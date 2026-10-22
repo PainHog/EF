@@ -25,7 +25,7 @@ const POLICY_SWEEP = [
   ["Default habits (POLICY)", {}],
   ["Never Awaken before the Heart", { awakenInHunt: "never" }],
   ["Awaken as soon as allowed", { awakenInHunt: "asap" }],
-  ["Spend Chi freely in the Hunt (no reserve for Awakening)", { reserveForAwakening: false }],
+  ["Save 3 Chi through the Hunt for an Awakening", { reserveForAwakening: true }],
   ["Rest only below 40% Vigor", { restBelow: 0.4 }],
   ["Rest below 80% Vigor", { restBelow: 0.8 }],
   ["Always strike the Warden or Heart, never the pack", { packFirstAt: 99 }],
@@ -89,6 +89,7 @@ export function summarise(nights) {
       max: Math.max(0, ...fs.map(f => f.rounds)), win: fs.filter(f => f.result === "win").length / Math.max(1, fs.length),
       wiped: fs.filter(f => f.result === "wiped" || f.result === "wipe").length / Math.max(1, fs.length),
       withdrew: fs.filter(f => f.result === "withdrew").length / Math.max(1, fs.length),
+      held: fs.filter(f => f.result === "held").length / Math.max(1, fs.length),
       long: fs.filter(f => f.long).length / Math.max(1, fs.length) };
   }
   return {
@@ -209,10 +210,10 @@ export function report({ cmd, args, sum, pooled, opt, blank, sweep = null, ready
   L.push("");
 
   L.push("## 3. Fight length (rounds) and fight results", "");
-  L.push("| Fight | Target rounds | Easy mean (90th pct, max) | Standard | Hard | Standard: won · wiped out · withdrew |", "|---|---|---|---|---|---|");
+  L.push("| Fight | Target rounds | Easy mean (90th pct, max) | Standard | Hard | Standard: won · wiped out · withdrew · held at round 7 |", "|---|---|---|---|---|---|");
   for (const k of ["clash", "anchor", "heart"]) {
     const t = T.rounds[k];
-    L.push(`| ${{ clash: "First Clash", anchor: "Anchor", heart: "Heart" }[k]} | ${t[0]}–${t[1]} | ${DIFFS.map(d => { const f = pooled[d].fk[k]; return `${f.rounds.toFixed(1)} (${f.p90}, ${f.max})`; }).join(" | ")} | ${(() => { const f = pooled.standard.fk[k]; return `${pct(f.win)} · ${pct(f.wiped)} · ${pct(f.withdrew)}`; })()} |`);
+    L.push(`| ${{ clash: "First Clash", anchor: "Anchor", heart: "Heart" }[k]} | ${t[0]}–${t[1]} | ${DIFFS.map(d => { const f = pooled[d].fk[k]; return `${f.rounds.toFixed(1)} (${f.p90}, ${f.max})`; }).join(" | ")} | ${(() => { const f = pooled.standard.fk[k]; return `${pct(f.win)} · ${pct(f.wiped)} · ${pct(f.withdrew)} · ${pct(f.held)}`; })()} |`);
   }
   L.push("");
 

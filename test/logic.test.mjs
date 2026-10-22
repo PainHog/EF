@@ -1,6 +1,6 @@
 /**
  * The pure rules logic (module/logic/rules.mjs) against the rulebook: every
- * worked example in the chapters, the Night card's numbers, and the edge cases
+ * worked example in the chapters, the Difficulty table's numbers, and the edge cases
  * the chapters spell out. Run with `npm test`.
  */
 import test from "node:test";
@@ -40,8 +40,8 @@ test("Ch 3 example: one round at an Anchor", () => {
   const p = pack({ toughness: 9 - a.sweeper });
   const pr = L.resolveStrike({ fighter: priya, target: p, faces: [5, 5, 6, 1, 2], fed: L.isFed(marcus, priya, elements) });
   assert.equal(pr.damage, 4); assert.equal(pr.left, 4); assert.equal(L.stillsIn({ ...p, toughness: pr.left }), 2);
-  const fed = L.feedOnStills({ ...w2, toughness: m.left }, [{ ...p, toughness: pr.left }]);
-  assert.equal(fed.gain, 2, "the Warden regains 2 for two Stills");
+  const fed = L.drawOnStills({ ...w2, toughness: m.left }, [{ ...p, toughness: pr.left }]);
+  assert.equal(fed.gain, 2, "the Warden draws 2 from two Stills");
   assert.equal(L.swarmHarm({ ...p, toughness: pr.left }), 1, "half of 2");
 });
 
@@ -139,7 +139,7 @@ test("Ch 6: Surges, their targets and ties", () => {
   assert.equal(L.surgeKind(1), "crush"); assert.equal(L.surgeKind(4), "sweep"); assert.equal(L.surgeKind(5), "drain"); assert.equal(L.surgeKind(6), "call");
 });
 
-test("Ch 6: the Night card's size table", () => {
+test("Ch 6: the size table", () => {
   const row = fn => EF.sizes.map(fn);
   assert.deepEqual(row(n => L.startingVigor(n)), [10, 7, 6]);
   assert.deepEqual(row(n => L.startingVigor(n, "tough")), [13, 10, 9]);

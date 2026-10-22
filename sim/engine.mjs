@@ -360,7 +360,7 @@ function strike(ctx, f, t, enemies, last, { free = false } = {}) {
     if (crit) dmg += R.critDamage + (f.has("perk", "trained") ? R.trainedDamage : 0); // §2 Trained
   }
   dealDamage(ctx, f, t, dmg, hits);
-  if (met && f.has("style", "sweeper")) { // §2 Sweeper: 2 damage to one other enemy
+  if (met && f.has("style", "sweeper")) { // §2 Sweeper: 1 damage to one other enemy
     const pick = t.kind === "pack" ? eliteOf(enemies) : packOf(enemies);
     if (pick && pick !== t && pick.tough > 0) dealDamage(ctx, f, pick, R.sweeperDamage, 0);
   }

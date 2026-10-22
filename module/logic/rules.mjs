@@ -203,8 +203,8 @@ export const stillsIn = pack => (pack.toughness > 0 ? Math.ceil(pack.toughness /
 /** Ch 6 Swarm: Harm equal to half its Stills, rounded up, as one blow. */
 export const swarmHarm = pack => Math.ceil(stillsIn(pack) / 2);
 
-/** Ch 6 "Feeds on its Stills": 1 Toughness per Still standing, never above its start. */
-export function feedOnStills(master, packs) {
+/** Ch 6 "Draws on its Stills": 1 Toughness per Still standing, never above its start. */
+export function drawOnStills(master, packs) {
   const stills = packs.filter(p => p.masterId === master.id).reduce((n, p) => n + stillsIn(p), 0);
   const toughness = Math.min(master.toughnessMax, master.toughness + stills);
   return { gain: toughness - master.toughness, toughness };

@@ -37,7 +37,7 @@ const confirm = yes => dialogResponders.push(() => yes);
 const set = (k, v) => game.settings.set(SYSTEM_ID, k, v);
 const lastCard = () => game.messages.at(-1);
 
-test("the night begins with the Night card's numbers", async () => {
+test("the night begins with the Difficulty table's numbers", async () => {
   const res = await api.request(OPS.beginNight, { difficulty: "easy", fighterIds: [dani.id, marcus.id, priya.id] });
   assert.equal(res.ok, true, res.error);
   for (const a of [dani, marcus, priya]) { assert.equal(a.system.vigor.value, 10); assert.equal(a.system.vigor.max, 10); assert.equal(a.system.chi, 2); }

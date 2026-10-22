@@ -247,7 +247,7 @@ async function startFight({ kind, anchor = null }) {
   };
   await saveNight(night);
   const title = kind === "anchor" ? night.anchors[anchor].name : EF.fightKinds[kind];
-  if (master) lines.unshift(`${master.name}: Guard ${master.system.guard}, Harm ${master.system.harm}, Toughness ${master.system.toughness.value}${master.system.shell ? `, ${EF.elements[master.system.shell].label} Shell (broken by ${EF.elements[EF.cycle.find(e => EF.elements[e].breaks === master.system.shell)].label})` : ""}.`);
+  if (master) lines.unshift(`${master.name}: Guard ${master.system.guard}, Harm ${master.system.harm}, Toughness ${master.system.toughness.value}${master.system.shell ? `, ${EF.elements[master.system.shell].label} Shell (shattered by ${EF.elements[EF.cycle.find(e => EF.elements[e].breaks === master.system.shell)].label})` : ""}.`);
   lines.splice(master ? 1 : 0, 0, `A pack of ${plural(stills, "Still")}: Guard 1, Harm 1, Toughness ${pt}.`);
   if (kind === "heart") lines.push(`Every fighter gains 3 Chi, and anyone may Awaken. Dawn breaks at the end of round ${L.dawnRound(night.hoursOwed)}.`);
   if (kind === "anchor") lines.push(`${plural(night.hoursLeft, "Hour")} left after this one.`);
@@ -319,7 +319,7 @@ async function strike(data) {
     const upd = { "system.toughness.value": left };
     if (enemy.type === "unmade" && enemy.system.shell && enemy.system.shellIntact && left <= enemy.system.toughness.max / 2) upd["system.shellIntact"] = false;
     await enemy.update(upd);
-    if (enemy.id === fight.masterId) fight.damage[a.id] = (fight.damage[a.id] ?? 0) + n;
+    if (enemy.id === fight.masterId && !free) fight.damage[a.id] = (fight.damage[a.id] ?? 0) + n;   // Quick's Strike comes before round 1
     return n;
   };
   if (r.damage) await hurt(t, r.damage);
@@ -340,7 +340,10 @@ async function strike(data) {
   }
   if (data.technique && f.element === "earth") {
     const bt = actor(data.bulwarkTargetId) ?? a;
-    if (fight.fighterIds.includes(bt.id)) { fight.bulwark.push(bt.id); lines.push(`Bulwark on ${bt.name}: the next loss this round is 3 less.`); }
+    if (free) lines.push("Bulwark on Quick's Strike ends before round 1 begins.");
+    else if (!fight.fighterIds.includes(bt.id) || bt.system.down) lines.push("Bulwark: a Down fighter can't be chosen.");
+    else if (fight.bulwark.includes(bt.id)) lines.push(`${bt.name} already carries a Bulwark (one at a time).`);
+    else { fight.bulwark.push(bt.id); lines.push(`Bulwark on ${bt.name}: the next loss this round is 3 less.`); }
   }
   if (r.hitBack) {
     const res = await applyLoss(night, a.id, r.hitBack.harm, "hitback");
@@ -446,10 +449,11 @@ async function endRound({ withdraw = false, swarmTargets = {} } = {}) {
 
   if (auto(SETTINGS.autoEnemies)) {
     if (master && master.system.toughness.value > 0) {
-      const fd = L.feedOnStills(rulesOf(master), packs.map(rulesOf));
-      if (fd.gain) { await master.update({ "system.toughness.value": fd.toughness }); lines.push(`${master.name} feeds on its Stills: +${fd.gain} Toughness (${fd.toughness}).`); }
+      const fd = L.drawOnStills(rulesOf(master), packs.map(rulesOf));
+      if (fd.gain) { await master.update({ "system.toughness.value": fd.toughness }); lines.push(`${master.name} draws on its Stills: +${fd.gain} Toughness (${fd.toughness}).`); }
     }
     for (const p of packs) {
+      if (L.allDown(fighters().map(rulesOf))) break;
       const harm = L.swarmHarm(rulesOf(p));
       const standing = fighters().filter(x => !x.system.down);
       if (!harm || !standing.length) continue;
@@ -457,7 +461,7 @@ async function endRound({ withdraw = false, swarmTargets = {} } = {}) {
       if (!standing.some(x => x.id === tid)) tid = await chooseFighter(`The Stills Swarm for ${harm} Harm. Who takes it?`, standing);
       lines.push(lossLine(`Swarm for ${harm}`, harm, await applyLoss(night, tid, harm, "swarm")));
     }
-    if (master && master.system.toughness.value > 0) {
+    if (master && master.system.toughness.value > 0 && !L.allDown(fighters().map(rulesOf))) {
       const sealed = fighters().some(x => x.system.awakened.active && x.system.awakening === "seal");
       if (sealed) lines.push(`${master.name} is Sealed and can't Surge.`);
       else {
@@ -520,9 +524,9 @@ async function endRound({ withdraw = false, swarmTargets = {} } = {}) {
 
 const ENDINGS = {
   won: { anchor: "The Warden falls and the Anchor breaks.", clash: "The First Clash is won. The Hunt begins.", heart: "The Heart falls. The clocks start again." },
-  holds: { anchor: "Round 7: the Warden holds, and the Anchor stands.", clash: "Round 7: the fight ends." },
+  holds: { anchor: "Round 7: the Warden holds, and the Anchor stands.", clash: "Round 7: the Stills scatter, and the Hunt begins." },
   withdrew: { anchor: "The group withdraws. The Anchor stands, and Down fighters stand up with 1 Vigor." },
-  down: { anchor: "Everyone is Down. The Anchor stands, and everyone wakes with 1 Vigor.", clash: "Everyone is Down. Everyone wakes with 1 Vigor." },
+  down: { anchor: "Everyone is Down. The Anchor stands, and everyone stands up with 1 Vigor.", clash: "Everyone is Down. The Stills scatter; everyone stands up with 1 Vigor, and the Hunt begins." },
   "driven-off": { heart: "Dawn breaks with the Heart at half its Toughness or less: the Unmade is driven off." },
   lost: { heart: "The Unmade takes hold. The sun rises on a city that has stopped." }
 };
@@ -561,7 +565,7 @@ async function respite() {
   for (const a of fightersIn(night.fighterIds)) await a.update({ "system.vigor.value": a.system.vigor.max });
   if (night.hoursLeft <= 0) night.phase = "heart";
   await saveNight(night);
-  await postCard(CARD.clocks, "A Respite", ["Every fighter returns to full Vigor and every Down fighter stands. Chi is unchanged.", `${plural(night.hoursLeft, "Hour")} left.`]);
+  await postCard(CARD.clocks, "A Respite", ["Every fighter returns to full Vigor. Chi is unchanged.", `${plural(night.hoursLeft, "Hour")} left.`]);
   return { night };
 }
 

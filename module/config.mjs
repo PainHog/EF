@@ -82,7 +82,7 @@ EF.stills = { guard: 1, harm: 1, toughPer: 3 };
 EF.warden = { guard: 2, harm: 2, shellGuard: 1, toughPer: 9, crush: 3, sweep: 1 };
 EF.heart = { guard: 2, harm: 2, base: 5, baseBySize: { 5: 6 }, perAnchor: 4 };
 
-/** Ch 6: the Night card. Only the Heart's Crush and Sweep change. */
+/** Ch 6: the Difficulty table. Only the Heart's Crush and Sweep change. */
 EF.difficulties = {
   easy:     { label: "Easy",     crush: 2, sweep: 1 },
   standard: { label: "Standard", crush: 4, sweep: 2 },

@@ -7,12 +7,12 @@
   </header>
   <div class="nw-hours"><span class="nw-label">Hours</span>{{#each hours}}<span class="hour{{#if left}} left{{/if}}"></span>{{/each}}{{#if night.hoursOwed}}<span class="owed">{{night.hoursOwed}} owed</span>{{/if}}</div>
   <table class="nw-anchors">
-    <thead><tr><th>Anchor</th><th>Shell</th><th>Broken by</th><th></th></tr></thead>
+    <thead><tr><th>Anchor</th><th>Shell</th><th>Shattered by</th><th></th></tr></thead>
     <tbody>
       {{#each anchors}}
       <tr class="{{#if broken}}broken{{/if}}">
         <td>{{name}}</td><td>{{shellLabel}}</td><td>{{breaker}}</td>
-        <td>{{#if broken}}Broken{{else}}{{#if ../gm}}{{#if canStrike}}<button type="button" data-action="anchor" data-anchor="{{index}}">Strike</button>{{/if}}{{/if}}{{/if}}</td>
+        <td>{{#if broken}}Broken{{else}}{{#if ../gm}}{{#if canStrike}}<button type="button" data-action="anchor" data-anchor="{{index}}">Go</button>{{/if}}{{/if}}{{/if}}</td>
       </tr>
       {{/each}}
     </tbody>
