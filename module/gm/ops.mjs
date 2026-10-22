@@ -59,7 +59,7 @@ function cantAct(fight, a) {
 }
 /** Bookkeeping for feeding and ties (Ch 3, Ch 6). */
 function acted(fight, a, { countsAsAction = true } = {}) {
-  if (countsAsAction) fight.actions[a.id] = (fight.actions[a.id] ?? 0) + 1;
+  if (countsAsAction) { fight.actions[a.id] = (fight.actions[a.id] ?? 0) + 1; fight.started = true; }
   fight.last = { id: a.id, element: a.system.element };
   fight.clock += 1;
   fight.actedAt[a.id] = fight.clock;
@@ -112,7 +112,8 @@ async function applyLoss(night, victimId, amount, source) {
   if (res.stubbornUsed) upd["system.stubbornUsed"] = true;
   if (res.awakeningEnds) Object.assign(upd, { "system.awakened.active": false, "system.awakened.roundsLeft": 0 });
   // Ch 2 Guardian: 2 Chi when the Guardian actually loses 2 or more this way, unless it puts them Down.
-  if (guardian && !res.down && res.afterProtections >= EF.rules.guardianMinLoss) upd["system.chi"] = L.gainChi(res.chi, EF.rules.guardianChi);
+  // (counting only the Vigor actually lost: Stubborn keeping them at 2 can make it less)
+  if (guardian && !res.down && who.system.vigor.value - res.vigor >= EF.rules.guardianMinLoss) upd["system.chi"] = L.gainChi(res.chi, EF.rules.guardianChi);
   await who.update(upd);
   if (res.wentDown) night.firstDown = true;
   return { id: who.id, name: who.name, guardian: !!guardian, for: guardian ? victim.name : null, ...res };
@@ -182,7 +183,7 @@ async function beginNight({ difficulty = "standard", fighterIds = [], anchors = 
   return { night };
 }
 
-/** Ch 2 "Joining late": an element nobody has, the starting Vigor everyone began with, 2 Chi; counted by the enemies from the next fight on. */
+/** Ch 2 "Joining late": four picks nobody has, the starting Vigor everyone began with (+3 if Tough), 2 Chi; joins at the next fight. */
 async function join({ fighterId }) {
   const night = getNight();
   const a = actor(fighterId);
@@ -244,13 +245,13 @@ async function startFight({ kind, anchor = null }) {
   night.fight = {
     kind, anchor: kind === "anchor" ? anchor : null, round: 1, fighterIds: [...night.fighterIds],
     masterId: master?.id ?? null, packIds: [pack.id],
-    last: null, clock: 0, actedAt: {}, actions: {}, damage: {}, bulwark: [], guardianUsed: [], noAct: [], quickDone: []
+    last: null, clock: 0, actedAt: {}, actions: {}, damage: {}, bulwark: [], guardianUsed: [], noAct: [], quickDone: [], started: false
   };
   await saveNight(night);
   const title = kind === "anchor" ? night.anchors[anchor].name : EF.fightKinds[kind];
   if (master) lines.unshift(`${master.name}: Guard ${master.system.guard}, Harm ${master.system.harm}, Toughness ${master.system.toughness.value}${master.system.shell ? `, ${EF.elements[master.system.shell].label} Shell (shattered by ${EF.elements[EF.cycle.find(e => EF.elements[e].breaks === master.system.shell)].label})` : ""}.`);
   lines.splice(master ? 1 : 0, 0, `A pack of ${plural(stills, "Still")}: Guard 1, Harm 1, Toughness ${pt}.`);
-  if (kind === "heart") lines.push(`Every fighter gains 3 Chi, and anyone may Awaken. Dawn breaks at the end of round ${L.dawnRound(night.hoursOwed)}.`);
+  if (kind === "heart") lines.push(`Every fighter gains 3 Chi, and anyone may Awaken at the start of their turn. Dawn breaks at the end of round ${L.dawnRound(night.hoursOwed)}.`);
   if (kind === "anchor") lines.push(`${plural(night.hoursLeft, "Hour")} left after this one.`);
   if (fightersIn(night.fighterIds).some(a => a.system.perk === "quick")) lines.push("Quick: a free Strike with +1 die before round 1.");
   await postCard(CARD.night, title, lines);
@@ -266,7 +267,7 @@ async function strike(data) {
   const free = !!data.free;
   if (free) {
     if (f.perk !== "quick") throw new OpError("Only a Quick fighter has a free Strike.");
-    if (fight.round !== 1 || Object.keys(fight.actions).length) throw new OpError("Quick's free Strike comes before the first round.");
+    if (fight.round !== 1 || fight.started) throw new OpError("Quick's free Strike comes before the first round, before anyone takes a turn.");
     if (fight.quickDone.includes(a.id)) throw new OpError(`${a.name} has already taken the free Strike this fight.`);
     if (f.down) throw new OpError(`${a.name} is Down.`);
   } else {
@@ -408,14 +409,18 @@ async function awaken({ userId, fighterId }) {
   const fight = requireFight(night);
   if (!fight.fighterIds.includes(a.id)) throw new OpError(`${a.name} isn't in this fight.`);
   if ((fight.actions[a.id] ?? 0) > 0) throw new OpError("You Awaken at the start of your turn, before you act.");
+  const quickWaiting = fight.round === 1 && !fight.started && fightersIn(fight.fighterIds).some(x => x.system.perk === "quick" && !x.system.down && !fight.quickDone.includes(x.id));
+  if (quickWaiting && !(await Dialog().confirm({ window: { title: "Quick's free Strike" }, content: "<p>Awakening starts round 1, so any Quick fighter who hasn't taken their free Strike loses it. Awaken anyway?</p>" }))) throw new OpError("Take Quick's free Strike first: you can't Awaken before it.");
   if (!L.canAwaken(rulesOf(a), { firstDownTonight: night.firstDown, fightKind: fight.kind })) {
     const why = a.system.awakened.used ? "Once a night, and it's been used." : a.system.chi < EF.rules.awakenCost ? "It costs 3 Chi." : a.system.down ? `${a.name} is Down.` : "Not yet: from the first time a fighter goes Down tonight, or at the Heart.";
     throw new OpError(why);
   }
   const rounds = L.awakeningRounds(a.system.awakening);
+  fight.started = true;   // a turn has begun: Quick's free Strike is gone
   await a.update({ "system.chi": a.system.chi - EF.rules.awakenCost, "system.awakened": { active: true, roundsLeft: rounds, used: true } });
   const aw = EF.awakenings[a.system.awakening];
   await postCard(CARD.awaken, `${a.name} Awakens: ${aw.label}`, [aw.text, `It lasts ${plural(rounds, "round")}, counting this one.`], { actor: a });
+  await saveNight(night);
   return { night };
 }
 
@@ -548,7 +553,7 @@ async function endFight(night, ending, lines = []) {
   else if (fight.kind === "anchor") night.phase = night.hoursLeft <= 0 || night.anchors.every(x => x.broken) ? "heart" : "hunt";
   else { night.phase = "ended"; night.ending = ending === "won" ? "won" : ending === "driven-off" ? "driven-off" : "lost"; }
   night.fight = null;
-  if (night.phase === "heart") lines.push("The Hunt is over. In the last Hour the fighters are drawn to the Heart.");
+  if (night.phase === "heart") lines.push("The Hunt is over. Wherever they are, the fighters are drawn to the Heart.");
   await saveNight(night);
   await postCard(CARD.clocks, ending === "won" ? "Victory" : "The fight ends", lines);
   Hooks.callAll(HOOKS.fightEnded, night, ending);

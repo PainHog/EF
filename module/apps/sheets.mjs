@@ -48,7 +48,7 @@ export class FighterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       down: s.down, inFight,
       fightLabel: inFight ? `${fight.kind === "anchor" ? night.anchors[fight.anchor].name : EF.fightKinds[fight.kind]}, round ${fight.round}` : "",
       canStrike: inFight && !s.down && !sealHolder,
-      canFree: inFight && !s.down && s.perk === "quick" && fight.round === 1 && !Object.keys(fight.actions).length && !fight.quickDone.includes(a.id),
+      canFree: inFight && !s.down && s.perk === "quick" && fight.round === 1 && !fight.started && !fight.quickDone.includes(a.id),
       canAwaken: inFight && L.canAwaken(s.toRules(), { firstDownTonight: night.firstDown, fightKind: fight?.kind }),
       sealHolder,
       awakenedText: s.awakened.active ? `${awakening?.label}: ${s.awakened.roundsLeft} round(s) left` : s.awakened.used ? "Used tonight" : "Ready (3 Chi)"

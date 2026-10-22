@@ -31,7 +31,7 @@ export const RULES = {
   // §2 Fighting styles
   brawlerDamage: 1,     // Brawler: extra damage when you meet the Guard
   guardianChi: 2,       // Guardian: Chi gained when you take another fighter's loss…
-  guardianMinLoss: 2,   // …of at least this much (before protections)
+  guardianMinLoss: 2,   // …of at least this much actually lost (after protections, not if Down)
   sweeperDamage: 1,     // Sweeper: damage to one other enemy when you meet the Guard
   counterDamage: 1,     // Counter: damage to an enemy that hits you back…
   counterChi: 1,        // …and extra Chi

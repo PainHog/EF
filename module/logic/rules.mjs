@@ -58,7 +58,7 @@ export function applyRerolls(faces, indices, fresh) {
 
 /**
  * Ch 3, Ch 6: the Guard to meet. A pack has Guard 1; a Warden 2, +1 while its
- * Shell holds, except for the element that breaks the Shell; the Heart 2.
+ * Shell holds, except for the element that shatters the Shell; the Heart 2.
  */
 export function guardFor(enemy, element) {
   if (enemy.kind === "pack") return EF.stills.guard;
@@ -110,7 +110,7 @@ export function resolveStrike({ fighter, target, faces, technique = false, fed =
   const left = Math.max(0, target.toughness - damage);
   const falls = left === 0;
 
-  // Ch 6 Shell: the breaker's first hit shatters it; so does half Toughness.
+  // Ch 6 Shell: the first hit by the element that shatters it does; so does half Toughness.
   let shellShatters = false;
   if (target.kind === "warden" && target.shell && target.shellIntact) {
     const breakerHit = EF.elements[element]?.breaks === target.shell && hits > 0;
@@ -167,7 +167,7 @@ export function guardiansFor(victimId, fighters, usedThisRound = []) {
  * Ch 3 "Vigor and going Down": the protections after Guardian, in order:
  * Bulwark (3 less, once, this round), Flow (1 less, not from a Sweep), then
  * Unbreakable (no loss); `afterProtections` is what is left (Guardian's Chi needs
- * 2 or more of it). Then Stubborn (Ch 2): the first time in a fight you
+ * 2 or more of what is actually lost). Then Stubborn (Ch 2): the first time in a fight you
  * would go Down, stay up with 2 Vigor. At 0 you are Down: all Chi lost, any
  * Awakening ends. Harm past 0 is lost.
  * @param {object} f   the fighter losing Vigor
@@ -238,7 +238,7 @@ function pickBy(fighters, score, actedAt) {
  * @param {object} a.damage      fighter id → damage dealt to the master this round
  * @param {object} a.actedAt     fighter id → when they last acted this round
  * @param {string} a.difficulty  easy | standard | hard (the Heart's column)
- * @param {number} a.size        fighters when the night began (the Call cap)
+ * @param {number} a.size        fighters in this fight (the Call cap)
  * @param {number} a.packStills  Stills now in the master's pack(s)
  */
 export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}, difficulty = "standard", size = 3, packStills = 0 }) {
