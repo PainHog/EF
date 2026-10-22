@@ -1,40 +1,43 @@
 /* ==========================================================================
-   ELEMENTAL FIGHTERS — Rulebook print stylesheet
+   NIGHTWAKE — Rulebook print stylesheet
    US Letter, printed by Chromium with native CSS paged media.
 
-   ART DIRECTION IS UNDECIDED. Every colour below is a neutral PLACEHOLDER
-   palette, defined once here as tokens; nothing further down uses a literal
-   colour. When the palette is chosen, change the tokens (and book/art/README.md,
-   and the Foundry system's styles) — not the rules below.
-   The typefaces are placeholders too (SIL OFL @fontsource packages loaded by
-   book/build.mjs); swap them there and in the font tokens.
+   Every colour is a token defined once below; nothing further down uses a
+   literal colour. To change the palette, change the tokens (and C in
+   book/tools/art-gen/lib.mjs, book/art/README.md and the Foundry system's
+   styles together). Typefaces: Fraunces, Alegreya and Alegreya Sans (SIL OFL,
+   loaded by book/build.mjs).
    ========================================================================== */
 
 :root {
   --page-mt: 0.72in;   /* @page top margin — ornaments anchored to the paper edge use it */
   --page-ml: 0.68in;
 
-  /* --- PLACEHOLDER palette (neutral greys + one muted accent) --- */
-  --dark: #3a3a3c;          /* primary dark fill, headings */
-  --dark-deep: #222224;     /* full-bleed pages, table heads, rule boxes */
-  --dark-soft: #5c5c60;     /* highlights on dark */
-  --paper: #f2f1ee;         /* the page */
-  --paper-2: #e3e1dc;       /* secondary light fill (boxes, stat lines) */
-  --paper-edge: #c9c6bf;    /* soft lines on light */
-  --paper-light: #faf9f6;   /* lightest fill (example boxes, sheet fields) */
-  --ink: #161618;           /* body text, linework */
-  --ink-soft: #5a5a5e;      /* captions, quiet text */
-  --footer: #85847f;        /* running footer */
-  --accent: #7a7f88;        /* rules, list markers, borders */
-  --accent-deep: #555a63;   /* labels on light */
-  --accent-bright: #e4e6ea; /* labels on dark */
-  --alarm: #7c2a2a;         /* danger / warning headings */
-  --alarm-bright: #b5473f;
-  --good: #3f6f52;          /* calm / safe (sparingly) */
+  /* --- Nightwake palette (docs/DESIGN.md D32, D35): a city at night, lamplight brass,
+         and the five element colours (each element also has its own shape, so no
+         meaning is ever carried by colour alone) --- */
+  --dark: #1d2636;          /* primary dark fill, headings */
+  --dark-deep: #10151f;     /* full-bleed pages, table heads, rule boxes */
+  --dark-soft: #34405a;     /* highlights on dark */
+  --paper: #f4f0e6;         /* the page */
+  --paper-2: #e6dfcf;       /* secondary light fill (boxes, stat lines) */
+  --paper-edge: #cbbfa6;    /* soft lines on light */
+  --paper-light: #fbf8f1;   /* lightest fill (example boxes, sheet fields) */
+  --ink: #14161c;           /* body text, linework */
+  --ink-soft: #555b66;      /* captions, quiet text */
+  --footer: #8a8577;        /* running footer */
+  --accent: #b08a4a;        /* lamplight brass: rules, list markers, borders */
+  --accent-deep: #7a5d2c;   /* labels on light */
+  --accent-bright: #f1dfb2; /* labels on dark */
+  --alarm: #8a2c22;         /* danger / warning headings */
+  --alarm-bright: #c2452d;
+  --good: #3d7a52;          /* calm / safe (sparingly) */
+  --wood: #3f8a55; --fire: #c8472f; --earth: #c49a3a; --metal: #aab3bd; --water: #2c5f8f;
+  --unmade: #8c9096;        /* the Unmade's grey */
 
-  --display: "Fraunces", Georgia, serif;          /* PLACEHOLDER typeface */
-  --text: "Alegreya", Georgia, serif;             /* PLACEHOLDER typeface */
-  --sans: "Alegreya Sans", "Segoe UI", sans-serif; /* PLACEHOLDER typeface */
+  --display: "Fraunces", Georgia, serif;
+  --text: "Alegreya", Georgia, serif;
+  --sans: "Alegreya Sans", "Segoe UI", sans-serif;
 }
 
 /* ------------------------------------------------------------ pages ----- */
@@ -302,9 +305,8 @@ p.opener::first-line { font-variant: small-caps; letter-spacing: .03em; font-wei
 /* ------------------------------------------------------------ entries --- */
 /* A catalogue entry (a character option, an item, …) with an optional portrait or badge. */
 .entry {
-  /* entries may flow across columns/pages (their boxes and table rows stay whole);
-     forcing whole entries to jump left near-empty pages */
-  break-inside: auto;
+  /* Nightwake's entries are short (an element, a fighter, an Anchor): keep each whole */
+  break-inside: avoid;
   position: relative;
   margin: 0.06in 0 0.16in;
   padding-top: 0.06in;

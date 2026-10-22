@@ -98,11 +98,11 @@ const files = readdirSync(join(SRC, "chapters")).filter(f => f.endsWith(".html")
 if (!files.length) throw new Error("no chapters in book/src/chapters");
 let body = files.map(f => `\n<!-- ${f} -->\n` + readFileSync(join(SRC, "chapters", f), "utf8")).join("\n");
 
-// Wide tables (4+ columns) span both text columns.
+// Wide tables (4+ columns) span both text columns, unless marked "narrow" (short numeric tables).
 body = body.replace(/<table class="tbl([^"]*)">([\s\S]*?)<\/table>/g, (m, cls, inner) => {
   const head = inner.match(/<tr>([\s\S]*?)<\/tr>/);
   const cols = head ? (head[1].match(/<t[hd]\b/g) ?? []).length : 0;
-  return cols >= 4 && !/\bwide\b/.test(cls) ? `<table class="tbl${cls} wide">${inner}</table>` : m;
+  return cols >= 4 && !/\b(wide|narrow)\b/.test(cls) ? `<table class="tbl${cls} wide">${inner}</table>` : m;
 });
 
 // Keep headings with what follows. Chromium's multi-column fragmentation does
@@ -187,7 +187,17 @@ const FOOTER_CSS = `@page { @bottom-center { content: ${cssString(BOOK_TITLE + "
  *   e.g.  "ch-01": ["spot-something", "spot-spare"],
  * Empty until the art exists (the build then warns about large unfilled gaps).
  */
-const SPOTS = {};
+const SPOTS = {
+  "ch-01": ["spot-dice"],
+  "ch-02": ["spot-stills"],
+  "ch-03": ["spot-dice", "spot-stills"],
+  "ch-04": ["spot-stills", "spot-greenhouse"],
+  "ch-05": ["spot-greenhouse", "spot-bridge"],
+  "ch-06": ["spot-substation", "spot-stills"],
+  "ch-07": ["spot-dice", "spot-reservoir"],
+  "ch-08": ["spot-bridge", "spot-reservoir", "spot-underpass", "spot-substation"],
+  "ch-09": ["spot-underpass", "spot-reservoir"],
+};
 const PT_PER_IN = 72;
 const BOTTOM_LIMIT_PT = (0.78 + BLEED_IN) * PT_PER_IN;   // @page bottom margin: content must end above this
 const TEXT_H_IN = 11 - 0.72 - 0.78;   // the text area's height (the print bleed adds to both the page and its margins)

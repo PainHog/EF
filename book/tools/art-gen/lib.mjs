@@ -1,20 +1,21 @@
 // Shared drawing primitives for the Nightwake book art.
-// Palette-agnostic: every colour comes from C, which mirrors the PLACEHOLDER
-// tokens at the top of book/src/book.css. Art direction is undecided — when the
-// palette is chosen, change C (and book.css, and book/art/README.md) together.
+// Every colour comes from C, which mirrors the tokens at the top of
+// book/src/book.css; change C, book.css and book/art/README.md together.
 // Nothing in here draws a particular character, creature or place; build those
 // in their own modules on top of these primitives (see scenes/placeholders.mjs).
 import { writeFileSync } from "node:fs";
 
 export const OUT = new URL("../../art/", import.meta.url).pathname; // book/art/
 
-/** PLACEHOLDER palette — keep in step with book/src/book.css :root tokens. */
+/** Nightwake palette — keep in step with book/src/book.css :root tokens. */
 export const C = {
-  dark: "#3a3a3c", deep: "#222224", soft: "#5c5c60",
-  paper: "#f2f1ee", paper2: "#e3e1dc", edge: "#c9c6bf", light: "#faf9f6",
-  ink: "#161618", inkSoft: "#5a5a5e",
-  accent: "#7a7f88", accentDeep: "#555a63", accentB: "#e4e6ea",
-  alarm: "#7c2a2a", alarmB: "#b5473f", good: "#3f6f52",
+  dark: "#1d2636", deep: "#10151f", soft: "#34405a",
+  paper: "#f4f0e6", paper2: "#e6dfcf", edge: "#cbbfa6", light: "#fbf8f1",
+  ink: "#14161c", inkSoft: "#555b66",
+  accent: "#b08a4a", accentDeep: "#7a5d2c", accentB: "#f1dfb2",
+  alarm: "#8a2c22", alarmB: "#c2452d", good: "#3d7a52",
+  wood: "#3f8a55", fire: "#c8472f", earth: "#c49a3a", metal: "#aab3bd", water: "#2c5f8f",
+  unmade: "#8c9096", unmadeDeep: "#5d6168", night: "#18233a", dawn: "#e9b98a",
 };
 
 // Unique ids per piece (clipPaths, gradients) — the book build also namespaces them.

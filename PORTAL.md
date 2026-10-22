@@ -1,6 +1,6 @@
-Now: The rulebook chapters are written; making the book’s art
+Now: The rulebook has its art; checking the page layout
 Next: Page layout, then computer playtests by the book and their fixes
-Number: Design decisions made = 34
+Number: Design decisions made = 35
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
 Number: Rulebook chapters written = 9
@@ -30,7 +30,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Write the rulebook chapters
 - [x] Ready-made fighters for a quick start
 - [x] The first one-night adventure
-- [ ] Cover and book art
+- [x] Cover and book art
 - [ ] Rulebook layout, for screen and for print
 - [ ] Computer playtests by the book, and the fixes they turn up
 - [ ] A playtest at a real table

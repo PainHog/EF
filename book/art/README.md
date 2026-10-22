@@ -7,30 +7,33 @@ rendered piece is looked at (`node book/tools/preview-art.mjs <outDir>`) before 
 called done. Every SVG has a `viewBox` and **no** fixed width or height; the CSS sizes it.
 No `<image>`, `<script>`, filters such as `feTurbulence`, or external links.
 
-## House style — TBD
+## House style
 
-The art direction is **undecided**. Until the author picks it, art uses the neutral
-PLACEHOLDER palette below (the same tokens as `book/src/book.css` and `C` in
-`book/tools/art-gen/lib.mjs`; change all three together).
+A city at night, flat colour with ink outlines (docs/DESIGN.md D32, D35). The book
+shows places, the elements and the Unmade, not faces: people appear only as small
+silhouettes from one figure kit, and the ready-made fighters only as emblems. Each
+element keeps one colour **and** one shape everywhere (Wood leaf, Fire flame, Earth
+layered square, Metal ring, Water waves). The Unmade is grey. The audit of every
+piece is in `AUDIT.md`.
 
-## Palette — TBD (placeholder values)
+## Palette
+
+The same tokens as `book/src/book.css` and `C` in `book/tools/art-gen/lib.mjs`
+(change all three together).
 
 | Token | Hex | Use |
 |---|---|---|
-| dark | `#3a3a3c` | primary dark fill |
-| deep | `#222224` | shadows, night, dark bands |
-| soft | `#5c5c60` | highlights on dark |
-| paper | `#f2f1ee` | page, light fills |
-| paper2 | `#e3e1dc` | secondary light fill |
-| edge | `#c9c6bf` | soft lines on light |
-| light | `#faf9f6` | lightest fill |
-| ink | `#161618` | linework, text |
-| accent | `#7a7f88` | accents |
-| accentDeep | `#555a63` | accents on light |
-| accentB | `#e4e6ea` | glints, accents on dark |
-| alarm | `#7c2a2a` | danger, warning |
-| alarmB | `#b5473f` | strong danger |
-| good | `#3f6f52` | calm / safe (sparingly) |
+| deep | `#10151f` | night, full-bleed pages |
+| dark | `#1d2636` | buildings, primary dark |
+| soft | `#34405a` | highlights on dark, pavements |
+| night | `#18233a` | lower sky |
+| dawn | `#e9b98a` | dawn glow |
+| paper / paper2 / edge / light | `#f4f0e6` `#e6dfcf` `#cbbfa6` `#fbf8f1` | page and light fills |
+| ink / inkSoft | `#14161c` `#555b66` | linework, quiet text |
+| accent / accentDeep / accentB | `#b08a4a` `#7a5d2c` `#f1dfb2` | lamplight brass, lit windows |
+| alarm / alarmB | `#8a2c22` `#c2452d` | danger, the night bus |
+| wood / fire / earth / metal / water | `#3f8a55` `#c8472f` `#c49a3a` `#aab3bd` `#2c5f8f` | the five elements |
+| unmade / unmadeDeep | `#8c9096` `#5d6168` | the Unmade, Stills |
 
 ## Shapes
 
@@ -41,11 +44,11 @@ PLACEHOLDER palette below (the same tokens as `book/src/book.css` and `C` in
 | Spot | about 4:3 | end-of-chapter spots (placed by the build), back-cover panel |
 | Portrait / badge | square | `.entry .portrait`, `.entry .badge`, `.statblock .portrait` |
 
-## Catalogue
+## Catalogue (`tools/art-gen/scenes/nightwake.mjs`)
 
-**Placeholders** (`tools/art-gen/scenes/placeholders.mjs`)
-- `placeholder-cover`: cover-shaped placeholder (612×792)
-- `placeholder-wide`: wide placeholder (3:1), used by the Part One page and Chapter 1
-- `placeholder`: 4:3 placeholder, used by the back cover
-
-No real art exists yet.
+- **Cover and back:** `cover-night`, `back-heart`
+- **Part pages:** `part-awaken` (the feeding cycle), `part-unmade` (the Heart over a grey city)
+- **Chapter vignettes:** `ch-city`, `ch-fighters`, `ch-fights`, `ch-awakening`, `ch-night`, `ch-unmade`, `ch-storyteller`, `ch-clocktower`, `ch-map`
+- **Element emblems:** `el-wood`, `el-fire`, `el-earth`, `el-metal`, `el-water`
+- **Fighter emblems:** `pc-dani`, `pc-marcus`, `pc-jun`, `pc-priya`, `pc-sam`
+- **Spots** (placed by the build at chapter ends, never repeated): `spot-greenhouse`, `spot-substation`, `spot-underpass`, `spot-bridge`, `spot-reservoir`, `spot-stills`, `spot-dice`

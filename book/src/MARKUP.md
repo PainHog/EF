@@ -69,7 +69,7 @@ Record every ruling or text change in `book/REVIEW.md`.
 ```
 `class="num"` centres a numeric cell. Tables may break across pages; the header repeats.
 Tables with 4+ columns automatically span both text columns (`wide`).
-Add `flow` to let a short table split across the two columns, or `nosplit` to keep a table whole
+Add `narrow` to keep a short 4+ column table inside one column (e.g. inside a box). Add `flow` to let a short table split across the two columns, or `nosplit` to keep a table whole
 with its heading (use sparingly — a large unsplittable table can leave a gap).
 Wrap a chapter in `<div class="tight-tables">` when its tables must squeeze onto one page.
 
