@@ -1,9 +1,9 @@
 /**
- * ELEMENTAL FIGHTERS — Rulebook build
+ * NIGHTWAKE — Rulebook build
  * ---------------------------------
  * book/src/chapters/*.html (in filename order) + book/src/book.css + book/art/*.svg
- *   → book/dist/elemental-fighters.html  (self-contained print HTML)
- *   → book/dist/Elemental_Fighters_v<version>.pdf
+ *   → book/dist/nightwake.html  (self-contained print HTML)
+ *   → book/dist/Nightwake_v<version>.pdf
  *
  * Printed by the local Chromium (Playwright) using native CSS paged media:
  * @page sizes/margins, named pages (cover, part), margin-box page numbers.
@@ -31,12 +31,12 @@ const ART = join(BOOK, "art");
 const DIST = join(BOOK, "dist");
 
 /* ------------------------------------------------------------ the book -- */
-const BOOK_TITLE = "Elemental Fighters";             // curly apostrophe, as in the chapters
-const BOOK_DESCRIPTION = "A tabletop roleplaying game by Richard Moore";   // PLACEHOLDER — the real subtitle is not written yet
+const BOOK_TITLE = "Nightwake";                      // working title (docs/DESIGN.md §2.1)
+const BOOK_DESCRIPTION = "A roleplaying game of five elements and one long night, by Richard Moore";
 const AUTHOR = "Richard Moore";
 const VERSION = "0.1";
-const FILE_STEM = "Elemental_Fighters";        // → Elemental_Fighters_v0.1.pdf
-const HTML_NAME = "elemental-fighters.html";   // the self-contained print HTML (digital build only)
+const FILE_STEM = "Nightwake";                 // → Nightwake_v0.1.pdf
+const HTML_NAME = "nightwake.html";            // the self-contained print HTML (digital build only)
 // An ornament anchored in the top-left corner of the Table of Contents page
 // (an art name from book/art/, or null for none). Art direction is undecided.
 const TOC_ART = null;

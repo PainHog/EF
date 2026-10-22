@@ -515,3 +515,31 @@ figure.tailpiece svg { height: 100%; width: auto; max-width: 100%; }
 .back-cover .back-tagline { margin-top: auto; text-align: center; font: 600 11pt var(--sans); color: var(--paper); }
 .back-cover .back-title { text-align: center; margin: 0.08in 0 0; font: 900 20pt var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-bright); }
 .back-cover .back-title span { font: 800 10pt var(--sans); letter-spacing: .3em; color: var(--paper-2); }
+
+/* ------------------------------------------------- Nightwake sheets ----- */
+.sheet-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 0.25in; }
+.sheet-track { margin: 0 0 0.16in; }
+.sheet-track p { margin: 0 0 0.05in; }
+.sheet-track .pips { display: flex; flex-wrap: wrap; gap: 0.07in; align-items: center; }
+.sheet-track .pip { width: 0.26in; height: 0.26in; }
+.track-note { font-size: 8.5pt; color: var(--ink-soft); margin-left: 0.06in; }
+.sheet-grid td.center-check { text-align: center; vertical-align: middle; }
+.sheet-grid td.center-check .box-check { width: 0.24in; height: 0.24in; margin: 0; }
+.sheet-grid.anchors td, .sheet-grid.surge td { height: auto; padding: 0.05in 0.07in; font-size: 9pt; border-top: 1.6px solid var(--dark); border-radius: 0; }
+.sheet-grid.anchors tr:nth-child(2) td, .sheet-grid.surge tr:nth-child(2) td { border-top: none; }
+.sheet-grid.anchors td:nth-child(3) { width: 55%; height: 0.28in; }
+.sheet-grid.anchors th:nth-child(3) { width: 55%; }
+.sheet-grid.numbers td { height: 0.42in; }
+.sheet-grid.surge th:nth-child(1) { width: 8%; }
+.sheet-grid.surge th:nth-child(2) { width: 44%; }
+.rounds { display: flex; gap: 0.08in; }
+.rounds span {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 0.36in; height: 0.36in; border: 1.6px solid var(--dark); border-radius: 6px;
+  font: 800 11pt var(--sans); color: var(--ink-soft);
+}
+.rounds span.mark { border-width: 3px; color: var(--alarm); }
+.sheet.ref { font-size: 9.2pt; }
+.ref-cols { columns: 2; column-gap: 0.28in; }
+.ref-cols h4 { margin: 0.06in 0 0.02in; font: 800 9.5pt var(--sans); color: var(--alarm); text-transform: uppercase; letter-spacing: .04em; break-after: avoid; }
+.ref-cols p { margin: 0 0 0.08in; break-inside: avoid; line-height: 1.32; }

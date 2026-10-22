@@ -76,7 +76,7 @@ Add a **character row** for each figure:
 
 Look at every render yourself at print size. Viewing the picture as a whole isn't enough: almost every mistake found was a small prop at the edge of a scene, or a marking on the wrong side.
 
-## Project-specific: Elemental Fighters
+## Project-specific: Nightwake
 21. **Elements read at a glance and stay consistent.** Each element keeps one colour, one motif and one silhouette language across the whole book (character art, icons, sheets and effects), and is also told apart by its shape or symbol, not by colour alone.
 22. **Martial-arts poses are physically possible.** Weight sits over the supporting foot; strikes connect with the right part of the body; weapons are held with a correct grip and have complete, plausible shapes; motion effects follow the direction of the movement.
 23. **Respect the source culture.** The five-element (Wu Xing) imagery and any Chinese characters must be accurate (check each character's meaning and stroke form, and never use garbled pseudo-hanzi). No element is tied to one ethnicity, accent or stereotype. Draw the player characters from varied backgrounds, and give each element to people of any background.

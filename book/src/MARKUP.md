@@ -1,11 +1,11 @@
-# Elemental Fighters rulebook — source markup
+# Nightwake rulebook — source markup
 
 The book is plain HTML fragments + one stylesheet, paginated by Chromium's native
 CSS paged media and printed to PDF (`npm run build:book`). Every chapter is one
 file in `book/src/chapters/NN-slug.html`, concatenated in filename order.
 
-**The author decides the game.** Never add rules, numbers, names or flavour text
-that Richard Moore has not approved. Text not written yet is marked
+**The book is the rules.** Rules, numbers, names and flavour text follow the decisions in
+`docs/DESIGN.md` (Richard delegated them on 2026-10-22). Text not written yet is marked
 `class="placeholder"` and starts with "PLACEHOLDER —", so it shows on every proof.
 Record every ruling or text change in `book/REVIEW.md`.
 

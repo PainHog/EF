@@ -1,7 +1,7 @@
-# Elemental Fighters — the rulebook
+# Nightwake — the rulebook
 
-The game is not written yet: every chapter, the cover and the art are clearly
-marked PLACEHOLDERs (dashed red outline on the proofs) so nothing ships by accident.
+Version 0.1: every chapter and sheet is written; the art is in progress (until a piece
+exists, `--draft` builds show a labelled box in its place).
 
 | Path | What |
 |---|---|
@@ -13,18 +13,18 @@ marked PLACEHOLDERs (dashed red outline on the proofs) so nothing ships by accid
 | `tools/contact-sheet.py` | Renders a PDF's pages into one contact-sheet image for layout review |
 | `tools/text-diff.py` | Word-level diff of two builds' text (to prove only intended text changed) |
 | `REVIEW.md` | The log of every ruling and text change (what, where, why, source) |
-| `dist/Elemental_Fighters_v0.1.pdf` | The typeset edition (digital) |
-| `dist/Elemental_Fighters_v0.1_print-*.pdf` | Print-on-demand files: interior (8.75×11.25in incl. 0.125in bleed, even page count) and separate front/back covers |
+| `dist/Nightwake_v0.1.pdf` | The typeset edition (digital) |
+| `dist/Nightwake_v0.1_print-*.pdf` | Print-on-demand files: interior (8.75×11.25in incl. 0.125in bleed, even page count) and separate front/back covers |
 
 ```bash
 npm install
-npm run build:book                                   # → book/dist/Elemental_Fighters_v0.1.pdf
+npm run build:book                                   # → book/dist/Nightwake_v0.1.pdf
 npm run build:book -- --print                        # → print-on-demand interior + covers (with bleed)
 npm run build:book -- --draft                        # missing art becomes a labelled box instead of an error
 node book/tools/art-gen/scenes/build.mjs [name …]    # regenerate art into book/art/
 node book/tools/preview-art.mjs /tmp/art [name …]    # look at the art (PNG per piece + _sheet.png)
-python3 book/tools/contact-sheet.py book/dist/Elemental_Fighters_v0.1.pdf /tmp/sheet 40 6   # look at every page
-python3 book/tools/text-diff.py old.pdf book/dist/Elemental_Fighters_v0.1.pdf               # text check vs an earlier build
+python3 book/tools/contact-sheet.py book/dist/Nightwake_v0.1.pdf /tmp/sheet 40 6   # look at every page
+python3 book/tools/text-diff.py old.pdf book/dist/Nightwake_v0.1.pdf               # text check vs an earlier build
 ```
 
 ## What the build does

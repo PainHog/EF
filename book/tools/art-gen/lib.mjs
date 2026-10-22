@@ -1,4 +1,4 @@
-// Shared drawing primitives for the Elemental Fighters book art.
+// Shared drawing primitives for the Nightwake book art.
 // Palette-agnostic: every colour comes from C, which mirrors the PLACEHOLDER
 // tokens at the top of book/src/book.css. Art direction is undecided — when the
 // palette is chosen, change C (and book.css, and book/art/README.md) together.

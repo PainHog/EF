@@ -2,7 +2,7 @@
 
 *One night. Five elements. Break the Heart before dawn.*
 
-**The table:** 3–5 players and a Storyteller, ages 12+, about 3 hours plus setup. Each player needs 7 six-sided dice; the Storyteller needs a few. These are the rules until the rulebook chapters exist (`AGENTS.md`); every number here was tested by `sim/` (results in §11).
+**The table:** 3–5 players and a Storyteller, ages 12+, about 3 hours plus setup. Each player needs 7 six-sided dice; the Storyteller needs a few. **Approved by Richard on 2026-10-22.** The rulebook chapters (`book/src/chapters/`) are now the rules; this page is their one-page summary and must match them. Every number here was tested by `sim/` (results in §11).
 
 ## §1 The roll
 - Roll **5 dice**. Each **5 or 6 is a hit**.

@@ -1,8 +1,9 @@
-Now: Writing the rulebook chapters, now that Richard has approved the core rules
-Next: Art and page layout, then computer playtests by the book
+Now: The rulebook chapters are written; making the book’s art
+Next: Page layout, then computer playtests by the book and their fixes
 Number: Design decisions made = 34
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
+Number: Rulebook chapters written = 9
 
 # Nightwake (working title) plan
 
@@ -26,9 +27,9 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 
 ## Building the game
 
-- [ ] Write the rulebook chapters
-- [ ] Ready-made fighters for a quick start
-- [ ] The first one-night adventure
+- [x] Write the rulebook chapters
+- [x] Ready-made fighters for a quick start
+- [x] The first one-night adventure
 - [ ] Cover and book art
 - [ ] Rulebook layout, for screen and for print
 - [ ] Computer playtests by the book, and the fixes they turn up
