@@ -2,22 +2,25 @@
 
 A tabletop roleplaying game by **Richard Moore**. On one night, ordinary people awaken to the five elements, choose how they fight, and stand together against the Unmade before dawn. It's a one-shot game for 3–5 players and a Storyteller.
 
-**Status:** core rules v0.1 written and simulated, waiting for Richard's approval. Read `docs/CORE-RULES.md` (the rules), `docs/DESIGN.md` (every decision and why) and `sim/REPORT.md` (the balance numbers). No chapters or art until the core is approved.
+**Status:** version 0.1. Richard approved the core rules on 2026-10-22; the rulebook (`book/`) is written, illustrated and laid out, and is now the rules (`docs/CORE-RULES.md` is its one-page summary). The online version for Foundry VTT is built and tested. The review of version 0.1 (an independent rules review and two playtests with real dice, `review/v0.1/`) is under way. `docs/DESIGN.md` has every decision and why; `sim/REPORT.md` has the balance numbers.
 
 ## What's in here
 | Folder | What it is |
 |---|---|
-| `docs/` | `CORE-RULES.md` (the rules until chapters exist), `DESIGN.md` (pitch, name check, decisions log), `DESIGN-RULES.md` (lessons from three earlier games), `REVIEW-PROCEDURE.md`, the kickoff prompt, and reference studies from *Heisty Spideys* |
+| `docs/` | `CORE-RULES.md` (the one-page summary of the rules), `DESIGN.md` (pitch, name check, decisions log), `DESIGN-RULES.md` (lessons from three earlier games), `REVIEW-PROCEDURE.md`, the kickoff prompt, and reference studies from *Heisty Spideys* |
 | `book/` | The rulebook: HTML chapters built into a typeset PDF (digital and print-on-demand), and `book/art/ART-CHECKLIST.md` |
 | `sim/` | The rules simulator: plays whole nights by the core rules and writes `sim/REPORT.md` |
-| `module/`, `templates/`, `styles/`, `lang/`, `packs/` | The Foundry VTT game system (a skeleton for now) |
+| `module/`, `templates/`, `styles/`, `lang/`, `packs/` | The Foundry VTT game system: fighter, Warden/Heart and Stills sheets, the Night sheet, Strikes and the enemies' step resolved by the book (`module/logic/rules.mjs`, Foundry-free and tested), and the ready-made fighters |
+| `review/` | Each version's review: rules review, playtest logs with their dice, and the combined report |
 | `tools/`, `test/` | Build, validation and test tooling |
 
 ## Commands
 ```
 npm install
 npm run build:book          # rulebook PDF → book/dist/
-node book/build.mjs --print # print-on-demand interior + covers
+node book/build.mjs --print # print-on-demand interior, covers and cover spread
+node book/build.mjs --white # printer-friendly edition
+npm run build:packs         # compile the compendium packs
 npm run check               # validate the Foundry system + run tests
 node sim/run.mjs            # balance report → sim/REPORT.md (add --blank for option values)
 ```
