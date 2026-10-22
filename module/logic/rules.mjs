@@ -156,11 +156,11 @@ export function isFed(last, fighter, elements) {
 /* -------------------------------------------------- losing Vigor -- */
 
 /**
- * Ch 2 Guardian: who may take this loss instead (once per round, standing, not
- * the fighter losing it).
+ * Ch 2 Guardian: who may take this loss instead: once per round, standing, not
+ * the fighter losing it, and only with more Vigor than the loss.
  */
-export function guardiansFor(victimId, fighters, usedThisRound = []) {
-  return fighters.filter(f => f.style === "guardian" && !f.down && f.id !== victimId && !usedThisRound.includes(f.id));
+export function guardiansFor(victimId, fighters, usedThisRound = [], amount = 0) {
+  return fighters.filter(f => f.style === "guardian" && !f.down && f.id !== victimId && !usedThisRound.includes(f.id) && f.vigor > amount);
 }
 
 /**
@@ -218,14 +218,13 @@ export const surgeKind = face => EF.surge[face];
  * Ch 6 "Ties, for a Crush or a Drain": the fighter among them who acted last
  * that round. `actedAt` maps fighter id → a clock tick (higher = later).
  */
-function pickBy(fighters, score, actedAt) {
-  let best = null;
-  for (const f of fighters) {
-    if (!best) { best = f; continue; }
-    const a = score(f), b = score(best);
-    if (a > b || (a === b && (actedAt[f.id] ?? -1) > (actedAt[best.id] ?? -1))) best = f;
-  }
-  return best;
+function pickBy(fighters, score, actedAt, rand = Math.random) {
+  const top = Math.max(...fighters.map(score));
+  const tied = fighters.filter(f => score(f) === top);
+  const last = Math.max(...tied.map(f => actedAt[f.id] ?? -1));
+  const pool = tied.filter(f => (actedAt[f.id] ?? -1) === last);
+  // …and if none of them acted this round (or still a tie), a die decides
+  return pool.length > 1 ? pool[Math.floor(rand() * pool.length)] : pool[0] ?? null;
 }
 
 /**
@@ -240,8 +239,9 @@ function pickBy(fighters, score, actedAt) {
  * @param {string} a.difficulty  easy | standard | hard (the Heart's column)
  * @param {number} a.size        fighters in this fight (the Call cap)
  * @param {number} a.packStills  Stills now in the master's pack(s)
+ * @param {Function} a.rand       a die for ties nobody acted to break (0 ≤ x < 1)
  */
-export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}, difficulty = "standard", size = 3, packStills = 0 }) {
+export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}, difficulty = "standard", size = 3, packStills = 0, rand = Math.random }) {
   const heart = master.kind === "heart";
   const card = EF.difficulties[difficulty] ?? EF.difficulties.standard;
   const standing = fighters.filter(f => !f.down);
@@ -249,19 +249,20 @@ export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}
   const crush = () => {
     const amount = heart ? card.crush : EF.warden.crush;
     const hitters = standing.filter(f => (damage[f.id] ?? 0) > 0);
-    const target = hitters.length ? pickBy(hitters, f => damage[f.id], actedAt) : pickBy(standing, f => f.vigor, actedAt);
+    const target = hitters.length ? pickBy(hitters, f => damage[f.id], actedAt, rand) : pickBy(standing, f => f.vigor, actedAt, rand);
     if (target) out.losses.push({ id: target.id, amount, source: "crush" });
     out.note = hitters.length ? "the fighter who dealt it the most damage" : "nobody damaged it: the fighter with the most Vigor";
   };
   if (kind === "crush") crush();
   else if (kind === "sweep") {
+    // one at a time, in the order the players choose: a Guardian's own share last
     const amount = heart ? card.sweep : EF.warden.sweep;
-    for (const f of standing) out.losses.push({ id: f.id, amount, source: "sweep" });
+    for (const f of [...standing].sort((a, b) => (a.style === "guardian") - (b.style === "guardian"))) out.losses.push({ id: f.id, amount, source: "sweep" });
   } else if (kind === "drain") {
     const withChi = standing.filter(f => f.chi > 0);
     if (!withChi.length) { out.kind = "crush"; crush(); out.note = `a Drain that finds no Chi Crushes instead (${out.note})`; }
     else if (heart) for (const f of withChi) out.drains.push({ id: f.id, amount: EF.heartDrainChi });
-    else { const t = pickBy(withChi, f => f.chi, actedAt); out.drains.push({ id: t.id, amount: EF.drainChi }); }
+    else { const t = pickBy(withChi, f => f.chi, actedAt, rand); out.drains.push({ id: t.id, amount: EF.drainChi }); }
   } else if (kind === "call") {
     out.call = Math.max(0, Math.min(EF.callStills, callCap(size) - packStills));
   }

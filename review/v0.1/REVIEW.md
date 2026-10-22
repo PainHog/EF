@@ -7,10 +7,13 @@ The review of version 0.1, run as `docs/REVIEW-PROCEDURE.md` says: an independen
 | `rules-review.md` | Rules review: 1 blocker, 12 confusing, 30 minor; exact odds; Part A and Part B tables; simulator against the book |
 | `playtest-a.md`, `playtest-a-dice.log` | Playtest A: a first night with 3 new players (Easy, then a night built from Chapter 9 at Standard); 123 logged rolls |
 | `playtest-b.md`, `playtest-b-dice.log` | Playtest B: 5 experienced players at Hard, plus 23 drills and a 3-fighter Heart; 183 logged rolls |
+| `verification.md` | Verification round: every earlier item marked fixed or not, new gaps, the simulator re-run, the online version checked |
+| `playtest-a2.md`, `playtest-a2-dice.log` | Playtest A2 on the fixed book: 3 new players, Easy then Standard; 160 logged rolls |
+| `playtest-b2.md`, `playtest-b2-dice.log` | Playtest B2 on the fixed book: 5 players at Hard on a Chapter 9 night, plus drills; 191 logged rolls |
 | `dice.mjs` | The dice script every roll came from |
 | `../../book/art/AUDIT.md` | The art audit, with object and figure tables for every picture |
 
-Every issue below was checked against the book before it was fixed. Every fix is logged in `book/REVIEW.md` (rows 6 to 22) and every design decision in `docs/DESIGN.md` (D37 to D40).
+Every issue below was checked against the book before it was fixed. Every fix is logged in `book/REVIEW.md` (rows 6 to 35) and every design decision in `docs/DESIGN.md` (D37 to D42). The verification round is summarised at the end.
 
 ## 1. Verdict
 
@@ -50,7 +53,7 @@ No other blockers.
 | Decision | Options weighed | Chosen, and why |
 |---|---|---|
 | **D37 A Down fighter is out of play** | Exclude Down fighters only from Swarms; exclude them from everything | Everything: one sentence closes the Swarm, Crush, Guardian, Renewal and Harmony questions together, and matches the simulator |
-| **D38 Guardian's Chi** | Leave it; Chi only for hit backs and Crushes; Chi only for a loss of 2 or more before protections; **Chi only when the Guardian actually loses 2 or more** | The last. Playtest A found a Chi engine (2 Chi for every 1-Harm Swarm); Playtest B found Guardian with Unbreakable gaining Chi from losses it never took. Simulated: the old rule let Guardian groups gain +2.1 / +4.5 points (Standard / Hard) by guarding everything, and Guardian with Unbreakable +3.8 / +6.0. Under the chosen rule both fall away (+1.3 / +0.4), and the labels move to 88 / 72 / 58 wins, still on target |
+| **D38 Guardian's Chi** | Leave it; Chi only for hit backs and Crushes; Chi only for a loss of 2 or more before protections; **Chi only when the Guardian actually loses 2 or more** | The last. Playtest A found a Chi engine (2 Chi for every 1-Harm Swarm); Playtest B found Guardian with Unbreakable gaining Chi from losses it never took. Simulated: the old rule let Guardian groups gain +2.1 / +4.5 points (Standard / Hard) by guarding everything, and Guardian with Unbreakable +3.8 / +6.0. Under the chosen rule both fall away (+1.3 / +0.4). The verification round added: the Guardian needs more Vigor than the loss it takes (D42) |
 | **D39 The Heart after four Hours** | The Heart in Hour 4; the Heart after Hour 4 | After: it is what the Night sheet, the timings and the simulator always meant. The size table's Heart row now starts at one Anchor standing, because four Hours and five Anchors mean one always stands |
 | **D40 Edge cases and terms** | For each, the two readings the reviews found | Where the simulator already played one reading, the book says that one (withdrawing at round 4 still costs the Hour; Quick's Strike isn't part of round 1; one Bulwark at a time; one Chi die per roll; a fight ends the moment everyone is Down). Terms: Wardens *draw on* their Stills, elements *shatter* Shells, *the Difficulty table*, *Go to an Anchor* |
 
@@ -152,9 +155,27 @@ From the three reports, in their words where possible:
 |---|---|
 | Every Part B question answered in the text, in one place | **Pass** after the fixes: the Down state, movement, carry-over, late joiners and every end state are now in the text |
 | Quick reference, sheets and trackers checked against the chapters, line by line | **Pass**: checked after the edits (the card now uses Chapter 3's words; the sheets carry every box the rules need) |
-| Simulated win and loss rates on target for every label and size; no dead or dominated options | **Pass**: wins 88 / 72 / 58, losses 1 / 10 / 22, every size within 3.2 points, every option within ±1.8 of its pick (`sim/REPORT.md`) |
-| Two clean playtests in a row: no blocker, no invented ruling on core flow | **Not yet**: these two playtests found the blocker and the rulings now in the book. A second round of playtests on the fixed book is the next step |
+| Simulated win and loss rates on target for every label and size; no dead or dominated options | **Pass**: wins 89.5 / 74.9 / 58.3, losses 0.7 / 8.9 / 20.8, every size within 3.3 points, every option within ±1.8 of its pick (`sim/REPORT.md`) |
+| Two clean playtests in a row: no blocker, no invented ruling on core flow | **Not yet**. Round 1 found the blocker. Round 2: A2 was clean; B2 had no blocker but had to invent two small core rulings (feeding after a Down; the Guardian in a Sweep), now in the book. A third round on the current book is the next step |
 | Every picture passes the art checklist, with tables | **Pass** (`book/art/AUDIT.md`) |
 | Layout: no near-empty pages, text ≥ 7.5 pt, no colour-only meaning, contents and cross-references verified | **Pass** |
 | Print: printer-friendly version; bleed, cover spread, fonts embedded and credited, no Type 3 | **Pass** (the spine width needs the printer's figure before ordering) |
 | Credits and rights | **Pass**, except the full trademark search (§2), which is Richard's |
+
+## Verification round (second round)
+
+**Verification** (`verification.md`): of the 87 earlier items, 75 fixed, 7 partly fixed (old words left in a few places), 2 changed differently (agreed), 1 not changed (where to put the last Respite; now covered by a sentence in the advice) and 2 deliberately left alone (agreed). No new blocker; 1 confusing (Guardian with Stubborn) and 12 minor. The seeded simulator re-run matched `sim/REPORT.md` exactly. Two places where the online version disagreed with the book were fixed (Awakening before Quick's free Strike; the Guardian's Chi with Stubborn).
+
+**Playtest A2** (3 new players; Easy, then a Chapter 9 night at Standard): **clean**: no blocker and no invented ruling on core flow. Driven off at Easy (the Heart on 3 of 39 at dawn), a round-7 win at Standard with the fighters on 2, 2 and 1 Vigor. 1 confusing and 7 minor issues, all fixed.
+
+**Playtest B2** (5 players at Hard on a Chapter 9 night, plus drills): driven off (the Heart on 12 of 70), no blocker; the table had to invent two one-line core rulings (feeding after a Down; the Guardian in a Sweep). 5 confusing and 13 minor issues, all fixed. Drills covered every ending.
+
+**What changed** (D41, D42; `book/REVIEW.md` rows 23 to 35):
+- Hard's Heart Crush is 7, because tables give Swarms to Flow or Bulwarked fighters (now the simulator's habit). Every target is still met.
+- The Guardian can take a loss only with more Vigor than the loss. This closes a Rally-the-Guardian loop and the Stubborn question.
+- A Sweep's losses come one at a time in the players' order, and an action taken before going Down still feeds.
+- A start-of-round step was added for Wellspring and Harmony.
+- A late joiner now resets everyone's maximum Vigor to the new group size.
+- Going back to an Anchor is a new fight.
+- The sheets now carry each enemy's Guard and Harm, a ring line and names for the Crush damage.
+

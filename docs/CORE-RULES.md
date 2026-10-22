@@ -2,7 +2,7 @@
 
 *One night. Five elements. Break the Heart before dawn.*
 
-**The table:** 3–5 players and a Storyteller, ages 12+, about 3 hours plus setup. Each player needs 7 six-sided dice; the Storyteller needs a few. **Approved by Richard on 2026-10-22**, then revised after the version 0.1 review (`review/v0.1/`; `docs/DESIGN.md` D37–D40). The rulebook chapters (`book/src/chapters/`) are the rules; this page is their one-page summary and must match them. Every number here was tested by `sim/` (results in §11).
+**The table:** 3–5 players and a Storyteller, ages 12+, about 3 hours plus setup. Each player needs 7 six-sided dice; the Storyteller needs a few. **Approved by Richard on 2026-10-22**, then revised after the version 0.1 review and its verification round (`review/v0.1/`; `docs/DESIGN.md` D37–D42). The rulebook chapters (`book/src/chapters/`) are the rules; this page is their one-page summary and must match them. Every number here was tested by `sim/` (results in §11).
 
 ## §1 The roll
 - Roll **5 dice**. Each **5 or 6 is a hit**.
@@ -16,7 +16,7 @@
 - A strike is judged against the Guard you rolled against: a Shell that shatters during it lowers the Guard from the next roll.
 
 ## §2 Fighters
-Each fighter takes one **element**, one **fighting style**, one **perk** and one **awakening**. No two fighters in a group share any of them. Everyone picks all four, then clashes are settled pick by pick: both roll a die, the higher keeps it, and the other changes only that pick. Picks can also be rolled (reroll anything taken). The five ready-made fighters (§10) skip this step. A late fighter makes all four picks from what is left, starts with the Vigor the others began with (+3 if Tough) and 2 Chi, and joins at the next fight; five fighters at most. Every fighter starts with **2 Chi** (maximum 5) and the Vigor in §10.
+Each fighter takes one **element**, one **fighting style**, one **perk** and one **awakening**. No two fighters in a group share any of them. Everyone picks all four, then clashes are settled pick by pick: everyone who wants it rolls a die, the highest keeps it, and the others change only that pick (a ready-made fighter keeps its other picks). Picks can also be rolled (if taken, take the next free one). When a fighter joins late, everyone's maximum Vigor becomes the starting Vigor for the new number of fighters (+3 if Tough) and anyone above it drops to it; the new fighter makes all four picks from what is left, starts at that maximum with 2 Chi, and joins at the next fight. Five fighters at most. Every fighter starts with **2 Chi** (maximum 5) and the Vigor in §10.
 
 **Elements.** Your element fixes your place in the two cycles (§3, §4) and gives you a **technique**. Spend 1 Chi as you declare a Strike to use it, once per strike.
 
@@ -31,7 +31,7 @@ Each fighter takes one **element**, one **fighting style**, one **perk** and one
 | Fighting style | Effect |
 |---|---|
 | **Brawler** | +1 damage when you meet the Guard. |
-| **Guardian** | Once per round, when another fighter would lose Vigor, you may lose it instead. If you lose 2 or more Vigor this way, gain 2 Chi (not if it puts you Down). The fighter you saved still gains Chi for a hit back. |
+| **Guardian** | Once per round, when another fighter would lose Vigor and you have more Vigor than that, you may lose it instead. If you lose 2 or more Vigor this way, gain 2 Chi. The fighter you saved still gains Chi for a hit back. |
 | **Sweeper** | When you meet the Guard, also deal 1 damage to one other enemy, if there is one (not a hit: it never counts as the Shell's first hit). |
 | **Counter** | When an enemy hits you back, deal it 1 damage and gain 1 more Chi. The damage lands even if the hit back puts you Down. |
 | **Flow** | Lose 1 less Vigor each time, except from a Sweep. |
@@ -42,7 +42,7 @@ Each fighter takes one **element**, one **fighting style**, one **perk** and one
 | **Tough** | +3 maximum Vigor. |
 | **Medic** | After each fight (once Down fighters have stood), share out 2 Vigor among the fighters. |
 | **Lucky** | Once per fight, after you roll, reroll every die that isn't a hit. |
-| **Quick** | Before the first round of each fight, take a free Strike with +1 die. It can't be hit back. It isn't a turn and isn't part of round 1. |
+| **Quick** | Before the first round of each fight (after its opening Chi), take a free Strike with +1 die. It can't be hit back. It isn't a turn and isn't part of round 1: no Awakening before it, and a Bulwark given with it ends before round 1. |
 | **Stubborn** | The first time in each fight you would go Down, stay up with 2 Vigor. |
 | **Trained** | Your Criticals deal 2 more damage and give 1 more Chi. |
 
@@ -57,11 +57,12 @@ Each fighter takes one **element**, one **fighting style**, one **perk** and one
 
 ## §3 Fights
 **A round** has three steps:
-1. **Fighters act** one at a time, in any order the players like (the Storyteller settles disagreements).
-2. **Enemies act.** The Warden or Heart draws on its Stills (§4). Then each pack Swarms, then the Warden or Heart Surges.
-3. **End of round.** Awakenings count down, then check the clocks (§8, §9), then the group may withdraw from an Anchor.
+1. **Start of round.** Wellspring and Harmony share out.
+2. **Fighters act** one at a time, in any order the players like (the Storyteller settles disagreements).
+3. **Enemies act.** The Warden or Heart draws on its Stills (§4). Then each pack Swarms, then the Warden or Heart Surges.
+4. **End of round.** Awakenings count down, then check the clocks (§8, §9), then the group may withdraw from an Anchor.
 
-A fight ends the moment the enemy falls or every fighter is Down, even mid-step. There is no movement: anyone can strike any enemy.
+A fight ends the moment the enemy falls or every fighter is Down, even mid-step (a Strike always finishes resolving first). There is no movement: anyone can strike any enemy.
 
 **Actions.** Each fighter takes one action:
 - **Strike** an enemy (§1).
@@ -72,9 +73,9 @@ A fight ends the moment the enemy falls or every fighter is Down, even mid-step.
 - **Help**: spend 1 Chi to give another fighter's roll +1 die, once per roll for each helper (Down fighters can't Help);
 - your element's **technique**.
 
-**Feeding (the generating cycle).** The fighters' elements form a ring in cycle order: Wood → Fire → Earth → Metal → Water → back to Wood. Any element nobody has is skipped, so the ring always closes. A strike deals **+1 damage** (if it hits) when the fighters' action just before it in this fight was taken by the fighter before you in the ring.
+**Feeding (the feeding cycle).** The fighters' elements form a ring in cycle order: Wood → Fire → Earth → Metal → Water → back to Wood. Any element nobody has is skipped, so the ring always closes. A strike deals **+1 damage** (if it hits) when the fighters' action just before it in this fight was taken by the fighter before you in the ring.
 - Any fighter's action counts, including Rally, holding a Seal, Quick's free Strike, and the last fighter's action of the round before. The enemies' steps don't count.
-- A Down fighter keeps their place: the fighter after them can't be fed until they act again.
+- A Down fighter keeps their place: an action they took before going Down still feeds the next one, but while Down they take no actions, so the fighter after them can't be fed.
 - Two actions in a row by the same fighter don't feed.
 
 **Resolving a strike, in order:**
@@ -112,15 +113,16 @@ A fight ends the moment the enemy falls or every fighter is Down, even mid-step.
 | 5 **Drain** | the fighter with the most Chi loses 2 Chi | every fighter loses 1 Chi |
 | 6 **Call** | 2 more Stills join its pack (or form a new one), up to fighters + 2 Stills | the same |
 
-- **Crush:** if that fighter is Down, the standing fighter who dealt it the next most; if no standing fighter damaged it, the fighter with the most Vigor.
-- **Ties** (for a Crush or a Drain): the fighter who acted last that round.
+- **Crush when no standing fighter damaged it:** the fighter with the most Vigor. **Crush on a Down fighter:** the standing fighter who dealt it the next most.
+- **Ties** (for a Crush or a Drain): the fighter who acted last that round; if none of them acted, roll a die.
+- **A Sweep's losses** come one at a time, in the order the players choose.
 - **A Drain that finds no Chi** Crushes instead (the Heart's, only when no fighter has any).
-- **A Call with a full pack** does nothing. **A Sealed** Warden or Heart still draws on its Stills; if the Seal's holder goes Down before the Surge, it Surges.
+- **A Call** adds 3 Toughness per new Still; with a full pack it does nothing. **A Sealed** Warden or Heart still draws on its Stills; if the Seal's holder goes Down before the Surge, it Surges.
 
 ## §5 Vigor and Down
 - **Protections, in order:** when you would lose Vigor, a Guardian may take it first, then Bulwark applies, then Flow, then Unbreakable.
 - **At 0 Vigor you are Down.** You can't act or Help, **you lose all your Chi**, and your Awakening ends. Harm past 0 is lost.
-- **A Down fighter is out of play:** nobody can choose them for anything (Swarm, Bulwark, Renewal, Help, a share of Chi); they take no losses, gain no Chi, and their style, perk and technique do nothing until a Rally or a Wellspring share stands them up.
+- **A Down fighter is out of play:** nobody can choose them for anything (Swarm, Bulwark, Renewal, Help, a share of Chi); they take no losses, gain no Chi, and their style, perk and technique do nothing until a Rally, a Wellspring share or the end of the fight stands them up (Counter's answer to the blow that put them Down still lands).
 - **After a fight,** Down fighters stand with 1 Vigor.
 - Vigor carries from fight to fight. Nothing heals except what these rules say, and nothing goes above your maximum Vigor. When you share something out, you may keep some.
 
@@ -143,7 +145,7 @@ A fight ends the moment the enemy falls or every fighter is Down, even mid-step.
 ## §8 The night
 1. **Prologue.** Each player describes the moment their element wakes. Then comes the **First Clash** against a pack of 2 Stills per fighter. It costs no Hour. If everyone goes Down or it reaches the end of round 7, the Stills scatter, Down fighters stand with 1 Vigor and the Hunt begins. No withdrawing.
 2. **The Hunt: 4 Hours.** There are five **Anchors**. Each has a Warden (each with a different Shell) and a pack of 1 Still per fighter. Each Hour, the group chooses one:
-   - **Go to an Anchor.** If you win, the Anchor breaks. If everyone goes Down, or the group **withdraws** at the end of any round, the Anchor stands and Down fighters stand with 1 Vigor.
+   - **Go to an Anchor.** If you win, the Anchor breaks. Going back to one you left is a new fight (a whole Warden, Shell and pack). If everyone goes Down, or the group **withdraws** at the end of any round, the Anchor stands and Down fighters stand with 1 Vigor.
    - **Respite.** Everyone returns to full Vigor. Chi is unchanged.
    - **A long fight**, one still going at the end of round 4, costs **one more Hour**, even if the group then withdraws. If no Hours are left, the Hour is owed and dawn comes one round sooner at the Heart.
    - **An Anchor fight still going at the end of round 7** ends: the Warden holds and the Anchor stands.
@@ -170,10 +172,10 @@ A fight ends the moment the enemy falls or every fighter is Down, even mid-step.
 
 | Difficulty table: the Heart's | Easy | Standard | Hard |
 |---|---|---|---|
-| Crush | 2 | 4 | 6 |
+| Crush | 2 | 4 | 7 |
 | Sweep | 1 | 2 | 3 |
 
-**Ready-made fighters** (one per element; with fewer players, any of them). They are a little stronger than random groups: three of them win about 84% at Standard (78–91%), four 78%, all five 74%.
+**Ready-made fighters** (one per element; with fewer players, any of them). They are a little stronger than random groups: at Standard three of them win about 85% (78–92%), four 82%, all five 77%; at Hard 68%, 61% and 54%.
 
 | Element | Style | Perk | Awakening |
 |---|---|---|---|
@@ -188,15 +190,16 @@ A fight ends the moment the enemy falls or every fighter is Down, even mid-step.
 
   | Difficulty | Win | Partial | Loss |
   |---|---|---|---|
-  | Easy | 88% | 11% | 1% |
-  | Standard | 72% | 17% | 10% |
-  | Hard | 58% | 20% | 22% |
+  | Easy | 90% | 10% | 1% |
+  | Standard | 75% | 16% | 9% |
+  | Hard | 58% | 21% | 21% |
 
-- **Group size:** every size is within 3.2 points of its difficulty's average.
+- **Group size:** every size is within 3.3 points of its difficulty's average.
 - **Options:** each element, style, perk and awakening is within 2 points of its pick's average.
 - **Fight length:** the Heart fight lasts about 5 rounds and an Anchor fight about 4.
 - **Habits that win:**
-  - Clear the Stills before they feed the enemy, but don't spend strikes on the last one.
+  - Clear the Stills before the enemy draws on them, but don't spend strikes on the last one.
+  - Give each Swarm to a Flow or Bulwarked fighter (the default habit in the simulator).
   - Take a Respite when the group is down to about two-thirds of its Vigor.
   - Spend Chi freely in the Hunt; the Heart gives you the 3 you need to Awaken.
 

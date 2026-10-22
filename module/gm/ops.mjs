@@ -97,7 +97,7 @@ async function applyLoss(night, victimId, amount, source) {
   let guardian = null;
   if (auto(SETTINGS.guardianPrompt)) {
     const all = fightersIn(fight.fighterIds).map(rulesOf);
-    for (const g of L.guardiansFor(victimId, all, fight.guardianUsed)) {
+    for (const g of L.guardiansFor(victimId, all, fight.guardianUsed, amount)) {
       const yes = await Dialog().confirm({
         window: { title: "Guardian" },
         content: `<p>${esc(g.name)} (Guardian) may lose ${amount} Vigor instead of ${esc(victim.name)}${amount >= EF.rules.guardianMinLoss ? " (and gain 2 Chi if they lose 2 or more)" : ""}. Take it?</p>`
@@ -193,11 +193,17 @@ async function join({ fighterId }) {
     if (!a.system[key]) throw new OpError(`A fighter needs four picks: this one has no ${key}.`);
     if (fightersIn(night.fighterIds).some(o => o.system[key] === a.system[key])) throw new OpError(`Another fighter already has that ${key} (Chapter 2).`);
   }
-  const max = L.startingVigor(night.size, a.system.perk);
-  await a.update({ "system.vigor.value": max, "system.vigor.max": max, "system.chi": EF.rules.chiStart, "system.awakened": { active: false, roundsLeft: 0, used: false } });
+  if (night.fighterIds.length >= 5) throw new OpError("A night has five fighters at most.");
+  // Everyone's maximum becomes the starting Vigor for the new number of fighters.
   night.fighterIds.push(a.id);
+  night.size = night.fighterIds.length;
+  for (const f of fightersIn(night.fighterIds)) {
+    const max = L.startingVigor(night.size, f.system.perk);
+    if (f.id === a.id) await f.update({ "system.vigor.value": max, "system.vigor.max": max, "system.chi": EF.rules.chiStart, "system.awakened": { active: false, roundsLeft: 0, used: false } });
+    else await f.update({ "system.vigor.max": max, "system.vigor.value": Math.min(f.system.vigor.value, max) });
+  }
   await saveNight(night);
-  await postCard(CARD.night, `${a.name} joins the night`, ["The enemies count them from the next fight on."], { actor: a });
+  await postCard(CARD.night, `${a.name} joins the night`, [`Everyone's maximum Vigor is now ${EF.vigorBySize[night.size]} (Tough +3). ${a.name} joins at the start of the next fight.`], { actor: a });
   return { night };
 }
 

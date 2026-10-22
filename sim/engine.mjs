@@ -465,7 +465,8 @@ function surge(ctx, e, enemies) {
     if (tgt) harm(ctx, tgt, e.crush);
   };
   if (r <= 2) crush();
-  else if (r <= 4) for (const f of live) harm(ctx, f, e.sweep, { sweep: true });
+  // Sweep: the losses come one at a time, in the order the players choose (policy: the Guardian's own last).
+  else if (r <= 4) for (const f of [...live].sort((a, b) => a.has("style", "guardian") - b.has("style", "guardian"))) harm(ctx, f, e.sweep, { sweep: true });
   else if (r === 5) { // Drain: Warden takes 2 from the richest; the Heart takes 1 from everyone. No Chi anywhere: Crush.
     if (e.kind === "warden") {
       const rich = live.filter(f => f.chi > 0).sort((a, b) => b.chi - a.chi || lastFirst(a, b))[0];
@@ -477,7 +478,8 @@ function surge(ctx, e, enemies) {
   } else { // Call: 2 more Stills join (a new pack if none is left), to at most fighters + 2 Stills.
     const p = packOf(enemies);
     const cap = (n + 2) * R.stills.tough;
-    if (p) { p.tough = Math.min(cap, p.tough + R.callStills * R.stills.tough); p.toughMax = Math.max(p.toughMax, p.tough); p.stills = Math.ceil(p.tough / R.stills.tough); }
+    // each new Still adds 3 Toughness, up to fighters + 2 Stills
+    if (p) { const add = Math.max(0, Math.min(R.callStills, Math.round(cap / R.stills.tough) - p.stills)); p.tough += add * R.stills.tough; p.toughMax = Math.max(p.toughMax, p.tough); p.stills = Math.ceil(p.tough / R.stills.tough); }
     else enemies.push(makePack(R, R.callStills));
   }
 }
