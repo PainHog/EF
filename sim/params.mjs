@@ -94,7 +94,7 @@ export const RULES = {
 export const DIFFICULTY = {
   easy: { heart: { crush: 2, sweep: 1 } },
   standard: {},
-  hard: { heart: { crush: 6, sweep: 3 } },
+  hard: { heart: { crush: 7, sweep: 3 } },
 };
 
 /** How the simulated players decide (not rules). */
@@ -105,6 +105,7 @@ export const POLICY = {
   reserveForAwakening: false, // in the Hunt, keep enough Chi to Awaken at the Heart (the Heart gives 3)
   awakenInHunt: "trouble", // "trouble": only when someone is Down and the enemy is above half; "never"; "asap"
   packFirstAt: 2,          // strike the pack first while it has at least this many Stills
+  swarmTarget: "smart",    // who the players give a Swarm to: "smart" (Flow or a Bulwark first, as playtest tables did) or "vigor" (most Vigor)
   guardFrom: 2,            // a Guardian takes another fighter's loss of at least this much (or one that would put them Down)
 };
 

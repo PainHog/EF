@@ -86,7 +86,7 @@ EF.heart = { guard: 2, harm: 2, base: 5, baseBySize: { 5: 6 }, perAnchor: 4 };
 EF.difficulties = {
   easy:     { label: "Easy",     crush: 2, sweep: 1 },
   standard: { label: "Standard", crush: 4, sweep: 2 },
-  hard:     { label: "Hard",     crush: 6, sweep: 3 }
+  hard:     { label: "Hard",     crush: 7, sweep: 3 }
 };
 
 /** Ch 2, Ch 6: by the number of fighters when the night begins. */

@@ -120,3 +120,72 @@
 2026-10-22T03:43:00.604Z	HEART R4 Hal Strike Heart (no Chi)	5d6	3 3 1 5 6	hits=2 sixes=1
 2026-10-22T03:43:07.678Z	HEART R4 Surge Heart	1d6	2	hits=0 sixes=0
 2026-10-22T03:43:36.249Z	HEART R5 Surge Heart (Rosa Rallied Hal, no Strikes)	1d6	2	hits=0 sixes=0
+2026-10-22T03:43:47.370Z	HEART R6 Surge Heart (Rosa Rallied Hal again, no Strikes)	1d6	2	hits=0 sixes=0
+2026-10-22T03:43:54.387Z	HEART R7 Surge Heart (Rosa Rallied Hal again, no Strikes)	1d6	2	hits=0 sixes=0
+2026-10-22T03:47:14.036Z	D1 pick clash Medic: player A	1d6	2	hits=0 sixes=0
+2026-10-22T03:47:14.038Z	D1 pick clash Medic: player B	1d6	1	hits=0 sixes=0
+2026-10-22T03:47:14.038Z	D1 random late fighter element (reroll 6)	1d6	3	hits=0 sixes=0
+2026-10-22T03:47:14.038Z	D1 random late fighter style	1d6	3	hits=0 sixes=0
+2026-10-22T03:47:14.038Z	D1 random late fighter perk	1d6	1	hits=0 sixes=0
+2026-10-22T03:47:14.038Z	D1 random late fighter Awakening	1d6	3	hits=0 sixes=0
+2026-10-22T03:47:22.752Z	D1 random late fighter style reroll (Sweeper taken)	1d6	3	hits=0 sixes=0
+2026-10-22T03:47:26.378Z	D1 random late fighter style reroll 2	1d6	4	hits=0 sixes=0
+2026-10-22T03:47:30.033Z	D1 random late fighter style reroll 3	1d6	4	hits=0 sixes=0
+2026-10-22T03:47:33.861Z	D1 random late fighter style reroll 4	1d6	5	hits=1 sixes=0
+2026-10-22T03:47:37.494Z	D1 random late fighter style reroll 5	1d6	1	hits=0 sixes=0
+2026-10-22T03:47:50.648Z	D2 late joiner Jo (Earth Brawler) R1 Strike Lock-Keeper Water Shell (Chi die, fed)	6d6	3 1 3 3 4 1	hits=0 sixes=0
+2026-10-22T03:48:01.130Z	D3 Wellspring setup R2 Nadia V2 Strike Warden Guard 2 (no Chi)	5d6	4 2 1 1 4	hits=0 sixes=0
+2026-10-22T03:48:06.495Z	D3 R2 Jo Awakens Wellspring then Strike Warden Guard 2 (fed, Brawler)	5d6	1 6 5 2 4	hits=2 sixes=1
+2026-10-22T03:48:06.496Z	D3 R2 Surge Warden	1d6	6	hits=1 sixes=1
+2026-10-22T03:48:16.462Z	D4 Medic: last Strike on Warden at 3 T (Jun, Earth Brawler, fed)	5d6	2 4 5 3 6	hits=2 sixes=1
+2026-10-22T03:48:26.395Z	D5 all Down at Anchor: last standing fighter V2 Strike Warden Guard 2 (no Chi)	5d6	4 1 3 1 2	hits=0 sixes=0
+2026-10-22T03:48:34.929Z	D6 all Down in First Clash: last fighter V1 Strike pack of 4 Stills (no Chi)	5d6	6 3 5 2 6	hits=3 sixes=2
+2026-10-22T03:48:44.730Z	D7 Heart R7 last fighter V3 Strike Heart at 30 of 70 (no Chi)	5d6	3 6 4 2 1	hits=1 sixes=1
+2026-10-22T03:48:49.774Z	D7 Heart R7 Surge (Hard)	1d6	3	hits=0 sixes=0
+2026-10-22T03:49:00.144Z	D8 cap: Kit Quick Strike Warden (Quick die + Chi die; two Helps offered, refused)	7d6	4 6 2 3 1 1 3	hits=1 sixes=1
+2026-10-22T03:49:00.145Z	D9 Chi cap: Ade C5 Counter Strike Warden Guard 2 (no Chi)	5d6	1 1 3 6 5	hits=2 sixes=1
+2026-10-22T03:49:05.694Z	D9 Chi cap: Ade C5 Counter Strike Warden Guard 3 next round (no Chi)	5d6	4 5 4 2 2	hits=1 sixes=0
+2026-10-22T03:49:18.504Z	D11 Seal: holder given the Swarm, goes Down, Heart Surges (Hard)	1d6	5	hits=1 sixes=0
+2026-10-22T03:49:27.035Z	D12 Call cap: Warden Surge, pack 16 T (6 Stills), 5 fighters	1d6	6	hits=1 sixes=1
+2026-10-22T03:49:27.036Z	D12 Call cap: next round Surge, pack 21 T (7 Stills)	1d6	6	hits=1 sixes=1
+2026-10-22T03:49:27.036Z	D12 Call with no pack left: Surge	1d6	6	hits=1 sixes=1
+2026-10-22T03:49:40.018Z	D13 round 7 at Anchor: last Strike on Warden at 6 T (no Chi, fed)	5d6	4 5 4 4 4	hits=1 sixes=0
+2026-10-22T03:49:40.019Z	D14 Hour 4 round 4: last Strike on Warden at 8 T (no Chi, fed)	5d6	3 2 2 2 3	hits=0 sixes=0
+2026-10-22T03:49:52.667Z	D13 round 7 Surge Warden	1d6	6	hits=1 sixes=1
+2026-10-22T03:49:52.668Z	D15a Kit (Metal) Strike Wood Shell Warden, Guard 2 for him (no Chi)	5d6	1 4 2 4 4	hits=0 sixes=0
+2026-10-22T03:49:52.668Z	D15b Rosa (Fire) Strike Earth Shell Warden at 25 T, Guard 3 (Blaze, Chi die, fed)	6d6	6 2 5 2 5 1	hits=3 sixes=1
+2026-10-22T03:49:59.173Z	D15a attempt 2 Kit (Metal) Strike Wood Shell Warden, Guard 2 (no Chi)	5d6	3 3 4 3 3	hits=0 sixes=0
+2026-10-22T03:49:59.174Z	D15b attempt 2 Nadia (Water) Strike Earth Shell Warden at 24 T, Guard 3 (no Chi, fed)	5d6	4 2 5 2 4	hits=1 sixes=0
+2026-10-22T03:50:04.470Z	D15a attempt 3 Kit (Metal) Strike Wood Shell Warden, Guard 2 (Chi die)	6d6	3 4 5 2 4 5	hits=2 sixes=0
+2026-10-22T03:50:12.452Z	D16 Nadia (Sweeper) Strike last Still (2 T), Warden on 1 T (no Chi)	5d6	1 2 3 6 6	hits=2 sixes=2
+2026-10-22T03:50:35.144Z	D17 Counter at Heart 1 T: Ade V1 last fighter Strike Heart (no Chi)	5d6	3 5 3 6 5	hits=3 sixes=1
+2026-10-22T03:50:42.215Z	D20 4F Heart Quick Dani free Strike pack (Quick die, Chi die)	7d6	4 4 6 4 3 4 2	hits=1 sixes=1
+2026-10-22T03:50:50.583Z	D20 4F R1 Jun (Tempest awakened) action 1 Strike Heart (fed, Brawler)	5d6	4 3 4 6 1	hits=1 sixes=1
+2026-10-22T03:50:54.726Z	D20 4F R1 Jun Lucky reroll 4	4d6	2 6 3 4	hits=1 sixes=1
+2026-10-22T03:51:02.197Z	D20 4F R1 Jun action 2 Strike Heart (Chi die, not fed, Brawler)	6d6	3 5 2 3 4 4	hits=1 sixes=0
+2026-10-22T03:51:02.198Z	D20 4F R1 Priya Strike Heart (Edge, Chi die, fed)	6d6	6 2 4 3 4 3	hits=1 sixes=1
+2026-10-22T03:51:02.198Z	D20 4F R1 Sam (Unbreakable awakened) Strike Heart (Tide, fed)	5d6	6 3 2 6 4	hits=2 sixes=2
+2026-10-22T03:51:07.288Z	D20 4F R1 Sam Tide reroll 3	3d6	4 5 1	hits=1 sixes=0
+2026-10-22T03:51:13.229Z	D20 4F R1 Dani (Ascendant awakened) Strike Heart (fed, Sweeper)	5d6	5 1 5 4 2	hits=2 sixes=0
+2026-10-22T03:51:19.085Z	D20 4F R1 Surge Heart (Hard)	1d6	1	hits=0 sixes=0
+2026-10-22T03:51:28.439Z	D20 4F R2 Jun action 1 Strike Heart (fed, Brawler)	5d6	5 3 4 6 2	hits=2 sixes=1
+2026-10-22T03:51:28.440Z	D20 4F R2 Jun action 2 Strike pack (not fed, Brawler)	5d6	3 6 2 3 4	hits=1 sixes=1
+2026-10-22T03:51:28.440Z	D20 4F R2 Priya Strike Heart (Edge, Chi die, fed)	6d6	1 3 5 2 4 5	hits=2 sixes=0
+2026-10-22T03:51:28.440Z	D20 4F R2 Sam Strike Heart (Tide, Chi die, fed)	6d6	3 1 3 6 5 6	hits=3 sixes=2
+2026-10-22T03:51:34.978Z	D20 4F R2 Sam Tide reroll 3	3d6	2 2 5	hits=1 sixes=0
+2026-10-22T03:51:39.822Z	D20 4F R2 Dani Strike Heart (Ascendant, Help Priya, fed)	6d6	5 5 4 4 1 1	hits=2 sixes=0
+2026-10-22T03:51:44.760Z	D20 4F R2 Surge Heart (Hard)	1d6	3	hits=0 sixes=0
+2026-10-22T03:51:53.283Z	D20 4F R3 Jun action 1 Strike Heart (fed, Brawler)	5d6	2 3 6 3 4	hits=1 sixes=1
+2026-10-22T03:51:53.284Z	D20 4F R3 Jun action 2 Strike Heart (not fed, Brawler)	5d6	4 6 1 2 2	hits=1 sixes=1
+2026-10-22T03:51:53.285Z	D20 4F R3 Priya Strike Heart (no Chi, fed)	5d6	2 6 4 1 5	hits=2 sixes=1
+2026-10-22T03:51:58.091Z	D20 4F R3 Sam Strike Heart (Tide, Chi die, fed)	6d6	1 1 3 2 4 5	hits=1 sixes=0
+2026-10-22T03:52:04.125Z	D20 4F R3 Sam Tide reroll 3	3d6	1 3 3	hits=0 sixes=0
+2026-10-22T03:52:09.358Z	D20 4F R3 Dani Strike Heart (Ascendant, Help Sam, fed)	6d6	3 5 1 3 1 4	hits=1 sixes=0
+2026-10-22T03:52:15.923Z	D20 4F R3 Surge Heart (Hard)	1d6	2	hits=0 sixes=0
+2026-10-22T03:52:25.510Z	D20 4F R4 Jun Strike Heart (fed, Brawler)	5d6	5 3 6 1 3	hits=2 sixes=1
+2026-10-22T03:52:25.512Z	D20 4F R4 Priya Strike Heart (no Chi, fed)	5d6	1 5 6 4 3	hits=2 sixes=1
+2026-10-22T03:53:24.595Z	D19 dawn above half: R7 fighter A Strike Heart at 42 of 70 (Chi die, fed)	6d6	1 5 2 6 3 2	hits=2 sixes=1
+2026-10-22T03:53:24.596Z	D19 dawn above half: R7 fighter B Strike Heart (no Chi, fed)	5d6	5 3 4 6 4	hits=2 sixes=1
+2026-10-22T03:53:24.597Z	D21 Guardian in a Sweep: Heart Surge, Rosa V3 and Hal V2 (just Rallied) standing	1d6	3	hits=0 sixes=0
+2026-10-22T03:53:24.597Z	D22 Bulwark one at a time: Jun (Tempest) action 1 Bulwark on Sam, Strike Heart	5d6	5 3 3 3 3	hits=1 sixes=0
+2026-10-22T03:53:24.597Z	D22 Bulwark one at a time: Jun action 2 Bulwark on Sam again, Strike Heart	5d6	6 6 6 4 5	hits=4 sixes=3

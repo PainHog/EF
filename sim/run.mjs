@@ -30,6 +30,7 @@ const POLICY_SWEEP = [
   ["Rest below 80% Vigor", { restBelow: 0.8 }],
   ["Always strike the Warden or Heart, never the pack", { packFirstAt: 99 }],
   ["Never withdraw", { withdrawDownShare: 2 }],
+  ["Give every Swarm to whoever has the most Vigor", { swarmTarget: "vigor" }],
 ];
 const SIZES = [3, 4, 5];
 

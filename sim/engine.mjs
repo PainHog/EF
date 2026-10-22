@@ -434,9 +434,14 @@ function harm(ctx, f, amount, { sweep = false } = {}) {
 function swarm(ctx, pack) {
   const live = alive(ctx.F);
   if (!live.length) return;
-  // Policy: an awake Unbreakable fighter takes it; else whoever has the most Vigor.
-  const ub = live.find(f => f.awake && f.has("awakening", "unbreakable"));
+  // Policy: an awake Unbreakable fighter takes it; with swarmTarget "smart", then a Flow
+  // fighter who can take it standing, then a fighter holding a Bulwark; else the most Vigor.
   const amt = Math.ceil(pack.stills / ctx.R.stills.swarmPer);
+  let ub = live.find(f => f.awake && f.has("awakening", "unbreakable"));
+  if (!ub && ctx.P.swarmTarget === "smart") {
+    ub = live.find(f => f.has("style", "flow") && f.vigor > amt - ctx.R.flowReduce)
+      ?? live.find(f => ctx.rs.earth && ctx.rs.earth.has(f) && f.vigor > amt - ctx.R.earthReduce);
+  }
   if (!ctx.R.swarmSpread) { harm(ctx, ub ?? live.slice().sort((a, b) => b.vigor - a.vigor)[0], amt); return; }
   for (let k = 0; k < amt; k++) { // one blow per point, each to whoever has the most Vigor
     const now = alive(ctx.F);

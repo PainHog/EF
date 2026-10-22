@@ -127,3 +127,34 @@
 2026-10-22T03:43:35.117Z	N2 H4 Night market R2 Sam Tide reroll 3 misses	3d6	5 4 2	hits=1 sixes=0
 2026-10-22T03:43:39.169Z	N2 H4 Night market R2 Tariq strikes Cook (Blaze, Chi die, fed)	6d6	6 5 3 6 1 2	hits=3 sixes=2
 2026-10-22T03:43:44.699Z	N2 H4 Night market R2 Grace strikes Cook (Chi die, fed)	6d6	4 1 1 3 4 3	hits=0 sixes=0
+2026-10-22T03:43:49.185Z	N2 H4 Night market R2 Cook Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:43:55.095Z	N2 H4 Night market R3 Sam strikes Cook (Tide, Chi die, fed)	6d6	5 1 5 1 2 4	hits=2 sixes=0
+2026-10-22T03:43:59.590Z	N2 H4 Night market R3 Sam Tide reroll 3 misses	3d6	6 3 4	hits=1 sixes=1
+2026-10-22T03:44:05.609Z	N2 H4 Night market R3 Tariq strikes Cook (Blaze, Chi die, fed)	6d6	3 6 3 6 1 5	hits=3 sixes=2
+2026-10-22T03:44:19.539Z	N2 Heart R1 Tariq (Awakened Ascendant) strikes Heart (Blaze, Chi die)	6d6	6 3 4 4 2 2	hits=1 sixes=1
+2026-10-22T03:44:26.728Z	N2 Heart R1 Grace strikes pack (Bulwark on Tariq, fed)	5d6	5 6 2 2 2	hits=2 sixes=1
+2026-10-22T03:44:31.834Z	N2 Heart R1 Sam (Awakened Unbreakable) strikes Heart (fed)	5d6	4 5 3 3 3	hits=1 sixes=0
+2026-10-22T03:44:36.508Z	N2 Heart R1 Heart Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:44:43.291Z	N2 Heart R2 Tariq (Ascendant) strikes Heart (fed, Help from Sam)	6d6	5 3 6 4 1 1	hits=2 sixes=1
+2026-10-22T03:44:48.375Z	N2 Heart R2 Grace strikes pack (fed)	5d6	6 3 4 5 6	hits=3 sixes=2
+2026-10-22T03:44:52.999Z	N2 Heart R2 Sam (Unbreakable) strikes Heart (fed)	5d6	1 4 4 4 1	hits=0 sixes=0
+2026-10-22T03:44:57.435Z	N2 Heart R2 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:45:03.237Z	N2 Heart R3 Tariq (Ascendant) strikes Heart (fed, Help from Sam)	6d6	2 5 3 6 6 3	hits=3 sixes=2
+2026-10-22T03:45:11.846Z	N2 Heart R3 Grace (Awakened Wellspring) strikes Heart (fed)	5d6	5 6 4 2 1	hits=2 sixes=1
+2026-10-22T03:45:15.989Z	N2 Heart R3 Sam (Unbreakable) strikes Heart (Tide, fed)	5d6	1 4 3 1 2	hits=0 sixes=0
+2026-10-22T03:45:22.235Z	N2 Heart R3 Sam Tide reroll 3 misses	3d6	5 5 2	hits=2 sixes=0
+2026-10-22T03:45:26.486Z	N2 Heart R3 Heart Surge	1d6	3	hits=0 sixes=0
+2026-10-22T03:45:32.024Z	N2 Heart R4 Tariq strikes Heart (Blaze, fed)	5d6	2 3 2 1 6	hits=1 sixes=1
+2026-10-22T03:45:36.604Z	N2 Heart R4 Grace (Wellspring) strikes Heart (fed)	5d6	2 3 1 2 2	hits=0 sixes=0
+2026-10-22T03:45:42.671Z	N2 Heart R4 Sam strikes Heart (fed)	5d6	6 3 4 1 3	hits=1 sixes=1
+2026-10-22T03:45:47.058Z	N2 Heart R4 Heart Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:45:53.246Z	N2 Heart R5 Tariq strikes Heart (fed, Help from Sam)	6d6	6 4 2 6 4 1	hits=2 sixes=2
+2026-10-22T03:45:57.692Z	N2 Heart R5 Grace (Wellspring) strikes Heart (fed)	5d6	6 4 3 4 4	hits=1 sixes=1
+2026-10-22T03:46:01.947Z	N2 Heart R5 Sam strikes Heart (fed)	5d6	5 6 6 6 5	hits=5 sixes=3
+2026-10-22T03:46:06.344Z	N2 Heart R5 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:46:12.918Z	N2 Heart R6 Tariq strikes Heart (Blaze, fed, Help from Sam and Grace)	7d6	4 4 1 4 3 1 2	hits=0 sixes=0
+2026-10-22T03:46:17.334Z	N2 Heart R6 Grace strikes Heart (fed)	5d6	1 2 6 2 6	hits=2 sixes=2
+2026-10-22T03:46:23.686Z	N2 Heart R6 Sam strikes Heart (Tide, fed, Help from Grace)	6d6	5 4 2 4 2 6	hits=2 sixes=1
+2026-10-22T03:46:28.338Z	N2 Heart R6 Sam Tide reroll 3 misses	3d6	2 4 1	hits=0 sixes=0
+2026-10-22T03:46:33.553Z	N2 Heart R6 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:46:38.515Z	N2 Heart R7 Tariq strikes Heart (Blaze, fed)	5d6	6 4 3 5 2	hits=2 sixes=1
