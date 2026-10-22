@@ -4,7 +4,7 @@ name: Release
 # or manually via "Run workflow" (workflow_dispatch) with a version input.
 # Release only when the author says so.
 # The manifest URL for Foundry becomes:
-#   https://github.com/PainHog/ElementalFighters/releases/latest/download/system.json
+#   https://github.com/PainHog/EF/releases/latest/download/system.json
 
 on:
   push:
