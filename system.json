@@ -11,7 +11,7 @@
   "authors": [
     {
       "name": "Richard Moore",
-      "url": "https://github.com/PainHog/ElementalFighters"
+      "url": "https://github.com/PainHog/EF"
     }
   ],
   "esmodules": [
@@ -29,10 +29,10 @@
   ],
   "packs": [],
   "socket": true,
-  "url": "https://github.com/PainHog/ElementalFighters",
-  "bugs": "https://github.com/PainHog/ElementalFighters/issues",
-  "manifest": "https://github.com/PainHog/ElementalFighters/releases/latest/download/system.json",
-  "download": "https://github.com/PainHog/ElementalFighters/releases/latest/download/system.zip",
+  "url": "https://github.com/PainHog/EF",
+  "bugs": "https://github.com/PainHog/EF/issues",
+  "manifest": "https://github.com/PainHog/EF/releases/latest/download/system.json",
+  "download": "https://github.com/PainHog/EF/releases/latest/download/system.zip",
   "license": "LICENSE",
   "readme": "README.md"
 }

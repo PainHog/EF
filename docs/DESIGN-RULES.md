@@ -136,12 +136,12 @@ The **core ideas were never the problem**: the dice, the main loop and the fun h
   - a printer-friendly white version;
   - for print-on-demand: 0.125 in bleed, a cover spread with spine, all fonts embedded and credited, no Type 3 fonts.
 - [ ] Credits and rights:
-  - the credits page ("Game design & writing: Richard Moore"), plus maps, art and font credits;
+  - credits of "Created by Richard Moore" and "Game design & writing: Richard Moore", plus fonts, maps and art sources, and never a credit or mention of the tools used to make the game (Richard, 2026-10-21);
   - an image source log;
   - name and logo trademark search (e.g. "Nine Lives" against the 9Lives cat-food brand);
   - no famous-character echoes;
   - a public-domain notice if stand-ins are used;
-  - any online companion named and linked.
+  - any online companion named and linked to domoorestudio.com, never to where the code is kept.
 
 ## What worked, and should be reused
 - **The core mechanics:**
