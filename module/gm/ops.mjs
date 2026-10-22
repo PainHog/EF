@@ -257,10 +257,10 @@ async function startFight({ kind, anchor = null }) {
 }
 
 async function strike(data) {
-  const night = getNight();
-  const fight = requireFight(night);
   const a = actor(data.fighterId);
   assertOwner(data.userId, a);
+  const night = getNight();
+  const fight = requireFight(night);
   const f = rulesOf(a);
   const free = !!data.free;
   if (free) {
@@ -380,10 +380,10 @@ async function afterAction(night) {
 }
 
 async function rally({ userId, fighterId, targetId }) {
-  const night = getNight();
-  const fight = requireFight(night);
   const a = actor(fighterId);
   assertOwner(userId, a);
+  const night = getNight();
+  const fight = requireFight(night);
   const why = cantAct(fight, a);
   if (why) throw new OpError(why);
   if (a.system.awakened.active && a.system.awakening === "seal") throw new OpError("Holding the Seal is your action while it lasts: you can't Rally.");
@@ -398,10 +398,10 @@ async function rally({ userId, fighterId, targetId }) {
 }
 
 async function awaken({ userId, fighterId }) {
-  const night = getNight();
-  const fight = requireFight(night);
   const a = actor(fighterId);
   assertOwner(userId, a);
+  const night = getNight();
+  const fight = requireFight(night);
   if (!fight.fighterIds.includes(a.id)) throw new OpError(`${a.name} isn't in this fight.`);
   if ((fight.actions[a.id] ?? 0) > 0) throw new OpError("You Awaken at the start of your turn, before you act.");
   if (!L.canAwaken(rulesOf(a), { firstDownTonight: night.firstDown, fightKind: fight.kind })) {
@@ -416,10 +416,10 @@ async function awaken({ userId, fighterId }) {
 }
 
 async function holdSeal({ userId, fighterId }) {
-  const night = getNight();
-  const fight = requireFight(night);
   const a = actor(fighterId);
   assertOwner(userId, a);
+  const night = getNight();
+  const fight = requireFight(night);
   if (!(a.system.awakened.active && a.system.awakening === "seal")) throw new OpError(`${a.name} isn't holding a Seal.`);
   const why = cantAct(fight, a);
   if (why) throw new OpError(why);
