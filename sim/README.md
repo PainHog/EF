@@ -17,7 +17,7 @@ Same seed → same report. Each night draws its group and its dice from separate
 |---|---|
 | `rng.mjs` | Seeded RNG (mulberry32 + FNV-1a stream derivation) |
 | `data.mjs` | Option names, the two Wu Xing cycles, the ready-made fighters |
-| `params.mjs` | **Every number in the rules** (`RULES`, section-referenced), the Night card (`DIFFICULTY`), the player habits (`POLICY`) |
+| `params.mjs` | **Every number in the rules** (`RULES`, section-referenced), the Difficulty table (`DIFFICULTY`), the player habits (`POLICY`) |
 | `party.mjs` | Random legal groups (CORE-RULES §2) and a validator |
 | `engine.mjs` | Plays one night: First Clash, the Hunt, the Heart. Comments cite the CORE-RULES section |
 | `targets.mjs` | The balance targets the report checks against |
@@ -34,15 +34,17 @@ Same seed → same report. Each night draws its group and its dice from separate
   - at the Heart, keep 3 Chi until you have Awakened;
   - take a Respite below 70% of the group's Vigor;
   - withdraw when half the group is Down and the Warden is above half;
-  - pick Anchors whose Shell the group can break.
-- **Report §6 changes one habit at a time**, so you can see how much table play matters. For example, ignoring the Stills drops Standard from 75% to 55%.
+  - pick Anchors whose Shell the group can shatter;
+  - a Guardian takes another fighter's loss of 2 or more, or one that would put them Down (`guardFrom`), and only while its own Vigor is higher than the loss;
+  - Swarms and Crushes never go to a Down fighter (the book's rule since D37).
+- **Report §6 changes one habit at a time**, so you can see how much table play matters. For example, ignoring the Stills drops Standard from 72% to 51%.
 
 ## How the numbers were set
 1. **Size first.** Starting Vigor by group size (10 / 7 / 6) and the feeding ring that skips missing elements put 3, 4 and 5 fighters level (rule A21).
-2. **Then difficulty.** The Night card changes only the Heart's Crush and Sweep (rules A19, A20).
+2. **Then difficulty.** The Difficulty table changes only the Heart's Crush and Sweep (rules A19, A20).
 3. **Then options.** Each option was measured against a blank copy of itself (the same groups and dice with its effect switched off) and adjusted until every option in a pick was worth about the same. The report's §5 shows both the comparison and the blank test.
 4. **Then habits.** Report §6 found two traps the rules had to fix:
-   - **Ignoring the Stills was best,** so the Warden and Heart now feed on standing Stills.
+   - **Ignoring the Stills was best,** so the Warden and Heart now draw on standing Stills.
    - **Resting was always best,** so breaking Anchors is now worth more.
 
    The best habit now sits in the middle, and labels are calibrated to sensible play.

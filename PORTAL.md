@@ -1,6 +1,6 @@
-Now: Computer playtests of the rulebook with real dice, and building the online version
-Next: Fix what the playtests turn up, then finish and test the online version
-Number: Design decisions made = 36
+Now: Version 0.1 is reviewed and fixed: the rulebook, the printable sheets and the online version
+Next: Richard reads it through, a second round of playtests, and a try of the online version in Foundry VTT
+Number: Design decisions made = 40
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
 Number: Rulebook chapters written = 9
@@ -32,10 +32,11 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] The first one-night adventure
 - [x] Cover and book art
 - [x] Rulebook layout, for screen and for print
-- [ ] Computer playtests by the book, and the fixes they turn up
+- [x] Computer playtests by the book, and the fixes they turn up
+- [ ] A second round of computer playtests on the fixed rulebook
 - [ ] A playtest at a real table
 
 ## Online version
 
 - [x] Decide when to build the online version for Foundry VTT
-- [ ] The online version for Foundry VTT
+- [ ] The online version for Foundry VTT (built and tested; still to try in Foundry itself)

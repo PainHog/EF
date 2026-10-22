@@ -190,7 +190,7 @@ function fight(ctx, kind, setup) {
     if (done()) return out("win", heartFrac(elite));
     if (F.every(x => x.down)) { rec.wipes++; return out(kind === "heart" ? "wipe" : "wiped", heartFrac(elite)); }
 
-    // §4 (test): the Warden or Heart feeds on its standing Stills.
+    // §4 (test): the Warden or Heart draws on its standing Stills.
     if (R.feedOnStills) {
       const p = packOf(enemies);
       if (p && elite && elite.tough > 0) elite.tough = Math.min(elite.toughMax, elite.tough + p.stills * R.feedOnStills);
@@ -405,9 +405,9 @@ function harm(ctx, f, amount, { sweep = false } = {}) {
   let target = f;
   // §2 Guardian: once per round, take another fighter's loss instead (policy: when it would put them Down, or it's at least P.guardFrom).
   const gd = F.find(o => o !== f && !o.down && o.has("style", "guardian"));
+  let guarded = false;
   if (gd && !ctx.rs.guardianUsed && (f.vigor <= amount || amount >= ctx.P.guardFrom) && gd.vigor > amount) {
-    ctx.rs.guardianUsed = true; target = gd; rec.guardianSaves++;
-    if (amount >= R.guardianMinLoss) gainChi(ctx, gd, R.guardianChi); // §2 Guardian: 2 Chi for a loss of 2 or more
+    ctx.rs.guardianUsed = true; target = gd; rec.guardianSaves++; guarded = true;
   }
   if (ctx.rs.earth && ctx.rs.earth.has(target)) { amount -= R.earthReduce; ctx.rs.earth.delete(target); } // §2 Bulwark takes one blow
   if (target === f && f.has("style", "flow") && !sweep) amount -= R.flowReduce;                            // §2 Flow
@@ -415,15 +415,19 @@ function harm(ctx, f, amount, { sweep = false } = {}) {
   amount = Math.max(0, amount);
   if (!amount) return;
   target.vigor -= amount;
+  // §2 Guardian: 2 Chi when the Guardian actually loses 2 or more this way, unless it puts them Down.
+  const guardChi = () => { if (guarded && amount >= R.guardianMinLoss) gainChi(ctx, target, R.guardianChi); };
   if (target.vigor <= 0) {
     if (target.has("perk", "stubborn") && !target.stubbornUsed) { // §2 Stubborn
-      target.stubbornUsed = true; target.vigor = R.stubbornVigor; rec.stubbornSaves++; return;
+      target.stubbornUsed = true; target.vigor = R.stubbornVigor; rec.stubbornSaves++; guardChi(); return;
     }
     target.vigor = 0; target.down = true; target.st.downs++; rec.downs++;
     target.st.chiLostDown += target.chi; target.chi = 0; // §5: a Down fighter loses all Chi
     target.awake = false;                                 // §7: an Awakening ends when you go Down
     ctx.unlocked = true;                                  // §7: the first fighter Down lets everyone Awaken
+    return;
   }
+  guardChi();
 }
 
 /** §4 Swarm: a pack deals Harm equal to half its Stills (round up) to one fighter of the players' choice. */

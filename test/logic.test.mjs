@@ -94,6 +94,7 @@ test("Ch 2: Tide and Lucky reroll only dice that aren't hits", () => {
 test("Ch 3: protections in order, then Stubborn; Down loses all Chi", () => {
   const flow = fighter({ style: "flow", vigor: 5, chi: 3 });
   assert.equal(L.loseVigor(flow, 3, { bulwark: true }).loss, 0, "Bulwark −3 takes it all");
+  assert.equal(L.loseVigor(fighter({ style: "guardian", vigor: 1 }), 3).afterProtections, 3, "what the protections leave, before Vigor runs out");
   assert.equal(L.loseVigor(flow, 2).loss, 1, "Flow −1");
   assert.equal(L.loseVigor(flow, 2, { source: "sweep" }).loss, 2, "Flow doesn't work against a Sweep");
   const unb = fighter({ awakening: "unbreakable", awakened: { active: true, roundsLeft: 2, used: true }, style: "brawler" });

@@ -100,7 +100,7 @@ async function applyLoss(night, victimId, amount, source) {
     for (const g of L.guardiansFor(victimId, all, fight.guardianUsed)) {
       const yes = await Dialog().confirm({
         window: { title: "Guardian" },
-        content: `<p>${esc(g.name)} (Guardian) may lose ${amount} Vigor instead of ${esc(victim.name)}${amount >= EF.rules.guardianMinLoss ? ", and gain 2 Chi" : ""}. Take it?</p>`
+        content: `<p>${esc(g.name)} (Guardian) may lose ${amount} Vigor instead of ${esc(victim.name)}${amount >= EF.rules.guardianMinLoss ? " (and gain 2 Chi if they lose 2 or more)" : ""}. Take it?</p>`
       });
       if (yes) { guardian = actor(g.id); fight.guardianUsed.push(g.id); break; }
     }
@@ -111,7 +111,8 @@ async function applyLoss(night, victimId, amount, source) {
   const upd = { "system.vigor.value": res.vigor, "system.chi": res.chi };
   if (res.stubbornUsed) upd["system.stubbornUsed"] = true;
   if (res.awakeningEnds) Object.assign(upd, { "system.awakened.active": false, "system.awakened.roundsLeft": 0 });
-  if (guardian && !res.down && amount >= EF.rules.guardianMinLoss) upd["system.chi"] = L.gainChi(res.chi, EF.rules.guardianChi);
+  // Ch 2 Guardian: 2 Chi when the Guardian actually loses 2 or more this way, unless it puts them Down.
+  if (guardian && !res.down && res.afterProtections >= EF.rules.guardianMinLoss) upd["system.chi"] = L.gainChi(res.chi, EF.rules.guardianChi);
   await who.update(upd);
   if (res.wentDown) night.firstDown = true;
   return { id: who.id, name: who.name, guardian: !!guardian, for: guardian ? victim.name : null, ...res };

@@ -166,7 +166,8 @@ export function guardiansFor(victimId, fighters, usedThisRound = []) {
 /**
  * Ch 3 "Vigor and going Down": the protections after Guardian, in order:
  * Bulwark (3 less, once, this round), Flow (1 less, not from a Sweep), then
- * Unbreakable (no loss). Then Stubborn (Ch 2): the first time in a fight you
+ * Unbreakable (no loss); `afterProtections` is what is left (Guardian's Chi needs
+ * 2 or more of it). Then Stubborn (Ch 2): the first time in a fight you
  * would go Down, stay up with 2 Vigor. At 0 you are Down: all Chi lost, any
  * Awakening ends. Harm past 0 is lost.
  * @param {object} f   the fighter losing Vigor
@@ -187,7 +188,7 @@ export function loseVigor(f, amount, { source = "", bulwark = false } = {}) {
   }
   const down = vigor === 0;
   return {
-    loss: Math.min(loss, f.vigor), vigor, down, wentDown: down && !f.down,
+    loss: Math.min(loss, f.vigor), afterProtections: loss, vigor, down, wentDown: down && !f.down,
     chi: down ? 0 : f.chi, awakeningEnds: down && !!f.awakened?.active, bulwarkUsed, stubbornUsed, steps
   };
 }

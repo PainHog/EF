@@ -2,7 +2,7 @@
 
 A tabletop roleplaying game by **Richard Moore**. On one night, ordinary people awaken to the five elements, choose how they fight, and stand together against the Unmade before dawn. It's a one-shot game for 3–5 players and a Storyteller.
 
-**Status:** version 0.1. Richard approved the core rules on 2026-10-22; the rulebook (`book/`) is written, illustrated and laid out, and is now the rules (`docs/CORE-RULES.md` is its one-page summary). The online version for Foundry VTT is built and tested. The review of version 0.1 (an independent rules review and two playtests with real dice, `review/v0.1/`) is under way. `docs/DESIGN.md` has every decision and why; `sim/REPORT.md` has the balance numbers.
+**Status:** version 0.1. Richard approved the core rules on 2026-10-22; the rulebook (`book/`) is written, illustrated and laid out, and is now the rules (`docs/CORE-RULES.md` is its one-page summary). The online version for Foundry VTT is built and tested. Version 0.1 has been reviewed (an independent rules review and two playtests with real dice) and fixed: see `review/v0.1/REVIEW.md`. `docs/DESIGN.md` has every decision and why; `sim/REPORT.md` has the balance numbers.
 
 ## What's in here
 | Folder | What it is |

@@ -20,7 +20,7 @@
     </dl>
     <dl class="traits">
       <dt>One target</dt><dd>A pack is fought as one enemy. Damage carries over from one Still to the next; a pack with 4 Toughness left has two Stills standing.</dd>
-      <dt>Swarm</dt><dd>At the end of each round, the pack deals Harm equal to <strong>half its Stills</strong> (rounded up), as one blow, to one fighter of the players’ choice.</dd>
+      <dt>Swarm</dt><dd>At the end of each round, the pack deals Harm equal to <strong>half its Stills</strong> (rounded up), as one blow, to one fighter who isn’t Down, of the players’ choice.</dd>
       <dt>Crumble</dt><dd>When their Warden or the Heart falls, its Stills crumble.</dd>
     </dl>
   </article>
@@ -37,13 +37,13 @@
       <div><dt>Sweep</dt><dd>1</dd></div>
     </dl>
     <dl class="traits">
-      <dt>Shell</dt><dd>+1 Guard (Guard 3) until it shatters. The element that <strong>breaks</strong> the Shell ignores it, and that element’s first hit shatters it. It also shatters once the Warden is at <strong>half its Toughness</strong> or less.</dd>
-      <dt>Feeds on its Stills</dt><dd>At the end of each round, before anything else acts, it regains <strong>1 Toughness for each of its Stills</strong> still standing, never above its starting Toughness.</dd>
+      <dt>Shell</dt><dd>+1 Guard (Guard 3) until it shatters. The element that <strong>shatters</strong> the Shell ignores it, and that element’s first hit shatters it. It also shatters once the Warden is at <strong>half its Toughness</strong> or less. A shattered Shell stays shattered.</dd>
+      <dt>Draws on its Stills</dt><dd>At the end of each round, before anything else acts, it regains <strong>1 Toughness for each of its Stills</strong> still standing, never above its starting Toughness.</dd>
       <dt>Surge</dt><dd>At the end of each round, after the Swarm, roll on the Surge table.</dd>
     </dl>
   </article>
   <table class="tbl">
-    <thead><tr><th>Shell</th><th>Broken by</th><th>The Warden might be made of…</th></tr></thead>
+    <thead><tr><th>Shell</th><th>Shattered by</th><th>The Warden might be made of…</th></tr></thead>
     <tbody>
       <tr><td><strong>Wood</strong></td><td>Metal</td><td>old trees, a park, timber, paper</td></tr>
       <tr><td><strong>Fire</strong></td><td>Water</td><td>a furnace, neon, a power station</td></tr>
@@ -54,18 +54,18 @@
   </table>
 
   <h3>The Heart</h3>
-  <p>The <strong>Heart</strong> is where the Unmade gathers itself: a hole in the city’s motion. Around it clocks stop, smoke hangs in the air like glass, and sound arrives late or not at all. It has no element, so no Shell; but every Anchor still standing feeds it.</p>
+  <p>The <strong>Heart</strong> is where the Unmade gathers itself: a hole in the city’s motion. Around it clocks stop, smoke hangs in the air like glass, and sound arrives late or not at all. It has no element, so no Shell; but every Anchor still standing makes it stronger.</p>
   <article class="statblock" id="sb-heart">
     <h3>The Heart</h3>
     <dl class="stats">
       <div><dt>Guard</dt><dd>2</dd></div>
       <div><dt>Harm</dt><dd>2</dd></div>
-      <div><dt>Toughness</dt><dd>see the Night card</dd></div>
-      <div><dt>Crush / Sweep</dt><dd>see the Night card</dd></div>
+      <div><dt>Toughness</dt><dd>see the Difficulty table</dd></div>
+      <div><dt>Crush / Sweep</dt><dd>see the Difficulty table</dd></div>
     </dl>
     <dl class="traits">
       <dt>Toughness</dt><dd>(5 + 4 for each Anchor still standing) × the number of fighters. With five fighters, use 6 instead of 5. Fixed as the fight begins.</dd>
-      <dt>Feeds on its Stills</dt><dd>As a Warden.</dd>
+      <dt>Draws on its Stills</dt><dd>As a Warden.</dd>
       <dt>Surge</dt><dd>As a Warden, using the Heart’s column.</dd>
     </dl>
   </article>
@@ -75,21 +75,22 @@
   <table class="tbl">
     <thead><tr><th>d6</th><th>Surge</th><th>Warden</th><th>Heart</th></tr></thead>
     <tbody>
-      <tr><td class="num">1–2</td><td><strong>Crush</strong></td><td>3 Harm to the fighter who dealt it the most damage this round</td><td>the Night card’s Crush, to the same fighter</td></tr>
-      <tr><td class="num">3–4</td><td><strong>Sweep</strong></td><td>every fighter loses 1 Vigor</td><td>every fighter loses the Night card’s Sweep</td></tr>
+      <tr><td class="num">1–2</td><td><strong>Crush</strong></td><td>3 Harm to the fighter who dealt it the most damage this round</td><td>the Difficulty table’s Crush, to the same fighter</td></tr>
+      <tr><td class="num">3–4</td><td><strong>Sweep</strong></td><td>every fighter loses 1 Vigor</td><td>every fighter loses the Difficulty table’s Sweep</td></tr>
       <tr><td class="num">5</td><td><strong>Drain</strong></td><td>the fighter with the most Chi loses 2 Chi</td><td>every fighter loses 1 Chi</td></tr>
       <tr><td class="num">6</td><td><strong>Call</strong></td><td>2 more Stills join its pack (or form a new one), up to fighters + 2 Stills</td><td>the same</td></tr>
     </tbody>
   </table>
   <ul>
-    <li><strong>Crush when nobody damaged it this round:</strong> it hits the fighter with the most Vigor.</li>
+    <li><strong>Crush on a Down fighter:</strong> it goes to the standing fighter who dealt it the next most damage this round; if no standing fighter damaged it, to the fighter with the most Vigor.</li>
     <li><strong>Ties</strong>, for a Crush or a Drain: the fighter among them who acted last that round.</li>
-    <li><strong>A Drain that finds no Chi</strong> Crushes instead.</li>
+    <li><strong>A Drain that finds no Chi</strong> Crushes instead (the Heart’s, only when no fighter has any Chi).</li>
+    <li><strong>A Call with a full pack</strong> does nothing.</li>
     <li><strong>New Stills</strong> from a Call don’t Swarm until the next round.</li>
-    <li><strong>A Sealed</strong> Warden or Heart doesn’t Surge, but still feeds on its Stills, and its Stills still Swarm.</li>
+    <li><strong>A Sealed</strong> Warden or Heart doesn’t Surge, but still draws on its Stills, and its Stills still Swarm.</li>
   </ul>
 
-  <h3>The Night card</h3>
+  <h3>The Difficulty table</h3>
   <p>Pick a difficulty before the night begins. Use Easy for a first night or a young table, Standard for most nights, Hard for a group that wants to lose sometimes. Only the Heart changes:</p>
   <table class="tbl narrow">
     <thead><tr><th>The Heart’s</th><th class="num">Easy</th><th class="num">Standard</th><th class="num">Hard</th></tr></thead>
@@ -98,14 +99,14 @@
       <tr><td>Sweep</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
     </tbody>
   </table>
-  <p>The size of everything else depends on the number of fighters:</p>
+  <p>The size of everything else depends on the number of fighters (for starting Vigor, when the night begins; for the enemies, when each fight begins):</p>
   <table class="tbl narrow">
     <thead><tr><th>Fighters</th><th class="num">3</th><th class="num">4</th><th class="num">5</th></tr></thead>
     <tbody>
       <tr><td>Starting Vigor</td><td class="num">10</td><td class="num">7</td><td class="num">6</td></tr>
       <tr><td>Warden Toughness</td><td class="num">27</td><td class="num">36</td><td class="num">45</td></tr>
-      <tr><td>Heart Toughness, every Anchor broken</td><td class="num">15</td><td class="num">20</td><td class="num">30</td></tr>
-      <tr><td>…plus, per Anchor standing</td><td class="num">+12</td><td class="num">+16</td><td class="num">+20</td></tr>
+      <tr><td>Heart Toughness, one Anchor standing</td><td class="num">27</td><td class="num">36</td><td class="num">50</td></tr>
+      <tr><td>…plus, per other Anchor standing</td><td class="num">+12</td><td class="num">+16</td><td class="num">+20</td></tr>
       <tr><td>Stills: First Clash</td><td class="num">6</td><td class="num">8</td><td class="num">10</td></tr>
       <tr><td>Stills: an Anchor, the Heart</td><td class="num">3</td><td class="num">4</td><td class="num">5</td></tr>
       <tr><td>A Call fills a pack up to</td><td class="num">5</td><td class="num">6</td><td class="num">7</td></tr>
@@ -114,6 +115,6 @@
 
   <aside class="box designer">
     <h4>Designer’s Note: what the labels mean</h4>
-    <p>The labels come from simulated nights played strictly by these rules, with sensible habits and random groups of fighters. Out of every hundred nights, groups win about <strong>89</strong> on Easy, <strong>75</strong> on Standard and <strong>61</strong> on Hard, and lose outright about <strong>1</strong>, <strong>10</strong> and <strong>21</strong>; the rest end with the Unmade driven off at dawn. Three, four and five fighters do equally well. A group that ignores the Stills wins only about half its Standard nights.</p>
+    <p>The labels come from simulated nights played strictly by these rules, with sensible habits and random groups of fighters. Out of every hundred nights, groups win about <strong>88</strong> on Easy, <strong>72</strong> on Standard and <strong>58</strong> on Hard, and lose outright about <strong>1</strong>, <strong>10</strong> and <strong>22</strong>; the rest end with the Unmade driven off at dawn. Three, four and five fighters do within a few points of each other. The ready-made fighters are a little stronger (Chapter 2). A group that ignores the Stills wins only about half its Standard nights.</p>
   </aside>
 </section>

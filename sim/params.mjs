@@ -1,7 +1,7 @@
 /**
  * Every number in the core rules, and every player habit, as a named
  * parameter. RULES mirrors docs/CORE-RULES.md (section numbers in the
- * comments); DIFFICULTY holds the Night card's per-label values (§10); POLICY
+ * comments); DIFFICULTY holds the Difficulty table's per-label values (§10); POLICY
  * is how the simulated players decide: a documented, sensible habit, not a rule.
  *
  * Change a number here only together with docs/CORE-RULES.md, and log why in
@@ -90,7 +90,7 @@ export const RULES = {
   vigorBySize: { 3: 10, 4: 7, 5: 6 },
 };
 
-/** CORE-RULES §10: the Night card's difficulty labels (overrides of RULES). */
+/** CORE-RULES §10: the Difficulty table's labels (overrides of RULES). */
 export const DIFFICULTY = {
   easy: { heart: { crush: 2, sweep: 1 } },
   standard: {},

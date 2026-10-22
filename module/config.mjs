@@ -19,9 +19,9 @@ EF.cycle = ["wood", "fire", "earth", "metal", "water"];
 
 /** Ch 2: elements, their techniques (1 Chi, declared with a Strike), and the Shell each breaks. */
 EF.elements = {
-  wood:  { label: "Wood",  technique: "renewal", techniqueLabel: "Renewal", breaks: "earth", text: "After the roll, you or an ally regains 1 Vigor, whatever the result." },
+  wood:  { label: "Wood",  technique: "renewal", techniqueLabel: "Renewal", breaks: "earth", text: "After the roll, you or an ally who isn't Down regains 1 Vigor, whatever the result." },
   fire:  { label: "Fire",  technique: "blaze",   techniqueLabel: "Blaze",   breaks: "metal", text: "+2 damage if you hit at all." },
-  earth: { label: "Earth", technique: "bulwark", techniqueLabel: "Bulwark", breaks: "water", text: "Choose a fighter, you or an ally. The next time they would lose Vigor this round, they lose 3 less." },
+  earth: { label: "Earth", technique: "bulwark", techniqueLabel: "Bulwark", breaks: "water", text: "Choose a fighter, you or an ally. The next time they would lose Vigor this round, they lose 3 less. A fighter carries one Bulwark at a time." },
   metal: { label: "Metal", technique: "edge",    techniqueLabel: "Edge",    breaks: "wood",  text: "Each 6 you roll counts as three hits." },
   water: { label: "Water", technique: "tide",    techniqueLabel: "Tide",    breaks: "fire",  text: "After the roll, reroll up to three dice that aren't hits." }
 };
@@ -29,8 +29,8 @@ EF.elements = {
 /** Ch 2: fighting styles (always on). */
 EF.styles = {
   brawler:  { label: "Brawler",  text: "+1 damage when you meet the Guard." },
-  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigor, you may lose it instead. If it was 2 or more, gain 2 Chi." },
-  sweeper:  { label: "Sweeper",  text: "When you meet the Guard, also deal 1 damage to one other enemy." },
+  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigor, you may lose it instead. If you lose 2 or more Vigor this way, gain 2 Chi." },
+  sweeper:  { label: "Sweeper",  text: "When you meet the Guard, also deal 1 damage to one other enemy, if there is one." },
   counter:  { label: "Counter",  text: "When an enemy hits you back, deal it 1 damage and gain 1 more Chi." },
   flow:     { label: "Flow",     text: "Lose 1 less Vigor each time, except from a Sweep." },
   breath:   { label: "Breath",   text: "Gain 4 Chi at the start of every fight." }
