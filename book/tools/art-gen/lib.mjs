@@ -2,7 +2,7 @@
 // Every colour comes from C, which mirrors the tokens at the top of
 // book/src/book.css; change C, book.css and book/art/README.md together.
 // Nothing in here draws a particular character, creature or place; build those
-// in their own modules on top of these primitives (see scenes/placeholders.mjs).
+// in their own modules on top of these primitives (see scenes/nightwake.mjs).
 import { writeFileSync } from "node:fs";
 
 export const OUT = new URL("../../art/", import.meta.url).pathname; // book/art/

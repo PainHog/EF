@@ -509,6 +509,7 @@ figure.tailpiece svg { height: 100%; width: auto; max-width: 100%; }
 }
 .back-cover .back-inner { box-sizing: border-box; height: 100%; padding: 0.8in 0.9in; display: flex; flex-direction: column; }
 .back-cover p { margin: 0 0 0.12in; font: 500 11.5pt/1.5 var(--text); color: var(--paper-2); }
+.back-cover strong { color: var(--accent-bright); }
 .back-cover .back-lead { margin-top: 0.1in; font: 900 22pt/1.1 var(--display); color: var(--accent-bright); }
 .back-cover .back-art {
   margin: 0.15in auto 0.1in; width: 4.4in; padding: 0.12in;
@@ -545,3 +546,6 @@ figure.tailpiece svg { height: 100%; width: auto; max-width: 100%; }
 .ref-cols { columns: 2; column-gap: 0.28in; }
 .ref-cols h4 { margin: 0.06in 0 0.02in; font: 800 9.5pt var(--sans); color: var(--alarm); text-transform: uppercase; letter-spacing: .04em; break-after: avoid; }
 .ref-cols p { margin: 0 0 0.08in; break-inside: avoid; line-height: 1.32; }
+
+/* "→" drawn as an inline vector arrow by the build (the typefaces have no arrow) */
+.arw { display: inline-block; width: 0.95em; height: 0.62em; vertical-align: 0.02em; margin: 0 0.12em; }

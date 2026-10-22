@@ -15,6 +15,7 @@
  *   npm run build:book            strict: fails on missing art
  *   npm run build:book -- --draft missing art becomes a labelled placeholder
  *   npm run build:book -- --print print-on-demand interior + covers, with bleed
+ *   npm run build:book -- --white printer-friendly edition (white paper, no covers or scene art)
  *
  * Chromium: $CHROME_PATH, else /opt/pw-browsers/chromium when present, else
  * Playwright's own default browser.
@@ -38,14 +39,22 @@ const VERSION = "0.1";
 const FILE_STEM = "Nightwake";                 // → Nightwake_v0.1.pdf
 const HTML_NAME = "nightwake.html";            // the self-contained print HTML (digital build only)
 // An ornament anchored in the top-left corner of the Table of Contents page
-// (an art name from book/art/, or null for none). Art direction is undecided.
+// (an art name from book/art/, or null for none).
 const TOC_ART = null;
 
 const DRAFT = process.argv.includes("--draft");
+// Spine width per interior page for the --print cover spread. An estimate for colour
+// interiors; before ordering, replace it with the printer's own figure (its cover
+// calculator gives it). Under 80 pages printers refuse spine text, so the spine is plain.
+const SPINE_IN_PER_PAGE = 0.0025;
 // --print: print-on-demand files — an interior with 0.125in bleed on every edge
 // (no covers, even page count) plus separate front and back covers with bleed.
 const PRINT = process.argv.includes("--print");
 const BLEED_IN = PRINT ? 0.125 : 0;
+// --white: the printer-friendly edition for home printers: white paper, no covers,
+// no scene art, and every dark fill turned into a light box with a dark edge.
+const WHITE = process.argv.includes("--white");
+if (WHITE && PRINT) throw new Error("--white and --print are separate builds; run them one at a time");
 const CHROME = process.env.CHROME_PATH ?? (existsSync("/opt/pw-browsers/chromium") ? "/opt/pw-browsers/chromium" : undefined);
 
 const warn = [];
@@ -105,6 +114,17 @@ body = body.replace(/<table class="tbl([^"]*)">([\s\S]*?)<\/table>/g, (m, cls, i
   return cols >= 4 && !/\b(wide|narrow)\b/.test(cls) ? `<table class="tbl${cls} wide">${inner}</table>` : m;
 });
 
+// The typefaces have no arrow glyph, so "→" is drawn as a small inline vector arrow.
+// Any other character outside the fonts' Latin set fails the build: Chromium would
+// embed a fallback font (uncredited, or Type 3) for it.
+const ARROW = `<svg class="arw" viewBox="0 0 16 10" role="img" aria-label="to"><path d="M1 5h12M9 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+body = body.replaceAll("→", ARROW);
+{
+  const OK = new Set([..."‘’“”–—…·×−•′″€"]);
+  const bad = [...new Set([...body.replace(/<!--[\s\S]*?-->/g, "")].filter(c => c.codePointAt(0) > 0x17f && !OK.has(c)))];
+  if (bad.length) throw new Error(`characters the book's fonts lack: ${bad.join(" ")} (reword, or add a glyph)`);
+}
+
 // Keep headings with what follows. Chromium's multi-column fragmentation does
 // not reliably honour `break-after: avoid`, so bind an h3/h4 to its next block
 // in an unbreakable wrapper — only when that block is short enough that
@@ -159,9 +179,8 @@ function tocHtml(pages) {
 }
 
 /* ---------------------------------------------------------------- fonts -- */
-// PLACEHOLDER typefaces (SIL OFL, so the PDF can be sold): the type direction is
-// undecided. To change them, swap the @fontsource packages here and the font
-// tokens at the top of book/src/book.css.
+// Typefaces (SIL OFL, so the PDF can be sold). To change them, swap the
+// @fontsource packages here and the font tokens at the top of book/src/book.css.
 const FONT_DIR = join(ROOT, "node_modules", "@fontsource");
 const fontFace = (family, pkg, weight, style) => {
   const f = join(FONT_DIR, pkg, "files", `${pkg}-latin-${weight}-${style}.woff2`);
@@ -246,19 +265,40 @@ const PRINT_CSS = `
 @page blankp { @bottom-center { content: none; } }
 `;
 
+const WHITE_CSS = `
+:root { --paper: #ffffff; --paper-2: #f2f2f2; --paper-light: #ffffff; --paper-edge: #b9b9b9; }
+@page part { background: #fff; } @page cover { background: #fff; } @page back { background: #fff; }
+.chapter-art, .part-art, .tailpiece { display: none !important; }
+.chapter-head { padding-top: 0; }
+.part + .chapter { break-before: page; }
+.chapter-head { break-inside: avoid; break-after: avoid; }
+.chapter + .chapter { break-before: auto; margin-top: 0.32in; border-top: 2px solid var(--ink); padding-top: 0.1in; }
+.part { background: #fff; color: var(--ink); }
+.part h1 { color: var(--ink); } .part-kicker { color: var(--accent-deep); } .part-lede { color: var(--ink-soft); }
+.box.rule, .entry .ability, .entry .signature { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+.box.rule h4, .box.rule strong, .entry .ability h4, .entry .signature h4, .entry .ability strong, .entry .signature strong { color: var(--ink); }
+.box.gm, .box.designer { background: #fff; }
+.tbl th, .sheet-grid th { background: #fff; color: var(--ink); border-bottom: 2px solid var(--ink); }
+.tbl tbody tr:nth-child(even) td { background: #f4f4f4; }
+.statblock h3 { background: #fff; color: var(--alarm); border-bottom: 2px solid var(--alarm); }
+.statblock .epithet { color: var(--accent-deep); }
+`;
+
 const sectionOf = (html, cls) => (html.match(new RegExp(`<section class="${cls}"[\\s\\S]*?<\\/section>`)) ?? [null])[0];
 
-function page(pages, markers, spots = {}, { only = null, padBlank = false } = {}) {
+function page(pages, markers, spots = {}, { only = null, padBlank = false, raw = null, extraCss = "" } = {}) {
   let content = body;
-  if (only) {
+  if (raw) {
+    content = raw;
+  } else if (only) {
     content = sectionOf(body, only) ?? "";
   } else {
     const toc = inlineArt(tocHtml(pages));
     // the Table of Contents follows the credits page (or the cover if there is none)
     const anchor = sectionOf(content, "credits") ?? sectionOf(content, "cover");
     content = anchor ? content.replace(anchor, anchor + "\n" + toc) : toc + content;
-    if (PRINT) {
-      // the print interior carries no covers: those are separate files
+    if (PRINT || WHITE) {
+      // the print interior and the printer-friendly edition carry no covers
       for (const cls of ["cover", "back-cover"]) { const sec = sectionOf(content, cls); if (sec) content = content.replace(sec, ""); }
       if (padBlank) content += `\n<section class="blank-page"></section>`;
     }
@@ -284,13 +324,15 @@ function page(pages, markers, spots = {}, { only = null, padBlank = false } = {}
 <style>${css}</style>
 <style>${FOOTER_CSS}</style>
 ${PRINT ? `<style>${PRINT_CSS}</style>` : ""}
+${WHITE ? `<style>${WHITE_CSS}</style>` : ""}
+${extraCss ? `<style>${extraCss}</style>` : ""}
 </head><body>
 ${content}
 </body></html>`;
 }
 
 /* ---------------------------------------------------------------- print -- */
-async function printPdf(browser, html, out) {
+async function printPdf(browser, html, out, widthIn = 8.5 + 2 * BLEED_IN) {
   const tmp = join(DIST, ".print.html");
   writeFileSync(tmp, html);
   const p = await browser.newPage();
@@ -298,7 +340,7 @@ async function printPdf(browser, html, out) {
   await p.evaluate(() => document.fonts.ready);
   // Chromium silently shrinks EVERY page when any element is wider than the
   // paper. Refuse to print instead, naming the culprits.
-  await p.setViewportSize({ width: Math.round((8.5 + 2 * BLEED_IN) * 96), height: Math.round((11 + 2 * BLEED_IN) * 96) }); // the sheet at 96dpi
+  await p.setViewportSize({ width: Math.round(widthIn * 96), height: Math.round((11 + 2 * BLEED_IN) * 96) }); // the sheet at 96dpi
   await p.emulateMedia({ media: "print" });
   const wide = await p.evaluate(() => {
     const W = document.documentElement.clientWidth;
@@ -347,7 +389,7 @@ try {
   if (missing.length) throw new Error(`could not locate on any page: ${missing.join(", ")}`);
 
   // Pass 2: place spot illustrations; drop any that would move a page, and re-check.
-  let spots = planSpots(p1.ends);
+  let spots = WHITE ? {} : planSpots(p1.ends);
   for (let attempt = 0; attempt < 4; attempt++) {
     const pass2 = join(DIST, ".pass2.pdf");
     await printPdf(browser, page(p1.found, true, spots), pass2);
@@ -360,9 +402,9 @@ try {
     if (shifted.length && !moved.length) spots = {};
   }
 
-  const out = join(DIST, PRINT ? `${FILE_STEM}_v${VERSION}_print-interior.pdf` : `${FILE_STEM}_v${VERSION}.pdf`);
+  const out = join(DIST, PRINT ? `${FILE_STEM}_v${VERSION}_print-interior.pdf` : WHITE ? `${FILE_STEM}_v${VERSION}_printer-friendly.pdf` : `${FILE_STEM}_v${VERSION}.pdf`);
   let html = page(p1.found, false, spots);
-  if (!PRINT) writeFileSync(join(DIST, HTML_NAME), html);
+  if (!PRINT && !WHITE) writeFileSync(join(DIST, HTML_NAME), html);
   await printPdf(browser, html, out);
   let { pages } = await pageMap(out);
   if (pages !== p1.pages) throw new Error("pass 1 and the final pass paginated differently — TOC numbers may be wrong");
@@ -379,12 +421,27 @@ try {
       await printPdf(browser, page(null, false, {}, { only: cls }), f);
       console.log(`Built ${relative(ROOT, f)} (${8.5 + 2 * BLEED_IN}in × ${11 + 2 * BLEED_IN}in, bleed included).`);
     }
+    // One-piece cover: back, spine, front; bleed on the outer edges only.
+    const front = sectionOf(body, "cover"), back = sectionOf(body, "back-cover");
+    if (front && back) {
+      const spine = +(pages * SPINE_IN_PER_PAGE).toFixed(3), PW = 8.5 + BLEED_IN, H = 11 + 2 * BLEED_IN;
+      const W = +(2 * PW + spine).toFixed(3);
+      const css = `@page spread { size: ${W}in ${H}in; margin: 0; }
+.spread { page: spread; display: flex; width: ${W}in; height: ${H}in; overflow: hidden; }
+.spread-panel { flex: none; width: ${PW}in; height: ${H}in; overflow: hidden; }
+.spread .cover, .spread .back-cover { page: spread; break-before: auto; break-after: auto; }
+.spine { flex: none; width: ${spine}in; height: ${H}in; background: var(--dark-deep); }`;
+      const raw = `<div class="spread"><div class="spread-panel">${back}</div><div class="spine"></div><div class="spread-panel"><div style="margin-left:-${BLEED_IN}in">${front}</div></div></div>`;
+      const f = join(DIST, `${FILE_STEM}_v${VERSION}_print-cover-spread.pdf`);
+      await printPdf(browser, page(null, false, {}, { raw, extraCss: css }), f, W);
+      console.log(`Built ${relative(ROOT, f)} (${W}in × ${H}in: back, ${spine}in spine for ${pages} pages, front).`);
+    }
   }
   for (const e of entries) {
     const sp = spots[e.id];
     console.log(`  p${String(p1.found[e.id]).padStart(3)}  ${e.label ? e.label + " — " : ""}${e.title}${sp ? `   [+ ${sp.art} ${sp.h}in]` : ""}`);
   }
-  const gaps = Object.entries(p1.ends).filter(([id, v]) => !spots[id] && v.freeIn > 3 && v.freeIn <= TEXT_H_IN - 0.3).map(([id, v]) => `${id} (${v.freeIn.toFixed(1)}in free)`);
+  const gaps = WHITE ? [] : Object.entries(p1.ends).filter(([id, v]) => !spots[id] && v.freeIn > 3 && v.freeIn <= TEXT_H_IN - 0.3).map(([id, v]) => `${id} (${v.freeIn.toFixed(1)}in free)`);
   if (gaps.length) console.warn(`  ! large gaps with no spot: ${gaps.join(", ")}`);
   for (const w of warn) console.warn(`  ! ${w}`);
 } finally {

@@ -27,6 +27,7 @@ This is a living document. **§1 Pitch** is Richard's own. **§3 Decisions** lis
 
   It's also generic, so it stays the repository's name only.
 - **"Nightwake"** says *one night* and *awakening*, and suits any tone. A web check on 2026-10-22 found no game, book or product by that name.
+- **Second web check, 2026-10-22 (layout pass):** searches for the game and for a trademark found no game and no trademark record named "Nightwake". The nearest names are *Nighthawks* (a vampire video game RPG), *Night Wakings* (a short itch.io horror game), and NIGHTWAY, NIGHTWATCH and NIGHTHAWK marks for clothing, coffee and lighting. None is a tabletop game. This is not the full register search below, which is still owed.
 - **Rejected:**
   - "Hold Till Dawn" (a 2026 browser game);
   - "Fivefold" (a 3- or 4-player table doesn't field all five elements);

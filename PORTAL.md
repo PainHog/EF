@@ -1,5 +1,5 @@
-Now: The rulebook has its art; checking the page layout
-Next: Page layout, then computer playtests by the book and their fixes
+Now: Computer playtests of the rulebook, played strictly by the book with real dice
+Next: Fix what the playtests turn up, then the online version
 Number: Design decisions made = 35
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
@@ -31,7 +31,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Ready-made fighters for a quick start
 - [x] The first one-night adventure
 - [x] Cover and book art
-- [ ] Rulebook layout, for screen and for print
+- [x] Rulebook layout, for screen and for print
 - [ ] Computer playtests by the book, and the fixes they turn up
 - [ ] A playtest at a real table
 
