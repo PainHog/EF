@@ -1,0 +1,26 @@
+{
+  "key": "dani",
+  "name": "Dani Okafor",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "element": "wood",
+    "style": "sweeper",
+    "perk": "quick",
+    "awakening": "ascendant",
+    "before": "Nineteen, a bike courier who knows every alley in the city.",
+    "woke": "The wind lifted her off the saddle mid-delivery and set her down on a rooftop.",
+    "vigor": {
+      "value": 7,
+      "max": 7
+    },
+    "chi": 2,
+    "awakened": {
+      "active": false,
+      "roundsLeft": 0,
+      "used": false
+    },
+    "luckyUsed": false,
+    "stubbornUsed": false,
+    "notes": "<p><em>“Shortcut. Trust me.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+  }
+}

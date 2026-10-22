@@ -1,0 +1,26 @@
+{
+  "key": "priya",
+  "name": "Priya Raman",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "element": "metal",
+    "style": "flow",
+    "perk": "medic",
+    "awakening": "wellspring",
+    "before": "Thirty-four, a paramedic who runs free-running routes on her days off.",
+    "woke": "Her scissors rang like a bell and stayed sharp in her mind long after she put them down.",
+    "vigor": {
+      "value": 7,
+      "max": 7
+    },
+    "chi": 2,
+    "awakened": {
+      "active": false,
+      "roundsLeft": 0,
+      "used": false
+    },
+    "luckyUsed": false,
+    "stubbornUsed": false,
+    "notes": "<p><em>“Hold still. This will sting.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+  }
+}

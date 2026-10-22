@@ -1,0 +1,53 @@
+<section class="nw-night-body">
+  {{#if started}}
+  <header class="nw-night-head">
+    <span class="nw-phase">{{phase}}</span>
+    <span class="nw-diff">{{difficulty}}</span>
+    {{#if ended}}<span class="nw-ending">{{endingText}}</span>{{/if}}
+  </header>
+  <div class="nw-hours"><span class="nw-label">Hours</span>{{#each hours}}<span class="hour{{#if left}} left{{/if}}"></span>{{/each}}{{#if night.hoursOwed}}<span class="owed">{{night.hoursOwed}} owed</span>{{/if}}</div>
+  <table class="nw-anchors">
+    <thead><tr><th>Anchor</th><th>Shell</th><th>Broken by</th><th></th></tr></thead>
+    <tbody>
+      {{#each anchors}}
+      <tr class="{{#if broken}}broken{{/if}}">
+        <td>{{name}}</td><td>{{shellLabel}}</td><td>{{breaker}}</td>
+        <td>{{#if broken}}Broken{{else}}{{#if ../gm}}{{#if canStrike}}<button type="button" data-action="anchor" data-anchor="{{index}}">Strike</button>{{/if}}{{/if}}{{/if}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p class="hint">The Heart now: Toughness {{heartPreview}}.</p>
+
+  {{#if fight}}
+  <div class="nw-fight-box">
+    <h3>{{fightTitle}}: round {{fight.round}} of {{lastRound}}</h3>
+    <ul class="nw-enemies">
+      {{#each enemies}}<li><strong>{{name}}</strong> {{toughness}}/{{max}}{{#if stills}} ({{stills}} Stills){{/if}}{{#if shell}} · {{shell}} Shell{{/if}}</li>{{/each}}
+    </ul>
+    <ul class="nw-fighters">
+      {{#each fighters}}<li class="{{#if down}}down{{/if}}{{#if acted}} acted{{/if}}"><strong>{{name}}</strong> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}{{#if awakened}} · {{awakened}}{{/if}}{{#if down}} · Down{{/if}}</li>{{/each}}
+    </ul>
+    {{#if gm}}
+    <div class="nw-buttons">
+      <button type="button" data-action="endRound">End the round</button>
+      {{#if canWithdraw}}<button type="button" data-action="withdraw">End the round and withdraw</button>{{/if}}
+    </div>
+    {{/if}}
+  </div>
+  {{else}}
+  {{#if gm}}
+  <div class="nw-buttons">
+    {{#if canClash}}<button type="button" data-action="clash">The First Clash</button>{{/if}}
+    {{#if canRespite}}<button type="button" data-action="respite">Take a Respite</button>{{/if}}
+    {{#if canHeart}}<button type="button" data-action="heart">The Heart</button>{{/if}}
+    {{#unless ended}}<button type="button" data-action="join">A fighter joins late</button>{{/unless}}
+    {{#if ended}}<button type="button" data-action="beginNight">Begin a new night</button>{{/if}}
+  </div>
+  {{/if}}
+  {{/if}}
+  {{else}}
+  <p>No night has begun.</p>
+  {{#if gm}}<div class="nw-buttons"><button type="button" data-action="beginNight">Begin the night</button></div>{{/if}}
+  {{/if}}
+</section>

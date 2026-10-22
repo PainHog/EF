@@ -1,8 +1,8 @@
 {
   "id": "elemental-fighters",
   "type": "system",
-  "title": "Elemental Fighters",
-  "description": "The companion Foundry VTT game system for Elemental Fighters, a tabletop roleplaying game by Richard Moore. Early skeleton: the game's rules are not written yet.",
+  "title": "Nightwake",
+  "description": "The companion Foundry VTT game system for Nightwake, a roleplaying game of five elements and one long night by Richard Moore. Fighter sheets, the Night sheet, Strikes resolved by the book, the enemies' turn, and the clocks to dawn; every automation can be switched off.",
   "version": "0.1.0",
   "compatibility": {
     "minimum": "13",
@@ -11,7 +11,7 @@
   "authors": [
     {
       "name": "Richard Moore",
-      "url": "https://github.com/PainHog/EF"
+      "url": "https://domoorestudio.com"
     }
   ],
   "esmodules": [
@@ -27,10 +27,36 @@
       "path": "lang/en.json"
     }
   ],
-  "packs": [],
+  "documentTypes": {
+    "Actor": {
+      "fighter": {
+        "htmlFields": [
+          "notes"
+        ]
+      },
+      "unmade": {
+        "htmlFields": [
+          "notes"
+        ]
+      },
+      "pack": {}
+    }
+  },
+  "packs": [
+    {
+      "name": "fighters",
+      "label": "Ready-made Fighters",
+      "path": "packs/fighters",
+      "type": "Actor",
+      "system": "elemental-fighters",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
   "socket": true,
-  "url": "https://github.com/PainHog/EF",
-  "bugs": "https://github.com/PainHog/EF/issues",
+  "url": "https://domoorestudio.com",
   "manifest": "https://github.com/PainHog/EF/releases/latest/download/system.json",
   "download": "https://github.com/PainHog/EF/releases/latest/download/system.zip",
   "license": "LICENSE",

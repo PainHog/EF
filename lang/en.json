@@ -1,3 +1,6 @@
 {
-  "EF.SystemTitle": "Elemental Fighters"
+  "EF.SystemTitle": "Nightwake",
+  "TYPES.Actor.fighter": "Fighter",
+  "TYPES.Actor.unmade": "Warden or Heart",
+  "TYPES.Actor.pack": "Pack of Stills"
 }

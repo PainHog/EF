@@ -1,0 +1,25 @@
+<section class="nw-body">
+  <header class="nw-head">
+    <input class="nw-name" type="text" name="name" value="{{actor.name}}" {{#unless editable}}disabled{{/unless}}>
+    <span class="nw-flag unmade">{{#if isHeart}}The Heart{{else}}Warden{{/if}}</span>
+  </header>
+  <ul class="nw-stats">
+    <li><strong>Guard</strong> {{system.guard}}</li>
+    <li><strong>Harm</strong> {{system.harm}}</li>
+    <li><strong>Toughness</strong> <input type="number" name="system.toughness.value" value="{{system.toughness.value}}" min="0" {{#unless editable}}disabled{{/unless}}> / {{system.toughness.max}}</li>
+  </ul>
+  {{#unless isHeart}}
+  <div class="nw-row">
+    <label class="nw-field">Shell
+      <select name="system.shell" {{#unless editable}}disabled{{/unless}}>
+        {{#each shells}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+    <label class="nw-check"><input type="checkbox" name="system.shellIntact" {{#if system.shellIntact}}checked{{/if}} {{#unless editable}}disabled{{/unless}}> Shell holds</label>
+  </div>
+  {{#if breakerLabel}}<p class="hint">+1 Guard while it holds, except against {{breakerLabel}}. {{breakerLabel}}'s first hit shatters it; so does half Toughness.</p>{{/if}}
+  <p class="hint">Crush {{warden.crush}}, Sweep {{warden.sweep}}. Feeds on its Stills: +1 Toughness per Still each round.</p>
+  {{else}}
+  <p class="hint">Crush {{card.crush}}, Sweep {{card.sweep}} (the Night card). Feeds on its Stills like a Warden.</p>
+  {{/unless}}
+</section>

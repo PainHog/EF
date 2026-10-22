@@ -1,0 +1,13 @@
+<section class="nw-body">
+  <header class="nw-head">
+    <input class="nw-name" type="text" name="name" value="{{actor.name}}" {{#unless editable}}disabled{{/unless}}>
+    <span class="nw-flag unmade">A pack of Stills</span>
+  </header>
+  <ul class="nw-stats">
+    <li><strong>Guard</strong> {{system.guard}}</li>
+    <li><strong>Harm</strong> {{system.harm}}</li>
+    <li><strong>Toughness</strong> <input type="number" name="system.toughness.value" value="{{system.toughness.value}}" min="0" {{#unless editable}}disabled{{/unless}}> / {{system.toughness.max}}</li>
+    <li><strong>Stills standing</strong> {{system.stills}}</li>
+  </ul>
+  <p class="hint">Fought as one enemy; damage carries over from one Still to the next (3 Toughness each). Swarms for {{swarm}} at the end of each round.</p>
+</section>

@@ -1,0 +1,26 @@
+{
+  "key": "sam",
+  "name": "Sam Whitlock",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "element": "water",
+    "style": "counter",
+    "perk": "trained",
+    "awakening": "unbreakable",
+    "before": "Sixty-seven, a retired judo coach who still teaches the Tuesday class.",
+    "woke": "She was swimming late lengths when the water stopped moving for everyone except her.",
+    "vigor": {
+      "value": 7,
+      "max": 7
+    },
+    "chi": 2,
+    "awakened": {
+      "active": false,
+      "roundsLeft": 0,
+      "used": false
+    },
+    "luckyUsed": false,
+    "stubbornUsed": false,
+    "notes": "<p><em>“Use their weight, dear. They always bring plenty.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+  }
+}

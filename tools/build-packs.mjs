@@ -10,7 +10,7 @@
  * Our source stays human-friendly (a `key` slug, no ids); this script turns
  * each doc into a CLI-ready document with a deterministic 16-char `_id`, a
  * `_key`, `_stats`, and inline embedded pages, stages them outside the repo,
- * then compiles. Packs are declared in tools/pack-config.mjs (empty for now).
+ * then compiles. Packs are declared in tools/pack-config.mjs.
  *
  * Usage:  node tools/build-packs.mjs   |   node tools/build-packs.mjs --clean
  */

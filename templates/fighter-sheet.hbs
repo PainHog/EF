@@ -1,0 +1,73 @@
+<section class="nw-body{{#if down}} is-down{{/if}}">
+  <header class="nw-head">
+    <input class="nw-name" type="text" name="name" value="{{actor.name}}" placeholder="Name" {{#unless editable}}disabled{{/unless}}>
+    {{#if element}}<span class="nw-el nw-el-{{system.element}}">{{element.label}}</span>{{/if}}
+    {{#if down}}<span class="nw-flag down">Down</span>{{/if}}
+  </header>
+
+  <div class="nw-row">
+    <label class="nw-field">Who they were before tonight
+      <input type="text" name="system.before" value="{{system.before}}" {{#unless editable}}disabled{{/unless}}>
+    </label>
+    <label class="nw-field">What they were doing when their element woke
+      <input type="text" name="system.woke" value="{{system.woke}}" {{#unless editable}}disabled{{/unless}}>
+    </label>
+  </div>
+
+  <div class="nw-picks">
+    <label class="nw-field">Element
+      <select name="system.element" {{#unless editable}}disabled{{/unless}}>
+        <option value=""></option>
+        {{#each elements}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+    <label class="nw-field">Fighting style
+      <select name="system.style" {{#unless editable}}disabled{{/unless}}>
+        <option value=""></option>
+        {{#each styles}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+    <label class="nw-field">Perk
+      <select name="system.perk" {{#unless editable}}disabled{{/unless}}>
+        <option value=""></option>
+        {{#each perks}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+    <label class="nw-field">Awakening
+      <select name="system.awakening" {{#unless editable}}disabled{{/unless}}>
+        <option value=""></option>
+        {{#each awakenings}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+  </div>
+
+  <dl class="nw-text">
+    {{#if element}}<dt>Technique: {{element.techniqueLabel}} (1 Chi, with a Strike)</dt><dd>{{element.text}} Feeds {{feedsLabel}}; breaks {{breaksLabel}} Shells.</dd>{{/if}}
+    {{#if style}}<dt>{{style.label}}</dt><dd>{{style.text}}</dd>{{/if}}
+    {{#if perk}}<dt>{{perk.label}}</dt><dd>{{perk.text}}</dd>{{/if}}
+    {{#if awakening}}<dt>Awakening: {{awakening.label}}</dt><dd>{{awakening.text}} <em>{{awakenedText}}</em></dd>{{/if}}
+  </dl>
+
+  <div class="nw-tracks">
+    <div class="nw-track">
+      <span class="nw-label">Vigor</span>
+      <span class="nw-pips">{{#each vigorPips}}<span class="pip{{#if on}} on{{/if}}"></span>{{/each}}</span>
+      <input type="number" name="system.vigor.value" value="{{system.vigor.value}}" min="0" {{#unless editable}}disabled{{/unless}}> / {{system.vigor.max}}
+    </div>
+    <div class="nw-track">
+      <span class="nw-label">Chi</span>
+      <span class="nw-pips chi">{{#each chiPips}}<span class="pip{{#if on}} on{{/if}}"></span>{{/each}}</span>
+      <input type="number" name="system.chi" value="{{system.chi}}" min="0" max="5" {{#unless editable}}disabled{{/unless}}> / 5
+    </div>
+  </div>
+
+  <div class="nw-actions">
+    {{#if inFight}}<p class="nw-fight">{{fightLabel}}</p>{{else}}<p class="nw-fight">Not in a fight.</p>{{/if}}
+    {{#if canFree}}<button type="button" data-action="freeStrike">Quick: free Strike</button>{{/if}}
+    {{#if canStrike}}<button type="button" data-action="strike">Strike</button>{{/if}}
+    {{#if canStrike}}<button type="button" data-action="rally">Rally</button>{{/if}}
+    {{#if sealHolder}}<button type="button" data-action="holdSeal">Hold the Seal</button>{{/if}}
+    {{#if canAwaken}}<button type="button" data-action="awaken">Awaken (3 Chi)</button>{{/if}}
+    <button type="button" data-action="openNight">The Night</button>
+  </div>
+</section>

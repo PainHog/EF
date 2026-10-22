@@ -19,11 +19,13 @@ export const OUT = join(ROOT, "packs");
 /**
  * file → output pack, document class & subtype. Must match system.json packs[]
  * (and an Item/Actor subtype must be declared in system.json documentTypes).
- * Empty until the game has content. Examples of the shape:
+ * Examples of the shape:
  *   { file: "things", out: "things", collection: "items", type: "Item", subtype: "thing" },
  *   { file: "rules", out: "rules", collection: "journal", type: "JournalEntry", subtype: null }
  */
-export const PACKS = [];
+export const PACKS = [
+  { file: "fighters", out: "fighters", collection: "actors", type: "Actor", subtype: "fighter" }
+];
 
 /** Deterministic 16-char alphanumeric id from a namespace + key (sha256 hex prefix). */
 export function makeId(...parts) {
@@ -115,7 +117,7 @@ export function toCliDoc(def, raw, index) {
     doc.items = [];
     // null (not "") disables a token bar; "" would be cleaned back to the
     // system's primaryTokenAttribute. Override per pack once actors exist.
-    doc.prototypeToken = { bar1: { attribute: null }, bar2: { attribute: null } };
+    doc.prototypeToken = { name: raw.name, actorLink: true, disposition: 1, bar1: { attribute: def.subtype === "fighter" ? "vigor" : null }, bar2: { attribute: null } };
   }
   return doc;
 }
