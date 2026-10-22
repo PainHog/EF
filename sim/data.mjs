@@ -26,3 +26,12 @@ export const PERKS = Object.freeze(["tough", "medic", "lucky", "quick", "stubbor
 export const AWAKENINGS = Object.freeze(["ascendant", "unbreakable", "wellspring", "tempest", "seal", "harmony"]);
 
 export const PICKS = Object.freeze({ element: ELEMENTS, style: STYLES, perk: PERKS, awakening: AWAKENINGS });
+
+/** CORE-RULES §10: the ready-made fighters, one per element. */
+export const READY_MADE = Object.freeze([
+  { element: "wood", style: "sweeper", perk: "quick", awakening: "ascendant" },
+  { element: "fire", style: "guardian", perk: "stubborn", awakening: "harmony" },
+  { element: "earth", style: "brawler", perk: "lucky", awakening: "tempest" },
+  { element: "metal", style: "flow", perk: "medic", awakening: "wellspring" },
+  { element: "water", style: "counter", perk: "trained", awakening: "unbreakable" },
+]);

@@ -27,7 +27,7 @@ export function makeFighter(spec, R, off, n) {
 export function playNight({ party, R, P, rng, off = new Set() }) {
   const n = party.length;
   const F = party.map(s => makeFighter(s, R, off, n));
-  const ctx = { R, P, rng, F, n, off, unlocked: false, phase: "clash",
+  const ctx = { R, P, rng, F, n, off, unlocked: false, phase: "clash", clock: 0,
     rec: { rolls: 0, crits: 0, fails: 0, hitBacks: 0, fights: [], downs: 0, wipes: 0, withdraws: 0, longFights: 0, rests: 0,
       anchorsBroken: 0, overdue: 0, guardianSaves: 0, stubbornSaves: 0, luckyUses: 0, shellsByBreaker: 0, shellsByHalf: 0,
       surges: 0, surgesStopped: 0, feeds: 0, strikes: 0 } };
@@ -152,7 +152,7 @@ function fight(ctx, kind, setup) {
   // §2 Quick: before the first round, a free Strike with +1 die that can't be hit back.
   for (const f of F) if (f.has("perk", "quick") && !done()) {
     strike(ctx, f, chooseTarget(ctx, f, enemies), enemies, last, { free: true });
-    last = f;
+    last = f; f.actedAt = ++ctx.clock;
   }
   if (done()) return out("win", heartFrac(elite));
 
@@ -173,7 +173,7 @@ function fight(ctx, kind, setup) {
     for (const f of chooseOrder(ctx, last)) {
       if (f.down || done()) continue;
       maybeAwaken(ctx, f, kind, enemies);
-      if (f.awake && f.has("awakening", "seal")) { last = f; continue; } // §7 Seal: holding it is your action
+      if (f.awake && f.has("awakening", "seal")) { last = f; f.actedAt = ++ctx.clock; continue; } // §7 Seal: holding it is your action
       const acts = f.awake && f.has("awakening", "tempest") ? 2 : 1;      // §7 Tempest: two actions
       for (let a = 0; a < acts && !f.down && !done(); a++) {
         const downAlly = F.find(x => x.down);
@@ -182,7 +182,7 @@ function fight(ctx, kind, setup) {
         } else {
           strike(ctx, f, chooseTarget(ctx, f, enemies), enemies, last);
         }
-        last = f;
+        last = f; f.actedAt = ++ctx.clock;
       }
       if (F.every(x => x.down)) break;
     }
@@ -196,7 +196,7 @@ function fight(ctx, kind, setup) {
       if (p && elite && elite.tough > 0) elite.tough = Math.min(elite.toughMax, elite.tough + p.stills * R.feedOnStills);
     }
     // §4: enemies act at the end of the round: packs Swarm, then the Warden or Heart Surges.
-    for (const e of enemies) {
+    for (const e of [...enemies]) { // a pack Called this round doesn't Swarm until the next
       if (e.tough <= 0) continue;
       if (e.kind === "pack") swarm(ctx, e);
       else surge(ctx, e, enemies);
@@ -447,18 +447,18 @@ function surge(ctx, e, enemies) {
   rec.surges++;
   const r = rng.d6();
   const live = alive(F);
+  const lastFirst = (a, b) => (b.actedAt ?? 0) - (a.actedAt ?? 0); // §4 ties: the fighter who acted last
   const crush = () => { // the fighter who dealt it the most damage this round; nobody: the most Vigor
     const m = ctx.rs.dmg.get(e);
-    let tgt = null, best = -1;
-    if (m) for (const [f, d] of m) if (!f.down && d >= best) { best = d; tgt = f; }
-    if (!tgt) tgt = live.slice().sort((a, b) => b.vigor - a.vigor)[0];
+    const hitters = m ? [...m].filter(([f]) => !f.down).sort(([a, da], [b, db]) => db - da || lastFirst(a, b)) : [];
+    const tgt = hitters.length ? hitters[0][0] : live.slice().sort((a, b) => b.vigor - a.vigor || lastFirst(a, b))[0];
     if (tgt) harm(ctx, tgt, e.crush);
   };
   if (r <= 2) crush();
   else if (r <= 4) for (const f of live) harm(ctx, f, e.sweep, { sweep: true });
   else if (r === 5) { // Drain: Warden takes 2 from the richest; the Heart takes 1 from everyone. No Chi anywhere: Crush.
     if (e.kind === "warden") {
-      const rich = live.filter(f => f.chi > 0).sort((a, b) => b.chi - a.chi)[0];
+      const rich = live.filter(f => f.chi > 0).sort((a, b) => b.chi - a.chi || lastFirst(a, b))[0];
       if (!rich) crush(); else { const k = Math.min(2, rich.chi); rich.chi -= k; rich.st.chiDrained += k; }
     } else {
       const rich = live.filter(f => f.chi > 0);

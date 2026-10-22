@@ -1,9 +1,10 @@
-Now: The idea is set: on one night, ordinary people awaken to the five elements and fight together to save the world
-Next: Richard's design interview: which five elements, what the enemy is called, the dice, and how a fight works
-Number: Design decisions made = 1
-Number: Open design questions = 14
+Now: The core rules are written and balanced: five elements, one night, and a fight to break the Heart before dawn
+Next: Richard reads and approves the core rules, then the rulebook chapters begin
+Number: Design decisions made = 33
+Number: Open design questions = 0
+Number: Simulated nights in the latest balance check = 36,000
 
-# Elemental Fighters plan
+# Nightwake (working title) plan
 
 Read by Richard's project portal on every push to the default branch and shown on the Elemental Fighters card to everyone he has invited.
 Plain words only: no repo names, usernames, file paths, links or commit IDs. Rules: the project's working rules, "Portal" section.
@@ -12,12 +13,15 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 
 - [x] Write the pitch: one night, five elements, a group of fighters against a dark force
 - [x] First check of the working title and the enemy's name for clashes with other games and films
-- [ ] Choose the five elements
-- [ ] Name the enemy
+- [x] Choose the five elements
+- [x] Name the enemy
+- [x] Pick a working title: Nightwake
 - [ ] Choose the game's real title
-- [ ] Design interview: every core question answered
-- [ ] One page of core rules
-- [ ] Balance simulator: wins and losses for every group size and difficulty
+- [ ] Full name and trademark search for the title
+- [ ] A native speaker checks the Chinese terms
+- [x] Design interview: every core question answered
+- [x] One page of core rules
+- [x] Balance simulator: wins and losses for every group size and difficulty
 - [ ] Richard approves the core rules
 
 ## Building the game
@@ -32,5 +36,5 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 
 ## Online version
 
-- [ ] Decide when to build the online version for Foundry VTT
+- [x] Decide when to build the online version for Foundry VTT
 - [ ] The online version for Foundry VTT
