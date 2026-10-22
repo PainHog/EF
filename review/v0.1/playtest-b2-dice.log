@@ -1,0 +1,121 @@
+2026-10-22T03:32:28.712Z	SETUP First Clash table	1d6	2	hits=0 sixes=0
+2026-10-22T03:32:28.713Z	SETUP Wood Shell place	1d6	6	hits=1 sixes=1
+2026-10-22T03:32:28.713Z	SETUP Fire Shell place	1d6	5	hits=1 sixes=0
+2026-10-22T03:32:28.713Z	SETUP Earth Shell place	1d6	6	hits=1 sixes=1
+2026-10-22T03:32:28.713Z	SETUP Metal Shell place	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:28.714Z	SETUP Water Shell place	1d6	4	hits=0 sixes=0
+2026-10-22T03:32:28.714Z	SETUP Sign Wood Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T03:32:28.714Z	SETUP Sign Fire Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T03:32:28.714Z	SETUP Sign Earth Anchor	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:28.714Z	SETUP Sign Metal Anchor	1d6	3	hits=0 sixes=0
+2026-10-22T03:32:28.715Z	SETUP Sign Water Anchor	1d6	3	hits=0 sixes=0
+2026-10-22T03:32:28.715Z	SETUP Heart table	1d6	3	hits=0 sixes=0
+2026-10-22T03:32:37.194Z	SETUP Sign Fire Anchor reroll (dup 2)	1d6	3	hits=0 sixes=0
+2026-10-22T03:32:37.195Z	SETUP Sign Water Anchor reroll (dup 3)	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:42.987Z	SETUP Sign Fire Anchor reroll 2 (dup 3)	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:42.989Z	SETUP Sign Water Anchor reroll 2 (dup 1)	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:49.340Z	SETUP Sign Fire Anchor reroll 3 (dup 1)	1d6	5	hits=1 sixes=0
+2026-10-22T03:32:49.342Z	SETUP Sign Water Anchor reroll 3 (dup 1)	1d6	2	hits=0 sixes=0
+2026-10-22T03:32:53.794Z	SETUP Sign Water Anchor reroll 4 (dup 2)	1d6	1	hits=0 sixes=0
+2026-10-22T03:32:58.285Z	SETUP Sign Water Anchor reroll 5 (dup 1)	1d6	1	hits=0 sixes=0
+2026-10-22T03:33:01.589Z	SETUP Sign Water Anchor reroll 6 (dup 1)	1d6	6	hits=1 sixes=1
+2026-10-22T03:33:17.686Z	FC Quick Kit free Strike on pack (Edge, Quick die, Chi die)	7d6	2 2 3 3 2 6 3	hits=1 sixes=1
+2026-10-22T03:33:29.676Z	FC R1 Nadia Strike pack (Tide, Chi die)	6d6	4 4 2 4 5 3	hits=1 sixes=0
+2026-10-22T03:33:34.049Z	FC R1 Nadia Tide reroll 3 non-hits	3d6	4 1 5	hits=1 sixes=0
+2026-10-22T03:33:42.829Z	FC R1 Ade Strike pack (Chi die)	6d6	2 1 6 2 2 2	hits=1 sixes=1
+2026-10-22T03:33:47.427Z	FC R1 Ade Lucky reroll 5 non-hits	5d6	6 1 3 4 6	hits=2 sixes=2
+2026-10-22T03:33:54.051Z	FC R1 Rosa Strike pack (Blaze, Chi die)	6d6	1 4 6 6 6 4	hits=3 sixes=3
+2026-10-22T03:33:54.052Z	FC R1 Hal Strike pack (Bulwark self, Chi die)	6d6	6 1 5 6 1 4	hits=3 sixes=2
+2026-10-22T03:33:54.052Z	FC R1 Kit Strike pack (Help Rosa, Help Ade)	7d6	2 5 6 3 5 3 4	hits=3 sixes=1
+2026-10-22T03:34:06.749Z	FC R2 Nadia Strike pack (no Chi)	5d6	4 5 6 6 2	hits=3 sixes=2
+2026-10-22T03:34:21.281Z	H1 Piling Quick Kit free Strike Warden (Quick die, Help Rosa)	7d6	2 3 3 2 3 5 2	hits=1 sixes=0
+2026-10-22T03:34:30.809Z	H1 R1 Nadia Strike pack (Tide)	5d6	3 3 5 2 4	hits=1 sixes=0
+2026-10-22T03:34:34.018Z	H1 R1 Nadia Tide reroll 3	3d6	4 1 1	hits=0 sixes=0
+2026-10-22T03:34:38.877Z	H1 R1 Ade Strike pack (Chi die)	6d6	5 2 1 5 4 6	hits=3 sixes=1
+2026-10-22T03:34:44.982Z	H1 R1 Rosa Strike Warden (Blaze, Chi die)	6d6	4 3 6 5 2 2	hits=2 sixes=1
+2026-10-22T03:34:44.983Z	H1 R1 Hal Strike Warden (Bulwark self)	5d6	4 4 6 1 4	hits=1 sixes=1
+2026-10-22T03:34:44.984Z	H1 R1 Kit Strike pack (Help Rosa)	6d6	1 1 1 1 2 2	hits=0 sixes=0
+2026-10-22T03:34:57.823Z	H1 R1 Surge Warden	1d6	5	hits=1 sixes=0
+2026-10-22T03:35:11.913Z	H1 R2 Nadia Strike pack (no Chi)	5d6	1 5 5 5 4	hits=3 sixes=0
+2026-10-22T03:35:11.914Z	H1 R2 Ade Strike pack (no Chi)	5d6	5 5 4 1 3	hits=2 sixes=0
+2026-10-22T03:35:21.637Z	H1 R2 Rosa Strike Warden (Blaze)	5d6	5 5 6 2 6	hits=4 sixes=2
+2026-10-22T03:35:21.638Z	H1 R2 Hal Strike Warden (Bulwark self)	5d6	2 6 3 2 3	hits=1 sixes=1
+2026-10-22T03:35:21.638Z	H1 R2 Kit Strike Warden (no Chi)	5d6	3 2 3 6 5	hits=2 sixes=1
+2026-10-22T03:35:27.734Z	H1 R2 Surge Warden	1d6	4	hits=0 sixes=0
+2026-10-22T03:35:36.656Z	H1 R3 Nadia Strike Warden (no Chi)	5d6	3 6 6 4 5	hits=3 sixes=2
+2026-10-22T03:35:36.657Z	H1 R3 Ade Strike Warden (no Chi)	5d6	2 1 1 3 4	hits=0 sixes=0
+2026-10-22T03:35:42.352Z	H1 R3 Ade Lucky reroll 5	5d6	3 1 2 3 2	hits=0 sixes=0
+2026-10-22T03:35:53.307Z	H1 R3 Rosa Strike Warden (Blaze, Chi die)	6d6	2 3 2 2 3 2	hits=0 sixes=0
+2026-10-22T03:35:53.308Z	H1 R3 Hal Strike Warden (Bulwark self, Chi die)	6d6	4 3 1 4 4 2	hits=0 sixes=0
+2026-10-22T03:35:53.308Z	H1 R3 Kit Strike Warden (Help Ade, Help Hal)	7d6	2 2 2 5 4 1 1	hits=1 sixes=0
+2026-10-22T03:36:01.790Z	H1 R3 Surge Warden	1d6	1	hits=0 sixes=0
+2026-10-22T03:36:12.459Z	H1 R4 Nadia Strike Warden (Chi die)	6d6	2 5 3 3 2 1	hits=1 sixes=0
+2026-10-22T03:36:12.460Z	H1 R4 Ade Strike Warden (Chi die)	6d6	2 5 1 1 5 2	hits=2 sixes=0
+2026-10-22T03:36:12.460Z	H1 R4 Rosa Strike Warden (Blaze)	5d6	2 4 4 3 6	hits=1 sixes=1
+2026-10-22T03:36:12.460Z	H1 R4 Hal Strike Warden (Chi die)	6d6	5 4 4 1 2 1	hits=1 sixes=0
+2026-10-22T03:36:12.460Z	H1 R4 Kit Strike Warden (Edge)	5d6	5 3 6 5 5	hits=4 sixes=1
+2026-10-22T03:36:47.099Z	H3 Girder Quick Kit free Strike pack (Quick die, Help Hal)	7d6	6 3 5 3 5 4 3	hits=3 sixes=1
+2026-10-22T03:36:54.141Z	H3 R1 Nadia Strike pack (Tide)	5d6	5 5 5 2 6	hits=4 sixes=1
+2026-10-22T03:36:58.050Z	H3 R1 Nadia Tide reroll 1	1d6	5	hits=1 sixes=0
+2026-10-22T03:37:04.066Z	H3 R1 Ade Strike pack (no Chi)	5d6	3 3 1 5 4	hits=1 sixes=0
+2026-10-22T03:37:13.038Z	H3 R1 Rosa Strike Warden (Blaze, Chi die)	6d6	2 1 3 2 5 5	hits=2 sixes=0
+2026-10-22T03:37:13.039Z	H3 R1 Hal Strike pack (Bulwark self)	5d6	2 4 4 5 3	hits=1 sixes=0
+2026-10-22T03:37:13.039Z	H3 R1 Kit Strike Warden (Help Rosa)	6d6	6 5 5 4 5 4	hits=4 sixes=1
+2026-10-22T03:37:19.548Z	H3 R1 Surge Warden	1d6	1	hits=0 sixes=0
+2026-10-22T03:37:28.736Z	H3 R2 Nadia Strike Warden (no Chi)	5d6	6 1 4 2 4	hits=1 sixes=1
+2026-10-22T03:37:28.737Z	H3 R2 Ade Strike Warden (no Chi)	5d6	3 4 3 6 5	hits=2 sixes=1
+2026-10-22T03:37:39.791Z	H3 R2 Rosa Strike Warden (Blaze, Chi die)	6d6	5 2 6 6 2 3	hits=3 sixes=2
+2026-10-22T03:37:39.792Z	H3 R2 Hal Strike Warden (Bulwark self, Chi die)	6d6	6 5 3 2 6 3	hits=3 sixes=2
+2026-10-22T03:37:39.792Z	H3 R2 Kit Strike Warden (Help Hal)	6d6	5 2 4 5 3 1	hits=2 sixes=0
+2026-10-22T03:37:47.091Z	H3 R2 Surge Warden	1d6	3	hits=0 sixes=0
+2026-10-22T03:37:52.919Z	H3 R3 Nadia Strike Warden (Tide)	5d6	4 1 4 5 3	hits=1 sixes=0
+2026-10-22T03:37:56.419Z	H3 R3 Nadia Tide reroll 3	3d6	3 2 3	hits=0 sixes=0
+2026-10-22T03:38:03.392Z	H3 R3 Ade Strike Warden (no Chi)	5d6	4 5 1 2 5	hits=2 sixes=0
+2026-10-22T03:38:08.921Z	H3 R3 Rosa Strike Warden (Blaze, Chi die)	6d6	6 4 6 6 3 5	hits=4 sixes=3
+2026-10-22T03:38:20.245Z	H4 Holder Quick Kit free Strike pack (Quick die, Help Hal)	7d6	1 5 2 3 6 1 1	hits=2 sixes=1
+2026-10-22T03:38:25.798Z	H4 R1 Nadia Strike Warden (Tide)	5d6	3 6 1 2 4	hits=1 sixes=1
+2026-10-22T03:38:29.303Z	H4 R1 Nadia Tide reroll 3	3d6	5 5 5	hits=3 sixes=0
+2026-10-22T03:38:33.717Z	H4 R1 Ade Strike pack (no Chi)	5d6	2 3 2 5 4	hits=1 sixes=0
+2026-10-22T03:38:38.903Z	H4 R1 Rosa Strike Warden (Blaze, Chi die)	6d6	6 4 2 2 1 5	hits=2 sixes=1
+2026-10-22T03:38:38.904Z	H4 R1 Hal Strike pack (Bulwark self, Chi die)	6d6	4 2 6 4 2 4	hits=1 sixes=1
+2026-10-22T03:38:38.904Z	H4 R1 Kit Strike Warden (Help Rosa)	6d6	6 2 3 2 3 4	hits=1 sixes=1
+2026-10-22T03:38:50.848Z	H4 R1 Surge Warden	1d6	5	hits=1 sixes=0
+2026-10-22T03:38:58.162Z	H4 R2 Nadia Strike pack (no Chi)	5d6	6 3 1 1 6	hits=2 sixes=2
+2026-10-22T03:38:58.163Z	H4 R2 Ade Strike pack (no Chi)	5d6	1 5 3 4 1	hits=1 sixes=0
+2026-10-22T03:39:05.184Z	H4 R2 Rosa Strike Warden (Help Nadia)	6d6	6 2 5 1 1 3	hits=2 sixes=1
+2026-10-22T03:39:05.185Z	H4 R2 Hal Strike Warden (no Chi)	5d6	4 3 4 5 5	hits=2 sixes=0
+2026-10-22T03:39:05.186Z	H4 R2 Kit Strike Warden (Edge)	5d6	4 3 2 2 4	hits=0 sixes=0
+2026-10-22T03:39:14.930Z	H4 R2 Surge Warden	1d6	4	hits=0 sixes=0
+2026-10-22T03:39:24.102Z	H4 R3 Nadia Strike Warden (no Chi)	5d6	3 5 3 1 1	hits=1 sixes=0
+2026-10-22T03:39:24.103Z	H4 R3 Ade Strike Warden (no Chi)	5d6	3 3 6 6 1	hits=2 sixes=2
+2026-10-22T03:39:32.005Z	H4 R3 Ade Lucky reroll 3	3d6	3 5 4	hits=1 sixes=0
+2026-10-22T03:39:41.714Z	H4 R3 Rosa Strike Warden (Help Ade, Help Nadia)	7d6	2 6 6 2 5 6 6	hits=5 sixes=4
+2026-10-22T03:39:41.716Z	H4 R3 Hal Strike Warden (no Chi)	5d6	5 5 2 5 1	hits=3 sixes=0
+2026-10-22T03:39:41.716Z	H4 R3 Kit Strike Warden (Edge)	5d6	4 2 5 1 3	hits=1 sixes=0
+2026-10-22T03:39:52.291Z	H4 R3 Surge Warden	1d6	3	hits=0 sixes=0
+2026-10-22T03:39:59.802Z	H4 R4 Nadia Strike Warden (no Chi)	5d6	4 5 5 5 5	hits=4 sixes=0
+2026-10-22T03:39:59.804Z	H4 R4 Ade Strike Warden (no Chi)	5d6	1 6 1 4 4	hits=1 sixes=1
+2026-10-22T03:40:06.434Z	H4 R4 Rosa Strike Warden (Chi die)	6d6	4 4 5 4 3 1	hits=1 sixes=0
+2026-10-22T03:40:59.578Z	HEART Quick Kit free Strike pack (Quick die)	6d6	1 1 4 1 6 5	hits=2 sixes=1
+2026-10-22T03:41:06.637Z	HEART R1 Ade Strike pack (Harmony awakened, Renewal self, Chi die)	6d6	3 6 3 1 2 6	hits=2 sixes=2
+2026-10-22T03:41:11.968Z	HEART R1 Ade Lucky reroll 4	4d6	6 6 5 6	hits=4 sixes=3
+2026-10-22T03:41:24.799Z	HEART R1 Rosa action 1 Strike Heart (Tempest awakened, Blaze)	5d6	5 2 5 3 3	hits=2 sixes=0
+2026-10-22T03:41:24.801Z	HEART R1 Rosa action 2 Strike pack (Blaze)	5d6	1 4 4 2 4	hits=0 sixes=0
+2026-10-22T03:41:24.801Z	HEART R1 Hal Strike Heart (Unbreakable awakened, Bulwark on Kit, Chi die)	6d6	2 4 4 6 1 4	hits=1 sixes=1
+2026-10-22T03:41:24.801Z	HEART R1 Kit Strike Heart (Ascendant awakened, Edge)	5d6	1 6 5 4 3	hits=2 sixes=1
+2026-10-22T03:41:41.494Z	HEART R2 Ade Strike pack (Chi die)	6d6	3 1 2 3 3 1	hits=0 sixes=0
+2026-10-22T03:41:52.187Z	HEART R2 Rosa action 1 Strike Heart (Blaze, Help Ade)	6d6	2 2 4 4 1 3	hits=0 sixes=0
+2026-10-22T03:41:52.189Z	HEART R2 Rosa action 2 Strike pack (Help Ade)	6d6	3 4 1 2 1 3	hits=0 sixes=0
+2026-10-22T03:41:52.189Z	HEART R2 Hal Strike Heart (Chi die)	6d6	1 6 2 6 1 1	hits=2 sixes=2
+2026-10-22T03:41:52.189Z	HEART R2 Kit Strike Heart (Edge, Chi die)	6d6	3 5 2 6 1 6	hits=3 sixes=2
+2026-10-22T03:42:13.992Z	HEART R3 Nadia Strike Heart (no Chi)	5d6	2 6 5 2 1	hits=2 sixes=1
+2026-10-22T03:42:13.993Z	HEART R3 Ade Strike pack (no Chi)	5d6	5 5 5 2 4	hits=3 sixes=0
+2026-10-22T03:42:26.502Z	HEART R3 Rosa action 1 Strike Heart (Blaze)	5d6	3 4 1 3 4	hits=0 sixes=0
+2026-10-22T03:42:26.503Z	HEART R3 Rosa action 2 Strike Heart (Blaze)	5d6	6 3 4 4 6	hits=2 sixes=2
+2026-10-22T03:42:26.503Z	HEART R3 Hal Strike Heart (Bulwark on Rosa)	5d6	5 2 1 4 5	hits=2 sixes=0
+2026-10-22T03:42:26.503Z	HEART R3 Kit Strike Heart (Edge, Chi die)	6d6	2 4 4 2 4 3	hits=0 sixes=0
+2026-10-22T03:42:33.728Z	HEART R3 Surge Heart	1d6	3	hits=0 sixes=0
+2026-10-22T03:43:00.602Z	HEART R4 Nadia Strike Heart (no Chi)	5d6	1 6 4 3 2	hits=1 sixes=1
+2026-10-22T03:43:00.603Z	HEART R4 Rosa Strike Heart (Blaze, Chi die)	6d6	5 6 4 3 3 6	hits=3 sixes=2
+2026-10-22T03:43:00.604Z	HEART R4 Hal Strike Heart (no Chi)	5d6	3 3 1 5 6	hits=2 sixes=1
+2026-10-22T03:43:07.678Z	HEART R4 Surge Heart	1d6	2	hits=0 sixes=0

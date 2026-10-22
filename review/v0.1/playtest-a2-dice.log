@@ -1,0 +1,125 @@
+2026-10-22T03:29:45.848Z	Setup Ellie rolled pick: element	1d6	3	hits=0 sixes=0
+2026-10-22T03:29:45.850Z	Setup Ellie rolled pick: style	1d6	4	hits=0 sixes=0
+2026-10-22T03:29:45.850Z	Setup Ellie rolled pick: perk	1d6	5	hits=1 sixes=0
+2026-10-22T03:29:45.850Z	Setup Ellie rolled pick: Awakening	1d6	3	hits=0 sixes=0
+2026-10-22T03:29:49.608Z	Setup Ellie style reroll (4=Counter taken by Sam)	1d6	5	hits=1 sixes=0
+2026-10-22T03:30:23.551Z	N1 FC R1 Tariq strikes pack (Blaze, Chi die)	6d6	5 1 5 2 6 5	hits=4 sixes=1
+2026-10-22T03:30:28.641Z	N1 FC R1 Grace strikes pack (Chi die)	6d6	4 3 1 6 4 4	hits=1 sixes=1
+2026-10-22T03:30:35.411Z	N1 FC R1 Sam strikes pack (Chi die)	6d6	4 2 6 4 5 2	hits=2 sixes=1
+2026-10-22T03:30:42.002Z	N1 FC R2 Tariq strikes pack (Blaze, Chi die, fed)	6d6	2 6 3 5 5 4	hits=3 sixes=1
+2026-10-22T03:30:46.463Z	N1 FC R2 Grace strikes pack (fed)	5d6	2 2 5 6 4	hits=2 sixes=1
+2026-10-22T03:30:56.463Z	N1 H1 Bridge R1 Tariq strikes Girder (Blaze, Chi die)	6d6	3 2 5 6 4 5	hits=3 sixes=1
+2026-10-22T03:31:03.853Z	N1 H1 Bridge R1 Grace strikes pack (Chi die, fed)	6d6	1 4 4 1 1 5	hits=1 sixes=0
+2026-10-22T03:31:11.630Z	N1 H1 Bridge R1 Sam strikes pack (Chi die, fed)	6d6	1 2 4 6 6 1	hits=2 sixes=2
+2026-10-22T03:31:17.023Z	N1 H1 Bridge R1 Girder Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:31:22.746Z	N1 H1 Bridge R2 Tariq strikes Girder (Blaze, Chi die, fed)	6d6	6 2 4 1 2 3	hits=1 sixes=1
+2026-10-22T03:31:27.962Z	N1 H1 Bridge R2 Grace strikes Girder (fed)	5d6	3 4 2 5 5	hits=2 sixes=0
+2026-10-22T03:31:33.287Z	N1 H1 Bridge R2 Sam strikes Girder (Tide, Chi die, fed)	6d6	4 3 4 2 1 1	hits=0 sixes=0
+2026-10-22T03:31:36.814Z	N1 H1 Bridge R2 Sam Tide reroll 3 misses	3d6	5 1 1	hits=1 sixes=0
+2026-10-22T03:31:42.432Z	N1 H1 Bridge R2 Girder Surge	1d6	3	hits=0 sixes=0
+2026-10-22T03:31:47.327Z	N1 H1 Bridge R3 Tariq strikes Girder (Blaze, Chi die, fed)	6d6	4 5 6 5 2 4	hits=3 sixes=1
+2026-10-22T03:31:51.185Z	N1 H1 Bridge R3 Grace strikes Girder (fed)	5d6	1 4 4 2 6	hits=1 sixes=1
+2026-10-22T03:31:55.948Z	N1 H1 Bridge R3 Sam strikes Girder (Tide, Chi die, fed)	6d6	5 2 4 4 4 5	hits=2 sixes=0
+2026-10-22T03:32:00.104Z	N1 H1 Bridge R3 Sam Tide reroll 3 misses	3d6	6 4 4	hits=1 sixes=1
+2026-10-22T03:32:04.572Z	N1 H1 Bridge R3 Girder Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:32:12.609Z	N1 H1 Bridge R4 Tariq strikes Girder (fed)	5d6	4 1 1 5 5	hits=2 sixes=0
+2026-10-22T03:32:23.434Z	N1 H3 Reservoir R1 Grace strikes Overflow (Chi die)	6d6	1 5 4 2 2 3	hits=1 sixes=0
+2026-10-22T03:32:30.428Z	N1 H3 Reservoir R1 Sam strikes pack (fed)	5d6	4 5 3 6 1	hits=2 sixes=1
+2026-10-22T03:32:37.870Z	N1 H3 Reservoir R1 Tariq strikes pack (Blaze, Chi die, fed)	6d6	6 6 6 6 5 5	hits=6 sixes=4
+2026-10-22T03:32:42.783Z	N1 H3 Reservoir R1 Overflow Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:32:49.372Z	N1 H3 Reservoir R2 Grace strikes Overflow (Chi die, fed)	6d6	2 5 2 4 5 6	hits=3 sixes=1
+2026-10-22T03:32:55.178Z	N1 H3 Reservoir R2 Sam strikes Overflow (fed)	5d6	1 3 5 6 1	hits=2 sixes=1
+2026-10-22T03:32:59.866Z	N1 H3 Reservoir R2 Tariq strikes Overflow (Blaze, fed)	5d6	5 1 5 4 4	hits=2 sixes=0
+2026-10-22T03:33:05.998Z	N1 H3 Reservoir R2 Overflow Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:33:11.670Z	N1 H3 Reservoir R3 Grace strikes Overflow (fed)	5d6	5 3 2 6 5	hits=3 sixes=1
+2026-10-22T03:33:17.193Z	N1 H3 Reservoir R3 Sam strikes Overflow (fed)	5d6	1 3 1 5 2	hits=1 sixes=0
+2026-10-22T03:33:21.385Z	N1 H3 Reservoir R3 Tariq strikes Overflow (fed)	5d6	2 4 3 1 4	hits=0 sixes=0
+2026-10-22T03:33:25.830Z	N1 H3 Reservoir R3 Overflow Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:33:31.544Z	N1 H3 Reservoir R4 Grace strikes Overflow (fed)	5d6	5 5 4 6 6	hits=4 sixes=2
+2026-10-22T03:33:37.019Z	N1 H3 Reservoir R4 Sam strikes Overflow (Tide, fed)	5d6	5 2 2 3 5	hits=2 sixes=0
+2026-10-22T03:33:44.239Z	N1 H4 Substation R1 Sam strikes Stoker (Tide)	5d6	1 4 1 6 6	hits=2 sixes=2
+2026-10-22T03:33:49.460Z	N1 H4 Substation R1 Sam Tide reroll 3 misses	3d6	4 2 2	hits=0 sixes=0
+2026-10-22T03:33:55.173Z	N1 H4 Substation R1 Tariq strikes pack (Blaze, Chi die, fed)	6d6	2 3 4 3 6 3	hits=1 sixes=1
+2026-10-22T03:34:00.881Z	N1 H4 Substation R1 Grace strikes pack (Chi die, fed)	6d6	4 6 3 3 6 2	hits=2 sixes=2
+2026-10-22T03:34:05.959Z	N1 H4 Substation R1 Stoker Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:34:10.645Z	N1 H4 Substation R2 Sam strikes Stoker (Tide, Chi die, fed)	6d6	3 5 6 4 3 2	hits=2 sixes=1
+2026-10-22T03:34:15.436Z	N1 H4 Substation R2 Sam Tide reroll 3 misses	3d6	6 3 1	hits=1 sixes=1
+2026-10-22T03:34:21.846Z	N1 H4 Substation R2 Tariq strikes Stoker (Blaze, Chi die, fed)	6d6	3 2 4 5 1 3	hits=1 sixes=0
+2026-10-22T03:34:26.699Z	N1 H4 Substation R2 Grace strikes Stoker (Chi die, fed)	6d6	4 2 2 6 4 5	hits=2 sixes=1
+2026-10-22T03:34:33.658Z	N1 H4 Substation R2 Stoker Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:34:41.402Z	N1 H4 Substation R3 Sam strikes Stoker (Tide, Chi die, fed)	6d6	3 4 5 1 6 2	hits=2 sixes=1
+2026-10-22T03:34:46.674Z	N1 H4 Substation R3 Sam Tide reroll 3 misses	3d6	3 4 4	hits=0 sixes=0
+2026-10-22T03:34:51.111Z	N1 H4 Substation R3 Tariq strikes Stoker (Blaze, Chi die, fed)	6d6	5 3 2 2 3 3	hits=1 sixes=0
+2026-10-22T03:34:56.451Z	N1 H4 Substation R3 Grace strikes Stoker (fed)	5d6	5 2 4 4 5	hits=2 sixes=0
+2026-10-22T03:35:13.567Z	N1 Heart R1 Tariq (Awakened Ascendant) strikes Heart (Blaze, Chi die)	6d6	3 3 2 5 6 2	hits=2 sixes=1
+2026-10-22T03:35:20.312Z	N1 Heart R1 Grace (Awakened Wellspring) strikes pack (fed)	5d6	2 3 5 4 5	hits=2 sixes=0
+2026-10-22T03:35:25.270Z	N1 Heart R1 Sam (Awakened Unbreakable) strikes Heart (fed)	5d6	4 4 3 6 4	hits=1 sixes=1
+2026-10-22T03:35:30.964Z	N1 Heart R1 Heart Surge	1d6	3	hits=0 sixes=0
+2026-10-22T03:35:37.018Z	N1 Heart R2 Tariq (Ascendant) strikes Heart (fed)	5d6	4 6 1 1 3	hits=1 sixes=1
+2026-10-22T03:35:41.856Z	N1 Heart R2 Grace strikes pack (fed)	5d6	2 5 2 2 6	hits=2 sixes=1
+2026-10-22T03:35:46.872Z	N1 Heart R2 Sam (Unbreakable) strikes Heart (Tide, Chi die, fed)	6d6	1 4 5 6 1 4	hits=2 sixes=1
+2026-10-22T03:35:50.825Z	N1 Heart R2 Sam Tide reroll 3 misses	3d6	5 5 4	hits=2 sixes=0
+2026-10-22T03:35:55.050Z	N1 Heart R2 Heart Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:36:01.369Z	N1 Heart R3 Tariq (Ascendant) strikes Heart (fed)	5d6	2 3 4 2 5	hits=1 sixes=0
+2026-10-22T03:36:05.650Z	N1 Heart R3 Grace strikes Heart (fed)	5d6	1 5 5 1 1	hits=2 sixes=0
+2026-10-22T03:36:10.074Z	N1 Heart R3 Sam (Unbreakable) strikes Heart (fed)	5d6	3 1 2 6 2	hits=1 sixes=1
+2026-10-22T03:36:14.794Z	N1 Heart R3 Heart Surge	1d6	6	hits=1 sixes=1
+2026-10-22T03:36:22.779Z	N1 Heart R4 Tariq strikes pack (Blaze, fed)	5d6	3 5 2 3 3	hits=1 sixes=0
+2026-10-22T03:36:28.429Z	N1 Heart R4 Grace strikes pack (fed)	5d6	3 2 2 6 6	hits=2 sixes=2
+2026-10-22T03:36:35.003Z	N1 Heart R4 Sam strikes pack (Chi die, fed)	6d6	5 6 2 3 2 6	hits=3 sixes=2
+2026-10-22T03:36:42.044Z	N1 Heart R4 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:36:49.602Z	N1 Heart R5 Tariq strikes Heart (fed, Help from Sam)	6d6	4 2 3 1 1 5	hits=1 sixes=0
+2026-10-22T03:36:59.629Z	N1 Heart R5 Sam strikes Heart (Tide, Chi die, fed by Grace's Rally)	6d6	5 6 2 4 4 4	hits=2 sixes=1
+2026-10-22T03:37:03.751Z	N1 Heart R5 Sam Tide reroll 3 misses	3d6	1 3 5	hits=1 sixes=0
+2026-10-22T03:37:09.465Z	N1 Heart R5 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:37:16.283Z	N1 Heart R6 Tariq strikes Heart (fed)	5d6	1 6 2 3 4	hits=1 sixes=1
+2026-10-22T03:37:31.221Z	N1 Heart R6 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:37:40.149Z	N1 Heart R7 Sam strikes Heart (fed, Help from Grace)	6d6	1 1 4 5 4 1	hits=1 sixes=0
+2026-10-22T03:37:45.298Z	N1 Heart R7 Grace strikes Heart	5d6	5 6 2 5 3	hits=3 sixes=1
+2026-10-22T03:37:50.343Z	N1 Heart R7 Heart Surge	1d6	3	hits=0 sixes=0
+2026-10-22T03:40:23.842Z	N2 build First Clash table	1d6	3	hits=0 sixes=0
+2026-10-22T03:40:23.843Z	N2 build Wood Shell place	1d6	5	hits=1 sixes=0
+2026-10-22T03:40:23.843Z	N2 build Fire Shell place	1d6	2	hits=0 sixes=0
+2026-10-22T03:40:23.844Z	N2 build Earth Shell place	1d6	4	hits=0 sixes=0
+2026-10-22T03:40:23.844Z	N2 build Metal Shell place	1d6	6	hits=1 sixes=1
+2026-10-22T03:40:23.844Z	N2 build Water Shell place	1d6	4	hits=0 sixes=0
+2026-10-22T03:40:23.844Z	N2 build sign Wood Anchor	1d6	5	hits=1 sixes=0
+2026-10-22T03:40:23.844Z	N2 build sign Fire Anchor	1d6	1	hits=0 sixes=0
+2026-10-22T03:40:23.844Z	N2 build sign Earth Anchor	1d6	3	hits=0 sixes=0
+2026-10-22T03:40:23.844Z	N2 build sign Metal Anchor	1d6	5	hits=1 sixes=0
+2026-10-22T03:40:23.844Z	N2 build sign Water Anchor	1d6	5	hits=1 sixes=0
+2026-10-22T03:40:23.844Z	N2 build Heart table	1d6	6	hits=1 sixes=1
+2026-10-22T03:40:29.363Z	N2 build sign Metal Anchor reroll (5 taken)	1d6	1	hits=0 sixes=0
+2026-10-22T03:40:29.364Z	N2 build sign Water Anchor reroll (5 taken)	1d6	6	hits=1 sixes=1
+2026-10-22T03:40:33.507Z	N2 build sign Metal Anchor reroll (1 taken)	1d6	4	hits=0 sixes=0
+2026-10-22T03:40:44.516Z	N2 FC R1 Tariq strikes pack (Blaze, Chi die)	6d6	4 3 3 5 2 4	hits=1 sixes=0
+2026-10-22T03:40:53.195Z	N2 FC R1 Grace strikes pack (Chi die, fed)	6d6	5 2 5 1 5 5	hits=4 sixes=0
+2026-10-22T03:40:57.127Z	N2 FC R1 Sam strikes pack (Chi die, fed)	6d6	3 1 6 3 1 4	hits=1 sixes=1
+2026-10-22T03:41:01.666Z	N2 FC R2 Tariq strikes pack (Blaze, Chi die, fed)	6d6	5 3 2 4 4 2	hits=1 sixes=0
+2026-10-22T03:41:06.297Z	N2 FC R2 Grace strikes pack (Chi die, fed)	6d6	5 6 6 5 1 3	hits=4 sixes=2
+2026-10-22T03:41:12.172Z	N2 H1 Escalators R1 Tariq strikes Stair (Blaze, Chi die)	6d6	4 1 3 4 4 4	hits=0 sixes=0
+2026-10-22T03:41:18.107Z	N2 H1 Escalators R1 Grace strikes pack (Chi die, fed)	6d6	2 1 4 4 3 6	hits=1 sixes=1
+2026-10-22T03:41:22.450Z	N2 H1 Escalators R1 Sam strikes pack (Chi die, fed)	6d6	6 2 5 4 2 6	hits=3 sixes=2
+2026-10-22T03:41:26.615Z	N2 H1 Escalators R1 Stair Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:41:30.908Z	N2 H1 Escalators R2 Tariq strikes Stair (Blaze, Chi die, fed)	6d6	6 2 1 5 3 1	hits=2 sixes=1
+2026-10-22T03:41:35.061Z	N2 H1 Escalators R2 Grace strikes Stair (fed)	5d6	1 6 2 2 2	hits=1 sixes=1
+2026-10-22T03:41:39.536Z	N2 H1 Escalators R2 Sam strikes Stair (Tide, Chi die, fed)	6d6	1 3 1 5 2 5	hits=2 sixes=0
+2026-10-22T03:41:43.285Z	N2 H1 Escalators R2 Sam Tide reroll 3 misses	3d6	3 6 2	hits=1 sixes=1
+2026-10-22T03:41:52.124Z	N2 H1 Escalators R2 Stair Surge	1d6	6	hits=1 sixes=1
+2026-10-22T03:41:57.854Z	N2 H1 Escalators R3 Tariq strikes Stair (Blaze, Chi die, fed)	6d6	1 3 5 1 2 4	hits=1 sixes=0
+2026-10-22T03:42:03.361Z	N2 H1 Escalators R3 Grace strikes pack (Chi die, fed)	6d6	3 3 3 3 1 2	hits=0 sixes=0
+2026-10-22T03:42:09.376Z	N2 H1 Escalators R3 Sam strikes pack (fed)	5d6	2 4 3 5 1	hits=1 sixes=0
+2026-10-22T03:42:15.335Z	N2 H1 Escalators R3 Stair Surge	1d6	6	hits=1 sixes=1
+2026-10-22T03:42:21.838Z	N2 H1 Escalators R4 Tariq strikes Stair (Blaze, fed)	5d6	3 5 6 5 4	hits=3 sixes=1
+2026-10-22T03:42:26.140Z	N2 H1 Escalators R4 Grace strikes Stair (Chi die, fed)	6d6	6 1 2 4 6 2	hits=2 sixes=2
+2026-10-22T03:42:31.180Z	N2 H1 Escalators R4 Sam strikes Stair (fed)	5d6	2 2 2 2 1	hits=0 sixes=0
+2026-10-22T03:42:35.908Z	N2 H1 Escalators R4 Stair Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:42:44.191Z	N2 H1 Escalators R5 Tariq strikes Stair (fed, Help from Sam)	6d6	2 3 4 4 3 3	hits=0 sixes=0
+2026-10-22T03:42:48.291Z	N2 H1 Escalators R5 Grace strikes Stair (Chi die, fed)	6d6	1 2 3 2 3 3	hits=0 sixes=0
+2026-10-22T03:42:52.771Z	N2 H1 Escalators R5 Sam strikes Stair (Tide, fed)	5d6	2 3 6 5 4	hits=2 sixes=1
+2026-10-22T03:42:57.651Z	N2 H1 Escalators R5 Sam Tide reroll 3 misses	3d6	2 1 6	hits=1 sixes=1
+2026-10-22T03:43:09.003Z	N2 H4 Night market R1 Sam strikes Cook (Tide, Chi die)	6d6	5 1 1 6 2 3	hits=2 sixes=1
+2026-10-22T03:43:12.824Z	N2 H4 Night market R1 Sam Tide reroll 3 misses	3d6	4 6 1	hits=1 sixes=1
+2026-10-22T03:43:17.968Z	N2 H4 Night market R1 Tariq strikes pack (Blaze, Chi die, fed)	6d6	3 1 4 5 4 4	hits=1 sixes=0
+2026-10-22T03:43:22.153Z	N2 H4 Night market R1 Grace strikes pack (Chi die, fed)	6d6	6 5 4 3 6 3	hits=3 sixes=2
+2026-10-22T03:43:27.066Z	N2 H4 Night market R1 Cook Surge	1d6	2	hits=0 sixes=0
