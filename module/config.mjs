@@ -29,7 +29,7 @@ EF.elements = {
 /** Ch 2: fighting styles (always on). */
 EF.styles = {
   brawler:  { label: "Brawler",  text: "+1 damage when you meet the Guard." },
-  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigor, you may lose it instead. When you do, gain 2 Chi." },
+  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigor, you may lose it instead. If it was 2 or more, gain 2 Chi." },
   sweeper:  { label: "Sweeper",  text: "When you meet the Guard, also deal 1 damage to one other enemy." },
   counter:  { label: "Counter",  text: "When an enemy hits you back, deal it 1 damage and gain 1 more Chi." },
   flow:     { label: "Flow",     text: "Lose 1 less Vigor each time, except from a Sweep." },
@@ -71,7 +71,7 @@ EF.rules = {
   awakenCost: 3,
   // techniques, styles, perks
   renewalVigor: 1, blazeDamage: 2, bulwarkReduce: 3, edgeHits: 3, tideRerolls: 3,
-  brawlerDamage: 1, guardianChi: 2, sweeperDamage: 1, counterDamage: 1, counterChi: 1, flowReduce: 1, breathChi: 4,
+  brawlerDamage: 1, guardianChi: 2, guardianMinLoss: 2, sweeperDamage: 1, counterDamage: 1, counterChi: 1, flowReduce: 1, breathChi: 4,
   toughVigor: 3, medicVigor: 2, quickDice: 1, stubbornVigor: 2, trainedDamage: 2, trainedChi: 1,
   feedDamage: 1,
   wellspringVigor: 2, harmonyChi: 3, ascendantMult: 2

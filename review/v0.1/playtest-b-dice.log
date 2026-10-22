@@ -160,3 +160,24 @@
 2026-10-22T03:03:40.637Z	Drill 19 R4 Nell Lucky reroll 4 misses	4d6	1 3 5 2	hits=1 sixes=0
 2026-10-22T03:03:44.206Z	Drill 19 R4 Heart Surge	1d6	1	hits=0 sixes=0
 2026-10-22T03:03:51.556Z	Drill 19 R5 Nell Strike Heart (not fed: Rae Rallied Kit, Metal acted nothing), Help Rae	6d6	5 4 6 4 6 4	hits=3 sixes=2
+2026-10-22T03:03:55.936Z	Drill 19 R5 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:04:08.876Z	Drill 19 R6 Rae Strike Heart at 11 (fed, V2, Stubborn used)	5d6	6 4 5 3 5	hits=3 sixes=1
+2026-10-22T03:04:13.065Z	Drill 19 R6 Nell Strike Heart at 7 (not fed, Chi die)	6d6	6 1 3 3 3 2	hits=1 sixes=1
+2026-10-22T03:04:17.275Z	Drill 19 R6 Heart Surge (Rae V1, Nell V1, Kit Down)	1d6	6	hits=1 sixes=1
+2026-10-22T03:04:25.105Z	Drill 19 R7 Rae Strike Heart at 7 (fed, V1)	5d6	1 5 5 1 3	hits=2 sixes=0
+2026-10-22T03:04:30.012Z	Drill 19 R7 Nell Strike Heart at 4 (not fed, Chi die, Tide)	6d6	6 2 3 2 2 1	hits=1 sixes=1
+2026-10-22T03:04:32.910Z	Drill 19 R7 Nell Tide reroll 3 misses	3d6	5 1 4	hits=1 sixes=0
+2026-10-22T03:04:40.637Z	Drill 19 R7 Heart Surge (Swarm put Rae Down; Nell V1 last standing; Heart 6 of 51)	1d6	1	hits=0 sixes=0
+2026-10-22T03:04:50.391Z	Drill 20 Heart R7 dawn, Heart 52/70 (half 35), 3 Stills: Lou Strike (fed)	5d6	2 6 1 4 4	hits=1 sixes=1
+2026-10-22T03:04:50.392Z	Drill 20 R7 Kit Strike (fed)	5d6	2 5 1 1 1	hits=1 sixes=0
+2026-10-22T03:04:50.392Z	Drill 20 R7 Nell Strike (fed)	5d6	2 2 4 5 2	hits=1 sixes=0
+2026-10-22T03:04:50.392Z	Drill 20 R7 Tess Strike (fed)	5d6	5 3 4 3 2	hits=1 sixes=0
+2026-10-22T03:04:50.392Z	Drill 20 R7 Omar Strike (fed)	5d6	2 4 3 5 6	hits=2 sixes=1
+2026-10-22T03:04:59.235Z	Drill 21 Tess Strike Warden with Renewal declared on Down Kit	5d6	3 6 5 6 4	hits=3 sixes=2
+2026-10-22T03:05:11.599Z	Drill 9c First Clash, no Chi spent: Omar Quick Strike (Quick die)	6d6	4 4 6 3 6 2	hits=2 sixes=2
+2026-10-22T03:05:11.600Z	Drill 9c R1 Lou (fed)	5d6	5 1 3 2 5	hits=2 sixes=0
+2026-10-22T03:05:11.600Z	Drill 9c R1 Kit (fed)	5d6	2 1 2 6 2	hits=1 sixes=1
+2026-10-22T03:05:11.600Z	Drill 9c R1 Nell (fed)	5d6	1 6 6 6 2	hits=3 sixes=3
+2026-10-22T03:05:11.600Z	Drill 9c R1 Tess (fed)	5d6	1 4 2 5 5	hits=2 sixes=0
+2026-10-22T03:05:11.600Z	Drill 9c R1 Omar (fed)	5d6	1 1 3 1 4	hits=0 sixes=0
+2026-10-22T03:05:25.366Z	Drill 22 Rae Strike last Still (pack at 2) with Warden at 1: Sweeper to Warden if Guard met (not fed)	5d6	6 3 1 6 5	hits=3 sixes=2

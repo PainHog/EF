@@ -403,10 +403,11 @@ function harm(ctx, f, amount, { sweep = false } = {}) {
   const { R, F, rec } = ctx;
   if (f.down || amount <= 0) return;
   let target = f;
-  // §2 Guardian: once per round, take another fighter's loss instead (policy: when it would put them Down, or it's 2+).
+  // §2 Guardian: once per round, take another fighter's loss instead (policy: when it would put them Down, or it's at least P.guardFrom).
   const gd = F.find(o => o !== f && !o.down && o.has("style", "guardian"));
-  if (gd && !ctx.rs.guardianUsed && (f.vigor <= amount || amount >= 2) && gd.vigor > amount) {
-    ctx.rs.guardianUsed = true; target = gd; rec.guardianSaves++; gainChi(ctx, gd, R.guardianChi);
+  if (gd && !ctx.rs.guardianUsed && (f.vigor <= amount || amount >= ctx.P.guardFrom) && gd.vigor > amount) {
+    ctx.rs.guardianUsed = true; target = gd; rec.guardianSaves++;
+    if (amount >= R.guardianMinLoss) gainChi(ctx, gd, R.guardianChi); // §2 Guardian: 2 Chi for a loss of 2 or more
   }
   if (ctx.rs.earth && ctx.rs.earth.has(target)) { amount -= R.earthReduce; ctx.rs.earth.delete(target); } // §2 Bulwark takes one blow
   if (target === f && f.has("style", "flow") && !sweep) amount -= R.flowReduce;                            // §2 Flow

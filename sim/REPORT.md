@@ -39,11 +39,11 @@ Losses split (wiped out at the Heart / dawn with the Heart above half):
 
 ## 3. Fight length (rounds) and fight results
 
-| Fight | Target rounds | Easy mean (90th pct, max) | Standard | Hard | Standard: won · wiped out · withdrew |
+| Fight | Target rounds | Easy mean (90th pct, max) | Standard | Hard | Standard: won · wiped out · withdrew · held at round 7 |
 |---|---|---|---|---|---|
-| First Clash | 2–3 | 2.2 (3, 5) | 2.2 (3, 5) | 2.2 (3, 5) | 100.0% · 0.0% · 0.0% |
-| Anchor | 3–5 | 3.8 (5, 7) | 3.8 (5, 7) | 3.8 (5, 7) | 99.3% · 0.1% · 0.0% |
-| Heart | 4–7 | 5.2 (7, 7) | 5.3 (7, 7) | 5.5 (7, 7) | 75.1% · 8.9% · 0.0% |
+| First Clash | 2–3 | 2.2 (3, 5) | 2.2 (3, 5) | 2.2 (3, 5) | 100.0% · 0.0% · 0.0% · 0.0% |
+| Anchor | 3–5 | 3.8 (5, 7) | 3.8 (5, 7) | 3.8 (5, 7) | 99.3% · 0.1% · 0.0% · 0.6% |
+| Heart | 4–7 | 5.2 (7, 7) | 5.3 (7, 7) | 5.5 (7, 7) | 75.1% · 8.9% · 0.0% · 0.0% |
 
 ## 4. The night at Standard, by group size
 
@@ -117,7 +117,7 @@ How the simulated players decide is not a rule. Each row changes one habit; the 
 | Default habits (POLICY) | 75.1% | 15.2% | 9.8% | 100.0% | 2.56 |
 | Never Awaken before the Heart | 75.1% | 15.2% | 9.7% | 100.0% | 2.56 |
 | Awaken as soon as allowed | 74.4% | 15.4% | 10.1% | 100.0% | 2.56 |
-| Spend Chi freely in the Hunt (no reserve for Awakening) | 75.1% | 15.2% | 9.8% | 100.0% | 2.56 |
+| Save 3 Chi through the Hunt for an Awakening | 69.0% | 18.7% | 12.4% | 100.0% | 2.27 |
 | Rest only below 40% Vigor | 62.6% | 14.7% | 22.7% | 100.0% | 2.72 |
 | Rest below 80% Vigor | 74.3% | 17.3% | 8.4% | 100.0% | 2.37 |
 | Always strike the Warden or Heart, never the pack | 55.0% | 18.7% | 26.3% | 100.0% | 2.36 |

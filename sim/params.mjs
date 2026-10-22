@@ -30,7 +30,8 @@ export const RULES = {
 
   // §2 Fighting styles
   brawlerDamage: 1,     // Brawler: extra damage when you meet the Guard
-  guardianChi: 2,       // Guardian: Chi gained when you take another fighter's loss
+  guardianChi: 2,       // Guardian: Chi gained when you take another fighter's loss…
+  guardianMinLoss: 2,   // …of at least this much (before protections)
   sweeperDamage: 1,     // Sweeper: damage to one other enemy when you meet the Guard
   counterDamage: 1,     // Counter: damage to an enemy that hits you back…
   counterChi: 1,        // …and extra Chi
@@ -104,6 +105,7 @@ export const POLICY = {
   reserveForAwakening: false, // in the Hunt, keep enough Chi to Awaken at the Heart (the Heart gives 3)
   awakenInHunt: "trouble", // "trouble": only when someone is Down and the enemy is above half; "never"; "asap"
   packFirstAt: 2,          // strike the pack first while it has at least this many Stills
+  guardFrom: 2,            // a Guardian takes another fighter's loss of at least this much (or one that would put them Down)
 };
 
 /** Deep-merge plain objects (b wins). */
