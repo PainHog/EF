@@ -1,6 +1,6 @@
-Now: The core rules are written and balanced: five elements, one night, and a fight to break the Heart before dawn
-Next: Richard reads and approves the core rules, then the rulebook chapters begin
-Number: Design decisions made = 33
+Now: Writing the rulebook chapters, now that Richard has approved the core rules
+Next: Art and page layout, then computer playtests by the book
+Number: Design decisions made = 34
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
 
@@ -22,7 +22,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Design interview: every core question answered
 - [x] One page of core rules
 - [x] Balance simulator: wins and losses for every group size and difficulty
-- [ ] Richard approves the core rules
+- [x] Richard approves the core rules
 
 ## Building the game
 

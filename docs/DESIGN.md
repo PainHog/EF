@@ -98,6 +98,7 @@ Use original names and designs.
 | 31 | 2026-10-22 | **Ready-made content for the book:** one full night with five named Anchors, plus an Anchor generator of d6 tables, validated with 100 generated nights | A25 and A26. Written after the core is approved |
 | 32 | 2026-10-22 | **Art direction:** each element has one colour and one shape, so meaning is never carried by colour alone: Wood green with a tall leaf, Fire red with a triangle, Earth ochre with a square, Metal silver-white with a circle, Water deep blue with a wave. The Unmade looks unfinished: desaturated, missing detail, still. Fighters come from every background, age and build | These are the traditional Wu Xing colours and shapes. Avoids the Top Cow and film looks (no black tendrils, no silhouette men). ART-CHECKLIST 18 and 21–24 |
 | 33 | 2026-10-22 | **Foundry: book first.** The Foundry system follows once the chapters exist; rules logic moves to `module/logic/` after the core is approved | DESIGN-RULES C2 and C6 |
+| 34 | 2026-10-22 | **Core rules v0.1 approved** (`docs/CORE-RULES.md` and `sim/REPORT.md`). The book's chapters become the rules, and CORE-RULES stays as their one-page summary | Richard. Credits stay out of everything players see (the book, the Foundry system, downloads); the repository's history is left as it is |
 
 ## 4. Early flags: how each was settled
 1. **Which five elements:** the Wu Xing set, with wind as Wood's (D4).
@@ -131,7 +132,6 @@ All 14 questions from the original interview list are settled:
 14. **Art direction and Foundry:** D32, D33.
 
 **Still open, and not design questions:**
-- Richard's approval of the core rules.
 - The full title and trademark search (§2.1).
 - The native-reader check of the Chinese terms (§2.5).
 - The names of the Anchors, Wardens and ready-made fighters, written with the chapters.
