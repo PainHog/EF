@@ -1,6 +1,6 @@
 # Kickoff prompt: Elemental Fighters (working title)
 
-1. Create your new, empty GitHub repository and start a new Claude Code session with **only that repository** selected.
+1. Create your new, empty GitHub repository and start a new coding session with **only that repository** selected.
 2. Attach **`Elemental-Fighters-Starter.zip`**.
 3. Paste everything below the line.
 
@@ -14,7 +14,7 @@ I'm Richard Moore, starting my fourth tabletop RPG, working title **Elemental Fi
 3. Commit everything to the default branch with the message "Project setup: design docs and toolchain", and push.
 
 **Then read, in this order:**
-1. `CLAUDE.md`: how we work. These are the project's rules. I decide all game content; you give options and I choose.
+1. `AGENTS.md`: how we work. These are the project's rules. I decide all game content; you give options and I choose.
 2. `docs/DESIGN.md`: my pitch, the name check, the early flags, and the open questions.
 3. `docs/DESIGN-RULES.md`: Part A hard rules, Part B questions, Part C process, Part D release gates.
 4. `book/art/ART-CHECKLIST.md` and `docs/REVIEW-PROCEDURE.md`: for later stages.

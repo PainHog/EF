@@ -1,4 +1,4 @@
-# Elemental Fighters (working title): working rules for Claude
+# Elemental Fighters (working title): working rules
 
 Author and designer: **Richard Moore**. This is his fourth tabletop RPG. Three earlier games were reviewed with simulators and agent playtests: *Heisty Spideys* (finished, with a fully automated Foundry VTT system), *Don't Get Forked* and *Nine Lives Gang*. The same mistakes kept turning up, and the lessons are written down in this repository.
 
@@ -44,6 +44,5 @@ After every version, run `docs/REVIEW-PROCEDURE.md`. A version isn't done until 
 
 ## Housekeeping
 - Commit and push work in progress often; sessions and agents can stop at any time (usage limits). Resume stopped agents rather than restarting the work.
-- Keep model names out of commits, code and docs (except a required commit trailer).
-- **Credits:** "Game design & writing: Richard Moore"; "Editing, layout & illustration: Produced with AI assistance (Claude, by Anthropic), directed and approved by Richard Moore".
+- **Credits:** "Game design & writing: Richard Moore". Never credit or name the tools, assistants or models used to make the game anywhere in the repository or the book, commit messages and trailers included.
 - **The game's title and the villain's name are not settled.** See `docs/DESIGN.md` §2.

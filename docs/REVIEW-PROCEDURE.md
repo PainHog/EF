@@ -35,7 +35,7 @@ This is the procedure that found the problems in *Heisty Spideys*, *Don't Get Fo
   - no echoes of famous characters, brands or logos;
   - the name checked against existing products and trademarks;
   - an image source log;
-  - the AI disclosure;
+  - the credits page;
   - font credits.
 
 ## 4. Verification (from the second version on)
