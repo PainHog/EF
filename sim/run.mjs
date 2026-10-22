@@ -21,6 +21,16 @@ import { PICKS } from "./data.mjs";
 import { TARGETS } from "./targets.mjs";
 
 const DIFFS = ["easy", "standard", "hard"];
+const POLICY_SWEEP = [
+  ["Default habits (POLICY)", {}],
+  ["Never Awaken before the Heart", { awakenInHunt: "never" }],
+  ["Awaken as soon as allowed", { awakenInHunt: "asap" }],
+  ["Spend Chi freely in the Hunt (no reserve for Awakening)", { reserveForAwakening: false }],
+  ["Rest only below 40% Vigor", { restBelow: 0.4 }],
+  ["Rest below 80% Vigor", { restBelow: 0.8 }],
+  ["Always strike the Warden or Heart, never the pack", { packFirstAt: 99 }],
+  ["Never withdraw", { withdrawDownShare: 2 }],
+];
 const SIZES = [3, 4, 5];
 
 export function parseArgs(argv) {
@@ -146,8 +156,13 @@ function main() {
       blank[`${pick}:${o}`] = (on - offW) / Math.max(1, cnt);
     }
   }
+  // Player habits are not rules: show what each alternative habit does at Standard.
+  const sweep = POLICY_SWEEP.map(([label, policy]) => {
+    const x = summarise(SIZES.flatMap(s => runCell({ diff: "standard", size: s, ...args, policy: { ...args.policy, ...policy } })));
+    return { label, x };
+  });
   const secs = ((Date.now() - t0) / 1000).toFixed(1);
-  const md = report({ cmd, args, sum, pooled, opt, blank, secs });
+  const md = report({ cmd, args, sum, pooled, opt, blank, sweep, secs });
   if (args.write) writeFileSync(join(dirname(fileURLToPath(import.meta.url)), "REPORT.md"), md);
   console.log(md.split("\n## ")[0] + "\n## " + md.split("\n## ")[1]);
   console.log(`(${secs}s)`);
@@ -155,7 +170,7 @@ function main() {
 
 function check(v, [lo, hi]) { return v >= lo && v <= hi ? "ok" : "**off**"; }
 
-export function report({ cmd, args, sum, pooled, opt, blank, secs }) {
+export function report({ cmd, args, sum, pooled, opt, blank, sweep = null, secs }) {
   const T = TARGETS;
   const L = [];
   L.push("# Nightwake balance report", "");
@@ -221,6 +236,13 @@ export function report({ cmd, args, sum, pooled, opt, blank, secs }) {
       const b = blank ? ` | ${(100 * blank[`${pick}:${r.o}`]).toFixed(1)} pts` : "";
       L.push(`| ${r.o} | ${pct(r.win)} | ${(100 * r.delta >= 0 ? "+" : "") + (100 * r.delta).toFixed(1)}${flag} | ${pct(r.loss)} | ${r.dmg.toFixed(1)}${b} |`);
     }
+    L.push("");
+  }
+  if (sweep) {
+    L.push("## 6. Player habits (Standard, all group sizes)", "");
+    L.push("How the simulated players decide is not a rule. Each row changes one habit; the spread shows how much table play matters.", "");
+    L.push("| Habit | Win | Partial | Loss | Fighters who Awaken | Anchors broken |", "|---|---|---|---|---|---|");
+    for (const { label, x } of sweep) L.push(`| ${label} | ${pct(x.win)} | ${pct(x.partial)} | ${pct(x.loss)} | ${pct(x.awakened)} | ${x.anchors.toFixed(2)} |`);
     L.push("");
   }
   return L.join("\n");
