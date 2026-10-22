@@ -2,7 +2,7 @@
 
 Test A from the review procedure: a Storyteller who has read the book once and three players who have never played a roleplaying game. One person ran every seat, strictly by the book (`book/src/chapters/*.html`, PDF page numbers from `book/dist/Nightwake_v0.1.pdf`). Nothing outside the book was read to fill gaps. Every roll came from `review/v0.1/dice.mjs` and is in `review/v0.1/playtest-a-dice.log`; "L12" below means line 12 of that log.
 
-Status: work in progress (setup, Night 1 and Night 2 up to the Heart written).
+Status: complete. 123 rolls in the dice log (L1 to L123).
 
 ## 1. The table
 
@@ -49,7 +49,7 @@ Why they picked what they picked: Tom took the biggest numbers he could see (Bla
 6. "Can I Awaken now?" Answered quickly (Chapter 4 box, and the sheet heading). Good.
 7. "What does Feeds: Fire mean for me?" Answered in Chapter 3; the Chapter 2 entry points there. Good.
 
-### Missing from the sheets
+### Missing from the sheets (issue 11)
 
 - Fighter sheet: no way to count down an Awakening (rounds left); no "Guardian used this round" box, though Guardian is once per round; nothing showing who feeds you.
 - Night sheet: no "Shell shattered" box; no box for "someone has gone Down tonight" (which opens the Awakening); no place to tally each fighter's damage to the Warden this round, or who acted last, both needed to aim a Crush; no space for the ring; no box for half the Heart's Toughness (the driven-off line).
@@ -271,7 +271,7 @@ Breath: Nell 0 → 4.
 | R3 Ray (Blaze; Chi die; Marcus Helps; fed) | L102 | 0 hits | 24 | Hit back 2: Marcus guards (5 → 3, +2 Chi); Ray +1 Chi. |
 | Enemies | L103 | Surge 4 = Sweep | 24 | Marcus 2, Nell 5, Ray 3. |
 
-Six Strikes in a row with no hits (L93 to L98, chance of each about 1 in 8 to 1 in 13). At the end of round 3 the Ramp has 24 of 27 Toughness and the group 10 of 30 Vigor. Fighting on means a long fight at the end of round 4 (costing their last Hour) and probably people Down. **The group withdraws.** The Ramp stands; they keep their Vigor; the Hour is spent.
+Five of six Strikes with no hits (L93, L94, L96, L97, L98; a five-die roll misses completely about 1 time in 8, a seven-die roll about 1 time in 17). At the end of round 3 the Ramp has 24 of 27 Toughness and the group 10 of 30 Vigor. Fighting on means a long fight at the end of round 4 (costing their last Hour) and probably people Down. **The group withdraws.** The Ramp stands; they keep their Vigor; the Hour is spent.
 
 Withdrawing was clear in the book (p14 box, p11) and the right call; the only question at the table was whether withdrawing at the end of round 4 would still count as a long fight (issue 10). Here it was round 3, so it didn't matter.
 
@@ -280,3 +280,214 @@ Withdrawing was clear in the book (p14 box, p11) and the right call; the only qu
 With 10 of 30 Vigor, striking the ice rink would almost certainly put people Down with no rest before the Heart. Respite: everyone to 10. Chi carried: Marcus 3, Nell 1, Ray 1.
 
 One Anchor broken (the sidings); four stand (greenhouse, gasworks, car park, ice rink).
+
+### The Heart: the top of the tallest building (book minutes: 30)
+
+Heart Toughness (5 + 4 x 4) x 3 = **63** (p19: 15 + 4 x 12 = 63). Guard 2, Harm 2, Standard Crush 4, Sweep 2. Pack of 3 Stills (9). Driven-off line: 31 or less. Dawn at the end of round 7.
+
+Everyone at 10 Vigor. Heart Chi: Marcus 3 + 3 = 5 (capped), Nell 1 + 3 + Breath 4 = 5 (capped), Ray 1 + 3 = 4. Learning from Night 1, Leah holds Wellspring back until people are hurt.
+
+| Step | Roll | Result | Heart / pack | Notes |
+|---|---|---|---|---|
+| Quick: Ray at the pack (Blaze; Quick die; Nell Helps) | L104 | 5 hits, four 6s: Critical | 63 / 0 | 5 + 2 + 1 + 1 = 9: **the whole pack gone before round 1.** +1 Chi (Ray 4). |
+| R1 Marcus **Awakens: Harmony**, strikes the Heart (Chi die; fed) | L105 | 1 hit, short | 61 | 2 damage; hit back: Marcus 10 → 8, +1 Chi. |
+| R1 Nell (Chi die; Marcus Helps; fed) | L106 | 3 hits, two 6s: Critical | 56 | 5 damage; +1 Chi. |
+| R1 Ray **Awakens: Ascendant**; Blaze; Marcus and Nell Help; fed | L107 | 3 hits, two 6s: Critical | 45 | 6 + 1 + 2 + 1 + 1 = 11. |
+| Enemies | L108 | Surge 2 = Crush 4 | 45 | To Ray (most damage): 10 → 6. Marcus (8) chooses not to guard. |
+| R2 start | | Harmony: 2 Chi to Ray, 1 to Marcus. | | |
+| R2 Marcus (Chi die; fed) | L109 | 2 hits | 42 | 3 damage. |
+| R2 Nell (Chi die; fed) | L110 | 2 hits | 39 | 3 damage. |
+| R2 Ray (Ascendant; Blaze; Chi die; Nell Helps; fed) | L111 | 3 hits, two 6s: Critical | 28 | 11 damage. The Heart is already under the driven-off line. |
+| Enemies | L112 | Surge 6 = Call | 28 / 6 | A new pack of 2 Stills. |
+| R3 start | | Harmony: 2 Chi to Nell, 1 to Marcus. | | |
+| R3 Marcus at the pack (Chi die; fed) | L113 | 1 hit | 28 / 4 | 2 damage. |
+| R3 Nell **Awakens: Wellspring**, strikes the pack (fed) | L114 | 2 hits, two 6s: Critical | 28 / 0 | 4 damage: pack gone. +1 Chi. |
+| R3 Ray (Ascendant; Blaze; Chi die; Nell Helps; fed) | L115 | 3 hits, two 6s: Critical | 17 | 11 damage, his third 11 in a row. |
+| Enemies | L116 | Surge 5 = Drain | 17 | Every fighter loses 1 Chi. Only Ray has any (1 → 0). Does a Drain that finds Chi on only some fighters also Crush? (issue 8). Ruling: no; it Crushes only if no fighter has Chi. Harmony and Ascendant end. |
+| R4 start | | Wellspring: 2 Vigor to Ray (6 → 8). | | |
+| R4 Marcus (fed) | L117 | 1 hit, short | 15 | 2 damage; hit back: Marcus 8 → 6, +1 Chi. |
+| R4 Nell (fed) | L118 | 1 hit, short | 13 | 2 damage; hit back: Nell takes it, 10 → 8, +1 Chi. |
+| R4 Ray (Marcus and Nell Help; fed) | L119 | 1 hit, short | 11 | 2 damage; hit back: Marcus guards (6 → 4, +2 Chi); Ray +1 Chi. |
+| Enemies | L120 | Surge 6 = Call | 11 / 6 | A new pack of 2 Stills. |
+| R5 start | | Wellspring: 2 Vigor to Marcus (4 → 6). | | |
+| R5 Marcus (Chi die; fed) | L121 | 1 hit, short | 9 | 2 damage; hit back: Marcus 6 → 4, +1 Chi. |
+| R5 Nell (Marcus Helps; fed) | L122 | 2 hits, two 6s: Critical | 5 | 4 damage. |
+| R5 Ray (Blaze; Marcus and Nell Help; fed) | L123 | 3 hits, three 6s | 0 | 3 + 1 + 2 + 1 + 1 = 8. **The Heart falls in round 5. Win.** |
+
+### Morning and epilogue (book minutes: 8)
+
+The lights of the city come back on below them one street at a time, a second late. Ray calls the restaurant to say he's not coming in. Nell asks Marcus where he learned to stand like that; he says he's been a caretaker for thirty years.
+
+### Night 2 result
+
+**Win on Standard.** Heart (63, four Anchors standing) broken in round 5 of 7. Only one Anchor broken, one withdrawn from, two Respites. Nobody went Down. Lowest Vigor seen: 2 (Marcus, car park round 3).
+
+Night 2 time at the table, in book minutes: building 8, Prologue recap 4, First Clash 6, Hunt 53, Heart 30, epilogue 8: **about 1 hour 50 minutes.**
+
+## 5. Results of both nights
+
+| | Night 1 | Night 2 |
+|---|---|---|
+| Night | The Night the Clocks Stopped (Chapter 8) | Built from the Chapter 9 tables |
+| Difficulty | Easy | Standard |
+| First Clash | won in round 2 | won in round 1 (the pack never acted) |
+| Hour 1 | Iron Bridge, broken in round 3 | Railway sidings, broken in round 4 |
+| Hour 2 | Underpass, broken in round 3 | Respite |
+| Hour 3 | Respite | Car park: withdrew after round 3 (Ramp 24 of 27) |
+| Hour 4 | Reservoir, broken in round 3 | Respite |
+| Anchors standing at the Heart | 2 | 4 |
+| Heart Toughness | 39 | 63 |
+| Heart | broken in round 4 | broken in round 5 |
+| **Ending** | **Win** | **Win** |
+| Fighters Down all night | 0 | 0 |
+| Long fights | 0 | 0 |
+| Play time (book minutes) | about 2 h 5 min, plus 32 min setup | about 1 h 50 min including building |
+
+Damage at the Hearts: Ray's three Awakened Strikes dealt 23 of 39 (Night 1) and 33 of 63 (Night 2), plus his Quick Strikes cleared most or all of each opening pack.
+
+## 6. Issues
+
+Severity: **blocker** (the table can't go on), **confusing** (the table stops to argue or could play it wrong), **minor** (a gap with an obvious answer, or a polish point). Count: **0 blockers, 3 confusing, 14 minor.**
+
+### 1. A ready-made fighter who loses a duplicate pick (confusing)
+- **Page:** 7 and 9.
+- **Quote:** "No two fighters in a group share any pick: one fighter per element, and each style, perk and Awakening at most once. If two players want the same one, both roll a die and the higher roll picks first (roll again on a tie)." and "Rename them, change who they are, keep the picks."
+- **What happened:** Mia took Marcus (Fire); Tom wanted Fire for his own fighter and won the roll (L1, L2). "Keep the picks" made Mia think she had to give Marcus up entirely. Mixing ready-made and home-made fighters will make this common at first tables.
+- **Suggested fix:** add to the rule: "A player using a ready-made fighter who loses a pick swaps just that pick for a free one."
+- **Ruling to use tonight:** keep the other three picks and choose a free element.
+
+### 2. Is the Heart the fourth Hour, or after it? (confusing)
+- **Page:** 6, 14 and 23.
+- **Quote:** p6: "You have four Hours. Each Hour you either strike an Anchor and fight its Warden, or take a Respite to recover." then "The Heart. In the last Hour you face the Heart of the Unmade." p14: "In the last Hour, wherever they are, the fighters are drawn to the Heart." p23: "In the last Hour, every stopped clock in the city points the same way".
+- **What happened:** Read straight, "the last Hour" is Hour 4, which would leave only three Hours of Hunt. The Night sheet's four Hour circles and "The Hunt ends when the Hours run out" point the other way. A table that reads it wrongly loses an Anchor or a Respite every night.
+- **Suggested fix:** in all three places, say "When the Hunt ends (after four Hours, or once every Anchor is broken), the fighters are drawn to the Heart."
+- **Ruling to use tonight:** four Hours of Hunt, then the Heart.
+
+### 3. Guardian taking a hit back: who gains the Chi? (confusing)
+- **Page:** 8, 10 and 12.
+- **Quote:** p8 Guardian: "Once per round, when another fighter would lose Vigor, you may lose it instead. When you do, gain 2 Chi." p10: "the enemy hits you back. You lose Vigor equal to its Harm, then gain 1 Chi (unless you went Down)." p12: "1 each time an enemy hits you back (unless it puts you Down)".
+- **What happened:** it came up ten times. Was the striker still "hit back" (so gains 1 Chi) when the Guardian lost the Vigor? Does Counter still answer? The text supports both readings.
+- **Suggested fix:** one line in "Reading the styles": "The fighter who was hit back still gains their 1 Chi (and Counter still answers); the Guardian gains 2." Or the opposite, whichever the simulator models.
+- **Ruling to use tonight:** both gain: the striker 1, the Guardian 2.
+
+### 4. Guardian plus the players' choice of Swarm target makes a Chi engine (minor; a balance question for the simulator)
+- **Page:** 17 and 8.
+- **Quote:** p17: "the pack deals Harm equal to half its Stills (rounded up), as one blow, to one fighter of the players’ choice."
+- **What happened:** from the first round Mia aimed every Swarm at a friend and took it with Guardian: 1 Vigor for 2 Chi, every round there were Stills. With hit backs as well, Guardian gave 28 Chi over the two nights (14 uses), most of the group's Help dice. It never felt broken, but it was the group's main Chi source and a habit with no downside.
+- **Suggested fix:** check in the simulator whether its Guardian does this. If it is too strong: Guardian gains Chi only when taking a hit back or a Crush; or the Swarm goes to the fighter with the most Vigor.
+- **Ruling to use tonight:** as written.
+
+### 5. The First Clash is over before it teaches anything (minor)
+- **Page:** 14.
+- **Quote:** "It throws the fighters together and teaches the rules."
+- **What happened:** won in round 2 (Night 1) and round 1 (Night 2, the pack never acted). It taught the roll, Chi dice, Help and feeding, but never a hit back, a Guard above 1, a Shell or a Surge; all of those arrived at the first Anchor with nothing explained.
+- **Suggested fix:** tell the Storyteller what it won't teach: "Explain the Warden's Guard, Shell and Surge when you describe the first Warden." Or make it bigger (but simulate that first).
+- **Ruling to use tonight:** teach the Warden's rules at the first Anchor.
+
+### 6. Quick's free Strike: techniques, and Awakening before it (minor)
+- **Page:** 8, 12 and 14.
+- **Quote:** p8: "Before the first round of each fight, take a free Strike with +1 die. It can’t be hit back." p12: "Once per night, at the start of your turn, spend 3 Chi to Awaken." p14: "As the fight begins, every fighter gains 3 Chi, and anyone may Awaken."
+- **What happened:** Tom asked whether Blaze and a Chi die work on the free Strike, and at the Heart whether he could Awaken first, since "anyone may Awaken" as the fight begins.
+- **Suggested fix:** "Quick's Strike is a normal Strike (technique, Chi die and Help allowed, two bonus dice at most), but it isn't a turn, so you can't Awaken before it." And p14: "anyone may Awaken on their turn".
+- **Ruling to use tonight:** technique and bonus dice yes; no Awakening before it.
+
+### 7. Healing: maximum, giving to yourself, and Medic's timing (minor)
+- **Page:** 8 and 13.
+- **Quote:** p8 Medic: "After each fight, share out 2 Vigor among the fighters." p13 Wellspring: "share out 2 Vigor among the fighters, as you choose." p13 Harmony: "share out 3 Chi among the fighters, as you choose (no one past 5)."
+- **What happened:** Harmony states its cap, so the table wondered whether Medic, Wellspring and Renewal can go past maximum Vigor (p7 says "starting (and maximum) Vigor"). Also: can Marcus give Harmony's Chi to himself, and does Medic come before or after Down fighters stand at 1?
+- **Suggested fix:** in "Vigor and going Down": "Nothing takes you past your maximum Vigor. When you share something out, you may give some to yourself." Add "after Down fighters stand up" to Medic.
+- **Ruling to use tonight:** no one past maximum; you can give to yourself; Medic after standing up.
+
+### 8. The Heart's Drain when only some fighters have Chi (minor)
+- **Page:** 18.
+- **Quote:** table: "every fighter loses 1 Chi"; below: "A Drain that finds no Chi Crushes instead."
+- **What happened:** Night 2, Heart round 3 (L116): only Ray had Chi. Does it Crush because two fighters had none?
+- **Suggested fix:** "If no fighter has any Chi, the Heart's Drain Crushes instead."
+- **Ruling to use tonight:** Crush only when nobody has Chi.
+
+### 9. The Vigor track on the fighter sheet (minor)
+- **Page:** 26.
+- **Quote:** "Start: 10 / 7 / 6 for 3 / 4 / 5 fighters, +3 if Tough. Cross off the boxes you don’t have."
+- **What happened:** the track is 13 circles, not boxes, and nothing says how to show Vigor lost, as opposed to Vigor you never had. A newcomer who marks lost Vigor by crossing circles can no longer see their maximum.
+- **Suggested fix:** "Cross out the circles past your maximum. Shade one circle for each Vigor you lose; rub it out when you heal."
+- **Ruling to use tonight:** exactly that.
+
+### 10. Withdrawing at the end of round 4: long fight or not? (minor)
+- **Page:** 14 and 10.
+- **Quote:** p14: "Long fight: an Anchor fight still going at the end of round 4 costs one more Hour." and "Withdraw: at the end of any round, the group can withdraw." p10: "End of round. Awakenings count down, then the clocks are checked (Chapter 5)."
+- **What happened:** asked at the car park; they withdrew after round 3, so it didn't matter, but it will.
+- **Suggested fix:** "Decide whether to withdraw before the clocks are checked; a fight you withdraw from isn't a long fight." (or the reverse).
+- **Ruling to use tonight:** withdrawing at the end of round 4 costs no extra Hour.
+
+### 11. Things the sheets don't track (minor)
+- **Page:** 26 and 27.
+- **Quote:** p27: "For the Storyteller. Keep it where everyone can see the clocks."
+- **What happened:** the table kept these on scrap paper: Awakening rounds left; Guardian used this round; whether the Warden's Shell has shattered; whether anyone has gone Down tonight (which opens the Awakening); each fighter's damage to the Warden this round and who acted last (to aim a Crush); the ring; half the Heart's Toughness (the driven-off line).
+- **Suggested fix:** fighter sheet: an Awakening countdown (3 boxes) and a "Guardian used this round" box. Night sheet: "Shell shattered", "Someone has gone Down tonight", a driven-off box under Heart Toughness, and a small ring with the five elements to tick.
+- **Ruling to use tonight:** scrap paper.
+
+### 12. Round 7 in the First Clash (minor)
+- **Page:** 11.
+- **Quote:** "The clock runs out. Every fight ends at the end of round 7 (Chapter 5)."
+- **What happened:** Chapter 5 says what round 7 means at an Anchor and at the Heart, not at the First Clash. It never comes close to round 7, so it never matters, but a careful Storyteller asks.
+- **Suggested fix:** drop "Every" or add "The First Clash simply ends: the Stills scatter."
+- **Ruling to use tonight:** the Stills scatter; no cost.
+
+### 13. Does a Shell come back if the Warden heals above half? (minor)
+- **Page:** 18.
+- **Quote:** "+1 Guard (Guard 3) until it shatters. ... It also shatters once the Warden is at half its Toughness or less."
+- **What happened:** asked, not tested: every Shell was shattered by its element.
+- **Suggested fix:** "Once shattered, it stays shattered."
+- **Ruling to use tonight:** it stays shattered.
+
+### 14. No advice for players building their own fighters (minor)
+- **Page:** 7.
+- **Quote:** "Each fighter makes four picks:"
+- **What happened:** Leah asked whether an all-healing fighter would work, and Tom whether he needed anything to keep himself up. The only advice is that the ready-made five work together.
+- **Suggested fix:** two lines: "Pick at least one thing that helps the group, not just you. Check which Shells your group can break."
+- **Ruling to use tonight:** none needed; Leah's healer worked fine.
+
+### 15. Where should the last Respite go? (minor)
+- **Page:** 15.
+- **Quote:** "Rest at about two-thirds. Take a Respite when the group is down to about two-thirds of its Vigor. Resting much later loses nights; resting much earlier leaves too many Anchors standing."
+- **What happened:** in Night 1 the table rested in Hour 3, fought the Reservoir in Hour 4 and went into the Heart at 15 of 30 Vigor. Fighting first and resting in Hour 4 would have sent them in at 30. They asked whether the advice means "rest just before the Heart if you can".
+- **Suggested fix:** have the simulator compare the two, and say the answer in the advice.
+- **Ruling to use tonight:** as written.
+
+### 16. Setup time with home-made fighters (minor)
+- **Page:** 14.
+- **Quote:** "Setup: fighters and the Night card | 20–30 minutes"
+- **What happened:** with two players building their own fighters from scratch and one clash, setup took 32 book minutes.
+- **Suggested fix:** "20 minutes with ready-made fighters, 30 to 40 if everyone builds their own."
+- **Ruling to use tonight:** none needed.
+
+### 17. Playing a second night (minor)
+- **Page:** 5.
+- **Quote:** "A game is one night: about three hours of play, after no more than half an hour of setup."
+- **What happened:** before Night 2 the players asked whether they keep their fighters and whether anything carries over (Vigor, Chi, a used Awakening). The book doesn't say.
+- **Suggested fix:** one line: "Playing again? Keep your fighters or make new ones. Every night starts fresh."
+- **Ruling to use tonight:** same fighters, everything reset.
+
+## 7. What worked
+
+- **The roll.** All three newcomers had it after two Strikes. Five dice, count 5s and 6s, compare with one number: the footer of the fighter sheet was enough reminder.
+- **No opposed rolls.** The players rolled everything; the Storyteller rolled one die a round. A round of three Strikes and a Surge took two or three minutes.
+- **Chi and Help.** Constant table talk ("Help me, I need two hits"). Chi was spent almost as soon as it arrived: the Designer's Note on p12 landed.
+- **Shells.** Each element got its moment ("my Wood cracks the brick"), and the Shell decided which Anchors to strike. Clear, and it felt good.
+- **Choices in the Hunt.** Which Anchor, when to rest, and the car-park withdrawal were the most-discussed moments of both nights. Withdrawing was clear and turned a run of bad dice into a hard choice instead of a wipe.
+- **Pack or Warden?** A real decision every turn; the ring put Nell before Ray at the sidings while the Shell was still up, so she took the Still instead. That was a nice small puzzle.
+- **Clean edge cases.** The Crush tie rule (who acted last), "nobody damaged it, so the most Vigor", "a roll's result comes first", "bonuses need one hit" (the Chapter 3 example answered it) and "new Stills don't Swarm until next round" all came up and resolved without a pause.
+- **The Night card numbers (p19)** made Warden and Heart Toughness a lookup, and the Heart formula on p18 matched the table both times.
+- **Chapter 9.** A full night built in 8 minutes; every entry names its Warden, and the "Always five Shells" box answers the obvious question. The tables are evocative (the Skater, the Points, "sound arriving late").
+
+## 8. How it felt
+
+- **Was losing a real risk?** On these two nights, not really. Nobody went Down in two First Clashes, five Anchor fights and two Hearts; the lowest anyone fell was 2 Vigor. Because nobody went Down, the Awakening never opened during the Hunt and Stubborn never fired. The real risk was to the Anchors, not the fighters: a run of misses at the car park cost an Anchor and an Hour. Both Hearts fell with rounds to spare (round 4 of 7 on Easy; round 5 of 7 on Standard with four Anchors standing). Two nights are far too few to test the win rates on p19, but the simulator should report how often anyone goes Down at all, since two powers depend on it.
+- **Was Chi spent?** Yes, all the time. Nobody sat on 5 except for a moment at the start of a fight. Help and Chi dice were the biggest uses, then Blaze, then Renewal. Leah's Breath and Mia's Guardian fed the whole group.
+- **Was there a dominant tactic?**
+  - *Walking the ring* is automatic with three fighters taking one action each: every Strike after the first in every fight was fed. It is a +1 to remember rather than a choice; only Rallies or Tempest could ever break it.
+  - *Guardian with the Swarm* (issue 4): a free 2 Chi most rounds.
+  - *Quick at the pack:* a free Strike that can't be hit back, aimed at the Stills, cleared 3 to 9 Toughness of Stills at the start of seven of the nine fights, including all of the Night 2 Heart's pack.
+  - *Stacked flat bonuses on Ascendant:* "Double your hits first, then add bonuses" (p12) let Fire + Brawler + Blaze + Ascendant hit for 10, 8, 5 and then 11, 11, 11, about half of each Heart. Worth checking in the simulator that this build isn't far ahead of the others.
+- **How long did it take?** Night 1 about 2 hours 5 minutes of play after 32 minutes of setup; Night 2 about 1 hour 50 minutes including building. Both under the book's "about three hours", mainly because the First Clashes ended in a round or two and every Anchor fight ended by round 4. Nobody minded; the pace felt brisk.
+- **Overall:** the newcomers were playing confidently by the first Anchor. The arguments at the table were about the three confusing issues above, all fixable with a sentence each.

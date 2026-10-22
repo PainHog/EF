@@ -101,3 +101,62 @@
 2026-10-22T02:59:35.145Z	Drill 6 Heart round 5, Heart at 4, only Omar standing at V2: Strike Heart (Blaze, not fed)	5d6	4 1 4 3 1	hits=0 sixes=0
 2026-10-22T02:59:46.498Z	Drill 6b Heart at 2, only Nell standing at V2 (Counter): Strike Heart, no Chi, not fed	5d6	3 6 1 1 1	hits=1 sixes=1
 2026-10-22T02:59:55.457Z	Drill 7 Kit Strike Warden: Chi die + Help Nell + Help Omar offered, cap 2 bonus dice	7d6	1 5 4 2 1 6 2	hits=2 sixes=1
+2026-10-22T03:00:01.269Z	Drill 8 Nell at C4 Strike Warden, no Chi spent (Chi cap check)	5d6	1 4 3 5 1	hits=1 sixes=0
+2026-10-22T03:00:12.754Z	Drill 10 Seal: Lou holding Seal at V2 takes a 3-Harm Swarm (Down), then Warden Surge	1d6	4	hits=0 sixes=0
+2026-10-22T03:00:24.130Z	Drill 11 Hour 4 Substation R4 Lou Strike Warden (Shell gone, Warden 42, fed)	5d6	4 1 3 3 1	hits=0 sixes=0
+2026-10-22T03:00:24.131Z	Drill 11 R4 Kit Strike Warden (fed)	5d6	6 4 6 5 1	hits=3 sixes=2
+2026-10-22T03:00:24.131Z	Drill 11 R4 Nell Strike Warden (fed)	5d6	3 6 6 6 5	hits=4 sixes=3
+2026-10-22T03:00:24.131Z	Drill 11 R4 Rae Strike Warden (fed)	5d6	4 5 3 3 3	hits=1 sixes=0
+2026-10-22T03:00:24.132Z	Drill 11 R4 Omar Strike Warden (fed)	5d6	1 6 5 2 5	hits=3 sixes=1
+2026-10-22T03:00:24.132Z	Drill 11 R4 Surge	1d6	5	hits=1 sixes=0
+2026-10-22T03:00:33.609Z	Drill 11 R5 Lou Strike Warden (fed)	5d6	1 6 6 4 4	hits=2 sixes=2
+2026-10-22T03:00:33.611Z	Drill 11 R5 Kit Strike Warden (fed)	5d6	4 6 6 4 2	hits=2 sixes=2
+2026-10-22T03:00:33.611Z	Drill 11 R5 Nell Strike Warden (fed)	5d6	3 4 4 6 5	hits=2 sixes=1
+2026-10-22T03:00:33.611Z	Drill 11 R5 Rae Strike Warden (fed)	5d6	6 5 3 1 5	hits=3 sixes=1
+2026-10-22T03:00:33.611Z	Drill 11 R5 Omar Strike Warden (fed)	5d6	5 4 6 4 4	hits=2 sixes=1
+2026-10-22T03:00:33.611Z	Drill 11 R5 Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:00:44.599Z	Drill 11 R6 Lou Strike Warden at 7 (fed)	5d6	2 2 4 6 6	hits=2 sixes=2
+2026-10-22T03:00:48.923Z	Drill 11 R6 Kit Strike Warden at 3 (fed, Edge)	5d6	4 6 6 1 4	hits=2 sixes=2
+2026-10-22T03:00:56.352Z	Drill 11b round 7, Warden at 30: Lou Strike (fed)	5d6	6 3 5 3 2	hits=2 sixes=1
+2026-10-22T03:00:56.354Z	Drill 11b R7 Kit Strike (fed)	5d6	4 6 6 1 6	hits=3 sixes=3
+2026-10-22T03:00:56.354Z	Drill 11b R7 Nell Strike (fed)	5d6	3 5 2 3 1	hits=1 sixes=0
+2026-10-22T03:00:56.354Z	Drill 11b R7 Rae Strike (fed)	5d6	6 1 4 6 6	hits=3 sixes=3
+2026-10-22T03:00:56.354Z	Drill 11b R7 Omar Strike (fed)	5d6	4 5 2 2 3	hits=1 sixes=0
+2026-10-22T03:00:56.354Z	Drill 11b R7 Surge	1d6	6	hits=1 sixes=1
+2026-10-22T03:01:06.494Z	Drill 12 Heart dawn at end of R6 (1 Hour owed); Heart 41/70: Lou Strike (fed)	5d6	2 5 6 6 1	hits=3 sixes=2
+2026-10-22T03:01:13.105Z	Drill 12 R6 Kit Strike Heart at 36 (fed)	5d6	6 1 1 5 3	hits=2 sixes=1
+2026-10-22T03:01:23.053Z	Drill 12 R6 Nell Strike Heart at 32 (fed)	5d6	1 4 4 3 3	hits=0 sixes=0
+2026-10-22T03:01:23.054Z	Drill 12 R6 Rae Strike pack 6 (fed; Sweeper 1 to Heart if Guard met)	5d6	4 2 1 6 1	hits=1 sixes=1
+2026-10-22T03:01:23.055Z	Drill 12 R6 Omar Strike Heart (fed)	5d6	6 6 1 3 5	hits=3 sixes=2
+2026-10-22T03:01:23.055Z	Drill 12 R6 Heart Surge (Hard)	1d6	1	hits=0 sixes=0
+2026-10-22T03:01:36.418Z	Drill 14 late joiner Nell (joined after First Clash of a 4-fighter night) first Strike at Hour 1 Warden, fed by Kit	5d6	6 3 1 2 4	hits=1 sixes=1
+2026-10-22T03:01:44.201Z	Drill 15 Reservoir R2 (Warden 41, Shell on, Lou breaks) Lou Strike (fed)	5d6	5 2 2 4 1	hits=1 sixes=0
+2026-10-22T03:01:44.203Z	Drill 15 R2 Kit Strike (fed)	5d6	1 4 2 3 4	hits=0 sixes=0
+2026-10-22T03:01:44.203Z	Drill 15 R2 Nell Strike (fed)	5d6	5 6 3 4 2	hits=2 sixes=1
+2026-10-22T03:01:44.203Z	Drill 15 R2 Tess Strike (fed)	5d6	3 4 3 6 6	hits=2 sixes=2
+2026-10-22T03:01:44.203Z	Drill 15 R2 Omar Strike (fed)	5d6	6 1 5 1 6	hits=3 sixes=2
+2026-10-22T03:01:44.203Z	Drill 15 R2 Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:02:02.113Z	Drill 17 Heart Quick Strike Omar (Blaze, Quick die + Help from Kit), asks to Awaken first (refused)	7d6	5 1 3 1 3 3 4	hits=1 sixes=0
+2026-10-22T03:02:07.804Z	Drill 18 hypothetical Metal Ascendant (Brawler, Trained) Strike Heart: Edge, Chi die, Help, fed	7d6	1 2 2 4 1 2 4	hits=0 sixes=0
+2026-10-22T03:02:31.738Z	Drill 19 3-fighter Heart R1 Rae Strike Heart (not fed, Chi die)	6d6	3 4 3 5 2 1	hits=1 sixes=0
+2026-10-22T03:02:35.252Z	Drill 19 R1 Kit Awakens Tempest, action 1 Strike Heart (fed, Edge)	5d6	3 1 1 4 1	hits=0 sixes=0
+2026-10-22T03:02:38.842Z	Drill 19 R1 Kit action 2 Strike Heart (not fed, Help Nell)	6d6	2 1 1 2 5 2	hits=1 sixes=0
+2026-10-22T03:02:42.742Z	Drill 19 R1 Nell Awakens Unbreakable, Strike Heart (fed)	5d6	6 6 1 4 4	hits=2 sixes=2
+2026-10-22T03:02:46.476Z	Drill 19 R1 Heart Surge (Hard, 3 fighters)	1d6	5	hits=1 sixes=0
+2026-10-22T03:02:51.311Z	Drill 19 R2 Rae Strike Heart (fed, Chi die)	6d6	1 1 5 3 6 1	hits=2 sixes=1
+2026-10-22T03:02:54.944Z	Drill 19 R2 Kit action 1 Strike Heart (fed, Help Rae)	6d6	5 4 5 2 2 5	hits=3 sixes=0
+2026-10-22T03:02:58.486Z	Drill 19 R2 Kit action 2 Strike Heart (not fed, Help Rae)	6d6	5 6 6 4 6 3	hits=4 sixes=3
+2026-10-22T03:03:02.251Z	Drill 19 R2 Nell Strike Heart (fed, Help Kit)	6d6	1 6 2 6 2 6	hits=3 sixes=3
+2026-10-22T03:03:05.630Z	Drill 19 R2 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T03:03:09.364Z	Drill 19 R3 Rae Strike Heart (fed)	5d6	3 6 3 2 6	hits=2 sixes=2
+2026-10-22T03:03:12.830Z	Drill 19 R3 Kit action 1 Strike Heart (fed, Edge)	5d6	1 5 1 5 4	hits=2 sixes=0
+2026-10-22T03:03:16.366Z	Drill 19 R3 Kit action 2 Strike Heart (not fed, Help Rae)	6d6	5 4 2 6 2 4	hits=2 sixes=1
+2026-10-22T03:03:19.516Z	Drill 19 R3 Nell Strike Heart (fed, Tide)	5d6	2 6 2 5 5	hits=3 sixes=1
+2026-10-22T03:03:22.742Z	Drill 19 R3 Nell Tide reroll 2 misses	2d6	1 3	hits=0 sixes=0
+2026-10-22T03:03:25.993Z	Drill 19 R3 Heart Surge	1d6	3	hits=0 sixes=0
+2026-10-22T03:03:30.143Z	Drill 19 R4 Rae Strike Heart (fed)	5d6	6 2 4 2 1	hits=1 sixes=1
+2026-10-22T03:03:34.318Z	Drill 19 R4 Kit Strike Heart (fed, V1)	5d6	4 5 2 6 4	hits=2 sixes=1
+2026-10-22T03:03:37.593Z	Drill 19 R4 Nell Strike Heart (fed)	5d6	2 2 2 6 1	hits=1 sixes=1
+2026-10-22T03:03:40.637Z	Drill 19 R4 Nell Lucky reroll 4 misses	4d6	1 3 5 2	hits=1 sixes=0
+2026-10-22T03:03:44.206Z	Drill 19 R4 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T03:03:51.556Z	Drill 19 R5 Nell Strike Heart (not fed: Rae Rallied Kit, Metal acted nothing), Help Rae	6d6	5 4 6 4 6 4	hits=3 sixes=2
