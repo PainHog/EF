@@ -1,0 +1,116 @@
+2026-10-22T02:42:33.781Z	Setup clash for Fire: Mia (ready-made Marcus)	1d6	1	hits=0 sixes=0
+2026-10-22T02:42:33.783Z	Setup clash for Fire: Tom	1d6	6	hits=1 sixes=1
+2026-10-22T02:43:03.041Z	N1 FirstClash Quick: Tom/Ray strikes pack (Blaze, Quick die, Help from Nell)	7d6	4 2 1 3 4 6 1	hits=1 sixes=1
+2026-10-22T02:43:14.473Z	N1 FC R1 Mia/Marcus strikes pack (Chi die, Help Nell; fed)	7d6	2 1 6 2 1 3 3	hits=1 sixes=1
+2026-10-22T02:43:14.474Z	N1 FC R1 Leah/Nell strikes pack (Chi die; fed)	6d6	1 2 3 3 6 4	hits=1 sixes=1
+2026-10-22T02:43:14.475Z	N1 FC R1 Tom/Ray strikes pack (Blaze, Help Nell; fed)	6d6	4 5 4 2 1 5	hits=2 sixes=0
+2026-10-22T02:43:27.373Z	N1 FC R2 Mia/Marcus strikes pack (Chi die; fed)	6d6	5 4 5 6 4 3	hits=3 sixes=1
+2026-10-22T02:43:41.878Z	N1 H1 Bridge Quick: Tom/Ray strikes Girder G2 (Quick die, Help Nell)	7d6	4 4 3 2 1 1 1	hits=0 sixes=0
+2026-10-22T02:43:49.834Z	N1 H1 Bridge R1 Mia/Marcus strikes pack G1 (Chi die, Help Nell; fed)	7d6	3 2 2 6 1 6 1	hits=2 sixes=2
+2026-10-22T02:43:55.442Z	N1 H1 Bridge R1 Leah/Nell strikes pack G1 (Chi die; fed)	6d6	4 3 5 2 6 3	hits=2 sixes=1
+2026-10-22T02:44:00.693Z	N1 H1 Bridge R1 Tom/Ray strikes Girder G2 (Help Nell; fed)	6d6	1 3 6 5 1 6	hits=3 sixes=2
+2026-10-22T02:44:06.586Z	N1 H1 Bridge R1 Girder Surge	1d6	3	hits=0 sixes=0
+2026-10-22T02:44:15.842Z	N1 H1 Bridge R2 Mia/Marcus strikes Girder G2 (Chi die; fed)	6d6	5 5 3 2 1 3	hits=2 sixes=0
+2026-10-22T02:44:21.258Z	N1 H1 Bridge R2 Leah/Nell strikes Girder G2 (Chi die, Help Marcus; fed)	7d6	2 4 5 2 4 2 4	hits=1 sixes=0
+2026-10-22T02:44:29.185Z	N1 H1 Bridge R2 Tom/Ray strikes Girder G2 (Blaze, Help Marcus; fed)	6d6	1 6 2 3 5 6	hits=3 sixes=2
+2026-10-22T02:44:34.899Z	N1 H1 Bridge R2 Girder Surge	1d6	3	hits=0 sixes=0
+2026-10-22T02:44:40.719Z	N1 H1 Bridge R3 Mia/Marcus strikes Girder G2 (Chi die; fed)	6d6	3 3 1 2 1 5	hits=1 sixes=0
+2026-10-22T02:44:47.340Z	N1 H1 Bridge R3 Leah/Nell strikes Girder G2 (Renewal on Marcus, Help Marcus; fed)	6d6	4 1 1 6 4 6	hits=2 sixes=2
+2026-10-22T02:44:54.200Z	N1 H1 Bridge R3 Tom/Ray strikes Girder G2 (Blaze, Help Marcus; fed)	6d6	2 5 4 6 2 5	hits=3 sixes=1
+2026-10-22T02:45:10.037Z	N1 H2 Underpass Quick: Tom/Ray strikes pack G1 (Quick die, Help Nell)	7d6	1 3 6 5 6 3 1	hits=3 sixes=2
+2026-10-22T02:45:16.123Z	N1 H2 Underpass R1 Mia/Marcus strikes pack G1 (Chi die, Help Nell; fed)	7d6	5 5 2 3 1 3 1	hits=2 sixes=0
+2026-10-22T02:45:21.702Z	N1 H2 Underpass R1 Leah/Nell strikes Mason G2 (Chi die; fed)	6d6	3 2 5 1 1 4	hits=1 sixes=0
+2026-10-22T02:45:28.021Z	N1 H2 Underpass R1 Tom/Ray strikes Mason G2 (Blaze, Help Nell, Help Marcus; fed)	7d6	3 1 6 1 3 1 4	hits=1 sixes=1
+2026-10-22T02:45:35.010Z	N1 H2 Underpass R1 Mason Surge	1d6	4	hits=0 sixes=0
+2026-10-22T02:45:44.653Z	N1 H2 Underpass R2 Mia/Marcus strikes last Still G1 (Bulwark on self; fed)	5d6	4 3 1 2 5	hits=1 sixes=0
+2026-10-22T02:45:51.470Z	N1 H2 Underpass R2 Leah/Nell strikes Mason G2 (Chi die, Renewal on Marcus; fed)	6d6	6 3 1 6 3 2	hits=2 sixes=2
+2026-10-22T02:45:56.662Z	N1 H2 Underpass R2 Tom/Ray strikes Mason G2 (Blaze, Help Nell; fed)	6d6	5 4 6 4 6 5	hits=4 sixes=2
+2026-10-22T02:46:01.574Z	N1 H2 Underpass R2 Mason Surge	1d6	6	hits=1 sixes=1
+2026-10-22T02:46:08.399Z	N1 H2 Underpass R3 Mia/Marcus strikes Mason G2 (fed)	5d6	6 3 5 3 3	hits=2 sixes=1
+2026-10-22T02:46:12.953Z	N1 H2 Underpass R3 Leah/Nell strikes Mason G2 (fed)	5d6	6 5 2 2 5	hits=3 sixes=1
+2026-10-22T02:46:19.587Z	N1 H2 Underpass R3 Tom/Ray strikes Mason G2 (Chi die; fed)	6d6	2 6 6 4 2 6	hits=3 sixes=3
+2026-10-22T02:46:32.721Z	N1 H4 Reservoir Quick: Tom/Ray strikes pack G1 (Quick die, Help Nell)	7d6	6 6 4 6 6 3 4	hits=4 sixes=4
+2026-10-22T02:46:38.377Z	N1 H4 Reservoir R1 Mia/Marcus strikes Overflow G2 (Help Nell; fed)	6d6	4 3 2 1 4 5	hits=1 sixes=0
+2026-10-22T02:46:44.539Z	N1 H4 Reservoir R1 Leah/Nell strikes Overflow G2 (Chi die, Renewal on Marcus; fed)	6d6	3 1 2 4 5 2	hits=1 sixes=0
+2026-10-22T02:46:51.146Z	N1 H4 Reservoir R1 Tom/Ray strikes Overflow G2 (Blaze, Chi die, Help Marcus; fed)	7d6	6 1 1 4 3 1 4	hits=1 sixes=1
+2026-10-22T02:46:56.245Z	N1 H4 Reservoir R1 Overflow Surge	1d6	3	hits=0 sixes=0
+2026-10-22T02:47:03.579Z	N1 H4 Reservoir R2 Mia/Marcus strikes Overflow G2 (Chi die; fed)	6d6	6 6 5 1 6 1	hits=4 sixes=3
+2026-10-22T02:47:09.650Z	N1 H4 Reservoir R2 Leah/Nell strikes Overflow G2 (Chi die, Help Marcus; fed)	7d6	5 3 5 6 4 6 6	hits=5 sixes=3
+2026-10-22T02:47:15.226Z	N1 H4 Reservoir R2 Tom/Ray strikes Overflow G2 (Blaze, Help Marcus, Help Nell; fed)	7d6	3 3 4 1 4 2 2	hits=0 sixes=0
+2026-10-22T02:47:21.096Z	N1 H4 Reservoir R2 Overflow Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:47:26.976Z	N1 H4 Reservoir R3 Mia/Marcus strikes Overflow G2 (Chi die, Help Ray; fed)	7d6	3 4 1 6 3 1 3	hits=1 sixes=1
+2026-10-22T02:47:32.488Z	N1 H4 Reservoir R3 Leah/Nell strikes Overflow G2 (Chi die, Help Marcus; fed)	7d6	3 4 4 6 4 6 5	hits=3 sixes=2
+2026-10-22T02:47:43.354Z	N1 H4 Reservoir R3 Tom/Ray strikes Overflow G2 (Help Marcus, Help Nell; fed)	7d6	2 6 1 2 4 2 5	hits=2 sixes=1
+2026-10-22T02:48:01.294Z	N1 Heart Quick: Tom/Ray strikes pack G1 (Quick die, Help Nell)	7d6	1 3 6 2 6 1 2	hits=2 sixes=2
+2026-10-22T02:48:08.994Z	N1 Heart R1 Mia/Marcus (Awakens Harmony) strikes pack G1 (Help Nell; fed)	6d6	2 1 4 2 6 4	hits=1 sixes=1
+2026-10-22T02:48:14.653Z	N1 Heart R1 Leah/Nell (Awakens Wellspring) strikes Heart G2 (fed)	5d6	3 3 6 3 5	hits=2 sixes=1
+2026-10-22T02:48:20.440Z	N1 Heart R1 Tom/Ray (Awakens Ascendant) strikes Heart G2 (Blaze; fed)	5d6	5 5 2 6 1	hits=3 sixes=1
+2026-10-22T02:48:26.824Z	N1 Heart R1 Heart Surge	1d6	6	hits=1 sixes=1
+2026-10-22T02:48:36.281Z	N1 Heart R2 Mia/Marcus strikes pack G1 (Chi die; fed)	6d6	4 3 6 5 2 5	hits=3 sixes=1
+2026-10-22T02:48:41.715Z	N1 Heart R2 Leah/Nell strikes pack G1 (Chi die; fed)	6d6	1 3 5 5 2 6	hits=3 sixes=1
+2026-10-22T02:48:47.956Z	N1 Heart R2 Tom/Ray (Ascendant) strikes Heart G2 (Blaze, Chi die, Help Marcus; fed)	7d6	4 1 3 4 6 3 5	hits=2 sixes=1
+2026-10-22T02:48:54.154Z	N1 Heart R2 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:49:02.874Z	N1 Heart R3 Mia/Marcus strikes last Still G1 (fed)	5d6	6 1 3 2 5	hits=2 sixes=1
+2026-10-22T02:49:07.955Z	N1 Heart R3 Leah/Nell strikes Heart G2 (Chi die, Help Marcus; fed)	7d6	5 5 6 5 3 1 2	hits=4 sixes=1
+2026-10-22T02:49:13.062Z	N1 Heart R3 Tom/Ray (Ascendant) strikes Heart G2 (Blaze, Chi die, Help Marcus; fed)	7d6	2 3 1 5 3 2 1	hits=1 sixes=0
+2026-10-22T02:49:18.746Z	N1 Heart R3 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:49:25.409Z	N1 Heart R4 Mia/Marcus strikes Heart G2 (Chi die; fed)	6d6	6 3 3 3 2 5	hits=2 sixes=1
+2026-10-22T02:49:32.395Z	N1 Heart R4 Leah/Nell strikes Heart G2 (Help Marcus; fed)	6d6	2 5 5 2 4 4	hits=2 sixes=0
+2026-10-22T02:49:38.638Z	N1 Heart R4 Tom/Ray strikes Heart G2 (Blaze; fed)	5d6	3 3 3 5 1	hits=1 sixes=0
+2026-10-22T02:53:02.345Z	N2 Build First Clash table	1d6	3	hits=0 sixes=0
+2026-10-22T02:53:02.346Z	N2 Build Wood Shell place	1d6	1	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Fire Shell place	1d6	5	hits=1 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Earth Shell place	1d6	4	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Metal Shell place	1d6	3	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Water Shell place	1d6	6	hits=1 sixes=1
+2026-10-22T02:53:02.347Z	N2 Build Sign for Wood Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Sign for Fire Anchor	1d6	5	hits=1 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Sign for Earth Anchor	1d6	1	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Sign for Metal Anchor	1d6	6	hits=1 sixes=1
+2026-10-22T02:53:02.347Z	N2 Build Sign for Water Anchor	1d6	4	hits=0 sixes=0
+2026-10-22T02:53:02.347Z	N2 Build Heart table	1d6	4	hits=0 sixes=0
+2026-10-22T02:53:16.783Z	N2 FC Quick: Tom/Ray strikes pack (Blaze, Quick die, Help Nell)	7d6	1 2 5 3 3 1 4	hits=1 sixes=0
+2026-10-22T02:53:23.099Z	N2 FC R1 Mia/Marcus strikes pack (Chi die, Help Nell; fed)	7d6	6 1 1 3 4 4 6	hits=2 sixes=2
+2026-10-22T02:53:23.100Z	N2 FC R1 Leah/Nell strikes pack (Chi die; fed)	6d6	3 2 4 1 5 6	hits=2 sixes=1
+2026-10-22T02:53:33.813Z	N2 FC R1 Tom/Ray strikes pack (Blaze, Help Nell; fed)	6d6	2 3 5 6 5 1	hits=3 sixes=1
+2026-10-22T02:53:45.224Z	N2 H1 Sidings Quick: Tom/Ray strikes pack G1 (Quick die, Help Nell)	7d6	1 5 6 5 2 2 1	hits=3 sixes=1
+2026-10-22T02:53:51.766Z	N2 H1 Sidings R1 Mia/Marcus strikes pack G1 (Chi die, Help Nell; fed)	7d6	2 5 5 3 4 2 2	hits=2 sixes=0
+2026-10-22T02:54:00.838Z	N2 H1 Sidings R1 Leah/Nell strikes last Still G1 (Chi die; fed)	6d6	3 4 5 5 5 4	hits=3 sixes=0
+2026-10-22T02:54:07.251Z	N2 H1 Sidings R1 Tom/Ray strikes Points G2 (Help Nell, Help Marcus; fed)	7d6	3 1 4 6 2 2 1	hits=1 sixes=1
+2026-10-22T02:55:06.700Z	N2 H1 Sidings R1 Points Surge	1d6	4	hits=0 sixes=0
+2026-10-22T02:55:11.966Z	N2 H1 Sidings R2 Mia/Marcus strikes Points G2 (Chi die; fed)	6d6	3 4 2 3 6 3	hits=1 sixes=1
+2026-10-22T02:55:18.021Z	N2 H1 Sidings R2 Leah/Nell strikes Points G2 (Chi die, Help Marcus; fed)	7d6	1 1 3 4 1 2 2	hits=0 sixes=0
+2026-10-22T02:55:23.663Z	N2 H1 Sidings R2 Tom/Ray strikes Points G2 (Blaze, Help Marcus; fed)	6d6	4 2 6 1 5 1	hits=2 sixes=1
+2026-10-22T02:55:28.068Z	N2 H1 Sidings R2 Points Surge	1d6	3	hits=0 sixes=0
+2026-10-22T02:55:34.042Z	N2 H1 Sidings R3 Mia/Marcus strikes Points G2 (Help Nell; fed)	6d6	3 5 1 5 2 5	hits=3 sixes=0
+2026-10-22T02:55:38.738Z	N2 H1 Sidings R3 Leah/Nell strikes Points G2 (fed)	5d6	3 5 5 3 1	hits=2 sixes=0
+2026-10-22T02:55:43.249Z	N2 H1 Sidings R3 Tom/Ray strikes Points G2 (fed)	5d6	3 6 3 4 5	hits=2 sixes=1
+2026-10-22T02:55:47.554Z	N2 H1 Sidings R3 Points Surge	1d6	1	hits=0 sixes=0
+2026-10-22T02:55:53.077Z	N2 H1 Sidings R4 Mia/Marcus strikes Points G2 (fed)	5d6	1 6 5 1 2	hits=2 sixes=1
+2026-10-22T02:55:57.917Z	N2 H1 Sidings R4 Leah/Nell strikes Points G2 (fed)	5d6	5 5 4 2 2	hits=2 sixes=0
+2026-10-22T02:56:11.005Z	N2 H3 CarPark Quick: Tom/Ray strikes pack G1 (Quick die, Help Nell)	7d6	4 4 6 4 1 3 5	hits=2 sixes=1
+2026-10-22T02:56:18.389Z	N2 H3 CarPark R1 Mia/Marcus strikes pack G1 (Help Nell; fed)	6d6	4 1 6 1 4 6	hits=2 sixes=2
+2026-10-22T02:56:23.763Z	N2 H3 CarPark R1 Leah/Nell strikes Ramp G2 (Chi die; fed)	6d6	4 3 4 3 1 2	hits=0 sixes=0
+2026-10-22T02:56:30.689Z	N2 H3 CarPark R1 Tom/Ray strikes last Still G1 (fed)	5d6	2 2 2 4 2	hits=0 sixes=0
+2026-10-22T02:56:35.788Z	N2 H3 CarPark R1 Ramp Surge	1d6	4	hits=0 sixes=0
+2026-10-22T02:56:41.714Z	N2 H3 CarPark R2 Mia/Marcus strikes last Still G1 (Chi die; fed)	6d6	2 3 3 3 2 4	hits=0 sixes=0
+2026-10-22T02:56:46.635Z	N2 H3 CarPark R2 Leah/Nell strikes Ramp G2 (Chi die, Help Marcus; fed)	7d6	1 1 1 4 4 1 2	hits=0 sixes=0
+2026-10-22T02:56:53.500Z	N2 H3 CarPark R2 Tom/Ray strikes last Still G1 (Help Marcus; fed)	6d6	3 1 2 2 3 4	hits=0 sixes=0
+2026-10-22T02:56:59.952Z	N2 H3 CarPark R2 Ramp Surge	1d6	1	hits=0 sixes=0
+2026-10-22T02:57:13.539Z	N2 H3 CarPark R3 Mia/Marcus strikes last Still G1 (Chi die; fed)	6d6	5 6 1 6 1 2	hits=3 sixes=2
+2026-10-22T02:57:20.976Z	N2 H3 CarPark R3 Leah/Nell strikes Ramp G2 (Chi die, Help Marcus; fed)	7d6	2 1 3 5 1 2 5	hits=2 sixes=0
+2026-10-22T02:57:26.311Z	N2 H3 CarPark R3 Tom/Ray strikes Ramp G2 (Blaze, Chi die, Help Marcus; fed)	7d6	3 2 2 2 4 3 1	hits=0 sixes=0
+2026-10-22T02:57:31.166Z	N2 H3 CarPark R3 Ramp Surge	1d6	4	hits=0 sixes=0
+2026-10-22T02:58:27.828Z	N2 Heart Quick: Tom/Ray strikes pack G1 (Blaze, Quick die, Help Nell)	7d6	1 6 2 6 6 6 5	hits=5 sixes=4
+2026-10-22T02:58:33.555Z	N2 Heart R1 Mia/Marcus (Awakens Harmony) strikes Heart G2 (Chi die; fed)	6d6	2 1 4 4 2 6	hits=1 sixes=1
+2026-10-22T02:58:40.504Z	N2 Heart R1 Leah/Nell strikes Heart G2 (Chi die, Help Marcus; fed)	7d6	5 6 3 1 2 2 6	hits=3 sixes=2
+2026-10-22T02:58:45.593Z	N2 Heart R1 Tom/Ray (Awakens Ascendant) strikes Heart G2 (Blaze, Help Marcus, Help Nell; fed)	7d6	4 2 5 4 2 6 6	hits=3 sixes=2
+2026-10-22T02:58:50.470Z	N2 Heart R1 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:58:57.766Z	N2 Heart R2 Mia/Marcus strikes Heart G2 (Chi die; fed)	6d6	4 5 1 6 4 2	hits=2 sixes=1
+2026-10-22T02:59:03.360Z	N2 Heart R2 Leah/Nell strikes Heart G2 (Chi die; fed)	6d6	2 5 3 5 4 4	hits=2 sixes=0
+2026-10-22T02:59:08.264Z	N2 Heart R2 Tom/Ray (Ascendant) strikes Heart G2 (Blaze, Chi die, Help Nell; fed)	7d6	6 1 2 6 1 5 1	hits=3 sixes=2
+2026-10-22T02:59:14.113Z	N2 Heart R2 Heart Surge	1d6	6	hits=1 sixes=1
+2026-10-22T02:59:20.677Z	N2 Heart R3 Mia/Marcus strikes pack G1 (Chi die; fed)	6d6	3 4 4 6 1 3	hits=1 sixes=1
+2026-10-22T02:59:28.038Z	N2 Heart R3 Leah/Nell (Awakens Wellspring) strikes pack G1 (fed)	5d6	3 6 3 6 2	hits=2 sixes=2
+2026-10-22T02:59:33.013Z	N2 Heart R3 Tom/Ray (Ascendant) strikes Heart G2 (Blaze, Chi die, Help Nell; fed)	7d6	1 3 6 2 5 6 2	hits=3 sixes=2
+2026-10-22T02:59:37.522Z	N2 Heart R3 Heart Surge	1d6	5	hits=1 sixes=0

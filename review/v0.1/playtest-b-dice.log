@@ -1,0 +1,101 @@
+2026-10-22T02:44:30.270Z	Setup pick clash Unbreakable: Earth player (Lou)	1d6	3	hits=0 sixes=0
+2026-10-22T02:44:30.271Z	Setup pick clash Unbreakable: Water player (Nell)	1d6	5	hits=1 sixes=0
+2026-10-22T02:44:30.271Z	Setup pick clash Ascendant: Metal player (Kit)	1d6	1	hits=0 sixes=0
+2026-10-22T02:44:30.271Z	Setup pick clash Ascendant: Fire player (Omar)	1d6	5	hits=1 sixes=0
+2026-10-22T02:45:12.818Z	FC pre Omar Quick Strike pack (Blaze, Quick die + Chi die)	7d6	3 4 3 6 6 6 6	hits=4 sixes=4
+2026-10-22T02:45:21.330Z	FC R1 Lou Strike pack (Bulwark on self, Chi die)	6d6	2 6 3 6 5 2	hits=3 sixes=2
+2026-10-22T02:45:27.192Z	FC R1 Kit Strike pack (Edge, Chi die)	6d6	1 4 6 4 6 6	hits=3 sixes=3
+2026-10-22T02:45:34.538Z	FC R1 Nell Strike pack (Tide, Chi die)	6d6	3 4 3 2 6 3	hits=1 sixes=1
+2026-10-22T02:45:38.343Z	FC R1 Nell Tide reroll 3 misses	3d6	4 3 6	hits=1 sixes=1
+2026-10-22T02:45:55.185Z	H1 Greenhouse pre Omar Quick Strike pack (Blaze, Quick die + Chi die)	7d6	5 2 5 6 2 3 6	hits=4 sixes=2
+2026-10-22T02:46:00.826Z	H1 R1 Lou Strike pack (Chi die)	6d6	3 1 1 3 3 5	hits=1 sixes=0
+2026-10-22T02:46:07.011Z	H1 R1 Kit Strike Warden (Edge, Chi die, Help Tess)	7d6	6 2 6 2 4 4 5	hits=3 sixes=2
+2026-10-22T02:46:14.789Z	H1 R1 Nell Strike Warden (Chi die)	6d6	1 6 6 2 1 6	hits=3 sixes=3
+2026-10-22T02:46:19.716Z	H1 R1 Tess Strike Warden (Chi die)	6d6	4 6 5 5 5 1	hits=4 sixes=1
+2026-10-22T02:46:27.983Z	H1 R1 Omar Strike Warden (Blaze, Chi die, Help Kit)	7d6	3 3 6 5 4 4 3	hits=2 sixes=1
+2026-10-22T02:46:35.026Z	H1 R1 Gardener Surge	1d6	6	hits=1 sixes=1
+2026-10-22T02:46:41.615Z	H1 R2 Lou Strike Warden (no Chi)	5d6	1 3 5 4 2	hits=1 sixes=0
+2026-10-22T02:46:47.631Z	H1 R2 Kit Strike Warden (Edge, Help Omar)	6d6	2 5 3 2 3 3	hits=1 sixes=0
+2026-10-22T02:46:52.499Z	H1 R2 Nell Strike Warden (Chi die)	6d6	3 1 6 2 3 1	hits=1 sixes=1
+2026-10-22T02:46:56.364Z	H1 R2 Nell Lucky reroll 5 misses	5d6	2 1 1 1 2	hits=0 sixes=0
+2026-10-22T02:47:01.599Z	H1 R2 Tess Strike Warden (Help Nell)	6d6	5 5 4 5 5 5	hits=5 sixes=0
+2026-10-22T02:47:07.178Z	H1 R2 Omar Strike Warden (Blaze, Help Lou, Help Kit)	7d6	4 5 6 4 1 2 5	hits=3 sixes=1
+2026-10-22T02:47:13.003Z	H1 R2 Gardener Surge	1d6	1	hits=0 sixes=0
+2026-10-22T02:47:19.950Z	H1 R3 Lou Strike Warden (Chi die)	6d6	2 6 5 1 2 4	hits=2 sixes=1
+2026-10-22T02:47:25.407Z	H1 R3 Kit Strike Warden (Help Lou)	6d6	2 1 1 3 2 5	hits=1 sixes=0
+2026-10-22T02:47:35.595Z	H2 Bridge pre Omar Quick Strike Warden (Blaze, Quick die + Chi die)	7d6	2 2 5 6 4 4 5	hits=3 sixes=1
+2026-10-22T02:47:41.177Z	H2 R1 Lou Strike pack (no Chi)	5d6	2 4 6 4 5	hits=2 sixes=1
+2026-10-22T02:47:46.222Z	H2 R1 Kit Strike Warden (Help Omar)	6d6	5 2 1 5 3 4	hits=2 sixes=0
+2026-10-22T02:47:51.738Z	H2 R1 Nell Strike Warden (Chi die)	6d6	4 4 2 1 6 3	hits=1 sixes=1
+2026-10-22T02:47:57.406Z	H2 R1 Nell Lucky reroll 5 misses	5d6	6 6 6 6 4	hits=4 sixes=4
+2026-10-22T02:48:02.907Z	H2 R1 Tess Strike pack (no Chi)	5d6	4 3 6 2 3	hits=1 sixes=1
+2026-10-22T02:48:07.300Z	H2 R1 Omar Strike Warden (Blaze, Help Nell)	6d6	1 1 6 4 3 2	hits=1 sixes=1
+2026-10-22T02:48:12.836Z	H2 R1 Girder Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:48:20.117Z	H2 R2 Lou Strike pack (Bulwark on self, Chi die)	6d6	2 6 5 1 1 1	hits=2 sixes=1
+2026-10-22T02:48:24.635Z	H2 R2 Kit Strike Warden (Help Omar)	6d6	5 6 1 2 4 2	hits=2 sixes=1
+2026-10-22T02:48:28.785Z	H2 R2 Nell Strike Warden (no Chi)	5d6	2 6 3 2 3	hits=1 sixes=1
+2026-10-22T02:48:35.355Z	H2 R2 Tess Strike pack (no Chi)	5d6	1 3 3 4 6	hits=1 sixes=1
+2026-10-22T02:48:39.751Z	H2 R2 Omar Strike Warden (Help Nell)	6d6	6 1 2 4 5 3	hits=2 sixes=1
+2026-10-22T02:48:44.596Z	H2 R2 Girder Surge	1d6	4	hits=0 sixes=0
+2026-10-22T02:48:56.583Z	H2 R3 Lou Strike pack (no Chi)	5d6	3 1 4 3 4	hits=0 sixes=0
+2026-10-22T02:49:05.226Z	H2 R3 Kit Strike Warden (Help Nell)	6d6	1 4 5 3 3 6	hits=2 sixes=1
+2026-10-22T02:49:10.547Z	H2 R3 Nell Strike pack (no Chi)	5d6	6 6 3 2 4	hits=2 sixes=2
+2026-10-22T02:49:18.420Z	H2 R3 Omar Strike Warden (no Chi)	5d6	4 4 5 4 6	hits=2 sixes=1
+2026-10-22T02:49:23.182Z	H2 R3 Girder Surge	1d6	1	hits=0 sixes=0
+2026-10-22T02:49:33.611Z	H2 R4 Lou Strike Warden (no Chi)	5d6	1 3 2 2 3	hits=0 sixes=0
+2026-10-22T02:49:37.991Z	H2 R4 Kit Strike Warden (Help Nell)	6d6	4 5 6 3 1 4	hits=2 sixes=1
+2026-10-22T02:49:42.997Z	H2 R4 Nell Strike Warden (no Chi)	5d6	3 5 6 4 2	hits=2 sixes=1
+2026-10-22T02:49:52.787Z	H2 R4 Tess Strike Warden (no Chi)	5d6	3 1 4 2 3	hits=0 sixes=0
+2026-10-22T02:50:01.982Z	H2 R4 Omar Strike Warden (Help Tess)	6d6	5 1 2 4 3 5	hits=2 sixes=0
+2026-10-22T02:50:07.868Z	H2 R4 Girder Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:50:35.723Z	H2 R5 Nell Strike Warden (no Chi, not fed)	5d6	2 5 6 3 5	hits=3 sixes=1
+2026-10-22T02:50:40.246Z	H2 R5 Tess Strike Warden (no Chi)	5d6	1 3 4 1 6	hits=1 sixes=1
+2026-10-22T02:50:45.082Z	H2 R5 Omar Strike Warden (Help Tess)	6d6	3 5 3 4 3 1	hits=1 sixes=0
+2026-10-22T02:51:13.474Z	Heart pre Omar Quick Strike pack (Blaze, Quick die + Chi die)	7d6	4 1 6 1 3 1 4	hits=1 sixes=1
+2026-10-22T02:52:24.688Z	Heart R1 Kit Tempest action 1 Strike Heart (fed, no Chi)	5d6	6 4 5 6 6	hits=4 sixes=3
+2026-10-22T02:52:24.689Z	Heart R1 Kit Tempest action 2 Strike pack (not fed, no Chi)	5d6	1 4 2 2 4	hits=0 sixes=0
+2026-10-22T02:52:33.255Z	Heart R1 Nell Strike Heart (fed, Tide, Chi die)	6d6	3 1 2 3 6 5	hits=2 sixes=1
+2026-10-22T02:52:38.031Z	Heart R1 Nell Tide reroll 3 misses	3d6	1 4 2	hits=0 sixes=0
+2026-10-22T02:52:43.659Z	Heart R1 Tess Awakens Harmony then Strike Heart (fed, no Chi)	5d6	2 5 3 6 2	hits=2 sixes=1
+2026-10-22T02:52:49.014Z	Heart R1 Omar Awakens Ascendant then Strike Heart (fed, Help Kit, Help Nell)	7d6	6 2 5 1 2 1 5	hits=3 sixes=1
+2026-10-22T02:52:59.923Z	Heart R2 Kit Tempest action 1 Strike Heart (fed, Edge, Chi die)	6d6	2 1 3 3 5 6	hits=2 sixes=1
+2026-10-22T02:53:11.627Z	Heart R2 Kit Tempest action 2 Strike pack (not fed, Edge)	5d6	5 3 4 4 5	hits=2 sixes=0
+2026-10-22T02:53:19.172Z	Heart R2 Nell Strike Heart (fed, no Chi)	5d6	5 6 5 1 3	hits=3 sixes=1
+2026-10-22T02:53:25.161Z	Heart R2 Tess Strike Heart (fed, no Chi)	5d6	2 1 5 6 2	hits=2 sixes=1
+2026-10-22T02:53:30.338Z	Heart R2 Omar Ascendant Strike Heart (fed, Blaze)	5d6	5 3 1 6 3	hits=2 sixes=1
+2026-10-22T02:53:42.629Z	Heart R3 Lou Strike Heart (fed, no Chi)	5d6	1 3 5 6 2	hits=2 sixes=1
+2026-10-22T02:53:48.418Z	Heart R3 Kit Tempest action 1 Strike Heart (fed, Edge)	5d6	6 2 5 5 6	hits=4 sixes=2
+2026-10-22T02:53:54.620Z	Heart R3 Kit Tempest action 2 Strike Heart (not fed, Edge, Chi die)	6d6	3 2 2 3 3 6	hits=1 sixes=1
+2026-10-22T02:54:00.620Z	Heart R3 Nell Strike Heart (fed, no Chi)	5d6	5 3 4 4 5	hits=2 sixes=0
+2026-10-22T02:54:06.227Z	Heart R3 Tess Strike Heart (fed, no Chi)	5d6	4 5 6 1 5	hits=3 sixes=1
+2026-10-22T02:55:03.636Z	Heart R3 Omar Ascendant Strike Heart (fed, Blaze, Help Kit)	6d6	2 6 5 6 2 3	hits=3 sixes=2
+2026-10-22T02:55:10.484Z	Heart R3 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T02:55:17.422Z	Heart R4 Lou Strike Heart (fed, Bulwark on self, Chi die)	6d6	5 4 1 3 3 3	hits=1 sixes=0
+2026-10-22T02:55:24.003Z	Heart R4 Kit Strike Heart (fed, Help Lou)	6d6	1 2 1 6 6 5	hits=3 sixes=2
+2026-10-22T02:55:28.736Z	Heart R4 Nell Strike Heart (fed, no Chi)	5d6	4 3 2 4 6	hits=1 sixes=1
+2026-10-22T02:55:32.915Z	Heart R4 Nell Lucky reroll 4 misses	4d6	2 3 5 4	hits=1 sixes=0
+2026-10-22T02:55:37.643Z	Heart R4 Tess Strike Heart (fed, Help Kit)	6d6	4 1 4 5 6 3	hits=2 sixes=1
+2026-10-22T02:55:42.553Z	Heart R4 Omar Strike Heart (fed, Blaze, Help Kit)	6d6	6 4 4 2 6 5	hits=3 sixes=2
+2026-10-22T02:57:17.597Z	Drill 1 First Clash Rae (Wood Sweeper) Strike pack, no Chi	5d6	5 6 5 2 6	hits=4 sixes=2
+2026-10-22T02:57:26.751Z	Drill 2a Underpass Lou Strike Warden (Shell on, Guard 3, Warden 24/45, not fed)	5d6	6 5 2 5 2	hits=3 sixes=1
+2026-10-22T02:57:35.693Z	Drill 2a second try Nell Strike Warden (Shell on, Guard 3, Warden 24/45, fed by Kit)	5d6	6 1 3 1 5	hits=2 sixes=1
+2026-10-22T02:57:44.156Z	Drill 2b Underpass Rae (breaker, Sweeper) Strike Warden (fed, Chi die, Renewal on Lou)	6d6	3 6 5 4 1 5	hits=3 sixes=1
+2026-10-22T02:57:52.876Z	Drill 2c Underpass Mason Surge (pack 6 Stills, Rae and Kit tied on 4 damage)	1d6	3	hits=0 sixes=0
+2026-10-22T02:58:00.673Z	Drill 2c Underpass Mason Surge next round (pack 6 Stills, Rae and Kit tied on damage, Kit acted later)	1d6	3	hits=0 sixes=0
+2026-10-22T02:58:07.882Z	Drill 2d Call-cap sequence: six Surges in order, pack starts at 6 Stills, nobody touches the pack	6d6	1 2 6 4 5 6	hits=3 sixes=2
+2026-10-22T02:58:21.410Z	Drill 3a Rae Awakens Wellspring then Strike Warden (V2, Stubborn unused, not fed)	5d6	2 1 6 2 4	hits=1 sixes=1
+2026-10-22T02:58:28.093Z	Drill 3b Kit Strike Warden (V1, no Chi, not fed)	5d6	6 3 6 5 2	hits=3 sixes=2
+2026-10-22T02:58:35.683Z	Drill 3c Warden Surge end of round 5 (most damage Kit 7)	1d6	2	hits=0 sixes=0
+2026-10-22T02:58:45.981Z	Drill 4a Heart Nell Awakens Unbreakable (C 3 to 0) then Strike Heart, no Chi	5d6	5 1 3 2 3	hits=1 sixes=0
+2026-10-22T02:58:53.436Z	Drill 4b Heart Surge with an Earth Guardian + Unbreakable fighter Awakened (Hard)	1d6	4	hits=0 sixes=0
+2026-10-22T02:58:53.438Z	Drill 4b Heart Surge next round	1d6	1	hits=0 sixes=0
+2026-10-22T02:58:53.438Z	Drill 4b Heart Surge third round	1d6	2	hits=0 sixes=0
+2026-10-22T02:59:03.579Z	Drill 5 Reservoir all at V1: Lou Strike Warden (breaker, Guard 2)	5d6	5 4 5 2 1	hits=2 sixes=0
+2026-10-22T02:59:03.581Z	Drill 5 Kit Strike Warden (Guard 3 until Lou shatters it)	5d6	2 6 2 2 5	hits=2 sixes=1
+2026-10-22T02:59:03.581Z	Drill 5 Nell Strike Warden	5d6	4 2 6 3 6	hits=2 sixes=2
+2026-10-22T02:59:03.581Z	Drill 5 Rae Strike Warden	5d6	4 6 3 2 3	hits=1 sixes=1
+2026-10-22T02:59:03.581Z	Drill 5 Omar Strike Warden	5d6	4 2 1 4 6	hits=1 sixes=1
+2026-10-22T02:59:12.261Z	Drill 5 Reservoir Warden Surge (Lou, Kit standing at V1; most damage Kit 4 and Nell 4, Nell later but Down)	1d6	6	hits=1 sixes=1
+2026-10-22T02:59:19.481Z	Drill 5 round 2 Kit Strike Warden (V1, Lou has Rallied Omar, Kit fed by Lou's Rally)	5d6	1 3 6 5 1	hits=2 sixes=1
+2026-10-22T02:59:24.643Z	Drill 5 round 2 Warden Surge (standing Lou V1, Kit V1; Kit dealt the damage)	1d6	3	hits=0 sixes=0
+2026-10-22T02:59:35.145Z	Drill 6 Heart round 5, Heart at 4, only Omar standing at V2: Strike Heart (Blaze, not fed)	5d6	4 1 4 3 1	hits=0 sixes=0
