@@ -214,3 +214,7 @@ From the three reports, in their words where possible:
 - Tempest's two actions start in the round you Awaken;
 - the setup times are consistent.
 
+
+## Copy-edit (2026-10-26)
+
+A full copy-edit of the book after the verification round. No rule or number changed: wording that contradicted a chapter (the Surge and Swarm in the enemies' step, the At the Table card's Guardian, long fight and feeding lines), terms used before they were explained, and small typos. Every fix is logged in `book/REVIEW.md` rows 48 to 54; "Vigour" replaces "Vigor" (DESIGN D44). The book still builds to 31 pages, with the contact sheet checked.

@@ -7,7 +7,7 @@ A tabletop roleplaying game by **Richard Moore**. On one night, ordinary people 
 ## What's in here
 | Folder | What it is |
 |---|---|
-| `docs/` | `CORE-RULES.md` (the one-page summary of the rules), `DESIGN.md` (pitch, name check, decisions log), `DESIGN-RULES.md` (lessons from three earlier games), `REVIEW-PROCEDURE.md`, the kickoff prompt, and reference studies from *Heisty Spideys* |
+| `docs/` | `CORE-RULES.md` (the one-page summary of the rules), `DESIGN.md` (pitch, name check, decisions log), `DESIGN-RULES.md` (lessons from three earlier games), `REVIEW-PROCEDURE.md`, the original brief, and reference studies from *Heisty Spideys* |
 | `book/` | The rulebook: HTML chapters built into a typeset PDF (digital and print-on-demand), and `book/art/ART-CHECKLIST.md` |
 | `sim/` | The rules simulator: plays whole nights by the core rules and writes `sim/REPORT.md` |
 | `module/`, `templates/`, `styles/`, `lang/`, `packs/` | The Foundry VTT game system: fighter, Warden/Heart and Stills sheets, the Night sheet, Strikes and the enemies' step resolved by the book (`module/logic/rules.mjs`, Foundry-free and tested), and the ready-made fighters |
