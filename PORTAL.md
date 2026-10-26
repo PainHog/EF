@@ -1,5 +1,5 @@
-Now: Polishing the online version and the rulebook so only the final artwork is left to add
-Next: The first release of the online version, for Richard to try in Foundry VTT
+Now: Releasing the first version of the online game, with the rulebook ready for its final pictures
+Next: Richard plays a test night in Foundry VTT, and an artist starts on the pictures
 Number: Design decisions made = 45
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
