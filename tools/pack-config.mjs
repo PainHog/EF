@@ -117,7 +117,10 @@ export function toCliDoc(def, raw, index) {
     doc.items = [];
     // null (not "") disables a token bar; "" would be cleaned back to the
     // system's primaryTokenAttribute. Override per pack once actors exist.
-    doc.prototypeToken = { name: raw.name, actorLink: true, disposition: 1, bar1: { attribute: def.subtype === "fighter" ? "vigor" : null }, bar2: { attribute: null } };
+    doc.prototypeToken = {
+      name: raw.name, actorLink: true, disposition: 1, displayBars: 50, displayName: 30,
+      texture: { src: raw.img }, bar1: { attribute: def.subtype === "fighter" ? "vigor" : null }, bar2: { attribute: null }
+    };
   }
   return doc;
 }

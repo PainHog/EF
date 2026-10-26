@@ -1,7 +1,7 @@
 {
   "key": "priya",
   "name": "Priya Raman",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/elemental-fighters/assets/fighters/priya.svg",
   "system": {
     "element": "metal",
     "style": "flow",
@@ -21,6 +21,6 @@
     },
     "luckyUsed": false,
     "stubbornUsed": false,
-    "notes": "<p><em>“Hold still. This will sting.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+    "notes": "“Hold still. This will sting.”\n\nA ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins."
   }
 }

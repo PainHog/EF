@@ -199,6 +199,53 @@ test("sheets and the Night sheet render for the Storyteller and a player", async
   assert.ok(game.messages.some(m => m.flags[SYSTEM_ID]?.card === CARD.strike));
 });
 
+test("only the Storyteller runs the night's steps; players run their fighters' actions", async () => {
+  for (const op of [OPS.endRound, OPS.startFight, OPS.beginNight, OPS.anchors, OPS.respite]) {
+    const res = await asUser(p1, () => api.request(op, { kind: "clash" }));
+    assert.equal(res.ok, false, op);
+    assert.match(res.error, /Only the Storyteller/);
+  }
+});
+
+test("the Night sheet says what comes next, opens sheets and names the Anchors", async () => {
+  const t = new NightTracker();
+  await t.render();
+  assert.match(t.element.innerHTML, /Morning: go round once more for the epilogue/);
+  assert.match(t.element.innerHTML, /data-action="openSheet" data-id="/);
+  answer({ "n-0": "The Library", "w-0": "the Archivist", "n-1": "", "w-1": "  " });
+  await t.options.actions.editAnchors.call(t);
+  assert.equal(night().anchors[0].name, "The Library");
+  assert.equal(night().anchors[0].warden, "the Archivist");
+  assert.equal(night().anchors[0].shell, "wood", "the Shells stay one per element");
+  assert.equal(night().anchors[1].name, "The Substation", "a blank name keeps the old one");
+  const bad = await api.request(OPS.anchors, { anchors: [{ name: "x" }] });
+  assert.equal(bad.ok, false);
+});
+
+test("clicking a pip sets the track; clicking the top lit pip steps it down", async () => {
+  const sheet = new FighterSheet({ document: dani });
+  await sheet.render();
+  const pip = value => ({ dataset: { value: String(value) } });
+  await sheet.options.actions.setVigor.call(sheet, {}, pip(4));
+  assert.equal(dani.system.vigor.value, 4);
+  await sheet.options.actions.setVigor.call(sheet, {}, pip(4));
+  assert.equal(dani.system.vigor.value, 3);
+  await sheet.options.actions.setChi.call(sheet, {}, pip(9));
+  assert.equal(dani.system.chi, 5, "never above 5 Chi");
+});
+
+test("a new fighter gets its element badge and a linked token; enemies show their art", async () => {
+  const a = await Actor.create({ name: "Test", type: "fighter", system: { element: "water" } });
+  assert.match(a.img, /assets\/elements\/water\.svg$/);
+  assert.equal(a.prototypeToken.actorLink, true);
+  assert.equal(a.prototypeToken.disposition, 1);
+  await a.update({ "system.element": "fire" });
+  assert.match(a.img, /elements\/fire\.svg$/, "a default badge follows the element");
+  const heart = game.actors.find(x => x.type === "unmade" && /Heart/.test(x.name));
+  if (heart) assert.match(heart.img, /tokens\/heart\.svg$/);
+  assert.ok(game.actors.filter(x => x.type === "pack").every(x => /tokens\/still\.svg$/.test(x.img)));
+});
+
 test("every contract name is used by the system", async () => {
   const { readFileSync, readdirSync } = await import("node:fs");
   const walk = d => readdirSync(d, { withFileTypes: true }).flatMap(e => (e.isDirectory() ? walk(`${d}/${e.name}`) : e.name.endsWith(".mjs") ? [`${d}/${e.name}`] : []));

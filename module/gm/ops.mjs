@@ -65,11 +65,20 @@ function acted(fight, a, { countsAsAction = true } = {}) {
   fight.actedAt[a.id] = fight.clock;
 }
 
-/** Find or make the actor for an enemy role ("warden-2", "heart", "stills"), reset to `data`. */
-async function enemyActor(role, data) {
+/** Find or make the actor for an enemy role ("warden-2", "heart", "stills"), reset to `data`, with its token art. */
+async function enemyActor(role, data, img) {
   const found = game.actors.find(x => x.getFlag?.(FLAG, "role") === role);
-  if (found) { await found.update({ name: data.name, system: data.system }); return found; }
-  return Actor.create({ ...data, flags: { [FLAG]: { role } } });
+  const art = { img, "prototypeToken.texture.src": img, "prototypeToken.name": data.name };
+  if (found) {
+    // keep art the Storyteller has chosen; replace only the system's own token art
+    const own = !found.img || found.img.includes(`systems/${EF.id}/assets/tokens/`) || found.img.startsWith("icons/svg/");
+    await found.update({ name: data.name, system: data.system, ...(own ? art : {}) });
+    return found;
+  }
+  return Actor.create({
+    ...data, img, flags: { [FLAG]: { role } },
+    prototypeToken: { name: data.name, texture: { src: img }, disposition: -1, actorLink: true, displayBars: 50, displayName: 30, bar1: { attribute: "toughness" } }
+  });
 }
 
 /* ----------------------------------------------------- losing Vigor -- */
@@ -173,7 +182,8 @@ async function beginNight({ difficulty = "standard", fighterIds = [], anchors = 
     const max = L.startingVigor(size, a.system.perk);
     await a.update({ "system.vigor.value": max, "system.vigor.max": max, "system.chi": EF.rules.chiStart, "system.awakened": { active: false, roundsLeft: 0, used: false }, "system.luckyUsed": false, "system.stubbornUsed": false });
   }
-  const night = { ...defaultNight(), started: true, difficulty, size, fighterIds: ids, phase: "prologue", anchors: anchors ?? defaultNight().anchors };
+  const kept = getNight().anchors.map(a => ({ ...a, broken: false }));   // the Anchors as the Storyteller last named them
+  const night = { ...defaultNight(), started: true, difficulty, size, fighterIds: ids, phase: "prologue", anchors: anchors ?? kept };
   await saveNight(night);
   await postCard(CARD.night, "The night begins", [
     `${size} fighters on ${EF.difficulties[difficulty].label}.`,
@@ -233,14 +243,14 @@ async function startFight({ kind, anchor = null }) {
     const an = night.anchors[anchor];
     const t = L.wardenToughness(n);
     const name = an.warden ? an.warden.replace(/^the /, "The ") : `The Warden of ${an.name}`;
-    master = await enemyActor(`warden-${anchor}`, { name, type: "unmade", system: { kind: "warden", shell: an.shell, shellIntact: true, toughness: { value: t, max: t }, anchor } });
+    master = await enemyActor(`warden-${anchor}`, { name, type: "unmade", system: { kind: "warden", shell: an.shell, shellIntact: true, toughness: { value: t, max: t }, anchor } }, EF.art.warden(an.shell));
   } else if (kind === "heart") {
     const t = L.heartToughness(n, night.anchors.filter(x => !x.broken).length);
-    master = await enemyActor("heart", { name: "The Heart", type: "unmade", system: { kind: "heart", shell: "", shellIntact: false, toughness: { value: t, max: t }, anchor: null } });
+    master = await enemyActor("heart", { name: "The Heart", type: "unmade", system: { kind: "heart", shell: "", shellIntact: false, toughness: { value: t, max: t }, anchor: null } }, EF.art.heart);
   }
   const stills = L.stillsFor(kind, n);
   const pt = stills * EF.stills.toughPer;
-  const pack = await enemyActor("stills", { name: "Stills", type: "pack", system: { toughness: { value: pt, max: pt }, masterId: master?.id ?? "" } });
+  const pack = await enemyActor("stills", { name: "Stills", type: "pack", system: { toughness: { value: pt, max: pt }, masterId: master?.id ?? "" } }, EF.art.still);
 
   const lines = [];
   for (const a of fightersIn(night.fighterIds)) {
@@ -566,6 +576,17 @@ async function endFight(night, ending, lines = []) {
   Hooks.callAll(HOOKS.fightEnded, night, ending);
 }
 
+/** Ch 9: name the five Anchors and their Wardens for a night of your own (one Anchor per Shell element, always). */
+async function anchors({ anchors: names = [] }) {
+  const night = getNight();
+  if (night.fight) throw new OpError("Not during a fight.");
+  if (!Array.isArray(names) || names.length !== night.anchors.length) throw new OpError("Name all five Anchors.");
+  const clean = (v, fallback) => (String(v ?? "").trim().slice(0, 80) || fallback);
+  night.anchors = night.anchors.map((a, i) => ({ ...a, name: clean(names[i]?.name, a.name), warden: clean(names[i]?.warden, a.warden) }));
+  await saveNight(night);
+  return { night };
+}
+
 async function respite() {
   const night = getNight();
   if (!night.started || night.ending) throw new OpError("No night is going on.");
@@ -594,8 +615,12 @@ const HANDLERS = {
   [OPS.holdSeal]: holdSeal,
   [OPS.endRound]: endRound,
   [OPS.withdraw]: data => endRound({ ...data, withdraw: true }),
-  [OPS.respite]: respite
+  [OPS.respite]: respite,
+  [OPS.anchors]: anchors
 };
+
+/** The night's own steps: only the Storyteller asks for these. Players ask only for their fighters' actions. */
+const STORYTELLER_OPS = new Set([OPS.beginNight, OPS.startFight, OPS.endRound, OPS.withdraw, OPS.respite, OPS.join, OPS.anchors]);
 
 let chain = Promise.resolve();
 /** Run on the Storyteller's client, one operation at a time. */
@@ -603,6 +628,7 @@ export function runOp({ op, data = {} } = {}) {
   if (!game.user.isGM) throw new Error("Nightwake: operations run on the Storyteller's client only.");
   const fn = HANDLERS[op];
   if (!fn) return Promise.resolve({ ok: false, error: `Unknown operation: ${op}` });
+  if (STORYTELLER_OPS.has(op) && !game.users.get(data.userId)?.isGM) return Promise.resolve({ ok: false, error: "Only the Storyteller does that." });
   const run = chain.then(async () => {
     try { return { ok: true, ...(await fn(data)) }; }
     catch (e) { if (e instanceof OpError) return { ok: false, error: e.message }; throw e; }

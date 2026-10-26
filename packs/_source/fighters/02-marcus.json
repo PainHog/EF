@@ -1,7 +1,7 @@
 {
   "key": "marcus",
   "name": "Marcus Bell",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/elemental-fighters/assets/fighters/marcus.svg",
   "system": {
     "element": "fire",
     "style": "guardian",
@@ -21,6 +21,6 @@
     },
     "luckyUsed": false,
     "stubbornUsed": false,
-    "notes": "<p><em>“Everybody behind me. Now.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+    "notes": "“Everybody behind me. Now.”\n\nA ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins."
   }
 }

@@ -21,6 +21,7 @@ export const SETTINGS = Object.freeze({
   autoEnemies: "autoEnemies",     // run the enemies' step (feed, Swarm, Surge) at the end of each round
   autoClocks: "autoClocks",       // keep the Hours, long fights, the round-7 limit and dawn
   guardianPrompt: "guardianPrompt", // ask whether a Guardian takes a loss
+  welcomed: "welcomed",           // the Storyteller has seen the welcome note
   migration: "systemMigrationVersion"
 });
 
@@ -46,7 +47,8 @@ export const OPS = Object.freeze({
   endRound: "endRound",
   withdraw: "withdraw",
   respite: "respite",
-  join: "join"
+  join: "join",
+  anchors: "anchors"
 });
 
 /** Hooks this system fires (other modules may listen). */

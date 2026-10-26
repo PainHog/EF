@@ -1,7 +1,10 @@
 <section class="nw-body">
   <header class="nw-head">
-    <input class="nw-name" type="text" name="name" value="{{actor.name}}" {{#unless editable}}disabled{{/unless}}>
-    <span class="nw-flag unmade">{{#if isHeart}}The Heart{{else}}Warden{{/if}}</span>
+    <img class="nw-portrait" src="{{actor.img}}" alt="{{actor.name}}" data-action="editImage" title="Change the portrait">
+    <div class="nw-head-main">
+      <input class="nw-name" type="text" name="name" value="{{actor.name}}" {{#unless editable}}disabled{{/unless}}>
+      <div class="nw-flags"><span class="nw-flag unmade">{{#if isHeart}}The Heart{{else}}Warden{{/if}}</span></div>
+    </div>
   </header>
   <ul class="nw-stats">
     <li><strong>Guard</strong> {{system.guard}}</li>

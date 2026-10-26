@@ -5,13 +5,19 @@
     <span class="nw-diff">{{difficulty}}</span>
     {{#if ended}}<span class="nw-ending">{{endingText}}</span>{{/if}}
   </header>
-  <div class="nw-hours"><span class="nw-label">Hours</span>{{#each hours}}<span class="hour{{#if left}} left{{/if}}"></span>{{/each}}{{#if night.hoursOwed}}<span class="owed">{{night.hoursOwed}} owed</span>{{/if}}</div>
+  <p class="nw-next"><i class="fa-solid fa-circle-arrow-right" inert></i> {{next}}</p>
+  <div class="nw-hours">
+    <span class="nw-label">Hours</span>{{#each hours}}<span class="hour{{#if left}} left{{/if}}"></span>{{/each}}
+    {{#if night.hoursOwed}}<span class="owed">{{night.hoursOwed}} owed: dawn at round {{lastRoundAtHeart}}</span>{{/if}}
+    <span class="nw-awaken{{#if awakeningsOpen}} open{{/if}}">{{#if awakeningsOpen}}Awakenings open{{else}}Awakenings open when a fighter first goes Down{{/if}}</span>
+  </div>
   <table class="nw-anchors">
     <thead><tr><th>Anchor</th><th>Shell</th><th>Shattered by</th><th></th></tr></thead>
     <tbody>
       {{#each anchors}}
       <tr class="{{#if broken}}broken{{/if}}">
-        <td>{{name}}</td><td>{{shellLabel}}</td><td>{{breaker}}</td>
+        <td><span class="nw-anchor-name">{{name}}</span><span class="nw-warden">{{warden}}</span></td>
+        <td><img class="nw-icon" src="{{shellIcon}}" alt=""> {{shellLabel}}</td><td>{{breaker}}</td>
         <td>{{#if broken}}Broken{{else}}{{#if ../gm}}{{#if canStrike}}<button type="button" data-action="anchor" data-anchor="{{index}}">Go</button>{{/if}}{{/if}}{{/if}}</td>
       </tr>
       {{/each}}
@@ -23,31 +29,39 @@
   <div class="nw-fight-box">
     <h3>{{fightTitle}}: round {{fight.round}} of {{lastRound}}</h3>
     <ul class="nw-enemies">
-      {{#each enemies}}<li><strong>{{name}}</strong> {{toughness}}/{{max}}{{#if stills}} ({{stills}} Stills){{/if}}{{#if shell}} · {{shell}} Shell{{/if}}</li>{{/each}}
+      {{#each enemies}}<li><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> Toughness {{toughness}}/{{max}}{{#if stills}} ({{stills}} Stills){{/if}} · Guard {{guard}} · Harm {{harm}}{{#if shell}} · {{shell}} Shell{{/if}}</li>{{/each}}
     </ul>
     <ul class="nw-fighters">
-      {{#each fighters}}<li class="{{#if down}}down{{/if}}{{#if acted}} acted{{/if}}"><strong>{{name}}</strong> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}{{#if awakened}} · {{awakened}}{{/if}}{{#if down}} · Down{{/if}}</li>{{/each}}
+      {{#each fighters}}<li class="{{#if down}}down{{/if}}{{#if acted}} acted{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}{{#if awakened}} · {{awakened}}{{/if}}{{#if down}} · Down{{/if}}{{#if acted}} <i class="fa-solid fa-check" title="Acted this round" inert></i>{{/if}}</li>{{/each}}
     </ul>
     {{#if gm}}
     <div class="nw-buttons">
-      <button type="button" data-action="endRound">End the round</button>
-      {{#if canWithdraw}}<button type="button" data-action="withdraw">End the round and withdraw</button>{{/if}}
+      <button type="button" data-action="endRound"><i class="fa-solid fa-hourglass-end" inert></i> End the round</button>
+      {{#if canWithdraw}}<button type="button" data-action="withdraw"><i class="fa-solid fa-person-running" inert></i> End the round and withdraw</button>{{/if}}
     </div>
     {{/if}}
   </div>
   {{else}}
+  <ul class="nw-fighters nw-roster">
+    {{#each fighters}}<li class="{{#if down}}down{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}</li>{{/each}}
+  </ul>
   {{#if gm}}
   <div class="nw-buttons">
-    {{#if canClash}}<button type="button" data-action="clash">The First Clash</button>{{/if}}
-    {{#if canRespite}}<button type="button" data-action="respite">Take a Respite</button>{{/if}}
-    {{#if canHeart}}<button type="button" data-action="heart">The Heart</button>{{/if}}
-    {{#unless ended}}<button type="button" data-action="join">A fighter joins late</button>{{/unless}}
-    {{#if ended}}<button type="button" data-action="beginNight">Begin a new night</button>{{/if}}
+    {{#if canClash}}<button type="button" data-action="clash"><i class="fa-solid fa-hand-fist" inert></i> The First Clash</button>{{/if}}
+    {{#if canRespite}}<button type="button" data-action="respite"><i class="fa-solid fa-mug-hot" inert></i> Take a Respite</button>{{/if}}
+    {{#if canHeart}}<button type="button" data-action="heart"><i class="fa-solid fa-heart-crack" inert></i> The Heart</button>{{/if}}
+    {{#if canEditAnchors}}<button type="button" data-action="editAnchors"><i class="fa-solid fa-pen" inert></i> Name the Anchors</button>{{/if}}
+    {{#unless ended}}<button type="button" data-action="join"><i class="fa-solid fa-user-plus" inert></i> A fighter joins late</button>{{/unless}}
+    {{#if ended}}<button type="button" data-action="beginNight"><i class="fa-solid fa-moon" inert></i> Begin a new night</button>{{/if}}
   </div>
   {{/if}}
   {{/if}}
   {{else}}
   <p>No night has begun.</p>
-  {{#if gm}}<div class="nw-buttons"><button type="button" data-action="beginNight">Begin the night</button></div>{{/if}}
+  <p class="nw-next"><i class="fa-solid fa-circle-arrow-right" inert></i> {{next}}</p>
+  {{#if gm}}<div class="nw-buttons">
+    <button type="button" data-action="beginNight"><i class="fa-solid fa-moon" inert></i> Begin the night</button>
+    {{#if canEditAnchors}}<button type="button" data-action="editAnchors"><i class="fa-solid fa-pen" inert></i> Name the Anchors</button>{{/if}}
+  </div>{{/if}}
   {{/if}}
 </section>

@@ -1,7 +1,7 @@
 {
   "key": "jun",
   "name": "Jun Park",
-  "img": "icons/svg/mystery-man.svg",
+  "img": "systems/elemental-fighters/assets/fighters/jun.svg",
   "system": {
     "element": "earth",
     "style": "brawler",
@@ -21,6 +21,6 @@
     },
     "luckyUsed": false,
     "stubbornUsed": false,
-    "notes": "<p><em>“I knead dough at four every morning. I can take a hit.”</em></p><p>A ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins.</p>"
+    "notes": "“I knead dough at four every morning. I can take a hit.”\n\nA ready-made fighter from Chapter 2. Rename them, change who they are, keep the picks. Starting Vigor is set when the night begins."
   }
 }

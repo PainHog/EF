@@ -122,3 +122,16 @@ EF.readyNight = [
   { name: "The Iron Bridge", warden: "the Girder", shell: "metal" },
   { name: "The Reservoir", warden: "the Overflow", shell: "water" }
 ];
+
+/**
+ * The online version's art (assets/, drawn by tools/build-assets.mjs). Replace a
+ * file to change the art, keeping its name, or change the path here.
+ */
+const ASSETS = `systems/${EF.id}/assets`;
+EF.art = {
+  element: el => `${ASSETS}/elements/${el}.svg`,
+  still: `${ASSETS}/tokens/still.svg`,
+  heart: `${ASSETS}/tokens/heart.svg`,
+  warden: shell => `${ASSETS}/tokens/warden-${shell}.svg`,
+  defaultFighter: "icons/svg/mystery-man.svg"
+};

@@ -476,3 +476,46 @@ export function spot_dice() {
   s += die(220, 230, 6, C.light) + die(450, 240, 5, C.alarmB);
   return svg(`0 0 ${W} ${H}`, "Two dice on a table: a six and a five, two hits", s);
 }
+
+/* -------------------------------------------- the online version's art --- */
+// Round token images and the system background for the Foundry system
+// (written to assets/ by tools/build-assets.mjs; not book pieces, so the
+// names don't match the book's PIECE pattern).
+
+/** A round token frame: dark disc, brass ring, optional coloured inner ring. */
+function tokenFrame(ring, body) {
+  return `<circle cx="200" cy="200" r="196" fill="${C.deep}" stroke="${C.ink}" stroke-width="6"/>`
+    + `<circle cx="200" cy="200" r="182" fill="none" stroke="${C.accent}" stroke-width="8"/>`
+    + (ring ? `<circle cx="200" cy="200" r="168" fill="none" stroke="${ring}" stroke-width="10"/>` : "")
+    + `<defs><clipPath id="tk-clip"><circle cx="200" cy="200" r="162"/></clipPath></defs><g clip-path="url(#tk-clip)">${body}</g>`;
+}
+
+/** A Still: a grey figure peeled from the city. */
+export function tokenStill() {
+  const body = `<rect x="0" y="300" width="400" height="100" fill="${C.soft}"/>` + figure({ x: 200, y: 318, s: 2.45, pose: "walk", still: true });
+  return svg("0 0 400 400", "Token: a Still, a grey figure with a dashed outline", tokenFrame(C.unmade, body));
+}
+
+/** A Warden: a hulking grey figure ringed in its Shell's colour, the Shell's glyph on its chest. */
+export function tokenWarden(shell) {
+  let body = `<rect x="0" y="318" width="400" height="90" fill="${C.soft}"/>` + figure({ x: 200, y: 336, s: 2.75, pose: "guard", still: true });
+  body += `<circle cx="200" cy="214" r="34" fill="${ELC[shell]}" stroke="${C.ink}" stroke-width="4"/>` + glyph(shell, 200, 214, 20, C.light, C.ink, 2.6);
+  return svg("0 0 400 400", `Token: a Warden with a ${shell} Shell`, tokenFrame(ELC[shell], body));
+}
+
+/** The Heart: the grey wheel. */
+export function tokenHeart() {
+  return svg("0 0 400 400", "Token: the Heart, a grey wheel with nothing on it", tokenFrame(C.unmade, heartWheel(200, 200, 150)));
+}
+
+/** The system's background: the clock tower with the Heart in its face, the city asleep around it. */
+export function systemBackground() {
+  const W = 1920, H = 1080;
+  let s = nightSky("bg-sky", W, H) + stars(31, 0, 0, W, 620, 260);
+  s += `<circle cx="1540" cy="240" r="70" fill="${C.accentB}" stroke="${C.ink}" stroke-width="3" opacity=".95"/>`;
+  s += skyline(32, -20, W + 20, 900, { hMin: 160, hMax: 420, fill: C.dark, wMin: 60, wMax: 150, winP: 0.25 });
+  s += clockTower(960, 900, 620, 150, { heart: true });
+  s += slab(0, W, 900, 180, C.soft) + `<rect x="0" y="900" width="${W}" height="16" fill="${C.dark}" stroke="${C.ink}" stroke-width="2"/>`;
+  EL.forEach((el, i) => { s += figure({ x: 660 + i * 150, y: 1010, s: 1.5, pose: ["guard", "stand", "raise", "stand", "guard"][i], flip: i > 2, fill: C.deep, glow: ELC[el] }); });
+  return svg(`0 0 ${W} ${H}`, "Nightwake: five fighters facing the clock tower, the Heart turning in its face", s);
+}

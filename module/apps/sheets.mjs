@@ -12,7 +12,21 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
 const T = name => `systems/${EF.id}/templates/${name}.hbs`;
 const opts = (table, current) => Object.entries(table).map(([value, d]) => ({ value, label: d.label, selected: value === current }));
-const pips = (n, max) => Array.from({ length: max }, (_, i) => ({ on: i < n }));
+const pips = (n, max) => Array.from({ length: max }, (_, i) => ({ on: i < n, value: i + 1 }));
+
+/** Change a document's portrait with Foundry's file picker. */
+function pickImage(sheet) {
+  const FP = foundry.applications.apps?.FilePicker?.implementation ?? globalThis.FilePicker;
+  if (!FP || !sheet.isEditable) return;
+  return new FP({ type: "image", current: sheet.document.img, callback: path => sheet.document.update({ img: path }) }).browse();
+}
+/** Click a pip to set a track to it; click the top lit pip to step down by one. */
+function setTrack(sheet, path, value, max) {
+  if (!sheet.isEditable) return;
+  const now = foundry.utils.getProperty(sheet.document, path) ?? 0;
+  const next = Math.max(0, Math.min(max, value === now ? value - 1 : value));
+  return sheet.document.update({ [path]: next });
+}
 
 export class FighterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
@@ -26,6 +40,9 @@ export class FighterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       rally: FighterSheet.#rally,
       awaken: FighterSheet.#awaken,
       holdSeal: FighterSheet.#seal,
+      editImage: FighterSheet.#editImage,
+      setVigor: FighterSheet.#setVigor,
+      setChi: FighterSheet.#setChi,
       openNight: () => game.elementalFighters?.openNight?.()
     }
   };
@@ -51,7 +68,10 @@ export class FighterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       canFree: inFight && !s.down && s.perk === "quick" && fight.round === 1 && !fight.started && !fight.quickDone.includes(a.id),
       canAwaken: inFight && L.canAwaken(s.toRules(), { firstDownTonight: night.firstDown, fightKind: fight?.kind }),
       sealHolder,
-      awakenedText: s.awakened.active ? `${awakening?.label}: ${s.awakened.roundsLeft} round(s) left` : s.awakened.used ? "Used tonight" : "Ready (3 Chi)"
+      awakenedText: s.awakened.active ? `${awakening?.label}: ${s.awakened.roundsLeft} round(s) left` : s.awakened.used ? "Used tonight" : "Ready (3 Chi)",
+      awakenedActive: s.awakened.active,
+      ringText: fight ? fight.fighterIds.map(id => game.actors.get(id)).filter(Boolean).map(x => x.system.element).filter(Boolean)
+        .sort((x, y) => EF.cycle.indexOf(x) - EF.cycle.indexOf(y)).map(e => EF.elements[e].label).join(" → ") : ""
     });
   }
 
@@ -60,14 +80,18 @@ export class FighterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static #rally() { return rallyFlow(this.document); }
   static #awaken() { return awakenFlow(this.document); }
   static #seal() { return sealFlow(this.document); }
+  static #editImage() { return pickImage(this); }
+  static #setVigor(event, target) { return setTrack(this, "system.vigor.value", Number(target.dataset.value), this.document.system.vigor.max); }
+  static #setChi(event, target) { return setTrack(this, "system.chi", Number(target.dataset.value), EF.rules.chiMax); }
 }
 
 export class UnmadeSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
     classes: ["elemental-fighters", "nw-sheet", "nw-unmade"],
-    position: { width: 440, height: 460 },
+    position: { width: 460, height: 480 },
     window: { resizable: true },
-    form: { submitOnChange: true }
+    form: { submitOnChange: true },
+    actions: { editImage() { return pickImage(this); } }
   };
   static PARTS = { sheet: { template: T("unmade-sheet") } };
 
@@ -87,9 +111,10 @@ export class UnmadeSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 export class PackSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static DEFAULT_OPTIONS = {
     classes: ["elemental-fighters", "nw-sheet", "nw-pack"],
-    position: { width: 400, height: 320 },
+    position: { width: 420, height: 360 },
     window: { resizable: true },
-    form: { submitOnChange: true }
+    form: { submitOnChange: true },
+    actions: { editImage() { return pickImage(this); } }
   };
   static PARTS = { sheet: { template: T("pack-sheet") } };
 

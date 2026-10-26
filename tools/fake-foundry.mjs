@@ -420,6 +420,7 @@ export class Actor extends BaseDocument {
     this.img = data.img ?? "icons/svg/mystery-man.svg";
     this.flags = clone(data.flags ?? {});
     this.ownership = clone(data.ownership ?? { default: 0 });
+    this.prototypeToken = clone(data.prototypeToken ?? { texture: { src: this.img } });
     this.system = clone(data.system ?? {});
     this.items = new Collection();
     const IC = CONFIG.Item.documentClass ?? Item;
@@ -428,6 +429,7 @@ export class Actor extends BaseDocument {
   }
   get documentName() { return "Actor"; }
   get uuid() { return `Actor.${this.id}`; }
+  updateSource(changes) { applyUpdate(this, changes); this.prepareData(); }
   get _source() { return this.toObject(); }
   get hasPlayerOwner() { return game.users.some(u => !u.isGM && this.testUserPermission(u, "OWNER")); }
   get sheet() { return { render: () => {}, rendered: false }; }
@@ -441,11 +443,13 @@ export class Actor extends BaseDocument {
   }
   reset() { this.prepareData(); }
   toObject() {
-    return clone({ _id: this.id, name: this.name, type: this.type, img: this.img, flags: this.flags, ownership: this.ownership, system: { ...this.system }, items: this.items.map(i => i.toObject()) });
+    return clone({ _id: this.id, name: this.name, type: this.type, img: this.img, flags: this.flags, ownership: this.ownership, prototypeToken: this.prototypeToken, system: { ...this.system }, items: this.items.map(i => i.toObject()) });
   }
   async update(changes, options = {}) {
     touch();
     if (!this.isOwner) throw new Error(`${game.user.name} lacks permission to update Actor ${this.name}`);
+    changes = expandObject(changes);
+    if (Hooks.call("preUpdateActor", this, changes, options, game.user.id) === false) return this;
     const diff = applyUpdate(this, changes);
     this.prepareData();
     broadcast("updateActor", this, diff, options, game.user.id);
@@ -468,6 +472,7 @@ export class Actor extends BaseDocument {
     if (!game.user?.isGM) throw new Error(`${game.user?.name} lacks permission to create an Actor`);
     const AC = CONFIG.Actor.documentClass ?? Actor;
     const actor = new AC(clone(data));
+    if (Hooks.call("preCreateActor", actor, clone(data), {}, game.user.id) === false) return null;
     game.actors.push(actor);
     broadcast("createActor", actor, {}, game.user.id);
     return actor;
