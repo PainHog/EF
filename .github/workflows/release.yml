@@ -47,21 +47,22 @@ jobs:
           VERSION: ${{ steps.vars.outputs.version }}
 
       # Only what Foundry needs ships: the manifest, module/, styles/, templates/,
-      # lang/, assets/ (if any), compiled packs/, LICENSE and README.
+      # lang/, assets/ (if any), compiled packs/, LICENSE and README (never the
+      # review, the portal card, the book sources or the simulator).
       - name: Build system.zip
         run: |
           zip -r system.zip . \
             -x ".git/*" -x ".github/*" -x ".gitignore" -x "node_modules/*" -x "*.zip" \
             -x "package.json" -x "package-lock.json" -x "AGENTS.md" \
             -x "tools/*" -x "test/*" -x "packs/_source/*" -x "*/.gitkeep" \
-            -x "book/*" -x "sim/*" -x "docs/*" \
+            -x "book/*" -x "sim/*" -x "docs/*" -x "review/*" -x "PORTAL.md" \
             -x "packs/*/LOCK" -x "packs/*/LOG" -x "packs/*/LOG.old"
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.vars.outputs.version }}
-          name: Elemental Fighters v${{ steps.vars.outputs.version }}
+          name: Nightwake v${{ steps.vars.outputs.version }}
           files: |
             system.json
             system.zip
