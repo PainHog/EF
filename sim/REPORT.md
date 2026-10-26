@@ -8,24 +8,24 @@ Every night is played start to finish by `sim/engine.mjs`, strictly by `docs/COR
 
 | Measure | Target | Easy | Standard | Hard |
 |---|---|---|---|---|
-| Win | 85%–95% / 70%–80% / 52%–62% | 89.5% (ok) | 74.9% (ok) | 58.3% (ok) |
-| Partial (driven off at dawn) |  | 9.8% | 16.2% | 20.9% |
-| Loss | 0%–5% / 8%–18% / 20%–35% | 0.7% (ok) | 8.9% (ok) | 20.8% (ok) |
+| Win | 85%–95% / 70%–80% / 52%–62% | 89.3% (ok) | 74.8% (ok) | 58.2% (ok) |
+| Partial (driven off at dawn) |  | 10.0% | 16.2% | 20.8% |
+| Loss | 0%–5% / 8%–18% / 20%–35% | 0.8% (ok) | 9.1% (ok) | 21.0% (ok) |
 | Critical (share of rolls) | 15%–25% | 24.7% (ok) | 24.7% (ok) | 24.6% (ok) |
 | Failure: no hits (share of rolls) | 8%–15% | 9.8% (ok) | 9.8% (ok) | 9.8% (ok) |
 | Fighters who Awaken | 85%–100% | 100.0% (ok) | 100.0% (ok) | 100.0% (ok) |
 | Fighters spending at least half their Chi | 50%–100% | 100.0% (ok) | 100.0% (ok) | 100.0% (ok) |
-| Nights the Heart fight ends at dawn | 10%–60% | 10.1% (ok) | 17.0% (ok) | 22.3% (ok) |
-| Nights with a long Anchor fight | 10%–60% | 42.9% (ok) | 42.9% (ok) | 42.9% (ok) |
+| Nights the Heart fight ends at dawn | 10%–60% | 10.3% (ok) | 17.0% (ok) | 22.2% (ok) |
+| Nights with a long Anchor fight | 10%–60% | 43.0% (ok) | 43.0% (ok) | 43.0% (ok) |
 
 ## 2. Win · partial · loss by difficulty and group size
 
 | Group | Easy | Standard | Hard |
 |---|---|---|---|
-| 3 fighters | 86.2% · 12.5% · 1.3% | 73.9% · 18.3% · 7.8% | 57.0% · 22.9% · 20.1% |
-| 4 fighters | 90.0% · 9.3% · 0.7% | 74.3% · 14.9% · 10.8% | 56.3% · 21.1% · 22.7% |
-| 5 fighters | 92.3% · 7.6% · 0.1% | 76.4% · 15.3% · 8.3% | 61.5% · 18.8% · 19.7% |
-| **all** | **89.5%** · 9.8% · 0.7% | **74.9%** · 16.2% · 8.9% | **58.3%** · 20.9% · 20.8% |
+| 3 fighters | 86.0% · 12.7% · 1.3% | 73.9% · 18.3% · 7.8% | 57.0% · 22.8% · 20.3% |
+| 4 fighters | 89.6% · 9.5% · 0.9% | 74.1% · 15.0% · 10.9% | 56.1% · 21.0% · 22.9% |
+| 5 fighters | 92.1% · 7.8% · 0.1% | 76.3% · 15.2% · 8.5% | 61.5% · 18.5% · 20.0% |
+| **all** | **89.3%** · 10.0% · 0.8% | **74.8%** · 16.2% · 9.1% | **58.2%** · 20.8% · 21.0% |
 
 Target: each group size within 5% of its difficulty's pooled win rate.
 
@@ -33,17 +33,17 @@ Losses split (wiped out at the Heart / dawn with the Heart above half):
 
 | Group | Easy | Standard | Hard |
 |---|---|---|---|
-| 3 fighters | 0.7% / 0.5% | 6.6% / 1.2% | 17.8% / 2.3% |
-| 4 fighters | 0.3% / 0.4% | 9.7% / 1.1% | 21.3% / 1.4% |
-| 5 fighters | 0.1% / 0.0% | 8.1% / 0.2% | 19.2% / 0.5% |
+| 3 fighters | 0.7% / 0.6% | 6.6% / 1.2% | 17.9% / 2.3% |
+| 4 fighters | 0.5% / 0.4% | 9.8% / 1.1% | 21.4% / 1.4% |
+| 5 fighters | 0.1% / 0.0% | 8.3% / 0.2% | 19.5% / 0.5% |
 
 ## 3. Fight length (rounds) and fight results
 
 | Fight | Target rounds | Easy mean (90th pct, max) | Standard | Hard | Standard: won · wiped out · withdrew · held at round 7 |
 |---|---|---|---|---|---|
 | First Clash | 2–3 | 2.2 (3, 5) | 2.2 (3, 5) | 2.2 (3, 5) | 100.0% · 0.0% · 0.0% · 0.0% |
-| Anchor | 3–5 | 3.8 (5, 7) | 3.8 (5, 7) | 3.8 (5, 7) | 99.4% · 0.0% · 0.0% · 0.6% |
-| Heart | 4–7 | 5.2 (7, 7) | 5.4 (7, 7) | 5.6 (7, 7) | 74.9% · 8.1% · 0.0% · 0.0% |
+| Anchor | 3–5 | 3.8 (5, 7) | 3.8 (5, 7) | 3.8 (5, 7) | 99.3% · 0.1% · 0.0% · 0.6% |
+| Heart | 4–7 | 5.2 (7, 7) | 5.4 (7, 7) | 5.6 (7, 7) | 74.8% · 8.2% · 0.0% · 0.0% |
 
 ## 4. The night at Standard, by group size
 
@@ -51,14 +51,14 @@ Losses split (wiped out at the Heart / dawn with the Heart above half):
 |---|---|---|---|
 | Anchors broken (of 5) | 2.56 | 2.57 | 2.62 |
 | Respites taken | 1.01 | 1.06 | 1.10 |
-| Nights with a long Anchor fight | 49.8% | 43.5% | 35.4% |
-| Nights a long fight brings dawn closer | 14.2% | 11.6% | 9.4% |
-| Nights with a wipe-out in the Hunt | 0.1% | 0.1% | 0.1% |
-| Fighters Down per night | 1.33 | 2.80 | 3.54 |
+| Nights with a long Anchor fight | 49.9% | 43.6% | 35.5% |
+| Nights a long fight brings dawn closer | 14.2% | 11.7% | 9.5% |
+| Nights with a wipe-out in the Hunt | 0.2% | 0.1% | 0.1% |
+| Fighters Down per night | 1.34 | 2.82 | 3.57 |
 | Rolls per fighter per night | 16.6 | 15.9 | 15.9 |
 | Hit back (share of rolls) | 21.6% | 21.8% | 22.1% |
 | Fighters who Awaken (at the Heart) | 100.0% (100.0%) | 100.0% (99.9%) | 100.0% (99.9%) |
-| Chi gained / spent / lost per fighter | 16.0 / 16.5 / 1.1 | 15.5 / 16.2 / 1.0 | 15.6 / 16.4 / 0.8 |
+| Chi gained / spent / lost per fighter | 16.0 / 16.5 / 1.1 | 15.5 / 16.1 / 1.0 | 15.6 / 16.4 / 0.8 |
 | Median share of Chi spent | 92% | 93% | 93% |
 
 ## 5. Option balance (Standard, averaged over group sizes)
@@ -69,44 +69,44 @@ Win rate of groups that include the option, minus the average for that pick. Tar
 
 | Option | Win | Δ | Loss | Damage per night | vs blank |
 |---|---|---|---|---|---|
-| wood | 73.5% | -1.3 | 9.1% | 51.6 | 5.0 pts |
-| fire | 75.7% | +0.8 | 8.8% | 65.8 | 10.1 pts |
-| earth | 74.4% | -0.5 | 8.8% | 51.3 | 6.9 pts |
-| metal | 75.4% | +0.5 | 9.0% | 63.3 | 9.9 pts |
-| water | 75.3% | +0.4 | 9.0% | 58.6 | 9.5 pts |
+| wood | 73.4% | -1.4 | 9.2% | 51.6 | 5.2 pts |
+| fire | 75.5% | +0.8 | 9.0% | 65.8 | 10.1 pts |
+| earth | 74.3% | -0.5 | 8.9% | 51.3 | 6.9 pts |
+| metal | 75.3% | +0.6 | 9.1% | 63.3 | 10.1 pts |
+| water | 75.2% | +0.5 | 9.1% | 58.6 | 9.7 pts |
 
 **style**
 
 | Option | Win | Δ | Loss | Damage per night | vs blank |
 |---|---|---|---|---|---|
-| brawler | 75.9% | +1.1 | 9.1% | 63.9 | 11.6 pts |
-| guardian | 73.0% | -1.8 | 9.1% | 55.5 | 6.5 pts |
-| sweeper | 75.1% | +0.2 | 9.3% | 61.1 | 8.7 pts |
-| counter | 74.2% | -0.7 | 9.9% | 57.2 | 7.2 pts |
-| flow | 76.2% | +1.4 | 7.1% | 54.5 | 12.6 pts |
-| breath | 74.7% | -0.1 | 9.2% | 56.5 | 8.7 pts |
+| brawler | 75.8% | +1.0 | 9.2% | 63.9 | 11.6 pts |
+| guardian | 72.9% | -1.8 | 9.2% | 55.5 | 6.6 pts |
+| sweeper | 75.0% | +0.2 | 9.5% | 61.1 | 8.8 pts |
+| counter | 74.0% | -0.7 | 10.0% | 57.2 | 7.2 pts |
+| flow | 76.1% | +1.4 | 7.1% | 54.5 | 12.8 pts |
+| breath | 74.7% | -0.1 | 9.3% | 56.5 | 8.7 pts |
 
 **perk**
 
 | Option | Win | Δ | Loss | Damage per night | vs blank |
 |---|---|---|---|---|---|
-| tough | 74.0% | -0.8 | 8.5% | 55.5 | 7.0 pts |
-| medic | 74.4% | -0.4 | 9.2% | 55.6 | 6.2 pts |
-| lucky | 75.8% | +1.0 | 8.8% | 61.4 | 11.2 pts |
-| quick | 76.3% | +1.5 | 9.3% | 60.6 | 12.2 pts |
-| stubborn | 74.0% | -0.9 | 8.6% | 55.4 | 5.9 pts |
-| trained | 74.5% | -0.4 | 9.4% | 60.2 | 7.7 pts |
+| tough | 73.9% | -0.8 | 8.7% | 55.5 | 6.9 pts |
+| medic | 74.3% | -0.4 | 9.3% | 55.6 | 6.4 pts |
+| lucky | 75.7% | +1.0 | 8.9% | 61.4 | 11.2 pts |
+| quick | 76.3% | +1.5 | 9.4% | 60.6 | 12.3 pts |
+| stubborn | 73.8% | -0.9 | 8.8% | 55.4 | 5.7 pts |
+| trained | 74.4% | -0.3 | 9.4% | 60.2 | 7.8 pts |
 
 **awakening**
 
 | Option | Win | Δ | Loss | Damage per night | vs blank |
 |---|---|---|---|---|---|
-| ascendant | 74.6% | -0.3 | 9.9% | 62.6 | 11.0 pts |
-| unbreakable | 74.1% | -0.7 | 8.7% | 57.6 | 7.5 pts |
-| wellspring | 73.5% | -1.3 | 9.2% | 57.2 | 9.1 pts |
-| tempest | 76.4% | +1.6 | 9.2% | 63.3 | 13.1 pts |
-| seal | 74.7% | -0.2 | 7.4% | 50.8 | 13.4 pts |
-| harmony | 75.7% | +0.9 | 9.3% | 57.3 | 12.4 pts |
+| ascendant | 74.5% | -0.3 | 9.9% | 62.5 | 10.9 pts |
+| unbreakable | 74.0% | -0.8 | 8.8% | 57.6 | 7.5 pts |
+| wellspring | 73.3% | -1.4 | 9.4% | 57.1 | 9.2 pts |
+| tempest | 76.4% | +1.7 | 9.3% | 63.2 | 13.2 pts |
+| seal | 74.6% | -0.1 | 7.5% | 50.8 | 13.5 pts |
+| harmony | 75.6% | +0.9 | 9.5% | 57.3 | 12.4 pts |
 
 ## 6. Player habits (Standard, all group sizes)
 
@@ -114,15 +114,16 @@ How the simulated players decide is not a rule. Each row changes one habit; the 
 
 | Habit | Win | Partial | Loss | Fighters who Awaken | Anchors broken |
 |---|---|---|---|---|---|
-| Default habits (POLICY) | 74.9% | 16.2% | 8.9% | 100.0% | 2.58 |
-| Never Awaken before the Heart | 74.9% | 16.2% | 8.9% | 100.0% | 2.58 |
-| Awaken as soon as allowed | 74.0% | 16.4% | 9.6% | 100.0% | 2.59 |
-| Save 3 Chi through the Hunt for an Awakening | 69.0% | 19.8% | 11.2% | 100.0% | 2.30 |
-| Rest only below 40% Vigor | 62.4% | 15.0% | 22.6% | 100.0% | 2.77 |
-| Rest below 80% Vigor | 74.2% | 18.0% | 7.8% | 100.0% | 2.40 |
-| Always strike the Warden or Heart, never the pack | 53.5% | 21.8% | 24.7% | 100.0% | 2.37 |
-| Never withdraw | 74.8% | 16.2% | 8.9% | 100.0% | 2.58 |
-| Give every Swarm to whoever has the most Vigor | 72.3% | 17.3% | 10.4% | 100.0% | 2.53 |
+| Default habits (POLICY) | 74.8% | 16.2% | 9.1% | 100.0% | 2.58 |
+| Never Awaken before the Heart | 74.8% | 16.2% | 9.1% | 100.0% | 2.58 |
+| Awaken as soon as allowed | 73.9% | 16.4% | 9.8% | 100.0% | 2.59 |
+| Save 3 Chi through the Hunt for an Awakening | 68.8% | 19.7% | 11.5% | 100.0% | 2.30 |
+| Rest only below 40% Vigor | 61.8% | 15.2% | 23.0% | 100.0% | 2.76 |
+| Rest below 80% Vigor | 74.1% | 17.9% | 8.0% | 100.0% | 2.40 |
+| Always strike the Warden or Heart, never the pack | 53.2% | 22.1% | 24.8% | 100.0% | 2.36 |
+| Never withdraw | 74.7% | 16.2% | 9.1% | 100.0% | 2.58 |
+| Give every Swarm to whoever has the most Vigor | 72.1% | 17.3% | 10.6% | 100.0% | 2.52 |
+| Keep 1 Chi each at the Heart, so a Drain can't Crush | 66.5% | 21.5% | 12.0% | 100.0% | 2.58 |
 
 ## 7. The ready-made fighters
 
@@ -130,6 +131,6 @@ Win rate of each ready-made group (1,000 nights each), against the random groups
 
 | Group | Easy | Standard | Hard |
 |---|---|---|---|
-| any 3 (10 groups): mean (lowest–highest) | 95.7% (92%–98%) | 85.4% (78%–92%) | 67.5% (58%–79%) |
-| any 4 (5 groups): mean (lowest–highest) | 96.7% (94%–98%) | 82.3% (79%–87%) | 60.9% (57%–66%) |
-| all five | 97.4% | 77.1% | 53.7% |
+| any 3 (10 groups): mean (lowest–highest) | 95.2% (91%–98%) | 84.9% (77%–92%) | 67.2% (58%–79%) |
+| any 4 (5 groups): mean (lowest–highest) | 96.1% (93%–98%) | 81.7% (78%–87%) | 60.2% (57%–65%) |
+| all five | 97.0% | 76.2% | 52.8% |

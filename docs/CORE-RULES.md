@@ -178,7 +178,7 @@ You can't skip your action.
 | Crush | 2 | 4 | 7 |
 | Sweep | 1 | 2 | 3 |
 
-**Ready-made fighters** (one per element; with fewer players, any of them). They are a little stronger than random groups: at Standard three of them win about 85% (78–92%), four 82%, all five 77%; at Hard 68%, 61% and 54%.
+**Ready-made fighters** (one per element; with fewer players, any of them). They are a little stronger than random groups: at Standard three of them win about 85% (77–92%), four 82%, all five 76%; at Hard 67%, 60% and 53%.
 
 | Element | Style | Perk | Awakening |
 |---|---|---|---|
@@ -193,7 +193,7 @@ You can't skip your action.
 
   | Difficulty | Win | Partial | Loss |
   |---|---|---|---|
-  | Easy | 90% | 10% | 1% |
+  | Easy | 89% | 10% | 1% |
   | Standard | 75% | 16% | 9% |
   | Hard | 58% | 21% | 21% |
 

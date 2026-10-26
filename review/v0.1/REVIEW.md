@@ -157,7 +157,7 @@ From the three reports, in their words where possible:
 |---|---|
 | Every Part B question answered in the text, in one place | **Pass** after the fixes: the Down state, movement, carry-over, late joiners and every end state are now in the text |
 | Quick reference, sheets and trackers checked against the chapters, line by line | **Pass**: checked after the edits (the card now uses Chapter 3's words; the sheets carry every box the rules need) |
-| Simulated win and loss rates on target for every label and size; no dead or dominated options | **Pass**: wins 89.5 / 74.9 / 58.3, losses 0.7 / 8.9 / 20.8, every size within 3.3 points, every option within ±1.8 of its pick (`sim/REPORT.md`) |
+| Simulated win and loss rates on target for every label and size; no dead or dominated options | **Pass**: wins 89.3 / 74.8 / 58.2, losses 0.8 / 9.1 / 21.0, every size within 3.3 points, every option within ±1.8 of its pick (`sim/REPORT.md`) |
 | Two clean playtests in a row: no blocker, no invented ruling on core flow | **Pass, with one note.** Round 3: Playtest A3 was clean, and Playtest B3 was clean through its whole night. B3's only invented ruling came in a constructed drill: how one die picks between fighters tied for a Crush when none of them acted. The book now says each rolls and the highest takes it. Round 2's A2 was also clean. Richard may want a fourth round before calling it final |
 | Every picture passes the art checklist, with tables | **Pass** (`book/art/AUDIT.md`) |
 | Layout: no near-empty pages, text ≥ 7.5 pt, no colour-only meaning, contents and cross-references verified | **Pass** |
