@@ -1,5 +1,5 @@
-Now: Version 0.1 has passed its test games: two clean ones in a row, with every fix in the rulebook
-Next: Richard reads it through, tries the online version in Foundry VTT, and plays it at a real table
+Now: Polishing the online version and the rulebook so only the final artwork is left to add
+Next: The first release of the online version, for Richard to try in Foundry VTT
 Number: Design decisions made = 43
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
@@ -41,3 +41,5 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 
 - [x] Decide when to build the online version for Foundry VTT
 - [ ] The online version for Foundry VTT (built and tested; still to try in Foundry itself)
+- [x] Polish for the online version: portraits, tokens, an in-game guide and a Night sheet that says what comes next
+- [ ] First release of the online version, ready to install

@@ -60,7 +60,7 @@ export class NightTracker extends HandlebarsApplicationMixin(ApplicationV2) {
     return {
       gm: game.user.isGM, night, fight,
       started: night.started, ended: !!night.ending, endingText: ENDINGS[night.ending] ?? "",
-      phase: PHASES[night.phase] ?? night.phase,
+      phase: fight?.kind === "clash" ? EF.fightKinds.clash : PHASES[night.phase] ?? night.phase,
       next: nextStep(night, huntOver),
       difficulty: EF.difficulties[night.difficulty]?.label,
       awakeningsOpen: night.firstDown,

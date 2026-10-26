@@ -20,6 +20,7 @@ import { rmSync, mkdirSync, mkdtempSync, writeFileSync, existsSync } from "node:
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { OUT, PACKS, makeId, readSource, toCliDoc } from "./pack-config.mjs";
+import { writeGuide } from "./build-guide.mjs";
 
 /** Fail loudly if any two source entries would produce the same document id. */
 function scanForDuplicateIds() {
@@ -67,6 +68,7 @@ async function main() {
   }
   console.log("Building Elemental Fighters compendium packs (official foundryvtt-cli)…");
   if (!PACKS.length) { console.log("  no packs configured yet (tools/pack-config.mjs PACKS is empty) — nothing to build."); return; }
+  writeGuide();   // the guide copies the book's reference card
   scanForDuplicateIds();
   const stagingRoot = mkdtempSync(join(tmpdir(), "ef-packs-"));
   try {

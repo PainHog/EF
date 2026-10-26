@@ -92,3 +92,19 @@ test("pack ids are deterministic 16-char ids", async () => {
   assert.equal(j.pages[0]._key, `!journal.pages!${j._id}.${j.pages[0]._id}`);
   assert.equal(j._stats.systemId, manifest.id);
 });
+
+test("the guide's At the Table page matches the book's reference card", async () => {
+  const { guideDocs } = await import("../tools/build-guide.mjs");
+  for (const doc of guideDocs()) {
+    const src = JSON.parse(readFileSync(join(ROOT, "packs/_source/guide", `${doc.key}.json`), "utf8"));
+    assert.deepEqual(src, doc, `packs/_source/guide/${doc.key}.json is stale: run npm run build:packs`);
+  }
+});
+
+test("every art path the system uses exists", async () => {
+  const { EF } = await import("../module/config.mjs");
+  const local = p => join(ROOT, p.replace(`systems/${manifest.id}/`, ""));
+  const paths = [EF.art.still, EF.art.heart, ...EF.cycle.map(EF.art.element), ...EF.cycle.map(EF.art.warden), manifest.background];
+  for (const f of readdirSync(join(ROOT, "packs/_source/fighters"))) paths.push(JSON.parse(readFileSync(join(ROOT, "packs/_source/fighters", f), "utf8")).img);
+  for (const p of paths) assert.doesNotThrow(() => readFileSync(local(p)), p);
+});

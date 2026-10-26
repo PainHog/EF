@@ -53,6 +53,17 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "guide",
+      "label": "Nightwake guide",
+      "path": "packs/guide",
+      "type": "JournalEntry",
+      "system": "elemental-fighters",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "socket": true,
@@ -60,5 +71,17 @@
   "manifest": "https://github.com/PainHog/EF/releases/latest/download/system.json",
   "download": "https://github.com/PainHog/EF/releases/latest/download/system.zip",
   "license": "LICENSE",
-  "readme": "README.md"
+  "readme": "README.md",
+  "background": "systems/elemental-fighters/assets/background.webp",
+  "packFolders": [
+    {
+      "name": "Nightwake",
+      "sorting": "m",
+      "color": "#1d2240",
+      "packs": [
+        "guide",
+        "fighters"
+      ]
+    }
+  ]
 }

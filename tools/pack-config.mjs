@@ -24,7 +24,8 @@ export const OUT = join(ROOT, "packs");
  *   { file: "rules", out: "rules", collection: "journal", type: "JournalEntry", subtype: null }
  */
 export const PACKS = [
-  { file: "fighters", out: "fighters", collection: "actors", type: "Actor", subtype: "fighter" }
+  { file: "fighters", out: "fighters", collection: "actors", type: "Actor", subtype: "fighter" },
+  { file: "guide", out: "guide", collection: "journal", type: "JournalEntry", subtype: null }
 ];
 
 /** Deterministic 16-char alphanumeric id from a namespace + key (sha256 hex prefix). */

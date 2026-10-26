@@ -31,7 +31,16 @@
 .elemental-fighters.nw-sheet .window-content,
 .elemental-fighters.nw-night .window-content { background: var(--nw-paper); color: var(--nw-ink); }
 .elemental-fighters .nw-body { display: flex; flex-direction: column; gap: 8px; }
-.elemental-fighters .nw-head { display: flex; align-items: center; gap: 8px; border-bottom: 2px solid var(--nw-accent); padding-bottom: 6px; }
+.elemental-fighters .nw-head { display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--nw-accent); padding-bottom: 6px; }
+.elemental-fighters .nw-portrait { flex: 0 0 96px; width: 96px; height: 96px; object-fit: cover; border: 2px solid var(--nw-dark); border-radius: 8px; background: var(--nw-dark-deep); cursor: pointer; }
+.elemental-fighters .nw-head-main { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.elemental-fighters .nw-flags { display: flex; flex-wrap: wrap; gap: 4px; }
+.elemental-fighters .nw-flag.lit { background: var(--nw-accent); color: var(--nw-dark-deep); box-shadow: 0 0 6px var(--nw-accent-bright); }
+.elemental-fighters .nw-el-edge-wood .nw-portrait { border-color: var(--nw-wood); }
+.elemental-fighters .nw-el-edge-fire .nw-portrait { border-color: var(--nw-fire); }
+.elemental-fighters .nw-el-edge-earth .nw-portrait { border-color: var(--nw-earth); }
+.elemental-fighters .nw-el-edge-metal .nw-portrait { border-color: var(--nw-metal); }
+.elemental-fighters .nw-el-edge-water .nw-portrait { border-color: var(--nw-water); }
 .elemental-fighters .nw-name { flex: 1; font-size: 1.5em; font-weight: 800; background: transparent; border: none; color: var(--nw-dark-deep); }
 .elemental-fighters .nw-el,
 .elemental-fighters .nw-flag { padding: 2px 8px; border-radius: 10px; font-weight: 700; font-size: 0.85em; color: #fff; background: var(--nw-dark); }
@@ -55,7 +64,10 @@
 .elemental-fighters .nw-track input { width: 3.5em; text-align: center; }
 .elemental-fighters .nw-label { width: 4em; font-weight: 800; color: var(--nw-dark-deep); }
 .elemental-fighters .nw-pips { display: flex; gap: 3px; flex-wrap: wrap; }
-.elemental-fighters .pip { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--nw-dark); }
+.elemental-fighters .pip { display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--nw-dark); cursor: pointer; }
+.elemental-fighters .pip:hover { box-shadow: 0 0 0 2px var(--nw-accent-bright); }
+.elemental-fighters .nw-count { font-weight: 700; color: var(--nw-ink-soft); min-width: 3.5em; }
+.elemental-fighters .nw-notes textarea { min-height: 5em; resize: vertical; font-size: 1.1em; text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--nw-ink); }
 .elemental-fighters .pip.on { background: var(--nw-good); }
 .elemental-fighters .nw-pips.chi .pip.on { background: var(--nw-accent); }
 .elemental-fighters .nw-actions,
@@ -86,6 +98,18 @@
 .elemental-fighters .nw-fighters { list-style: none; padding: 0; margin: 4px 0; }
 .elemental-fighters .nw-fighters li.down { color: var(--nw-alarm); }
 .elemental-fighters .nw-fighters li.acted { opacity: .7; }
+.elemental-fighters .nw-enemies li,
+.elemental-fighters .nw-fighters li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; padding: 2px 0; }
+.elemental-fighters .nw-next { margin: 6px 0; padding: 6px 10px; background: var(--nw-dark-deep); color: var(--nw-accent-bright); border-radius: 6px; font-weight: 600; }
+.elemental-fighters .nw-awaken { margin-left: auto; font-size: 0.85em; color: var(--nw-ink-soft); }
+.elemental-fighters .nw-awaken.open { color: var(--nw-accent-deep); font-weight: 800; }
+.elemental-fighters .nw-anchor-name { display: block; font-weight: 700; }
+.elemental-fighters .nw-warden { display: block; font-size: 0.85em; color: var(--nw-ink-soft); }
+.elemental-fighters .nw-icon { width: 18px; height: 18px; vertical-align: middle; border: none; }
+.elemental-fighters .nw-who { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; }
+.elemental-fighters .nw-who:hover strong { text-decoration: underline; }
+.elemental-fighters .nw-face { width: 24px; height: 24px; object-fit: cover; border: 1px solid var(--nw-dark); border-radius: 50%; }
+.elemental-fighters .nw-roster { margin-top: 8px; }
 
 /* -------------------------------------------------------------- dialogs -- */
 .elemental-fighters.nw-dialog,
