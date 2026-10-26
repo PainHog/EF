@@ -257,13 +257,15 @@ function chooseTarget(ctx, f, enemies) {
   if (!pack) return elite;
   if (f.has("style", "sweeper") && pack.stills >= 2) return pack;
   if (elite.shell && f.element === breakerOf(elite.shell)) return elite;
-  if (pack.stills >= ctx.P.packFirstAt) return pack;
+  const first = elite.kind === "heart" && ctx.P.heartPackFirstAt != null ? ctx.P.heartPackFirstAt : ctx.P.packFirstAt;
+  if (pack.stills >= first) return pack;
   return elite;
 }
 
 /** Policy: at the Heart, keep 3 Chi until you have Awakened; in the Hunt only if POLICY says so. */
 function reserveOf(ctx, f) {
-  if (f.awakenUsed) return 0;
+  if (f.awakenUsed) return ctx.phase === "heart" && ctx.P.heartKeepChi ? 1 : 0; // policy test: keep 1 Chi against Drains
+
   return ctx.phase === "heart" || ctx.P.reserveForAwakening ? ctx.R.awakenCost : 0;
 }
 
@@ -414,12 +416,13 @@ function harm(ctx, f, amount, { sweep = false } = {}) {
   if (target.awake && target.has("awakening", "unbreakable")) amount = 0;                                 // §7 Unbreakable
   amount = Math.max(0, amount);
   if (!amount) return;
+  const before = target.vigor;
   target.vigor -= amount;
   // §2 Guardian: 2 Chi when the Guardian actually loses 2 or more this way, unless it puts them Down.
   const guardChi = () => { if (guarded && amount >= R.guardianMinLoss) gainChi(ctx, target, R.guardianChi); };
   if (target.vigor <= 0) {
     if (target.has("perk", "stubborn") && !target.stubbornUsed) { // §2 Stubborn
-      target.stubbornUsed = true; target.vigor = R.stubbornVigor; rec.stubbornSaves++; guardChi(); return;
+      target.stubbornUsed = true; target.vigor = Math.min(R.stubbornVigor, before); rec.stubbornSaves++; guardChi(); return; // never more than you had
     }
     target.vigor = 0; target.down = true; target.st.downs++; rec.downs++;
     target.st.chiLostDown += target.chi; target.chi = 0; // §5: a Down fighter loses all Chi

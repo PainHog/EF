@@ -20,7 +20,7 @@
     </dl>
     <dl class="traits">
       <dt>One target</dt><dd>A pack is fought as one enemy. Damage carries over from one Still to the next; a pack with 4 Toughness left has two Stills standing.</dd>
-      <dt>Swarm</dt><dd>At the end of each round, the pack deals Harm equal to <strong>half its Stills</strong> (rounded up), as one blow, to one fighter who isn’t Down, of the players’ choice.</dd>
+      <dt>Swarm</dt><dd>In the enemies’ step, the pack deals Harm equal to <strong>half its Stills</strong> (rounded up), as one blow, to one fighter who isn’t Down, of the players’ choice.</dd>
       <dt>Crumble</dt><dd>When their Warden or the Heart falls, its Stills crumble.</dd>
     </dl>
   </article>
@@ -37,9 +37,9 @@
       <div><dt>Sweep</dt><dd>1</dd></div>
     </dl>
     <dl class="traits">
-      <dt>Shell</dt><dd>+1 Guard (Guard 3) until it shatters. The element that <strong>shatters</strong> the Shell ignores it, and that element’s first hit shatters it. It also shatters once the Warden is at <strong>half its Toughness</strong> or less. A shattered Shell stays shattered.</dd>
-      <dt>Draws on its Stills</dt><dd>At the end of each round, before anything else acts, it regains <strong>1 Toughness for each of its Stills</strong> still standing, never above its starting Toughness.</dd>
-      <dt>Surge</dt><dd>At the end of each round, after the Swarm, roll on the Surge table.</dd>
+      <dt>Shell</dt><dd>+1 Guard (Guard 3) until it shatters. The element that <strong>shatters</strong> the Shell ignores it, and that element’s first hit shatters it. It also shatters once the Warden is at <strong>half its Toughness</strong> (rounded down) or less. A shattered Shell stays shattered.</dd>
+      <dt>Draws on its Stills</dt><dd>In the enemies’ step, before anything else acts, it regains <strong>1 Toughness for each of its Stills</strong> still standing, never above its starting Toughness.</dd>
+      <dt>Surge</dt><dd>In the enemies’ step, after the Swarm, roll on the Surge table.</dd>
     </dl>
   </article>
   <table class="tbl">
@@ -71,7 +71,7 @@
   </article>
 
   <h3>The Surge table</h3>
-  <p>At the end of each round, after any Swarm, the Warden or the Heart rolls one die:</p>
+  <p>In the enemies’ step, after any Swarm, the Warden or the Heart rolls one die:</p>
   <table class="tbl">
     <thead><tr><th>d6</th><th>Surge</th><th>Warden</th><th>Heart</th></tr></thead>
     <tbody>
@@ -84,7 +84,7 @@
   <ul>
     <li><strong>Crush when no standing fighter damaged it this round:</strong> it hits the fighter with the most Vigor.</li>
     <li><strong>Crush on a Down fighter:</strong> it goes to the standing fighter who dealt it the next most damage this round (if none, as above).</li>
-    <li><strong>Ties</strong>, for a Crush or a Drain: the fighter among them who acted last that round; if none of them acted, roll a die.</li>
+    <li><strong>Ties</strong>, for a Crush or a Drain: the fighter among them who acted last that round; if none of them acted, each rolls a die and the highest takes it (roll again on a tie).</li>
     <li><strong>A Sweep’s losses</strong> come one at a time, in the order the players choose.</li>
     <li><strong>A Drain that finds no Chi</strong> Crushes instead (the Heart’s, only when no fighter has any Chi).</li>
     <li><strong>A Call</strong> adds 3 Toughness to the pack for each new Still. With a full pack it does nothing.</li>
@@ -107,6 +107,7 @@
     <tbody>
       <tr><td>Starting Vigor</td><td class="num">10</td><td class="num">7</td><td class="num">6</td></tr>
       <tr><td>Warden Toughness</td><td class="num">27</td><td class="num">36</td><td class="num">45</td></tr>
+      <tr><td>…its half (the Shell shatters)</td><td class="num">13</td><td class="num">18</td><td class="num">22</td></tr>
       <tr><td>Heart Toughness, one Anchor standing</td><td class="num">27</td><td class="num">36</td><td class="num">50</td></tr>
       <tr><td>…plus, per other Anchor standing</td><td class="num">+12</td><td class="num">+16</td><td class="num">+20</td></tr>
       <tr><td>Stills: First Clash</td><td class="num">6</td><td class="num">8</td><td class="num">10</td></tr>

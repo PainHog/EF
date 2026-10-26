@@ -31,6 +31,7 @@ const POLICY_SWEEP = [
   ["Always strike the Warden or Heart, never the pack", { packFirstAt: 99 }],
   ["Never withdraw", { withdrawDownShare: 2 }],
   ["Give every Swarm to whoever has the most Vigor", { swarmTarget: "vigor" }],
+  ["Keep 1 Chi each at the Heart, so a Drain can't Crush", { heartKeepChi: true }],
 ];
 const SIZES = [3, 4, 5];
 

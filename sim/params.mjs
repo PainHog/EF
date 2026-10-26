@@ -105,6 +105,7 @@ export const POLICY = {
   reserveForAwakening: false, // in the Hunt, keep enough Chi to Awaken at the Heart (the Heart gives 3)
   awakenInHunt: "trouble", // "trouble": only when someone is Down and the enemy is above half; "never"; "asap"
   packFirstAt: 2,          // strike the pack first while it has at least this many Stills
+  heartKeepChi: false,     // keep 1 Chi each at the Heart (after Awakening) so a Drain can't become a Crush
   swarmTarget: "smart",    // who the players give a Swarm to: "smart" (Flow or a Bulwark first, as playtest tables did) or "vigor" (most Vigor)
   guardFrom: 2,            // a Guardian takes another fighter's loss of at least this much (or one that would put them Down)
 };

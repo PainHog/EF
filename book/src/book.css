@@ -565,3 +565,4 @@ figure.tailpiece svg { height: 100%; width: auto; max-width: 100%; }
 #sheet-night .sheet-grid { margin-bottom: 0.11in; }
 #sheet-night .sheet-note { margin-top: 0.08in; padding-top: 0.06in; font-size: 8.6pt; }
 #sheet-night .sheet-intro { margin-bottom: 0.1in !important; }
+#sheet-fighter .sheet-grid.tall td { height: 0.7in; }

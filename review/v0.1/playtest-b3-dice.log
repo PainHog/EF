@@ -1,0 +1,142 @@
+2026-10-22T04:14:58.564Z	FC Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	6 5 4 1 4 5 3	hits=3 sixes=1
+2026-10-22T04:15:08.057Z	FC R1 Bo strikes pack (Chi die + Kit Help, Bulwark self, fed)	7d6	2 6 5 3 4 3 5	hits=3 sixes=1
+2026-10-22T04:15:12.790Z	FC R1 Lane strikes pack (Chi die, Edge, fed)	6d6	3 4 3 6 6 1	hits=2 sixes=2
+2026-10-22T04:15:26.335Z	H1 Bridge Q Kit Quick free Strike on Girder (Quick die + Chi die, Blaze)	7d6	6 3 4 3 3 4 2	hits=1 sixes=1
+2026-10-22T04:15:37.720Z	H1 Bridge R1 Bo strikes pack (Kit Help, fed)	6d6	6 3 1 4 3 2	hits=1 sixes=1
+2026-10-22T04:15:42.864Z	H1 Bridge R1 Lane strikes Girder (Chi die, Edge, fed)	6d6	6 2 2 1 2 4	hits=1 sixes=1
+2026-10-22T04:15:46.991Z	H1 Bridge R1 Kit strikes Girder (Chi die, Blaze, fed)	6d6	1 3 2 6 4 1	hits=1 sixes=1
+2026-10-22T04:15:55.895Z	H1 Bridge R1 Girder Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:16:05.725Z	H1 Bridge R2 Bo strikes pack (Chi die, Bulwark self, fed)	6d6	2 3 5 4 2 1	hits=1 sixes=0
+2026-10-22T04:16:13.166Z	H1 Bridge R2 Lane strikes Girder (no Chi, fed)	5d6	3 1 6 1 3	hits=1 sixes=1
+2026-10-22T04:16:23.407Z	H1 Bridge R2 Kit strikes Girder (Lane Help, Blaze, fed)	6d6	2 2 6 2 3 3	hits=1 sixes=1
+2026-10-22T04:16:29.177Z	H1 Bridge R2 Girder Surge	1d6	3	hits=0 sixes=0
+2026-10-22T04:16:37.874Z	H1 Bridge R3 Bo strikes Girder (no Chi, fed)	5d6	5 5 6 6 6	hits=5 sixes=3
+2026-10-22T04:16:44.896Z	H1 Bridge R3 Lane strikes Girder (Bo Help, Edge, fed)	6d6	1 6 1 2 6 1	hits=2 sixes=2
+2026-10-22T04:17:07.017Z	H2 Reservoir Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	4 1 6 3 5 6 5	hits=4 sixes=2
+2026-10-22T04:17:13.359Z	H2 Reservoir R1 Bo strikes Overflow (Kit + Lane Help, fed, Guard 2 as Earth)	7d6	4 3 5 6 3 2 2	hits=2 sixes=1
+2026-10-22T04:17:18.436Z	H2 Reservoir R1 Lane strikes Overflow (Kit Help, Edge, fed)	6d6	4 1 1 1 5 4	hits=1 sixes=0
+2026-10-22T04:17:29.149Z	H2 Reservoir R1 Kit strikes Overflow (Chi die + Lane Help, Blaze, fed)	7d6	5 3 4 5 3 5 4	hits=3 sixes=0
+2026-10-22T04:17:34.284Z	H2 Reservoir R1 Overflow Surge	1d6	3	hits=0 sixes=0
+2026-10-22T04:17:40.408Z	H2 Reservoir R2 Bo strikes Overflow (Chi die, Bulwark on Kit, fed)	6d6	4 4 1 3 4 3	hits=0 sixes=0
+2026-10-22T04:17:46.366Z	H2 Reservoir R2 Lane strikes Overflow (Bo Help, Edge, fed)	6d6	6 1 3 6 2 1	hits=2 sixes=2
+2026-10-22T04:17:53.115Z	H2 Reservoir R2 Kit strikes Overflow (Lane Help, no technique, fed)	6d6	6 5 6 5 2 1	hits=4 sixes=2
+2026-10-22T04:18:21.139Z	H3 Greenhouse Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	6 5 4 3 5 5 2	hits=4 sixes=1
+2026-10-22T04:19:11.315Z	H3 Greenhouse R1 Bo strikes pack (Kit Help, fed)	6d6	2 4 1 5 4 4	hits=1 sixes=0
+2026-10-22T04:19:18.816Z	H3 Greenhouse R1 Lane strikes Gardener (Kit Help, Edge, fed, Guard 2 as Metal)	6d6	3 2 1 5 6 4	hits=2 sixes=1
+2026-10-22T04:19:25.085Z	H3 Greenhouse R1 Kit strikes Gardener (Blaze, fed)	5d6	1 1 2 2 2	hits=0 sixes=0
+2026-10-22T04:19:33.832Z	H3 Greenhouse R1 Gardener Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:19:52.884Z	H3 Greenhouse R2 Bo strikes Gardener (Chi die + Kit Help, Bulwark self, fed)	7d6	2 6 3 5 4 4 3	hits=2 sixes=1
+2026-10-22T04:19:59.531Z	H3 Greenhouse R2 Lane strikes Gardener (no Chi, fed)	5d6	6 4 5 4 3	hits=2 sixes=1
+2026-10-22T04:20:03.656Z	H3 Greenhouse R2 Kit strikes Gardener (no Chi, fed)	5d6	6 4 4 4 4	hits=1 sixes=1
+2026-10-22T04:20:09.392Z	H3 Greenhouse R2 Gardener Surge	1d6	6	hits=1 sixes=1
+2026-10-22T04:20:24.023Z	H3 Greenhouse R3 Bo strikes Gardener (Kit Help, fed)	6d6	4 5 3 5 3 3	hits=2 sixes=0
+2026-10-22T04:20:29.323Z	H3 Greenhouse R3 Lane strikes Gardener (no Chi, fed)	5d6	5 2 3 5 1	hits=2 sixes=0
+2026-10-22T04:20:33.194Z	H3 Greenhouse R3 Kit strikes Gardener (no Chi, fed)	5d6	4 4 2 3 1	hits=0 sixes=0
+2026-10-22T04:20:42.077Z	H3 Greenhouse R3 Gardener Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:21:23.648Z	Heart Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	6 3 3 2 3 3 5	hits=2 sixes=1
+2026-10-22T04:21:37.815Z	Heart R1 Bo strikes pack (Chi die, Bulwark self, fed)	6d6	3 5 2 2 2 6	hits=2 sixes=1
+2026-10-22T04:21:45.479Z	Heart R1 Lane (Awakens Harmony) strikes pack (Bo Help, fed)	6d6	6 2 3 6 3 5	hits=3 sixes=2
+2026-10-22T04:21:52.271Z	Heart R1 Kit (Awakens Tempest) Strike 1 on Heart (Lane Help, fed)	6d6	1 5 6 4 4 4	hits=2 sixes=1
+2026-10-22T04:21:52.272Z	Heart R1 Kit Tempest Strike 2 on Heart (Lane Help, not fed)	6d6	4 1 4 2 3 3	hits=0 sixes=0
+2026-10-22T04:21:57.757Z	Heart R1 Heart Surge	1d6	3	hits=0 sixes=0
+2026-10-22T04:22:12.709Z	Heart R2 Bo strikes Heart (Chi die, Bulwark self, fed)	6d6	6 6 1 5 1 6	hits=4 sixes=3
+2026-10-22T04:22:18.810Z	Heart R2 Lane strikes Heart (Bo Help, Edge, fed)	6d6	5 2 3 2 2 5	hits=2 sixes=0
+2026-10-22T04:22:26.474Z	Heart R2 Kit Tempest Strike 1 on Heart (Blaze, fed)	5d6	2 1 6 4 3	hits=1 sixes=1
+2026-10-22T04:22:26.475Z	Heart R2 Kit Tempest Strike 2 on Heart (Blaze, not fed)	5d6	1 1 6 2 2	hits=1 sixes=1
+2026-10-22T04:22:30.878Z	Heart R2 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:22:49.595Z	Heart R3 Bo (Awakens Wellspring) strikes Heart (no Chi, fed)	5d6	5 1 6 1 2	hits=2 sixes=1
+2026-10-22T04:22:55.810Z	Heart R3 Lane strikes Heart (no Chi, fed)	5d6	6 5 6 6 1	hits=4 sixes=3
+2026-10-22T04:23:01.087Z	Heart R3 Kit Tempest Strike 1 on Heart (Lane Help, Blaze, fed)	6d6	1 5 6 1 2 3	hits=2 sixes=1
+2026-10-22T04:23:01.089Z	Heart R3 Kit Tempest Strike 2 on Heart (Lane Help, Blaze, not fed)	6d6	4 4 4 3 3 3	hits=0 sixes=0
+2026-10-22T04:23:05.206Z	Heart R3 Heart Surge	1d6	5	hits=1 sixes=0
+2026-10-22T04:23:13.783Z	Heart R4 Bo strikes Heart (no Chi, fed)	5d6	6 5 3 6 1	hits=3 sixes=2
+2026-10-22T04:23:19.011Z	Heart R4 Lane strikes Heart (Bo Help, fed)	6d6	4 6 4 2 1 1	hits=1 sixes=1
+2026-10-22T04:23:26.250Z	Heart R4 Kit strikes Heart (Bo + Lane Help, fed)	7d6	6 2 4 1 4 3 5	hits=2 sixes=1
+2026-10-22T04:23:30.587Z	Heart R4 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:23:40.821Z	Heart R5 Lane strikes Heart (Edge, not fed: Bo Down)	5d6	3 3 2 5 4	hits=1 sixes=0
+2026-10-22T04:23:47.554Z	Heart R5 Kit strikes Heart (no Chi, fed by Lane's Strike before Lane went Down)	5d6	6 1 6 1 2	hits=2 sixes=2
+2026-10-22T04:26:09.188Z	D1 Return Greenhouse Q Kit Quick free Strike on pack (Quick die, Blaze)	6d6	3 5 2 5 3 1	hits=2 sixes=0
+2026-10-22T04:26:16.048Z	D1 R1 Bo strikes pack (no Chi, fed)	5d6	1 1 5 2 2	hits=1 sixes=0
+2026-10-22T04:26:16.049Z	D1 R1 Lane strikes Gardener (no Chi, fed, Guard 2 as Metal)	5d6	4 5 1 6 2	hits=2 sixes=1
+2026-10-22T04:26:16.049Z	D1 R1 Kit (Awakens Tempest in the Hunt) Strike 1 on Gardener (fed)	5d6	2 1 5 5 4	hits=2 sixes=0
+2026-10-22T04:26:16.049Z	D1 R1 Kit Tempest Strike 2 on Gardener	5d6	6 6 5 1 2	hits=3 sixes=2
+2026-10-22T04:26:23.777Z	D1 R1 Gardener Surge	1d6	3	hits=0 sixes=0
+2026-10-22T04:26:39.571Z	D2 Underpass Hour4 Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	1 6 4 2 2 6 3	hits=2 sixes=2
+2026-10-22T04:26:47.122Z	D2 R1 Bo strikes pack (Kit Help, fed)	6d6	5 1 1 6 5 4	hits=3 sixes=1
+2026-10-22T04:26:47.123Z	D2 R1 Lane strikes Mason (Edge, fed, Guard 3)	5d6	3 5 3 3 6	hits=2 sixes=1
+2026-10-22T04:26:52.006Z	D2 R1 Kit strikes Mason (Chi die, Blaze, fed, Guard 3)	6d6	1 3 3 5 1 5	hits=2 sixes=0
+2026-10-22T04:26:56.784Z	D2 R1 Mason Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:27:05.959Z	D2 R2 Bo strikes Mason (Chi die, Bulwark self, fed, Guard 3)	6d6	3 2 3 4 6 6	hits=2 sixes=2
+2026-10-22T04:27:05.960Z	D2 R2 Lane strikes Mason (Kit Help, fed, Guard 3)	6d6	3 2 6 3 1 2	hits=1 sixes=1
+2026-10-22T04:27:14.946Z	D2 R2 Kit strikes Mason (Lane Help, Blaze, fed, Guard 2 after the Shell shattered at half)	6d6	3 2 3 5 3 3	hits=1 sixes=0
+2026-10-22T04:27:19.650Z	D2 R2 Mason Surge	1d6	5	hits=1 sixes=0
+2026-10-22T04:27:26.608Z	D2 R3 Bo strikes Mason (Chi die, fed)	6d6	4 6 4 6 3 4	hits=2 sixes=2
+2026-10-22T04:27:31.941Z	D2 R3 Lane strikes Mason (Edge, fed)	5d6	3 3 2 4 6	hits=1 sixes=1
+2026-10-22T04:28:16.756Z	D3 Substation R5 Bo strikes pack (Chi die, fed)	6d6	2 3 5 1 4 4	hits=1 sixes=0
+2026-10-22T04:28:16.758Z	D3 R5 Lane strikes Stoker (Edge, fed, Guard 3)	5d6	2 2 4 2 1	hits=0 sixes=0
+2026-10-22T04:28:16.758Z	D3 R5 Kit strikes pack (Blaze, fed)	5d6	6 2 1 5 4	hits=2 sixes=1
+2026-10-22T04:28:23.896Z	D3 R5 Stoker Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:28:31.130Z	D3 R6 Bo strikes pack (Chi die, Bulwark on Lane, fed)	6d6	3 3 2 4 4 5	hits=1 sixes=0
+2026-10-22T04:28:31.131Z	D3 R6 Lane strikes Stoker (Chi die, Edge, fed, Guard 3)	6d6	4 2 4 2 6 6	hits=2 sixes=2
+2026-10-22T04:28:31.131Z	D3 R6 Kit strikes pack (no Chi, fed)	5d6	2 1 1 3 3	hits=0 sixes=0
+2026-10-22T04:28:37.317Z	D3 R6 Stoker Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:28:44.090Z	D3 R7 Bo strikes Stoker (Chi die, Bulwark on Lane, fed, Guard 3)	6d6	6 3 4 3 5 1	hits=2 sixes=1
+2026-10-22T04:28:44.092Z	D3 R7 Lane strikes Stoker (Chi die, Edge, fed, Guard 3)	6d6	2 2 3 2 4 6	hits=1 sixes=1
+2026-10-22T04:28:44.092Z	D3 R7 Kit strikes Stoker (Blaze, fed, Guard 3)	5d6	5 2 1 3 2	hits=1 sixes=0
+2026-10-22T04:28:50.476Z	D3 R7 Stoker Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:29:11.677Z	D4 late join clash: Ash wants Unbreakable	1d6	3	hits=0 sixes=0
+2026-10-22T04:29:11.678Z	D4 late join clash: Wren wants Unbreakable	1d6	1	hits=0 sixes=0
+2026-10-22T04:29:28.036Z	D5 Heart5 Q Kit Quick free Strike on pack (Quick die + Chi die, Blaze)	7d6	6 4 1 1 1 2 5	hits=2 sixes=1
+2026-10-22T04:29:36.277Z	D5 R1 Bo strikes pack (Chi die, Bulwark self, fed)	6d6	4 6 4 6 1 2	hits=2 sixes=2
+2026-10-22T04:29:36.278Z	D5 R1 Lane (Awakens Harmony) strikes Heart (Chi die, Edge, fed)	6d6	2 4 3 5 2 4	hits=1 sixes=0
+2026-10-22T04:29:48.468Z	D5 R1 Ash (Awakens Unbreakable) strikes pack (Chi die + Wren Help, fed by Wren's Seal)	7d6	5 1 5 2 6 1 3	hits=3 sixes=1
+2026-10-22T04:29:48.469Z	D5 R1 Kit (Awakens Tempest) Strike 1 on Heart (Wren + Ash Help, fed)	7d6	5 3 2 2 6 3 2	hits=2 sixes=1
+2026-10-22T04:29:48.469Z	D5 R1 Kit Tempest Strike 2 on Heart (Bo + Lane Help)	7d6	4 5 3 3 6 2 2	hits=2 sixes=1
+2026-10-22T04:30:01.273Z	D5 R2 Bo strikes Heart (Chi die, Bulwark self, fed)	6d6	5 5 3 3 5 1	hits=3 sixes=0
+2026-10-22T04:30:01.274Z	D5 R2 Lane strikes Heart (Chi die, Edge, fed)	6d6	6 4 2 5 1 1	hits=2 sixes=1
+2026-10-22T04:30:01.274Z	D5 R2 Ash strikes pack (Bo Help, fed by Seal)	6d6	2 3 5 3 3 3	hits=1 sixes=0
+2026-10-22T04:30:01.274Z	D5 R2 Kit Tempest Strike 1 on Heart (Blaze, fed)	5d6	5 2 3 6 4	hits=2 sixes=1
+2026-10-22T04:30:01.274Z	D5 R2 Kit Tempest Strike 2 on Heart (Blaze)	5d6	5 3 4 5 2	hits=2 sixes=0
+2026-10-22T04:30:12.803Z	D5 R3 Bo strikes Heart (Bulwark self, fed)	5d6	6 2 1 4 2	hits=1 sixes=1
+2026-10-22T04:30:12.805Z	D5 R3 Lane strikes Heart (no Chi, fed)	5d6	5 6 3 5 3	hits=3 sixes=1
+2026-10-22T04:30:12.805Z	D5 R3 Wren strikes Heart (no Chi, fed)	5d6	2 6 6 6 4	hits=3 sixes=3
+2026-10-22T04:30:18.364Z	D5 R3 Ash strikes pack (no Chi, fed)	5d6	4 4 1 2 3	hits=0 sixes=0
+2026-10-22T04:30:18.365Z	D5 R3 Kit Tempest Strike 1 on Heart (Blaze, fed)	5d6	6 3 5 3 6	hits=3 sixes=2
+2026-10-22T04:30:18.365Z	D5 R3 Kit Tempest Strike 2 on Heart (Blaze)	5d6	6 3 6 4 3	hits=2 sixes=2
+2026-10-22T04:30:24.745Z	D5 R3 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:30:34.572Z	D5 R4 Bo (Awakens Wellspring) strikes Heart (no Chi, fed)	5d6	3 6 3 4 2	hits=1 sixes=1
+2026-10-22T04:30:34.573Z	D5 R4 Lane strikes Heart (no Chi, fed)	5d6	5 3 6 4 5	hits=3 sixes=1
+2026-10-22T04:30:34.573Z	D5 R4 Wren strikes Heart (Tide, fed)	5d6	4 5 6 3 2	hits=2 sixes=1
+2026-10-22T04:30:41.317Z	D5 R4 Wren Tide reroll of three non-hits	3d6	1 2 6	hits=1 sixes=1
+2026-10-22T04:30:47.177Z	D5 R4 Wren Lucky reroll of every non-hit (after Tide)	2d6	3 2	hits=0 sixes=0
+2026-10-22T04:30:55.200Z	D5 R4 Ash strikes Heart (Chi die, fed)	6d6	6 2 1 1 5 2	hits=2 sixes=1
+2026-10-22T04:30:55.202Z	D5 R4 Kit strikes Heart (Chi die, Blaze, fed)	6d6	1 1 4 5 4 3	hits=1 sixes=0
+2026-10-22T04:31:00.452Z	D5 R4 Heart Surge	1d6	5	hits=1 sixes=0
+2026-10-22T04:31:08.236Z	D5 R5 Wren strikes Heart (no Chi, fed by Lane's Rally)	5d6	6 6 5 3 3	hits=3 sixes=2
+2026-10-22T04:32:42.391Z	D6a Rae (Fire Brawler Stubborn Ascendant, Awakened) strikes Warden Guard 2 (Chi die, Blaze, fed)	6d6	6 1 1 1 4 5	hits=2 sixes=1
+2026-10-22T04:32:42.393Z	D6b Wren (Flow) strikes pack Guard 1 (no Chi)	5d6	2 1 2 6 6	hits=2 sixes=2
+2026-10-22T04:32:42.393Z	D6c Ash strikes Warden Guard 2 (Renewal on Bo, no Chi die)	5d6	1 4 1 5 4	hits=1 sixes=0
+2026-10-22T04:32:57.261Z	D6a2 Rae at 1 Vigor strikes Warden Guard 2 (no Chi, not fed, Ascendant over)	5d6	6 3 4 1 3	hits=1 sixes=1
+2026-10-22T04:32:57.262Z	D6b2 Wren (Flow) strikes Heart Guard 2 (no Chi)	5d6	2 3 3 4 2	hits=0 sixes=0
+2026-10-22T04:33:11.458Z	D7a FC R2 Bo at 1 strikes pack (no Chi, fed)	5d6	6 1 5 4 5	hits=3 sixes=1
+2026-10-22T04:33:11.459Z	D7a FC R2 Lane at 1 strikes pack (no Chi, fed)	5d6	4 2 3 1 1	hits=0 sixes=0
+2026-10-22T04:33:11.459Z	D7a FC R2 Kit at 1 strikes pack (no Chi, fed)	5d6	5 2 1 2 4	hits=1 sixes=0
+2026-10-22T04:33:18.160Z	D7a FC R3 Bo alone at 1 strikes pack (no Chi, not fed)	5d6	5 5 6 1 6	hits=4 sixes=2
+2026-10-22T04:33:27.328Z	D7b Heart R4 Bo at 4 strikes Heart (no Chi, fed)	5d6	6 5 1 6 1	hits=3 sixes=2
+2026-10-22T04:33:27.329Z	D7b Heart R4 Lane at 2 strikes Heart (no Chi, fed)	5d6	6 1 2 1 1	hits=1 sixes=1
+2026-10-22T04:33:27.329Z	D7b Heart R4 Kit at 3 strikes Heart (no Chi, fed)	5d6	1 4 3 4 1	hits=0 sixes=0
+2026-10-22T04:33:34.441Z	D7b Heart R4 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:33:43.400Z	D8a Ash (Sweeper) strikes pack last Still, Warden at 1 (no Chi, fed)	5d6	1 3 3 2 5	hits=1 sixes=0
+2026-10-22T04:33:43.401Z	D8b Heart R7 Bo at 3 strikes Heart (no Chi, fed)	5d6	3 2 3 4 4	hits=0 sixes=0
+2026-10-22T04:33:43.401Z	D8b Heart R7 Lane at 2 strikes Heart (no Chi, fed)	5d6	4 1 4 4 1	hits=0 sixes=0
+2026-10-22T04:33:43.401Z	D8b Heart R7 Kit at 2 strikes Heart (no Chi, fed)	5d6	4 1 3 4 2	hits=0 sixes=0
+2026-10-22T04:33:55.005Z	D8b Heart R7 Heart Surge	1d6	6	hits=1 sixes=1
+2026-10-22T04:33:55.006Z	D8c Lane last standing at 2 strikes Heart at 2 (no Chi, not fed)	5d6	4 4 1 1 2	hits=0 sixes=0
+2026-10-22T04:34:12.741Z	D8d Crush tie nobody acted: Storyteller die, 1-3 Bo, 4-6 Kit	1d6	2	hits=0 sixes=0
+2026-10-22T04:34:22.072Z	D9 owed-Hour Heart R6 Bo strikes Heart at 40 (Chi die, fed)	6d6	3 1 4 6 1 1	hits=1 sixes=1
+2026-10-22T04:34:22.073Z	D9 R6 Lane strikes Heart (Chi die, Edge, fed)	6d6	2 1 5 4 4 2	hits=1 sixes=0
+2026-10-22T04:34:22.073Z	D9 R6 Kit strikes Heart (Chi die, Blaze, fed)	6d6	4 6 1 1 1 5	hits=2 sixes=1
+2026-10-22T04:34:22.073Z	D10a cap: Kit Quick Strike (Quick die + Chi die; Help offered and refused, no Chi spent)	7d6	5 3 2 3 6 1 1	hits=2 sixes=1
+2026-10-22T04:34:22.073Z	D10b Chi cap: Lane at 4 Chi strikes Heart (no Chi spent, fed)	5d6	3 3 3 4 6	hits=1 sixes=1
+2026-10-22T04:34:22.073Z	D10c Call cap: Warden Surge with a full pack of 5 Stills	1d6	1	hits=0 sixes=0
+2026-10-22T04:34:41.154Z	D8c2 second table: Lane last standing at 1 strikes Heart at 2 (no Chi, not fed)	5d6	2 4 2 1 2	hits=0 sixes=0

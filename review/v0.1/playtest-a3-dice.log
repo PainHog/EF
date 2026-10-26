@@ -1,0 +1,175 @@
+2026-10-22T04:14:06.146Z	Setup clash Water: Bel (Sam, ready-made)	1d6	5	hits=1 sixes=0
+2026-10-22T04:14:06.149Z	Setup clash Water: Cass (own build)	1d6	6	hits=1 sixes=1
+2026-10-22T04:14:15.343Z	Setup Dev rolls element (reroll 6)	1d6	5	hits=1 sixes=0
+2026-10-22T04:14:15.345Z	Setup Dev rolls style	1d6	6	hits=1 sixes=1
+2026-10-22T04:14:15.345Z	Setup Dev rolls perk	1d6	1	hits=0 sixes=0
+2026-10-22T04:14:15.345Z	Setup Dev rolls Awakening	1d6	1	hits=0 sixes=0
+2026-10-22T04:14:38.610Z	N1 FC pre-round Dani Quick Strike pack (5+Quick+Chi die)	7d6	6 3 2 3 3 1 3	hits=1 sixes=1
+2026-10-22T04:14:48.043Z	N1 FC R1 Sam Strike pack (Blaze, Chi die, Hal Help)	7d6	1 1 5 1 5 4 6	hits=3 sixes=1
+2026-10-22T04:14:54.751Z	N1 FC R1 Hal Strike pack (Bulwark on self, Chi die)	6d6	6 5 5 5 2 6	hits=5 sixes=2
+2026-10-22T04:15:01.909Z	N1 FC R1 Lena Strike pack (Tide, Chi die)	6d6	3 5 4 1 1 4	hits=1 sixes=0
+2026-10-22T04:15:05.735Z	N1 FC R1 Lena Tide reroll 3 misses	3d6	1 3 3	hits=0 sixes=0
+2026-10-22T04:15:11.406Z	N1 FC R1 Dani Strike pack (Chi die, Hal Help)	7d6	3 1 3 4 1 5 6	hits=2 sixes=1
+2026-10-22T04:15:18.937Z	N1 FC R2 Sam Strike pack (Hal Help)	6d6	4 3 5 6 2 2	hits=2 sixes=1
+2026-10-22T04:15:24.402Z	N1 FC R2 Hal Strike pack	5d6	6 5 2 6 5	hits=4 sixes=2
+2026-10-22T04:15:37.103Z	N1 H1 Underpass pre-round Dani Quick Strike Warden (Quick, Hal Help)	7d6	4 1 3 6 4 2 2	hits=1 sixes=1
+2026-10-22T04:15:47.951Z	N1 H1 R1 Sam Strike pack	5d6	3 3 1 2 3	hits=0 sixes=0
+2026-10-22T04:15:56.899Z	N1 H1 R1 Hal Strike pack (Bulwark self, Chi die)	6d6	3 5 5 4 3 3	hits=2 sixes=0
+2026-10-22T04:16:04.510Z	N1 H1 R1 Lena Strike pack (Hal Help)	6d6	1 1 6 1 1 5	hits=2 sixes=1
+2026-10-22T04:16:13.272Z	N1 H1 R1 Dani Strike Warden (Sam Help)	6d6	1 1 6 2 4 5	hits=2 sixes=1
+2026-10-22T04:16:18.294Z	N1 H1 R1 Mason Surge	1d6	6	hits=1 sixes=1
+2026-10-22T04:16:26.080Z	N1 H1 R2 Sam Strike pack (Blaze)	5d6	4 6 6 4 6	hits=3 sixes=3
+2026-10-22T04:16:33.237Z	N1 H1 R2 Hal Strike Warden (Chi die)	6d6	6 4 1 1 1 5	hits=2 sixes=1
+2026-10-22T04:16:38.610Z	N1 H1 R2 Lena Strike Warden (Sam Help)	6d6	4 3 3 2 4 6	hits=1 sixes=1
+2026-10-22T04:16:46.363Z	N1 H1 R2 Dani Strike Warden	5d6	2 2 1 2 5	hits=1 sixes=0
+2026-10-22T04:16:51.610Z	N1 H1 R2 Mason Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:16:57.857Z	N1 H1 R3 Sam Strike Warden (Blaze)	5d6	5 4 4 6 1	hits=2 sixes=1
+2026-10-22T04:17:04.028Z	N1 H1 R3 Hal Strike Warden	5d6	6 3 2 4 5	hits=2 sixes=1
+2026-10-22T04:17:08.568Z	N1 H1 R3 Lena Strike Warden (Tide)	5d6	4 4 1 1 2	hits=0 sixes=0
+2026-10-22T04:17:13.239Z	N1 H1 R3 Lena Tide reroll 3 misses	3d6	5 6 2	hits=2 sixes=1
+2026-10-22T04:17:19.513Z	N1 H1 R3 Dani Strike Warden (Chi die)	6d6	2 4 5 4 4 1	hits=1 sixes=0
+2026-10-22T04:17:24.193Z	N1 H1 R3 Mason Surge	1d6	5	hits=1 sixes=0
+2026-10-22T04:17:36.941Z	N1 H1 R4 Sam Strike Warden	5d6	6 2 4 5 2	hits=2 sixes=1
+2026-10-22T04:17:41.173Z	N1 H1 R4 Hal Strike Warden	5d6	2 4 6 2 3	hits=1 sixes=1
+2026-10-22T04:17:46.350Z	N1 H1 R4 Lena Strike Warden (Hal Help)	6d6	1 5 6 1 6 4	hits=3 sixes=2
+2026-10-22T04:17:56.057Z	N1 H1 R4 Dani Strike pack (last Still)	5d6	1 1 5 5 3	hits=2 sixes=0
+2026-10-22T04:18:01.264Z	N1 H1 R4 Mason Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:18:07.453Z	N1 H1 R5 Sam Strike Warden	5d6	2 2 4 3 3	hits=0 sixes=0
+2026-10-22T04:18:15.439Z	N1 H1 R5 Hal Strike Warden (Sam Help)	6d6	4 1 5 2 2 4	hits=1 sixes=0
+2026-10-22T04:18:21.018Z	N1 H1 R5 Lena Strike Warden (Tide, Sam Help)	6d6	6 6 5 5 4 5	hits=5 sixes=2
+2026-10-22T04:18:40.939Z	N1 H4 Bridge pre-round Dani Quick Strike pack (Quick, Hal Help)	7d6	4 2 3 2 4 3 3	hits=0 sixes=0
+2026-10-22T04:18:46.971Z	N1 H4 R1 Sam Strike Girder (Blaze, Hal Help)	6d6	4 4 6 2 2 4	hits=1 sixes=1
+2026-10-22T04:18:56.918Z	N1 H4 R1 Hal Strike pack (Chi die, Bulwark self)	6d6	4 5 6 5 5 4	hits=4 sixes=1
+2026-10-22T04:19:02.008Z	N1 H4 R1 Lena Strike pack (Tide, Chi die)	6d6	4 4 5 6 1 3	hits=2 sixes=1
+2026-10-22T04:19:06.359Z	N1 H4 R1 Lena Tide reroll 3 misses	3d6	3 5 4	hits=1 sixes=0
+2026-10-22T04:19:12.200Z	N1 H4 R1 Dani Strike Girder (Lena Help)	6d6	2 6 6 3 4 1	hits=2 sixes=2
+2026-10-22T04:19:17.482Z	N1 H4 R1 Girder Surge	1d6	5	hits=1 sixes=0
+2026-10-22T04:19:22.992Z	N1 H4 R2 Sam Strike Girder	5d6	6 1 4 3 6	hits=2 sixes=2
+2026-10-22T04:19:28.660Z	N1 H4 R2 Hal Strike Girder (Chi die)	6d6	2 4 1 5 6 3	hits=2 sixes=1
+2026-10-22T04:19:32.856Z	N1 H4 R2 Lena Strike Girder (Sam Help)	6d6	4 1 6 2 5 3	hits=2 sixes=1
+2026-10-22T04:19:38.917Z	N1 H4 R2 Dani Strike Girder (Chi die)	6d6	4 2 4 4 3 4	hits=0 sixes=0
+2026-10-22T04:19:47.365Z	N1 H4 R2 Girder Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:19:54.149Z	N1 H4 R3 Sam Strike Girder (Blaze)	5d6	3 6 1 2 6	hits=2 sixes=2
+2026-10-22T04:19:59.997Z	N1 H4 R3 Hal Strike Girder (Sam Help)	6d6	5 5 2 4 2 5	hits=3 sixes=0
+2026-10-22T04:20:07.826Z	N1 H4 R3 Lena Strike Girder (Sam Help)	6d6	5 6 3 5 5 4	hits=4 sixes=1
+2026-10-22T04:20:29.921Z	N1 Heart pre-round Dani Quick Strike Heart (Quick, Chi die)	7d6	1 5 2 5 5 6 5	hits=5 sixes=1
+2026-10-22T04:20:38.597Z	N1 Heart R1 Sam (Awakens Unbreakable) Strike Heart (Hal Help)	6d6	1 1 1 4 6 4	hits=1 sixes=1
+2026-10-22T04:20:52.220Z	N1 Heart R1 Hal (Awakens Tempest) Strike 1 pack (Bulwark on Dani)	5d6	6 1 4 3 5	hits=2 sixes=1
+2026-10-22T04:20:58.047Z	N1 Heart R1 Hal Strike 2 Heart (Sam Help)	6d6	2 4 1 2 5 2	hits=1 sixes=0
+2026-10-22T04:21:07.683Z	N1 Heart R1 Lena (Awakens Wellspring) Strike pack	5d6	4 3 1 5 4	hits=1 sixes=0
+2026-10-22T04:21:13.578Z	N1 Heart R1 Dani (Awakens Ascendant) Strike Heart (Sam Help)	6d6	6 5 3 3 1 5	hits=3 sixes=1
+2026-10-22T04:21:19.114Z	N1 Heart R1 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:21:30.341Z	N1 Heart R2 Sam Strike Heart	5d6	6 5 3 4 3	hits=2 sixes=1
+2026-10-22T04:21:36.099Z	N1 Heart R2 Hal Strike 1 pack	5d6	3 1 3 5 3	hits=1 sixes=0
+2026-10-22T04:21:42.066Z	N1 Heart R2 Hal Strike 2 Heart	5d6	6 6 4 6 2	hits=3 sixes=3
+2026-10-22T04:21:48.140Z	N1 Heart R2 Lena Strike Heart	5d6	2 4 6 2 4	hits=1 sixes=1
+2026-10-22T04:21:54.994Z	N1 Heart R2 Dani Strike Heart (Ascendant, Hal Help)	6d6	1 4 5 1 3 2	hits=1 sixes=0
+2026-10-22T04:22:00.700Z	N1 Heart R2 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:22:07.502Z	N1 Heart R3 Sam Strike Heart	5d6	3 6 4 3 4	hits=1 sixes=1
+2026-10-22T04:22:13.961Z	N1 Heart R3 Hal Strike 1 Heart (Sam Help)	6d6	6 3 3 6 6 3	hits=3 sixes=3
+2026-10-22T04:22:21.227Z	N1 Heart R3 Hal Strike 2 Heart (Bulwark self)	5d6	1 6 1 2 6	hits=2 sixes=2
+2026-10-22T04:22:27.046Z	N1 Heart R3 Lena Strike Heart (Tide)	5d6	3 2 1 1 3	hits=0 sixes=0
+2026-10-22T04:22:31.592Z	N1 Heart R3 Lena Tide reroll 3 misses	3d6	6 5 2	hits=2 sixes=1
+2026-10-22T04:22:36.943Z	N1 Heart R3 Dani Strike Heart (Ascendant, Chi die, Sam Help)	7d6	4 4 1 3 5 1 3	hits=1 sixes=0
+2026-10-22T04:22:44.657Z	N1 Heart R3 Heart Surge	1d6	6	hits=1 sixes=1
+2026-10-22T04:22:52.314Z	N1 Heart R4 Sam Strike pack	5d6	2 5 1 5 3	hits=2 sixes=0
+2026-10-22T04:22:57.683Z	N1 Heart R4 Hal Strike pack (Chi die)	6d6	1 4 6 5 2 6	hits=3 sixes=2
+2026-10-22T04:23:02.977Z	N1 Heart R4 Lena Strike Heart (Tide, Chi die)	6d6	6 2 2 2 6 4	hits=2 sixes=2
+2026-10-22T04:23:09.953Z	N1 Heart R4 Lena Tide reroll 3 misses	3d6	1 1 1	hits=0 sixes=0
+2026-10-22T04:23:15.621Z	N1 Heart R4 Dani Strike Heart (Chi die)	6d6	5 1 2 3 1 5	hits=2 sixes=0
+2026-10-22T04:23:21.814Z	N1 Heart R4 Heart Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:23:36.964Z	N1 Heart R5 Sam Strike Heart	5d6	4 6 2 5 6	hits=3 sixes=2
+2026-10-22T04:23:42.821Z	N1 Heart R5 Hal Strike Heart (Chi die, Sam Help)	7d6	6 4 1 4 3 3 1	hits=1 sixes=1
+2026-10-22T04:23:53.811Z	N1 Heart R5 Heart Surge (after Dani Rallies Lena)	1d6	2	hits=0 sixes=0
+2026-10-22T04:23:59.782Z	N1 Heart R6 Sam Strike Heart (Blaze)	5d6	2 4 1 3 5	hits=1 sixes=0
+2026-10-22T04:24:07.044Z	N1 Heart R6 Hal Strike Heart (Chi die)	6d6	6 1 3 2 3 4	hits=1 sixes=1
+2026-10-22T04:24:13.309Z	N1 Heart R6 Lena Strike Heart (Hal Help)	6d6	5 6 3 5 2 3	hits=3 sixes=1
+2026-10-22T04:26:48.686Z	N2 build First Clash table	1d6	3	hits=0 sixes=0
+2026-10-22T04:26:48.688Z	N2 build Wood Shell place	1d6	5	hits=1 sixes=0
+2026-10-22T04:26:48.688Z	N2 build Fire Shell place	1d6	1	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build Earth Shell place	1d6	6	hits=1 sixes=1
+2026-10-22T04:26:48.689Z	N2 build Metal Shell place	1d6	4	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build Water Shell place	1d6	5	hits=1 sixes=0
+2026-10-22T04:26:48.689Z	N2 build sign for Wood Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build sign for Fire Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build sign for Earth Anchor	1d6	5	hits=1 sixes=0
+2026-10-22T04:26:48.689Z	N2 build sign for Metal Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build sign for Water Anchor	1d6	2	hits=0 sixes=0
+2026-10-22T04:26:48.689Z	N2 build Heart table	1d6	5	hits=1 sixes=0
+2026-10-22T04:26:59.782Z	N2 FC pre-round Dani Quick Strike pack (Quick, Chi die)	7d6	1 4 2 1 4 6 6	hits=2 sixes=2
+2026-10-22T04:27:05.806Z	N2 FC R1 Sam Strike pack (Blaze)	5d6	2 3 6 1 3	hits=1 sixes=1
+2026-10-22T04:27:10.801Z	N2 FC R1 Hal Strike pack (Bulwark self, Chi die)	6d6	3 5 6 4 1 1	hits=2 sixes=1
+2026-10-22T04:27:15.841Z	N2 FC R1 Lena Strike pack (Tide, Hal Help)	6d6	6 6 4 3 4 5	hits=3 sixes=2
+2026-10-22T04:27:20.997Z	N2 FC R1 Lena Tide reroll 3 misses	3d6	3 1 6	hits=1 sixes=1
+2026-10-22T04:27:25.716Z	N2 FC R1 Dani Strike pack (Chi die)	6d6	4 4 2 5 5 1	hits=2 sixes=0
+2026-10-22T04:27:31.489Z	N2 FC R2 Sam Strike pack (Blaze)	5d6	4 1 4 6 3	hits=1 sixes=1
+2026-10-22T04:27:37.012Z	N2 FC R2 Hal Strike pack	5d6	3 4 6 1 5	hits=2 sixes=1
+2026-10-22T04:27:44.049Z	N2 H1 Tunneller pre-round Dani Quick Strike Warden (Quick, Chi die)	7d6	6 1 4 5 4 6 1	hits=3 sixes=2
+2026-10-22T04:27:50.312Z	N2 H1 R1 Sam Strike pack (Hal Help)	6d6	1 6 1 2 1 4	hits=1 sixes=1
+2026-10-22T04:27:55.259Z	N2 H1 R1 Hal Strike pack (Bulwark self, Chi die)	6d6	5 3 2 6 4 2	hits=2 sixes=1
+2026-10-22T04:28:00.369Z	N2 H1 R1 Lena Strike pack (Tide)	5d6	3 1 3 4 4	hits=0 sixes=0
+2026-10-22T04:28:05.350Z	N2 H1 R1 Lena Tide reroll 3 misses	3d6	5 4 1	hits=1 sixes=0
+2026-10-22T04:28:10.119Z	N2 H1 R1 Dani Strike Tunneller (Chi die)	6d6	1 3 4 1 2 1	hits=0 sixes=0
+2026-10-22T04:28:17.959Z	N2 H1 R1 Tunneller Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:28:25.983Z	N2 H1 R2 Sam Strike pack (Lena Help)	6d6	3 2 1 1 4 5	hits=1 sixes=0
+2026-10-22T04:28:31.171Z	N2 H1 R2 Hal Strike Tunneller (Chi die, Bulwark self)	6d6	1 5 1 5 6 1	hits=3 sixes=1
+2026-10-22T04:28:36.819Z	N2 H1 R2 Lena Strike Tunneller (Tide, Chi die)	6d6	3 3 3 2 3 5	hits=1 sixes=0
+2026-10-22T04:28:41.263Z	N2 H1 R2 Lena Tide reroll 3 misses	3d6	4 1 1	hits=0 sixes=0
+2026-10-22T04:28:46.481Z	N2 H1 R2 Dani Strike Tunneller (Chi die)	6d6	3 2 2 3 5 4	hits=1 sixes=0
+2026-10-22T04:28:51.720Z	N2 H1 R2 Tunneller Surge	1d6	3	hits=0 sixes=0
+2026-10-22T04:29:03.949Z	N2 H1 R3 Sam Strike Tunneller	5d6	1 4 5 5 1	hits=2 sixes=0
+2026-10-22T04:29:08.310Z	N2 H1 R3 Hal Strike Tunneller	5d6	5 6 6 6 6	hits=5 sixes=4
+2026-10-22T04:29:14.224Z	N2 H1 R3 Lena Strike pack last Still (Tide)	5d6	6 6 5 6 3	hits=4 sixes=3
+2026-10-22T04:29:21.316Z	N2 H1 R3 Dani Strike Tunneller (Chi die)	6d6	4 3 5 4 3 5	hits=2 sixes=0
+2026-10-22T04:29:25.930Z	N2 H1 R3 Tunneller Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:29:34.906Z	N2 H1 R4 Sam Strike Tunneller	5d6	5 5 3 3 4	hits=2 sixes=0
+2026-10-22T04:29:40.845Z	N2 H1 R4 Hal Strike Tunneller (Bulwark on Dani)	5d6	6 2 3 4 3	hits=1 sixes=1
+2026-10-22T04:29:50.195Z	N2 H1 R4 Dani Strike Tunneller (unfed, Bulwark on him)	5d6	4 5 4 1 3	hits=1 sixes=0
+2026-10-22T04:29:55.245Z	N2 H1 R4 Tunneller Surge	1d6	2	hits=0 sixes=0
+2026-10-22T04:30:04.339Z	N2 H1 R5 Sam Strike Tunneller (Hal Help, Dani Help)	7d6	5 6 6 3 6 6 5	hits=6 sixes=4
+2026-10-22T04:30:14.892Z	N2 H4 Tolling pre-round Dani Quick Strike pack (Quick, Hal Help)	7d6	2 6 5 5 3 5 3	hits=4 sixes=1
+2026-10-22T04:30:21.225Z	N2 H4 R1 Sam Strike Tolling (Blaze, Chi die)	6d6	6 2 1 3 4 3	hits=1 sixes=1
+2026-10-22T04:30:27.048Z	N2 H4 R1 Hal Strike pack (Chi die, Bulwark self)	6d6	6 3 2 3 4 6	hits=2 sixes=2
+2026-10-22T04:30:32.484Z	N2 H4 R1 Lena Strike pack (Tide, Chi die)	6d6	3 2 2 2 5 4	hits=1 sixes=0
+2026-10-22T04:30:36.618Z	N2 H4 R1 Lena Tide reroll 3 misses	3d6	6 2 2	hits=1 sixes=1
+2026-10-22T04:30:41.523Z	N2 H4 R1 Dani Strike Tolling (Hal Help)	6d6	1 5 5 1 6 5	hits=4 sixes=1
+2026-10-22T04:30:47.436Z	N2 H4 R1 Tolling Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:30:52.905Z	N2 H4 R2 Sam Strike Tolling (Blaze)	5d6	5 2 3 1 5	hits=2 sixes=0
+2026-10-22T04:30:58.475Z	N2 H4 R2 Hal Strike Tolling (Chi die)	6d6	6 1 4 5 5 4	hits=3 sixes=1
+2026-10-22T04:31:03.115Z	N2 H4 R2 Lena Strike Tolling (Sam Help)	6d6	2 5 1 4 6 3	hits=2 sixes=1
+2026-10-22T04:31:07.529Z	N2 H4 R2 Dani Strike Tolling	5d6	3 1 2 3 1	hits=0 sixes=0
+2026-10-22T04:31:12.340Z	N2 H4 R2 Tolling Surge	1d6	6	hits=1 sixes=1
+2026-10-22T04:31:18.646Z	N2 H4 R3 Sam Strike Tolling	5d6	3 2 2 6 2	hits=1 sixes=1
+2026-10-22T04:31:24.170Z	N2 H4 R3 Hal Strike Tolling (Sam Help)	6d6	2 3 6 5 6 6	hits=4 sixes=3
+2026-10-22T04:31:29.809Z	N2 H4 R3 Lena Strike Tolling (Sam Help)	6d6	5 4 2 1 3 6	hits=2 sixes=1
+2026-10-22T04:31:34.674Z	N2 H4 R3 Dani Strike Tolling (Chi die)	6d6	1 6 5 2 3 3	hits=2 sixes=1
+2026-10-22T04:31:43.319Z	N2 Heart pre-round Dani Quick Strike Heart (Quick, Hal Help)	7d6	6 6 2 1 1 2 1	hits=2 sixes=2
+2026-10-22T04:31:49.498Z	N2 Heart R1 Sam (Awakens Unbreakable) Strike Heart (Hal Help)	6d6	3 2 3 6 4 5	hits=2 sixes=1
+2026-10-22T04:31:55.710Z	N2 Heart R1 Hal (Awakens Tempest) Strike 1 pack	5d6	3 4 5 6 1	hits=2 sixes=1
+2026-10-22T04:31:55.808Z	N2 Heart R1 Hal Strike 2 pack	5d6	4 2 1 1 2	hits=0 sixes=0
+2026-10-22T04:32:03.100Z	N2 Heart R1 Lena (Awakens Wellspring) Strike pack	5d6	4 6 6 5 3	hits=3 sixes=2
+2026-10-22T04:32:08.183Z	N2 Heart R1 Dani (Awakens Ascendant) Strike Heart (Chi die)	6d6	2 1 2 6 1 4	hits=1 sixes=1
+2026-10-22T04:32:14.394Z	N2 Heart R1 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:32:23.635Z	N2 Heart R2 Sam Strike Heart (Lena Help)	6d6	2 4 5 3 6 3	hits=2 sixes=1
+2026-10-22T04:32:28.774Z	N2 Heart R2 Hal Strike 1 Heart	5d6	4 5 3 5 6	hits=3 sixes=1
+2026-10-22T04:32:33.836Z	N2 Heart R2 Hal Strike 2 Heart	5d6	3 5 5 3 6	hits=3 sixes=1
+2026-10-22T04:32:38.677Z	N2 Heart R2 Lena Strike Heart (Tide, Chi die)	6d6	1 4 5 5 3 4	hits=2 sixes=0
+2026-10-22T04:32:44.330Z	N2 Heart R2 Lena Tide reroll 3 misses	3d6	4 5 5	hits=2 sixes=0
+2026-10-22T04:32:49.361Z	N2 Heart R2 Dani Strike Heart (Ascendant, Chi die)	6d6	4 6 2 4 3 6	hits=2 sixes=2
+2026-10-22T04:32:54.952Z	N2 Heart R2 Heart Surge	1d6	1	hits=0 sixes=0
+2026-10-22T04:33:01.381Z	N2 Heart R3 Sam Strike Heart	5d6	2 3 2 2 5	hits=1 sixes=0
+2026-10-22T04:33:06.699Z	N2 Heart R3 Hal Strike 1 Heart (Sam Help)	6d6	6 5 4 5 6 2	hits=4 sixes=2
+2026-10-22T04:33:12.145Z	N2 Heart R3 Hal Strike 2 Heart (Chi die, Sam Help)	7d6	3 1 4 6 6 3 2	hits=2 sixes=2
+2026-10-22T04:33:17.451Z	N2 Heart R3 Lena Strike Heart (Hal Help)	6d6	5 3 1 1 1 5	hits=2 sixes=0
+2026-10-22T04:33:22.531Z	N2 Heart R3 Dani Strike Heart (Ascendant, Chi die)	6d6	4 4 5 1 2 4	hits=1 sixes=0
+2026-10-22T04:33:27.976Z	N2 Heart R3 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:33:33.743Z	N2 Heart R4 Sam Strike Heart	5d6	4 6 4 5 5	hits=3 sixes=1
+2026-10-22T04:33:38.537Z	N2 Heart R4 Hal Strike Heart	5d6	2 6 4 5 4	hits=2 sixes=1
+2026-10-22T04:33:44.485Z	N2 Heart R4 Lena Strike Heart	5d6	4 3 3 6 1	hits=1 sixes=1
+2026-10-22T04:33:51.734Z	N2 Heart R4 Dani Strike pack last Still (Chi die)	6d6	5 3 6 2 3 3	hits=2 sixes=1
+2026-10-22T04:33:57.193Z	N2 Heart R4 Heart Surge	1d6	4	hits=0 sixes=0
+2026-10-22T04:34:04.372Z	N2 Heart R5 Sam Strike Heart	5d6	2 4 4 2 5	hits=1 sixes=0
+2026-10-22T04:34:10.110Z	N2 Heart R5 Hal Strike Heart (Sam Help)	6d6	5 4 5 1 4 5	hits=3 sixes=0
+2026-10-22T04:34:21.398Z	N2 Heart R5 Heart Surge (after Dani Rallies Lena)	1d6	4	hits=0 sixes=0
+2026-10-22T04:34:33.362Z	N2 Heart R6 Sam Strike Heart (Blaze)	5d6	4 1 6 1 5	hits=2 sixes=1
+2026-10-22T04:34:38.973Z	N2 Heart R6 Hal Strike Heart	5d6	5 1 4 1 4	hits=1 sixes=0
