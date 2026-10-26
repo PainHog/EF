@@ -184,7 +184,7 @@ export function loseVigor(f, amount, { source = "", bulwark = false } = {}) {
   let vigor = Math.max(0, f.vigor - loss);
   let stubbornUsed = false;
   if (vigor === 0 && loss > 0 && f.perk === "stubborn" && !f.stubbornUsed) {
-    vigor = R.stubbornVigor; stubbornUsed = true; steps.push("Stubborn: stays up with 2");
+    vigor = Math.min(R.stubbornVigor, f.vigor); stubbornUsed = true; steps.push(`Stubborn: stays up with ${vigor}`);
   }
   const down = vigor === 0;
   return {

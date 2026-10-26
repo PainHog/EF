@@ -1,6 +1,6 @@
-Now: A second round of computer test games is done, and every fix it found is in the rulebook
-Next: A third round of test games (the goal is two clean ones in a row), then a try of the online version in Foundry VTT
-Number: Design decisions made = 42
+Now: Version 0.1 has passed its test games: two clean ones in a row, with every fix in the rulebook
+Next: Richard reads it through, tries the online version in Foundry VTT, and plays it at a real table
+Number: Design decisions made = 43
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
 Number: Rulebook chapters written = 9
@@ -34,7 +34,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Rulebook layout, for screen and for print
 - [x] Computer playtests by the book, and the fixes they turn up
 - [x] A second round of computer playtests on the fixed rulebook
-- [ ] Two clean computer playtests in a row
+- [x] Two clean computer playtests in a row
 - [ ] A playtest at a real table
 
 ## Online version

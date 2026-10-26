@@ -10,6 +10,8 @@ The review of version 0.1, run as `docs/REVIEW-PROCEDURE.md` says: an independen
 | `verification.md` | Verification round: every earlier item marked fixed or not, new gaps, the simulator re-run, the online version checked |
 | `playtest-a2.md`, `playtest-a2-dice.log` | Playtest A2 on the fixed book: 3 new players, Easy then Standard; 160 logged rolls |
 | `playtest-b2.md`, `playtest-b2-dice.log` | Playtest B2 on the fixed book: 5 players at Hard on a Chapter 9 night, plus drills; 191 logged rolls |
+| `playtest-a3.md`, `playtest-a3-dice.log` | Playtest A3 (round 3): 4 new players, Standard then Easy with the same fighters; 175 logged rolls |
+| `playtest-b3.md`, `playtest-b3-dice.log` | Playtest B3 (round 3): 3 players at Hard on the ready-made night, plus drills; 142 logged rolls |
 | `dice.mjs` | The dice script every roll came from |
 | `../../book/art/AUDIT.md` | The art audit, with object and figure tables for every picture |
 
@@ -156,7 +158,7 @@ From the three reports, in their words where possible:
 | Every Part B question answered in the text, in one place | **Pass** after the fixes: the Down state, movement, carry-over, late joiners and every end state are now in the text |
 | Quick reference, sheets and trackers checked against the chapters, line by line | **Pass**: checked after the edits (the card now uses Chapter 3's words; the sheets carry every box the rules need) |
 | Simulated win and loss rates on target for every label and size; no dead or dominated options | **Pass**: wins 89.5 / 74.9 / 58.3, losses 0.7 / 8.9 / 20.8, every size within 3.3 points, every option within ±1.8 of its pick (`sim/REPORT.md`) |
-| Two clean playtests in a row: no blocker, no invented ruling on core flow | **Not yet**. Round 1 found the blocker. Round 2: A2 was clean; B2 had no blocker but had to invent two small core rulings (feeding after a Down; the Guardian in a Sweep), now in the book. A third round on the current book is the next step |
+| Two clean playtests in a row: no blocker, no invented ruling on core flow | **Pass, with one note.** Round 3: Playtest A3 was clean, and Playtest B3 was clean through its whole night. B3's only invented ruling came in a constructed drill: how one die picks between fighters tied for a Crush when none of them acted. The book now says each rolls and the highest takes it. Round 2's A2 was also clean. Richard may want a fourth round before calling it final |
 | Every picture passes the art checklist, with tables | **Pass** (`book/art/AUDIT.md`) |
 | Layout: no near-empty pages, text ≥ 7.5 pt, no colour-only meaning, contents and cross-references verified | **Pass** |
 | Print: printer-friendly version; bleed, cover spread, fonts embedded and credited, no Type 3 | **Pass** (the spine width needs the printer's figure before ordering) |
@@ -178,4 +180,37 @@ From the three reports, in their words where possible:
 - A late joiner now resets everyone's maximum Vigor to the new group size.
 - Going back to an Anchor is a new fight.
 - The sheets now carry each enemy's Guard and Harm, a ring line and names for the Crush damage.
+
+## Third round
+
+**Playtest A3** (4 new players; the ready-made night at Standard, then the same fighters on a Chapter 9 night at Easy):
+- **Clean:** no blocker, and no invented ruling on core flow.
+- **Results:** two wins, each Heart broken in round 6 of 7, with fighters Down at the end of both.
+- **Rulings the table made:** five small ones, all on setup or rare style interactions.
+- **Issues:** 2 confusing (what to change a lost pick to; the Shell rule wasn't on any sheet) and 9 minor. All are fixed.
+
+**Playtest B3** (3 players at Hard on the ready-made night, plus drills):
+- **Result:** a win, the Heart (51) broken in round 5 of 7 with two of three fighters Down.
+- **Blockers:** none.
+- **Core flow:** answered by the text throughout the night. One drill needed a ruling on how to roll for a tie nobody acted to break; that is now worded.
+- **Issues:** 1 confusing (a late fighter's Vigor change applied on arrival rather than on joining) and 13 minor. All are fixed.
+- **The five-fighter Heart on Hard,** played as a drill, was won in round 5.
+
+**Checked in the simulator** (D43):
+- **Keeping 1 Chi each at the Heart to dodge Drains** loses 8 to 10 win points, so "spend it" stands.
+- **Chasing the last Still at the Heart** loses 1.3 to 2 points, so "don't chase it" stands, now marked "even at the Heart".
+- **Stubborn no longer giving Vigor** makes no measurable difference.
+
+**What changed** (D43; `book/REVIEW.md` rows 36 to 47):
+- the Shell rule and the Warden's half on the card and the Night sheet;
+- you can't skip your action;
+- a Rallied fighter is back in play at once;
+- Counter answers under a Guardian;
+- the Guardian's test is against the loss before protections;
+- ties nobody acted to break go to each fighter's die;
+- late fighters change everyone's maximum only when they join;
+- "half" rounds down;
+- everyone Down before dawn is a loss;
+- Tempest's two actions start in the round you Awaken;
+- the setup times are consistent.
 

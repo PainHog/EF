@@ -104,6 +104,7 @@ test("Ch 3: protections in order, then Stubborn; Down loses all Chi", () => {
   const st = L.loseVigor(fighter({ style: "brawler", perk: "stubborn", vigor: 2 }), 5);
   assert.equal(st.down, false); assert.equal(st.vigor, 2); assert.equal(st.stubbornUsed, true);
   assert.equal(L.loseVigor(fighter({ style: "brawler", perk: "stubborn", vigor: 2, stubbornUsed: true }), 5).down, true);
+  assert.equal(L.loseVigor(fighter({ style: "brawler", perk: "stubborn", vigor: 1 }), 5).vigor, 1, "Stubborn never gives more than you had");
 });
 
 test("Ch 2: Guardian may take a loss once per round, for someone else", () => {

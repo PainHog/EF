@@ -189,6 +189,7 @@ async function join({ fighterId }) {
   const a = actor(fighterId);
   if (!night.started || night.ending) throw new OpError("No night is going on.");
   if (a?.type !== "fighter" || night.fighterIds.includes(a.id)) throw new OpError("That fighter can't join.");
+  if (night.fight) throw new OpError("A late fighter joins at the start of the next fight: add them between fights.");
   for (const key of ["element", "style", "perk", "awakening"]) {
     if (!a.system[key]) throw new OpError(`A fighter needs four picks: this one has no ${key}.`);
     if (fightersIn(night.fighterIds).some(o => o.system[key] === a.system[key])) throw new OpError(`Another fighter already has that ${key} (Chapter 2).`);

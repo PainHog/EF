@@ -42,7 +42,7 @@ EF.perks = {
   medic:    { label: "Medic",    text: "After each fight, share out 2 Vigor among the fighters." },
   lucky:    { label: "Lucky",    text: "Once per fight, after you roll, reroll every die that isn't a hit." },
   quick:    { label: "Quick",    text: "Before the first round of each fight, take a free Strike with +1 die. It can't be hit back." },
-  stubborn: { label: "Stubborn", text: "The first time in each fight you would go Down, stay up with 2 Vigor instead." },
+  stubborn: { label: "Stubborn", text: "The first time in each fight you would go Down, stay up instead, with 2 Vigor (or 1, if that was all you had)." },
   trained:  { label: "Trained",  text: "Your Criticals deal 2 more damage and give 1 more Chi." }
 };
 
@@ -51,7 +51,7 @@ EF.awakenings = {
   ascendant:   { label: "Ascendant",   rounds: 3, text: "Each of your hits deals 2 damage." },
   unbreakable: { label: "Unbreakable", rounds: 3, text: "You lose no Vigor." },
   wellspring:  { label: "Wellspring",  rounds: 3, text: "At the start of each round, share out 2 Vigor. A Down fighter given any stands up." },
-  tempest:     { label: "Tempest",     rounds: 3, text: "You take two actions each round, and your Strikes can't be hit back." },
+  tempest:     { label: "Tempest",     rounds: 3, text: "You take two actions each round (starting with the round you Awaken), and your Strikes can't be hit back." },
   seal:        { label: "Seal",        rounds: 2, text: "The Warden or the Heart can't Surge. Holding the Seal is your action each round." },
   harmony:     { label: "Harmony",     rounds: 3, text: "At the start of each round, share out 3 Chi." }
 };
