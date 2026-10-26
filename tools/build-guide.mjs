@@ -24,17 +24,17 @@ export function atTheTableHtml() {
   return `<p><em>${intro.trim()}</em></p>\n${body}`;
 }
 
-const ONLINE = `<p>The online version keeps the book's numbers for you: it rolls the dice, applies damage, Vigor and Chi, runs the enemies' step and keeps the clocks. Each step posts a card saying what happened and why, so the table can check it against the book. When the book and the online version disagree, the book is right.</p>
+const ONLINE = `<p>The online version keeps the book's numbers for you: it rolls the dice, applies damage, Vigour and Chi, runs the enemies' step and keeps the clocks. Each step posts a card saying what happened and why, so the table can check it against the book. When the book and the online version disagree, the book is right.</p>
 <h2>Before the first night (Storyteller)</h2>
 <ol>
 <li><strong>Fighters.</strong> Import the five from the <em>Ready-made Fighters</em> compendium, or create Actors of type Fighter and choose four picks each: an element, a fighting style, a perk and an Awakening. No two fighters in a group share any pick.</li>
 <li><strong>Owners.</strong> Give each player Owner permission on their fighter. Players use their own fighter's sheet; the Storyteller can act for anyone.</li>
-<li><strong>Art.</strong> Click a portrait on any sheet to choose a picture. A fighter with no picture shows their element's badge. Tokens are linked to their actors, so Vigor and Toughness bars follow the sheets.</li>
+<li><strong>Art.</strong> Click a portrait on any sheet to choose a picture. A fighter with no picture shows their element's badge. Tokens are linked to their actors, so Vigour and Toughness bars follow the sheets.</li>
 </ol>
 <h2>Running the night</h2>
 <p>Open <strong>The Night</strong> from the button at the top of the Actors tab. Its top line always says what comes next.</p>
 <ol>
-<li><strong>Begin the night.</strong> Pick the difficulty and three to five fighters. Everyone's Vigor and Chi are set from the size table. To use Anchors of your own (Chapter 9), press <em>Name the Anchors</em> first; each Anchor keeps one Shell element.</li>
+<li><strong>Begin the night.</strong> Pick the difficulty and three to five fighters. Everyone's Vigour and Chi are set from the size table. To use Anchors of your own (Chapter 9), press <em>Name the Anchors</em> first; each Anchor keeps one Shell element.</li>
 <li><strong>The Prologue,</strong> then <strong>The First Clash.</strong> Starting a fight makes its enemies (a Pack of Stills, and the Warden or the Heart) and puts them in the Actors tab. Drag them onto a scene if you want tokens; the fight doesn't need a map.</li>
 <li><strong>The Hunt.</strong> Each Hour, press <em>Go</em> beside an Anchor or <em>Take a Respite</em>. The Night sheet counts the Hours, long fights and any Hour owed.</li>
 <li><strong>The Heart.</strong> When the Hunt is over, press <em>The Heart</em>. Dawn comes at the end of the round shown.</li>
@@ -44,12 +44,12 @@ const ONLINE = `<p>The online version keeps the book's numbers for you: it rolls
 <li><strong>Fighters act</strong> from their sheets, in any order the players like: <em>Strike</em>, <em>Rally</em>, <em>Awaken</em>, or <em>Hold the Seal</em>. The Strike window offers the Chi die, your technique and Help from allies who have Chi; the helper's Chi is spent for them. Quick fighters get <em>Quick: free Strike</em> before round 1.</li>
 <li><strong>End the round</strong> on the Night sheet: Awakenings count down, the enemies take their step (drawing on their Stills, the Swarm and the Surge), and the clocks are checked. At an Anchor you can <em>End the round and withdraw</em>.</li>
 <li><strong>Guardian.</strong> When a Guardian could take a loss, the Storyteller is asked first.</li>
-<li><strong>By hand.</strong> Click a pip on a sheet to set Vigor or Chi; clicking the top lit pip takes one away. Use it for rulings and mistakes.</li>
+<li><strong>By hand.</strong> Click a pip on a sheet to set Vigour or Chi; clicking the top lit pip takes one away. Use it for rulings and mistakes.</li>
 </ul>
 <h2>Settings</h2>
 <p>Under the system settings, each automation can be switched off. The cards still say what the book says; you apply it by hand.</p>
 <ul>
-<li><strong>Apply Strike results:</strong> damage, Vigor, Chi, Shells and Help.</li>
+<li><strong>Apply Strike results:</strong> damage, Vigour, Chi, Shells and Help.</li>
 <li><strong>Run the enemies' step:</strong> drawing on Stills, the Swarm and the Surge.</li>
 <li><strong>Keep the clocks:</strong> Hours, long fights, the round-7 limit and dawn.</li>
 <li><strong>Ask about the Guardian:</strong> the prompt when a Guardian could take a loss.</li>

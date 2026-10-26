@@ -94,7 +94,7 @@ test("Ch 2: Tide and Lucky reroll only dice that aren't hits", () => {
 test("Ch 3: protections in order, then Stubborn; Down loses all Chi", () => {
   const flow = fighter({ style: "flow", vigor: 5, chi: 3 });
   assert.equal(L.loseVigor(flow, 3, { bulwark: true }).loss, 0, "Bulwark −3 takes it all");
-  assert.equal(L.loseVigor(fighter({ style: "guardian", vigor: 1 }), 3).afterProtections, 3, "what the protections leave, before Vigor runs out");
+  assert.equal(L.loseVigor(fighter({ style: "guardian", vigor: 1 }), 3).afterProtections, 3, "what the protections leave, before Vigour runs out");
   assert.equal(L.loseVigor(flow, 2).loss, 1, "Flow −1");
   assert.equal(L.loseVigor(flow, 2, { source: "sweep" }).loss, 2, "Flow doesn't work against a Sweep");
   const unb = fighter({ awakening: "unbreakable", awakened: { active: true, roundsLeft: 2, used: true }, style: "brawler" });
@@ -126,7 +126,7 @@ test("Ch 6: Surges, their targets and ties", () => {
   let s = L.resolveSurge({ kind: "crush", master: w, fighters: fs, damage: { a: 2, c: 4 } });
   assert.deepEqual(s.losses, [{ id: "c", amount: 3, source: "crush" }], "the most damage this round");
   s = L.resolveSurge({ kind: "crush", master: w, fighters: fs, actedAt: { a: 1, b: 2 } });
-  assert.equal(s.losses[0].id, "b", "nobody damaged it: most Vigor, tie to who acted last");
+  assert.equal(s.losses[0].id, "b", "nobody damaged it: most Vigour, tie to who acted last");
   s = L.resolveSurge({ kind: "drain", master: w, fighters: fs, actedAt: { b: 1, c: 2 } });
   assert.deepEqual(s.drains, [{ id: "c", amount: 2 }]);
   s = L.resolveSurge({ kind: "drain", master: w, fighters: fs.map(f => ({ ...f, chi: 0 })) });

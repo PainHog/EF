@@ -64,10 +64,10 @@ Hooks.once("init", function () {
   });
   // Every automation can be switched off (then the cards still say what the book says).
   const toggle = (key, name, hint) => game.settings.register(SYSTEM_ID, key, { name, hint, scope: "world", config: true, type: Boolean, default: true });
-  toggle(SETTINGS.autoApply, "Apply Strike results", "Damage, Vigor, Chi, Shells and Help are written automatically. Off: the card shows the result and you apply it by hand.");
+  toggle(SETTINGS.autoApply, "Apply Strike results", "Damage, Vigour, Chi, Shells and Help are written automatically. Off: the card shows the result and you apply it by hand.");
   toggle(SETTINGS.autoEnemies, "Run the enemies' step", "At the end of each round the Warden or the Heart draws on its Stills, the Stills Swarm and the Surge is rolled and applied.");
   toggle(SETTINGS.autoClocks, "Keep the clocks", "Hours, long fights, the round-7 limit and dawn are kept and enforced.");
-  toggle(SETTINGS.guardianPrompt, "Ask about the Guardian", "When a fighter would lose Vigor and a Guardian could take it, ask the Storyteller.");
+  toggle(SETTINGS.guardianPrompt, "Ask about the Guardian", "When a fighter would lose Vigour and a Guardian could take it, ask the Storyteller.");
   game.settings.register(SYSTEM_ID, SETTINGS.welcomed, { scope: "world", config: false, type: Boolean, default: false });
   game.settings.register(SYSTEM_ID, SETTINGS.migration, { scope: "world", config: false, type: String, default: "" });
 

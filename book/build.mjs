@@ -22,7 +22,8 @@
  * Playwright's own default browser.
  */
 import { chromium } from "playwright-core";
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, rmSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { join, dirname, relative } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { finalArt, slotFor, checkFinal } from "./tools/art-slots.mjs";
@@ -377,6 +378,33 @@ async function printPdf(browser, html, out, widthIn = 8.5 + 2 * BLEED_IN) {
   await p.close();
 }
 
+/**
+ * The finished files' properties: the book's title and author, and the book
+ * itself as creator and producer (the browser that prints it otherwise names
+ * itself there). A full rewrite with PyMuPDF (pip install pymupdf), so the old
+ * values don't linger in the file.
+ */
+const outputs = [];
+function stampPdf(path) {
+  const meta = { title: `${BOOK_TITLE}, version ${VERSION}`, author: AUTHOR, subject: BOOK_DESCRIPTION, keywords: "", creator: BOOK_TITLE, producer: BOOK_TITLE };
+  execFileSync("python3", ["-I", "-c", `
+import json, os, sys
+try:
+    import pymupdf
+except ImportError:
+    import fitz as pymupdf
+src, meta = sys.argv[1], json.loads(sys.argv[2])
+doc = pymupdf.open(src)
+m = doc.metadata
+m.update(meta)
+doc.set_metadata(m)
+doc.del_xml_metadata()
+doc.save(src + ".tmp", garbage=4, deflate=True)
+doc.close()
+os.replace(src + ".tmp", src)
+`, path, JSON.stringify(meta)]);
+}
+
 async function pageMap(pdfPath) {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
   const doc = await pdfjs.getDocument({ data: new Uint8Array(readFileSync(pdfPath)), verbosity: 0 }).promise;
@@ -434,12 +462,14 @@ try {
     await printPdf(browser, html, out);
     ({ pages } = await pageMap(out));
   }
+  outputs.push(out);
   console.log(`Built ${relative(ROOT, out)} — ${pages} pages (pass 1: ${p1.pages}).`);
   if (PRINT) {
     for (const [cls, name] of [["cover", "front"], ["back-cover", "back"]]) {
       if (!sectionOf(body, cls)) continue;
       const f = join(DIST, `${FILE_STEM}_v${VERSION}_print-cover-${name}.pdf`);
       await printPdf(browser, page(null, false, {}, { only: cls }), f);
+      outputs.push(f);
       console.log(`Built ${relative(ROOT, f)} (${8.5 + 2 * BLEED_IN}in × ${11 + 2 * BLEED_IN}in, bleed included).`);
     }
     // One-piece cover: back, spine, front; bleed on the outer edges only.
@@ -455,6 +485,7 @@ try {
       const raw = `<div class="spread"><div class="spread-panel">${back}</div><div class="spine"></div><div class="spread-panel"><div style="margin-left:-${BLEED_IN}in">${front}</div></div></div>`;
       const f = join(DIST, `${FILE_STEM}_v${VERSION}_print-cover-spread.pdf`);
       await printPdf(browser, page(null, false, {}, { raw, extraCss: css }), f, W);
+      outputs.push(f);
       console.log(`Built ${relative(ROOT, f)} (${W}in × ${H}in: back, ${spine}in spine for ${pages} pages, front).`);
     }
   }
@@ -464,6 +495,8 @@ try {
   }
   const gaps = WHITE ? [] : Object.entries(p1.ends).filter(([id, v]) => !spots[id] && v.freeIn > 3 && v.freeIn <= TEXT_H_IN - 0.3).map(([id, v]) => `${id} (${v.freeIn.toFixed(1)}in free)`);
   if (gaps.length) console.warn(`  ! large gaps with no spot: ${gaps.join(", ")}`);
+  for (const f of outputs) stampPdf(f);
+  for (const f of [".pass1.pdf", ".pass2.pdf"]) rmSync(join(DIST, f), { force: true });   // only the finished, stamped files stay
   console.log(`  art: ${finals.length ? `finished pictures for ${finals.join(", ")}` : "no finished pictures yet"} (the rest are placeholders; see book/art/ART-BRIEF.md)`);
   for (const w of [...new Set(warn)]) console.warn(`  ! ${w}`);
 } finally {

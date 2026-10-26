@@ -32,7 +32,7 @@
       {{#each enemies}}<li><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> Toughness {{toughness}}/{{max}}{{#if stills}} ({{stills}} Stills){{/if}} · Guard {{guard}} · Harm {{harm}}{{#if shell}} · {{shell}} Shell{{/if}}</li>{{/each}}
     </ul>
     <ul class="nw-fighters">
-      {{#each fighters}}<li class="{{#if down}}down{{/if}}{{#if acted}} acted{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}{{#if awakened}} · {{awakened}}{{/if}}{{#if down}} · Down{{/if}}{{#if acted}} <i class="fa-solid fa-check" title="Acted this round" inert></i>{{/if}}</li>{{/each}}
+      {{#each fighters}}<li class="{{#if down}}down{{/if}}{{#if acted}} acted{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigour {{vigor}}/{{max}} · Chi {{chi}}{{#if awakened}} · {{awakened}}{{/if}}{{#if down}} · Down{{/if}}{{#if acted}} <i class="fa-solid fa-check" title="Acted this round" inert></i>{{/if}}</li>{{/each}}
     </ul>
     {{#if gm}}
     <div class="nw-buttons">
@@ -43,7 +43,7 @@
   </div>
   {{else}}
   <ul class="nw-fighters nw-roster">
-    {{#each fighters}}<li class="{{#if down}}down{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigor {{vigor}}/{{max}} · Chi {{chi}}</li>{{/each}}
+    {{#each fighters}}<li class="{{#if down}}down{{/if}}"><a class="nw-who" data-action="openSheet" data-id="{{id}}"><img class="nw-face" src="{{img}}" alt=""><strong>{{name}}</strong></a> {{element}} · Vigour {{vigor}}/{{max}} · Chi {{chi}}</li>{{/each}}
   </ul>
   {{#if gm}}
   <div class="nw-buttons">

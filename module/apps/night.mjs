@@ -111,7 +111,7 @@ export class NightTracker extends HandlebarsApplicationMixin(ApplicationV2) {
     if (!candidates.length) { ui.notifications.warn("Every fighter is already in the night."); return; }
     const fighterId = await Dialog().prompt({
       window: { title: "A fighter joins late" },
-      content: `<div class="elemental-fighters nw-dialog"><select name="f">${candidates.map(a => `<option value="${a.id}">${esc(a.name)}</option>`).join("")}</select><p class="hint">They join now, before the next fight; everyone's maximum Vigor becomes the starting Vigor for the new group size.</p></div>`,
+      content: `<div class="elemental-fighters nw-dialog"><select name="f">${candidates.map(a => `<option value="${a.id}">${esc(a.name)}</option>`).join("")}</select><p class="hint">They join now, before the next fight; everyone's maximum Vigour becomes the starting Vigour for the new group size.</p></div>`,
       ok: { label: "Join", callback: (event, button) => button.form.elements.f.value }
     });
     if (fighterId) await request(OPS.join, { fighterId });

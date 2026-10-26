@@ -26,11 +26,11 @@ const POLICY_SWEEP = [
   ["Never Awaken before the Heart", { awakenInHunt: "never" }],
   ["Awaken as soon as allowed", { awakenInHunt: "asap" }],
   ["Save 3 Chi through the Hunt for an Awakening", { reserveForAwakening: true }],
-  ["Rest only below 40% Vigor", { restBelow: 0.4 }],
-  ["Rest below 80% Vigor", { restBelow: 0.8 }],
+  ["Rest only below 40% Vigour", { restBelow: 0.4 }],
+  ["Rest below 80% Vigour", { restBelow: 0.8 }],
   ["Always strike the Warden or Heart, never the pack", { packFirstAt: 99 }],
   ["Never withdraw", { withdrawDownShare: 2 }],
-  ["Give every Swarm to whoever has the most Vigor", { swarmTarget: "vigor" }],
+  ["Give every Swarm to whoever has the most Vigour", { swarmTarget: "vigor" }],
   ["Keep 1 Chi each at the Heart, so a Drain can't Crush", { heartKeepChi: true }],
 ];
 const SIZES = [3, 4, 5];

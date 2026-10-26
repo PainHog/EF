@@ -81,11 +81,11 @@ async function enemyActor(role, data, img) {
   });
 }
 
-/* ----------------------------------------------------- losing Vigor -- */
+/* ----------------------------------------------------- losing Vigour -- */
 
 async function chooseFighter(title, actors) {
   if (actors.length <= 1) return actors[0]?.id ?? null;
-  const options = actors.map(a => `<option value="${a.id}">${esc(a.name)} (Vigor ${a.system.vigor.value})</option>`).join("");
+  const options = actors.map(a => `<option value="${a.id}">${esc(a.name)} (Vigour ${a.system.vigor.value})</option>`).join("");
   const id = await Dialog().prompt({
     window: { title },
     content: `<div class="elemental-fighters nw-dialog"><p>${esc(title)}</p><select name="target">${options}</select></div>`,
@@ -95,7 +95,7 @@ async function chooseFighter(title, actors) {
 }
 
 /**
- * Ch 3 "Vigor and going Down": a fighter would lose Vigor. A Guardian may take
+ * Ch 3 "Vigour and going Down": a fighter would lose Vigour. A Guardian may take
  * it instead (asked of the Storyteller), then Bulwark, Flow, Unbreakable and
  * Stubborn apply to whoever takes it.
  */
@@ -109,7 +109,7 @@ async function applyLoss(night, victimId, amount, source) {
     for (const g of L.guardiansFor(victimId, all, fight.guardianUsed, amount)) {
       const yes = await Dialog().confirm({
         window: { title: "Guardian" },
-        content: `<p>${esc(g.name)} (Guardian) may lose ${amount} Vigor instead of ${esc(victim.name)}${amount >= EF.rules.guardianMinLoss ? " (and gain 2 Chi if they lose 2 or more)" : ""}. Take it?</p>`
+        content: `<p>${esc(g.name)} (Guardian) may lose ${amount} Vigour instead of ${esc(victim.name)}${amount >= EF.rules.guardianMinLoss ? " (and gain 2 Chi if they lose 2 or more)" : ""}. Take it?</p>`
       });
       if (yes) { guardian = actor(g.id); fight.guardianUsed.push(g.id); break; }
     }
@@ -121,7 +121,7 @@ async function applyLoss(night, victimId, amount, source) {
   if (res.stubbornUsed) upd["system.stubbornUsed"] = true;
   if (res.awakeningEnds) Object.assign(upd, { "system.awakened.active": false, "system.awakened.roundsLeft": 0 });
   // Ch 2 Guardian: 2 Chi when the Guardian actually loses 2 or more this way, unless it puts them Down.
-  // (counting only the Vigor actually lost: Stubborn keeping them at 2 can make it less)
+  // (counting only the Vigour actually lost: Stubborn keeping them at 2 can make it less)
   if (guardian && !res.down && who.system.vigor.value - res.vigor >= EF.rules.guardianMinLoss) upd["system.chi"] = L.gainChi(res.chi, EF.rules.guardianChi);
   await who.update(upd);
   if (res.wentDown) night.firstDown = true;
@@ -132,19 +132,19 @@ function lossLine(what, amount, res) {
   if (!res) return `${what}: ${amount}, but nobody is standing to take it.`;
   const who = res.guardian ? `${res.name} (Guardian, for ${res.for})` : res.name;
   const how = res.steps.length ? ` (${res.steps.join(", ")})` : "";
-  return `${what}: ${who} loses ${res.loss} Vigor${how}${res.wentDown ? " and goes Down" : ""}.`;
+  return `${what}: ${who} loses ${res.loss} Vigour${how}${res.wentDown ? " and goes Down" : ""}.`;
 }
 
-/** Ch 2, Ch 4: share out Vigor (Wellspring, Medic) or Chi (Harmony) as the sharer chooses. */
+/** Ch 2, Ch 4: share out Vigour (Wellspring, Medic) or Chi (Harmony) as the sharer chooses. */
 async function share(night, from, kind) {
   const fight = night.fight;
   const ids = fight ? fight.fighterIds : night.fighterIds;
   const isChi = kind === "harmony";
   const amount = kind === "harmony" ? EF.rules.harmonyChi : kind === "wellspring" ? EF.rules.wellspringVigor : EF.rules.medicVigor;
-  // Down fighters can take Vigor (Wellspring stands them up); Chi goes to standing fighters only.
+  // Down fighters can take Vigour (Wellspring stands them up); Chi goes to standing fighters only.
   const takers = fightersIn(ids).filter(a => (isChi ? !a.system.down && a.system.chi < EF.rules.chiMax : a.system.vigor.value < a.system.vigor.max));
   if (!takers.length) return `${from.name} has nobody to share with.`;
-  const label = isChi ? "Chi" : "Vigor";
+  const label = isChi ? "Chi" : "Vigour";
   const inputs = takers.map(a => `<label>${esc(a.name)} (${label} ${isChi ? a.system.chi : a.system.vigor.value}) <input type="number" name="n-${a.id}" value="0" min="0" max="${amount}"></label>`).join("");
   const want = await Dialog().prompt({
     window: { title: `${from.name}: share out ${amount} ${label}` },
@@ -187,13 +187,13 @@ async function beginNight({ difficulty = "standard", fighterIds = [], anchors = 
   await saveNight(night);
   await postCard(CARD.night, "The night begins", [
     `${size} fighters on ${EF.difficulties[difficulty].label}.`,
-    `Starting Vigor ${EF.vigorBySize[size]} (Tough +3) and 2 Chi each.`,
+    `Starting Vigour ${EF.vigorBySize[size]} (Tough +3) and 2 Chi each.`,
     "The Prologue: each player describes the moment their element woke. Then the First Clash."
   ]);
   return { night };
 }
 
-/** Ch 2 "Joining late": four picks nobody has, the starting Vigor everyone began with (+3 if Tough), 2 Chi; joins at the next fight. */
+/** Ch 2 "Joining late": four picks nobody has, the starting Vigour everyone began with (+3 if Tough), 2 Chi; joins at the next fight. */
 async function join({ fighterId }) {
   const night = getNight();
   const a = actor(fighterId);
@@ -205,7 +205,7 @@ async function join({ fighterId }) {
     if (fightersIn(night.fighterIds).some(o => o.system[key] === a.system[key])) throw new OpError(`Another fighter already has that ${key} (Chapter 2).`);
   }
   if (night.fighterIds.length >= 5) throw new OpError("A night has five fighters at most.");
-  // Everyone's maximum becomes the starting Vigor for the new number of fighters.
+  // Everyone's maximum becomes the starting Vigour for the new number of fighters.
   night.fighterIds.push(a.id);
   night.size = night.fighterIds.length;
   for (const f of fightersIn(night.fighterIds)) {
@@ -214,7 +214,7 @@ async function join({ fighterId }) {
     else await f.update({ "system.vigor.max": max, "system.vigor.value": Math.min(f.system.vigor.value, max) });
   }
   await saveNight(night);
-  await postCard(CARD.night, `${a.name} joins the night`, [`Everyone's maximum Vigor is now ${EF.vigorBySize[night.size]} (Tough +3). ${a.name} joins at the start of the next fight.`], { actor: a });
+  await postCard(CARD.night, `${a.name} joins the night`, [`Everyone's maximum Vigour is now ${EF.vigorBySize[night.size]} (Tough +3). ${a.name} joins at the start of the next fight.`], { actor: a });
   return { night };
 }
 
@@ -354,7 +354,7 @@ async function strike(data) {
     const rt = actor(data.renewalTargetId) ?? a;
     if (fight.fighterIds.includes(rt.id) && !rt.system.down && rt.system.vigor.value < rt.system.vigor.max) {
       await rt.update({ "system.vigor.value": rt.system.vigor.value + r.renewal });
-      lines.push(`Renewal: ${rt.name} regains 1 Vigor.`);
+      lines.push(`Renewal: ${rt.name} regains 1 Vigour.`);
     }
   }
   if (data.technique && f.element === "earth") {
@@ -414,7 +414,7 @@ async function rally({ userId, fighterId, targetId }) {
   await t.update({ "system.vigor.value": Math.min(EF.rules.rallyVigor, t.system.vigor.max) });
   fight.noAct.push(t.id);
   acted(fight, a);
-  await postCard(CARD.rally, `${a.name} Rallies ${t.name}`, [`${t.name} gets up with 2 Vigor and acts from the next round.`], { actor: a });
+  await postCard(CARD.rally, `${a.name} Rallies ${t.name}`, [`${t.name} gets up with 2 Vigour and acts from the next round.`], { actor: a });
   await saveNight(night);
   return { night };
 }
@@ -548,8 +548,8 @@ async function endRound({ withdraw = false, swarmTargets = {} } = {}) {
 const ENDINGS = {
   won: { anchor: "The Warden falls and the Anchor breaks.", clash: "The First Clash is won. The Hunt begins.", heart: "The Heart falls. The clocks start again." },
   holds: { anchor: "Round 7: the Warden holds, and the Anchor stands.", clash: "Round 7: the Stills scatter, and the Hunt begins." },
-  withdrew: { anchor: "The group withdraws. The Anchor stands, and Down fighters stand up with 1 Vigor." },
-  down: { anchor: "Everyone is Down. The Anchor stands, and everyone stands up with 1 Vigor.", clash: "Everyone is Down. The Stills scatter; everyone stands up with 1 Vigor, and the Hunt begins." },
+  withdrew: { anchor: "The group withdraws. The Anchor stands, and Down fighters stand up with 1 Vigour." },
+  down: { anchor: "Everyone is Down. The Anchor stands, and everyone stands up with 1 Vigour.", clash: "Everyone is Down. The Stills scatter; everyone stands up with 1 Vigour, and the Hunt begins." },
   "driven-off": { heart: "Dawn breaks with the Heart at half its Toughness or less: the Unmade is driven off." },
   lost: { heart: "The Unmade takes hold. The sun rises on a city that has stopped." }
 };
@@ -599,7 +599,7 @@ async function respite() {
   for (const a of fightersIn(night.fighterIds)) await a.update({ "system.vigor.value": a.system.vigor.max });
   if (night.hoursLeft <= 0) night.phase = "heart";
   await saveNight(night);
-  await postCard(CARD.clocks, "A Respite", ["Every fighter returns to full Vigor. Chi is unchanged.", `${plural(night.hoursLeft, "Hour")} left.`]);
+  await postCard(CARD.clocks, "A Respite", ["Every fighter returns to full Vigour. Chi is unchanged.", `${plural(night.hoursLeft, "Hour")} left.`]);
   return { night };
 }
 

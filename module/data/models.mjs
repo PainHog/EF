@@ -1,6 +1,6 @@
 /**
  * NIGHTWAKE — Actor data models.
- *  - fighter: a player's fighter (Ch 2): four picks, Vigor, Chi, the Awakening.
+ *  - fighter: a player's fighter (Ch 2): four picks, Vigour, Chi, the Awakening.
  *  - unmade:  a Warden or the Heart (Ch 6).
  *  - pack:    a pack of Stills, fought as one enemy (Ch 6).
  * Rules are computed by module/logic/rules.mjs; these models only hold the data

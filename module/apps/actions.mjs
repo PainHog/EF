@@ -100,7 +100,7 @@ export async function strikeFlow(a, { free = false } = {}) {
   return request(OPS.strike, { fighterId: a.id, ...choice, faces, free, lucky, rerolls });
 }
 
-/** Ch 3 Rally: a Down fighter gets up with 2 Vigor. */
+/** Ch 3 Rally: a Down fighter gets up with 2 Vigour. */
 export async function rallyFlow(a) {
   const fight = fightOrWarn();
   if (!fight) return null;

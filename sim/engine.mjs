@@ -82,23 +82,23 @@ export function playNight({ party, R, P, rng, off = new Set() }) {
 }
 
 function rest(ctx) {
-  // §8 Respite: everyone back to full Vigor; Down fighters stand. Chi is unchanged.
+  // §8 Respite: everyone back to full Vigour; Down fighters stand. Chi is unchanged.
   for (const f of ctx.F) { f.down = false; f.vigor = f.vigorMax; }
 }
 
 function afterFight(ctx) {
   const { F, R } = ctx;
-  // §5: Down fighters stand with 1 Vigor when the fight ends; §7 Awakenings end; once-per-fight uses reset.
+  // §5: Down fighters stand with 1 Vigour when the fight ends; §7 Awakenings end; once-per-fight uses reset.
   for (const f of F) {
     if (f.down) { f.down = false; f.vigor = R.standVigor; }
     f.awake = false;
     f.luckyUsed = false; f.stubbornUsed = false;
   }
-  // §2 Medic: after each fight, share out Vigor among the fighters.
+  // §2 Medic: after each fight, share out Vigour among the fighters.
   if (F.some(f => f.has("perk", "medic"))) shareVigor(F, R.medicPool);
 }
 
-/** Policy for shared healing: stand Down fighters first, then always the one with the least Vigor. */
+/** Policy for shared healing: stand Down fighters first, then always the one with the least Vigour. */
 function shareVigor(F, pool) {
   for (let k = 0; k < pool; k++) {
     const down = F.find(f => f.down);
@@ -326,7 +326,7 @@ function strike(ctx, f, t, enemies, last, { free = false } = {}) {
     spendChi(h, 1); h.st.helps++; bonus++;
   }
   if (tech && f.element === "earth") {
-    // §2 Earth Bulwark: one fighter (policy: the Guardian, else whoever has the least Vigor).
+    // §2 Earth Bulwark: one fighter (policy: the Guardian, else whoever has the least Vigour).
     const one = alive(F).find(o => o !== f && o.has("style", "guardian")) ?? alive(F).sort((a, b) => a.vigor - b.vigor)[0];
     ctx.rs.earth = new Set([one]);
   }
@@ -367,7 +367,7 @@ function strike(ctx, f, t, enemies, last, { free = false } = {}) {
     if (pick && pick !== t && pick.tough > 0) dealDamage(ctx, f, pick, R.sweeperDamage, 0);
   }
 
-  // 4. Wood heals, whatever the result (policy: the fighter with the smallest share of Vigor).
+  // 4. Wood heals, whatever the result (policy: the fighter with the smallest share of Vigour).
   if (tech && f.element === "wood") {
     const pick = alive(F).sort((a, b) => a.vigor / a.vigorMax - b.vigor / b.vigorMax)[0];
     if (pick) pick.vigor = Math.min(pick.vigorMax, pick.vigor + R.woodHeal);
@@ -400,7 +400,7 @@ function dealDamage(ctx, f, t, dmg, hits) {
   }
 }
 
-/** §5: lose Vigor, with every protection applied in CORE-RULES §5 order. */
+/** §5: lose Vigour, with every protection applied in CORE-RULES §5 order. */
 function harm(ctx, f, amount, { sweep = false } = {}) {
   const { R, F, rec } = ctx;
   if (f.down || amount <= 0) return;
@@ -438,7 +438,7 @@ function swarm(ctx, pack) {
   const live = alive(ctx.F);
   if (!live.length) return;
   // Policy: an awake Unbreakable fighter takes it; with swarmTarget "smart", then a Flow
-  // fighter who can take it standing, then a fighter holding a Bulwark; else the most Vigor.
+  // fighter who can take it standing, then a fighter holding a Bulwark; else the most Vigour.
   const amt = Math.ceil(pack.stills / ctx.R.stills.swarmPer);
   let ub = live.find(f => f.awake && f.has("awakening", "unbreakable"));
   if (!ub && ctx.P.swarmTarget === "smart") {
@@ -446,7 +446,7 @@ function swarm(ctx, pack) {
       ?? live.find(f => ctx.rs.earth && ctx.rs.earth.has(f) && f.vigor > amt - ctx.R.earthReduce);
   }
   if (!ctx.R.swarmSpread) { harm(ctx, ub ?? live.slice().sort((a, b) => b.vigor - a.vigor)[0], amt); return; }
-  for (let k = 0; k < amt; k++) { // one blow per point, each to whoever has the most Vigor
+  for (let k = 0; k < amt; k++) { // one blow per point, each to whoever has the most Vigour
     const now = alive(ctx.F);
     if (!now.length) return;
     harm(ctx, ub && !ub.down ? ub : now.sort((a, b) => b.vigor - a.vigor)[0], 1);
@@ -461,7 +461,7 @@ function surge(ctx, e, enemies) {
   const r = rng.d6();
   const live = alive(F);
   const lastFirst = (a, b) => (b.actedAt ?? 0) - (a.actedAt ?? 0); // §4 ties: the fighter who acted last
-  const crush = () => { // the fighter who dealt it the most damage this round; nobody: the most Vigor
+  const crush = () => { // the fighter who dealt it the most damage this round; nobody: the most Vigour
     const m = ctx.rs.dmg.get(e);
     const hitters = m ? [...m].filter(([f]) => !f.down).sort(([a, da], [b, db]) => db - da || lastFirst(a, b)) : [];
     const tgt = hitters.length ? hitters[0][0] : live.slice().sort((a, b) => b.vigor - a.vigor || lastFirst(a, b))[0];

@@ -8,7 +8,10 @@ print-on-demand files with bleed.
 |---|---|
 | `src/chapters/*.html` | The text, one file per chapter, concatenated in filename order (see `src/MARKUP.md`) |
 | `src/book.css` | The print design. The palette and typefaces are tokens at the top (night palette, DESIGN D35) |
-| `art/*.svg` | All illustrations (catalogue and palette in `art/README.md`; every piece must pass `art/ART-CHECKLIST.md`) |
+| `art/*.svg` | The placeholder illustrations (catalogue and palette in `art/README.md`; every piece must pass `art/ART-CHECKLIST.md`) |
+| `art/final/` | Finished pictures, named after their slots: each replaces its placeholder in the book and online (`art/ART-BRIEF.md`) |
+| `art/ART-BRIEF.md` | The artist's brief: the look, file rules, every slot's size and what each picture shows |
+| `tools/art-slots.mjs` | The art slots: sizes counted from the layout, finished-picture checks, and the brief's size table (`node book/tools/art-slots.mjs`) |
 | `tools/art-gen/` | Scripts that generate the art: `lib.mjs` (drawing primitives), `scenes/lib.mjs` (scene kit), `scenes/build.mjs` (writes the pieces), `scenes/nightwake.mjs` (every picture in the book) |
 | `tools/preview-art.mjs` | Renders art to PNGs plus a labelled contact sheet, and checks every SVG is well-formed |
 | `tools/contact-sheet.py` | Renders a PDF's pages into one contact-sheet image for layout review |
@@ -43,6 +46,8 @@ python3 book/tools/text-diff.py old.pdf book/dist/Nightwake_v0.1.pdf            
 - **Overflow guard.** Chromium silently shrinks every page when anything is wider than the
   paper; the build refuses to print instead and names the culprits.
 - **Missing art fails the build** (use `--draft` while drafting).
+- **Finished art:** a picture in `art/final/` replaces its placeholder, fitted to the slot's shape (cropped, never stretched; round slots cut to a circle), so pages can't move. The build lists the finished pictures it used and warns when one has too few pixels for 300 ppi or will be cropped a lot.
+- **File properties:** every finished PDF is given the book's title and author, and the book as creator and producer, with PyMuPDF (`pip install pymupdf`).
 - **`--print`:** interior with 0.125in bleed and an even page count (a blank page is
   added if needed), no covers; front and back covers as separate files with bleed; and a
   one-piece cover spread whose spine is the page count × `SPINE_IN_PER_PAGE` (an estimate:
@@ -62,6 +67,6 @@ in the PDF, so the file can be sold. `contact-sheet.py` and `text-diff.py` need
 `pip install pymupdf pillow`.
 
 ## After every build
-Render a contact sheet and look at every page: no near-empty pages, odd gaps, overflow
+Render a contact sheet and look at every page (and every finished picture in place): no near-empty pages, odd gaps, overflow
 or split tables. Run the text diff against the previous build and check every changed
 span against `REVIEW.md`.

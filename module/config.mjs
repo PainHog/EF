@@ -19,9 +19,9 @@ EF.cycle = ["wood", "fire", "earth", "metal", "water"];
 
 /** Ch 2: elements, their techniques (1 Chi, declared with a Strike), and the Shell each breaks. */
 EF.elements = {
-  wood:  { label: "Wood",  technique: "renewal", techniqueLabel: "Renewal", breaks: "earth", text: "After the roll, you or an ally who isn't Down regains 1 Vigor, whatever the result." },
+  wood:  { label: "Wood",  technique: "renewal", techniqueLabel: "Renewal", breaks: "earth", text: "After the roll, you or an ally who isn't Down regains 1 Vigour, whatever the result." },
   fire:  { label: "Fire",  technique: "blaze",   techniqueLabel: "Blaze",   breaks: "metal", text: "+2 damage if you hit at all." },
-  earth: { label: "Earth", technique: "bulwark", techniqueLabel: "Bulwark", breaks: "water", text: "Choose a fighter, you or an ally. The next time they would lose Vigor this round, they lose 3 less. A fighter carries one Bulwark at a time." },
+  earth: { label: "Earth", technique: "bulwark", techniqueLabel: "Bulwark", breaks: "water", text: "Choose a fighter, you or an ally. The next time they would lose Vigour this round, they lose 3 less. A fighter carries one Bulwark at a time." },
   metal: { label: "Metal", technique: "edge",    techniqueLabel: "Edge",    breaks: "wood",  text: "Each 6 you roll counts as three hits." },
   water: { label: "Water", technique: "tide",    techniqueLabel: "Tide",    breaks: "fire",  text: "After the roll, reroll up to three dice that aren't hits." }
 };
@@ -29,28 +29,28 @@ EF.elements = {
 /** Ch 2: fighting styles (always on). */
 EF.styles = {
   brawler:  { label: "Brawler",  text: "+1 damage when you meet the Guard." },
-  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigor, you may lose it instead. If you lose 2 or more Vigor this way, gain 2 Chi." },
+  guardian: { label: "Guardian", text: "Once per round, when another fighter would lose Vigour, you may lose it instead. If you lose 2 or more Vigour this way, gain 2 Chi." },
   sweeper:  { label: "Sweeper",  text: "When you meet the Guard, also deal 1 damage to one other enemy, if there is one." },
   counter:  { label: "Counter",  text: "When an enemy hits you back, deal it 1 damage and gain 1 more Chi." },
-  flow:     { label: "Flow",     text: "Lose 1 less Vigor each time, except from a Sweep." },
+  flow:     { label: "Flow",     text: "Lose 1 less Vigour each time, except from a Sweep." },
   breath:   { label: "Breath",   text: "Gain 4 Chi at the start of every fight." }
 };
 
 /** Ch 2: perks. */
 EF.perks = {
-  tough:    { label: "Tough",    text: "+3 maximum Vigor." },
-  medic:    { label: "Medic",    text: "After each fight, share out 2 Vigor among the fighters." },
+  tough:    { label: "Tough",    text: "+3 maximum Vigour." },
+  medic:    { label: "Medic",    text: "After each fight, share out 2 Vigour among the fighters." },
   lucky:    { label: "Lucky",    text: "Once per fight, after you roll, reroll every die that isn't a hit." },
   quick:    { label: "Quick",    text: "Before the first round of each fight, take a free Strike with +1 die. It can't be hit back." },
-  stubborn: { label: "Stubborn", text: "The first time in each fight you would go Down, stay up instead, with 2 Vigor (or 1, if that was all you had)." },
+  stubborn: { label: "Stubborn", text: "The first time in each fight you would go Down, stay up instead, with 2 Vigour (or 1, if that was all you had)." },
   trained:  { label: "Trained",  text: "Your Criticals deal 2 more damage and give 1 more Chi." }
 };
 
 /** Ch 2, Ch 4: Awakenings (once a night, 3 Chi, 3 rounds; Seal 2). */
 EF.awakenings = {
   ascendant:   { label: "Ascendant",   rounds: 3, text: "Each of your hits deals 2 damage." },
-  unbreakable: { label: "Unbreakable", rounds: 3, text: "You lose no Vigor." },
-  wellspring:  { label: "Wellspring",  rounds: 3, text: "At the start of each round, share out 2 Vigor. A Down fighter given any stands up." },
+  unbreakable: { label: "Unbreakable", rounds: 3, text: "You lose no Vigour." },
+  wellspring:  { label: "Wellspring",  rounds: 3, text: "At the start of each round, share out 2 Vigour. A Down fighter given any stands up." },
   tempest:     { label: "Tempest",     rounds: 3, text: "You take two actions each round (starting with the round you Awaken), and your Strikes can't be hit back." },
   seal:        { label: "Seal",        rounds: 2, text: "The Warden or the Heart can't Surge. Holding the Seal is your action each round." },
   harmony:     { label: "Harmony",     rounds: 3, text: "At the start of each round, share out 3 Chi." }
@@ -65,8 +65,8 @@ EF.rules = {
   critDamage: 1, critChi: 1,
   chiStart: 2, chiMax: 5,
   hitBackChi: 1,        // Chi for being hit back (unless it puts you Down)
-  rallyVigor: 2,        // a Rallied fighter gets up with 2 Vigor
-  standVigor: 1,        // Down fighters stand with 1 Vigor when a fight ends
+  rallyVigor: 2,        // a Rallied fighter gets up with 2 Vigour
+  standVigor: 1,        // Down fighters stand with 1 Vigour when a fight ends
   heartChi: 3,          // every fighter gains 3 Chi as the Heart fight begins
   awakenCost: 3,
   // techniques, styles, perks

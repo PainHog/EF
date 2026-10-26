@@ -17,7 +17,7 @@ export const SOCKET = "system.elemental-fighters";
 /** World/client setting keys. */
 export const SETTINGS = Object.freeze({
   night: "night",                 // the Night sheet: difficulty, size, Hours, Anchors, the fight in progress
-  autoApply: "autoApply",         // apply Strike results (damage, Vigor, Chi) automatically
+  autoApply: "autoApply",         // apply Strike results (damage, Vigour, Chi) automatically
   autoEnemies: "autoEnemies",     // run the enemies' step (feed, Swarm, Surge) at the end of each round
   autoClocks: "autoClocks",       // keep the Hours, long fights, the round-7 limit and dawn
   guardianPrompt: "guardianPrompt", // ask whether a Guardian takes a loss

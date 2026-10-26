@@ -153,24 +153,24 @@ export function isFed(last, fighter, elements) {
   return ringBefore(fighter.element, elements) === last.element;
 }
 
-/* -------------------------------------------------- losing Vigor -- */
+/* -------------------------------------------------- losing Vigour -- */
 
 /**
  * Ch 2 Guardian: who may take this loss instead: once per round, standing, not
- * the fighter losing it, and only with more Vigor than the loss.
+ * the fighter losing it, and only with more Vigour than the loss.
  */
 export function guardiansFor(victimId, fighters, usedThisRound = [], amount = 0) {
   return fighters.filter(f => f.style === "guardian" && !f.down && f.id !== victimId && !usedThisRound.includes(f.id) && f.vigor > amount);
 }
 
 /**
- * Ch 3 "Vigor and going Down": the protections after Guardian, in order:
+ * Ch 3 "Vigour and going Down": the protections after Guardian, in order:
  * Bulwark (3 less, once, this round), Flow (1 less, not from a Sweep), then
  * Unbreakable (no loss); `afterProtections` is what is left (Guardian's Chi needs
  * 2 or more of what is actually lost). Then Stubborn (Ch 2): the first time in a fight you
- * would go Down, stay up with 2 Vigor. At 0 you are Down: all Chi lost, any
+ * would go Down, stay up with 2 Vigour. At 0 you are Down: all Chi lost, any
  * Awakening ends. Harm past 0 is lost.
- * @param {object} f   the fighter losing Vigor
+ * @param {object} f   the fighter losing Vigour
  * @param {number} amount
  * @param {{source?: string, bulwark?: boolean}} o  source "sweep" skips Flow; bulwark: f holds a Bulwark this round
  */
@@ -251,7 +251,7 @@ export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}
     const hitters = standing.filter(f => (damage[f.id] ?? 0) > 0);
     const target = hitters.length ? pickBy(hitters, f => damage[f.id], actedAt, rand) : pickBy(standing, f => f.vigor, actedAt, rand);
     if (target) out.losses.push({ id: target.id, amount, source: "crush" });
-    out.note = hitters.length ? "the fighter who dealt it the most damage" : "nobody damaged it: the fighter with the most Vigor";
+    out.note = hitters.length ? "the fighter who dealt it the most damage" : "nobody damaged it: the fighter with the most Vigour";
   };
   if (kind === "crush") crush();
   else if (kind === "sweep") {
@@ -271,7 +271,7 @@ export function resolveSurge({ kind, master, fighters, damage = {}, actedAt = {}
 
 /* ------------------------------------------------------- the night -- */
 
-/** Ch 2: starting (and maximum) Vigor by the number of fighters; Tough adds 3. */
+/** Ch 2: starting (and maximum) Vigour by the number of fighters; Tough adds 3. */
 export const startingVigor = (size, perk) => (EF.vigorBySize[size] ?? EF.vigorBySize[3]) + (perk === "tough" ? R.toughVigor : 0);
 
 /** Ch 6: Warden Toughness, 9 per fighter. */

@@ -118,11 +118,11 @@ How the simulated players decide is not a rule. Each row changes one habit; the 
 | Never Awaken before the Heart | 74.8% | 16.2% | 9.1% | 100.0% | 2.58 |
 | Awaken as soon as allowed | 73.9% | 16.4% | 9.8% | 100.0% | 2.59 |
 | Save 3 Chi through the Hunt for an Awakening | 68.8% | 19.7% | 11.5% | 100.0% | 2.30 |
-| Rest only below 40% Vigor | 61.8% | 15.2% | 23.0% | 100.0% | 2.76 |
-| Rest below 80% Vigor | 74.1% | 17.9% | 8.0% | 100.0% | 2.40 |
+| Rest only below 40% Vigour | 61.8% | 15.2% | 23.0% | 100.0% | 2.76 |
+| Rest below 80% Vigour | 74.1% | 17.9% | 8.0% | 100.0% | 2.40 |
 | Always strike the Warden or Heart, never the pack | 53.2% | 22.1% | 24.8% | 100.0% | 2.36 |
 | Never withdraw | 74.7% | 16.2% | 9.1% | 100.0% | 2.58 |
-| Give every Swarm to whoever has the most Vigor | 72.1% | 17.3% | 10.6% | 100.0% | 2.52 |
+| Give every Swarm to whoever has the most Vigour | 72.1% | 17.3% | 10.6% | 100.0% | 2.52 |
 | Keep 1 Chi each at the Heart, so a Drain can't Crush | 66.5% | 21.5% | 12.0% | 100.0% | 2.58 |
 
 ## 7. The ready-made fighters

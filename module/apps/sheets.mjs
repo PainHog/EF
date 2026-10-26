@@ -1,5 +1,5 @@
 /**
- * NIGHTWAKE — Actor sheets: the fighter sheet (Ch 2's four picks, Vigor, Chi,
+ * NIGHTWAKE — Actor sheets: the fighter sheet (Ch 2's four picks, Vigour, Chi,
  * the Awakening, and the actions), and the Unmade's sheets (a Warden or the
  * Heart, and a pack of Stills).
  */

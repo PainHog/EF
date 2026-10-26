@@ -1,9 +1,10 @@
 Now: Polishing the online version and the rulebook so only the final artwork is left to add
 Next: The first release of the online version, for Richard to try in Foundry VTT
-Number: Design decisions made = 43
+Number: Design decisions made = 45
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
 Number: Rulebook chapters written = 9
+Screenshot: docs/portal/cover.webp = The rulebook cover, with stand-in art until the final pictures arrive
 
 # Nightwake (working title) plan
 
@@ -36,6 +37,9 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] A second round of computer playtests on the fixed rulebook
 - [x] Two clean computer playtests in a row
 - [ ] A playtest at a real table
+- [x] A copy-edit of the whole rulebook, and its fixes
+- [x] Rulebook ready for the final artwork: a brief for the artist and a place for every picture
+- [ ] Final artwork from an artist
 
 ## Online version
 

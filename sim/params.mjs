@@ -17,14 +17,14 @@ export const RULES = {
   critDamage: 1,        // extra damage on a Critical
   critChi: 1,           // Chi gained on a Critical
 
-  // §2 Fighters (starting Vigor is in §10)
+  // §2 Fighters (starting Vigour is in §10)
   chiStart: 2,
   chiMax: 5,
 
   // §2 Elements: techniques (1 Chi, declared with a Strike)
-  woodHeal: 1,          // Wood Renewal: you or an ally regains this much Vigor
+  woodHeal: 1,          // Wood Renewal: you or an ally regains this much Vigour
   fireDamage: 2,        // Fire Blaze: extra damage if you hit
-  earthReduce: 3,       // Earth Bulwark: the chosen fighter's next loss of Vigor this round is this much less
+  earthReduce: 3,       // Earth Bulwark: the chosen fighter's next loss of Vigour this round is this much less
   metalSixExtra: 2,     // Metal Edge: each six counts as 1 + this many hits
   waterRerollDice: 3,   // Water Tide: reroll up to this many dice that aren't hits
 
@@ -35,12 +35,12 @@ export const RULES = {
   sweeperDamage: 1,     // Sweeper: damage to one other enemy when you meet the Guard
   counterDamage: 1,     // Counter: damage to an enemy that hits you back…
   counterChi: 1,        // …and extra Chi
-  flowReduce: 1,        // Flow: lose this much less Vigor each time, except from Sweeps
+  flowReduce: 1,        // Flow: lose this much less Vigour each time, except from Sweeps
   breathChi: 4,         // Breath: Chi at the start of every fight
 
   // §2 Perks
-  toughVigor: 3,        // Tough: extra maximum Vigor
-  medicPool: 2,         // Medic: Vigor shared out after each fight
+  toughVigor: 3,        // Tough: extra maximum Vigour
+  medicPool: 2,         // Medic: Vigour shared out after each fight
   quickDice: 1,         // Quick: bonus dice on the free Strike before the first round
   stubbornVigor: 2,     // Stubborn: the first time each fight you'd go Down, stay up with this much
   trainedDamage: 2,     // Trained: your Criticals deal this much more damage…
@@ -48,7 +48,7 @@ export const RULES = {
 
   // §3 Fights
   feedDamage: 1,        // a fed strike deals this much more damage if it hits
-  rallyVigor: 2,        // a Rallied fighter stands with this much Vigor
+  rallyVigor: 2,        // a Rallied fighter stands with this much Vigour
 
   // §4 Enemies
   shellGuard: 1,        // a Shell adds this to Guard until it shatters
@@ -73,7 +73,7 @@ export const RULES = {
   awakenRounds: 3,      // rounds an Awakening lasts, counting the round it starts
   sealRounds: 2,        // …except Seal
   ascendantMult: 2,     // Ascendant: each hit deals this much damage
-  wellspringPool: 2,    // Wellspring: Vigor shared out at the start of each round
+  wellspringPool: 2,    // Wellspring: Vigour shared out at the start of each round
   harmonyChi: 3,        // Harmony: Chi shared out at the start of each round
 
   // §8 The night
@@ -99,14 +99,14 @@ export const DIFFICULTY = {
 
 /** How the simulated players decide (not rules). */
 export const POLICY = {
-  restBelow: 0.7,          // take a Respite when the group has less than this share of its Vigor
+  restBelow: 0.7,          // take a Respite when the group has less than this share of its Vigour
   withdrawDownShare: 0.5,  // withdraw from an Anchor when at least this share is Down…
   withdrawEnemyAbove: 0.5, // …and its Warden has more than this share of its Toughness left
   reserveForAwakening: false, // in the Hunt, keep enough Chi to Awaken at the Heart (the Heart gives 3)
   awakenInHunt: "trouble", // "trouble": only when someone is Down and the enemy is above half; "never"; "asap"
   packFirstAt: 2,          // strike the pack first while it has at least this many Stills
   heartKeepChi: false,     // keep 1 Chi each at the Heart (after Awakening) so a Drain can't become a Crush
-  swarmTarget: "smart",    // who the players give a Swarm to: "smart" (Flow or a Bulwark first, as playtest tables did) or "vigor" (most Vigor)
+  swarmTarget: "smart",    // who the players give a Swarm to: "smart" (Flow or a Bulwark first, as playtest tables did) or "vigor" (most Vigour)
   guardFrom: 2,            // a Guardian takes another fighter's loss of at least this much (or one that would put them Down)
 };
 
