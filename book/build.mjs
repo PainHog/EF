@@ -2,6 +2,7 @@
  * NIGHTWAKE — Rulebook build
  * ---------------------------------
  * book/src/chapters/*.html (in filename order) + book/src/book.css + book/art/*.svg
+ *   (a finished picture in book/art/final/ replaces its placeholder: tools/art-slots.mjs)
  *   → book/dist/nightwake.html  (self-contained print HTML)
  *   → book/dist/Nightwake_v<version>.pdf
  *
@@ -24,6 +25,7 @@ import { chromium } from "playwright-core";
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname, relative } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { finalArt, slotFor, checkFinal } from "./tools/art-slots.mjs";
 
 const BOOK = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(BOOK, "..");
@@ -63,11 +65,30 @@ const cssString = s => `"${String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"')
 
 /* ---------------------------------------------------------------- art -- */
 const artCache = new Map();
+const finals = [];
+/**
+ * A finished picture (book/art/final/<name>.png|jpg|webp) in the placeholder's
+ * box: cropped to fill, never stretched, so the page can't move.
+ */
+function finalSvg(name, art) {
+  const slot = slotFor(name);
+  for (const w of checkFinal(slot, art)) warn.push(w);
+  finals.push(name);
+  const [vw, vh] = slot.box;
+  // round slots (badges, emblems) are cut to a circle: the text wraps round them
+  const clip = slot.round ? `<defs><clipPath id="${name}__final"><circle cx="${vw / 2}" cy="${vh / 2}" r="${Math.min(vw, vh) / 2}"/></clipPath></defs>` : "";
+  return `<svg role="img" aria-hidden="true" viewBox="0 0 ${vw} ${vh}" preserveAspectRatio="xMidYMid meet" data-final="${name}">${clip}<image href="data:${art.mime};base64,${art.buf.toString("base64")}" x="0" y="0" width="${vw}" height="${vh}" preserveAspectRatio="xMidYMid slice"${slot.round ? ` clip-path="url(#${name}__final)"` : ""}/></svg>`;
+}
+const hasArt = name => existsSync(join(ART, `${name}.svg`)) || !!finalArt(name);
+
 function loadArt(name) {
   if (artCache.has(name)) return artCache.get(name);
   const file = join(ART, `${name}.svg`);
+  const art = finalArt(name);
   let svg;
-  if (existsSync(file)) {
+  if (art) {
+    svg = finalSvg(name, art);
+  } else if (existsSync(file)) {
     svg = readFileSync(file, "utf8")
       .replace(/<\?xml[^>]*\?>/g, "")
       .replace(/<!DOCTYPE[^>]*>/gi, "")
@@ -235,7 +256,7 @@ function planSpots(ends) {
     // preferred spots first, then any spot not used yet; never a repeat (the same
     // illustration twice in one book reads as a mistake)
     const all = [...new Set(Object.values(SPOTS).flat())];
-    const have = a => existsSync(join(ART, `${a}.svg`));
+    const have = hasArt;
     // don't take a spot a later chapter prefers
     const later = new Set(order.slice(idx + 1).flatMap(k => SPOTS[k] ?? []));
     const art = prefs.find(a => !used.has(a) && have(a))
@@ -443,7 +464,8 @@ try {
   }
   const gaps = WHITE ? [] : Object.entries(p1.ends).filter(([id, v]) => !spots[id] && v.freeIn > 3 && v.freeIn <= TEXT_H_IN - 0.3).map(([id, v]) => `${id} (${v.freeIn.toFixed(1)}in free)`);
   if (gaps.length) console.warn(`  ! large gaps with no spot: ${gaps.join(", ")}`);
-  for (const w of warn) console.warn(`  ! ${w}`);
+  console.log(`  art: ${finals.length ? `finished pictures for ${finals.join(", ")}` : "no finished pictures yet"} (the rest are placeholders; see book/art/ART-BRIEF.md)`);
+  for (const w of [...new Set(warn)]) console.warn(`  ! ${w}`);
 } finally {
   await browser.close();
 }

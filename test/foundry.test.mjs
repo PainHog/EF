@@ -236,14 +236,14 @@ test("clicking a pip sets the track; clicking the top lit pip steps it down", as
 
 test("a new fighter gets its element badge and a linked token; enemies show their art", async () => {
   const a = await Actor.create({ name: "Test", type: "fighter", system: { element: "water" } });
-  assert.match(a.img, /assets\/elements\/water\.svg$/);
+  assert.match(a.img, /assets\/elements\/water\.webp$/);
   assert.equal(a.prototypeToken.actorLink, true);
   assert.equal(a.prototypeToken.disposition, 1);
   await a.update({ "system.element": "fire" });
-  assert.match(a.img, /elements\/fire\.svg$/, "a default badge follows the element");
+  assert.match(a.img, /elements\/fire\.webp$/, "a default badge follows the element");
   const heart = game.actors.find(x => x.type === "unmade" && /Heart/.test(x.name));
-  if (heart) assert.match(heart.img, /tokens\/heart\.svg$/);
-  assert.ok(game.actors.filter(x => x.type === "pack").every(x => /tokens\/still\.svg$/.test(x.img)));
+  if (heart) assert.match(heart.img, /tokens\/heart\.webp$/);
+  assert.ok(game.actors.filter(x => x.type === "pack").every(x => /tokens\/still\.webp$/.test(x.img)));
 });
 
 test("every contract name is used by the system", async () => {

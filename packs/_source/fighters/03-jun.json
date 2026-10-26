@@ -1,7 +1,7 @@
 {
   "key": "jun",
   "name": "Jun Park",
-  "img": "systems/elemental-fighters/assets/fighters/jun.svg",
+  "img": "systems/elemental-fighters/assets/fighters/jun.webp",
   "system": {
     "element": "earth",
     "style": "brawler",

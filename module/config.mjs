@@ -129,9 +129,9 @@ EF.readyNight = [
  */
 const ASSETS = `systems/${EF.id}/assets`;
 EF.art = {
-  element: el => `${ASSETS}/elements/${el}.svg`,
-  still: `${ASSETS}/tokens/still.svg`,
-  heart: `${ASSETS}/tokens/heart.svg`,
-  warden: shell => `${ASSETS}/tokens/warden-${shell}.svg`,
+  element: el => `${ASSETS}/elements/${el}.webp`,
+  still: `${ASSETS}/tokens/still.webp`,
+  heart: `${ASSETS}/tokens/heart.webp`,
+  warden: shell => `${ASSETS}/tokens/warden-${shell}.webp`,
   defaultFighter: "icons/svg/mystery-man.svg"
 };

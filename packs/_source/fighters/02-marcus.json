@@ -1,7 +1,7 @@
 {
   "key": "marcus",
   "name": "Marcus Bell",
-  "img": "systems/elemental-fighters/assets/fighters/marcus.svg",
+  "img": "systems/elemental-fighters/assets/fighters/marcus.webp",
   "system": {
     "element": "fire",
     "style": "guardian",
