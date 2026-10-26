@@ -1,4 +1,4 @@
-Now: Releasing the first version of the online game, with the rulebook ready for its final pictures
+Now: The first version of the online game is out, and the rulebook is ready for its final pictures
 Next: Richard plays a test night in Foundry VTT, and an artist starts on the pictures
 Number: Design decisions made = 45
 Number: Open design questions = 0
@@ -46,4 +46,4 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Decide when to build the online version for Foundry VTT
 - [ ] The online version for Foundry VTT (built and tested; still to try in Foundry itself)
 - [x] Polish for the online version: portraits, tokens, an in-game guide and a Night sheet that says what comes next
-- [ ] First release of the online version, ready to install
+- [x] First release of the online version, ready to install
