@@ -12,6 +12,7 @@ A tabletop roleplaying game by **Richard Moore**. On one night, ordinary people 
 | `sim/` | The rules simulator: plays whole nights by the core rules and writes `sim/REPORT.md` |
 | `module/`, `templates/`, `styles/`, `lang/`, `packs/` | The Foundry VTT game system: fighter, Warden/Heart and Stills sheets, the Night sheet, Strikes and the enemies' step resolved by the book (`module/logic/rules.mjs`, Foundry-free and tested), and the ready-made fighters |
 | `review/` | Each version's review: rules review, playtest logs with their dice, and the combined report |
+| `modules/nightwake-nights/` | The Ready-made Nights module: a separate, paid Foundry module with both ready-made nights as journals, picked when a night begins (built by `tools/build-nights.mjs` from the book; never in the free system's download) |
 | `assets/` | The online version's art: element badges, fighter portraits, tokens and the background (drawn by `tools/build-assets.mjs`; replace a file, keeping its name, to change the art) |
 | `tools/`, `test/` | Build, validation and test tooling |
 
@@ -22,6 +23,7 @@ npm run build:book          # rulebook PDF → book/dist/
 node book/build.mjs --print # print-on-demand interior, covers and cover spread
 node book/build.mjs --white # printer-friendly edition
 npm run build:packs         # compile the compendium packs (the guide copies the book's At the Table card)
+node tools/build-nights.mjs # rebuild the Ready-made Nights module from the book (--zip: dist/nightwake-nights-<version>.zip)
 node tools/build-assets.mjs # redraw the online version's art in assets/ from the book's art
 npm run check               # validate the Foundry system + run tests
 node sim/run.mjs            # balance report → sim/REPORT.md (add --blank for option values)

@@ -3,7 +3,7 @@
   "type": "system",
   "title": "Nightwake",
   "description": "The companion Foundry VTT game system for Nightwake, a roleplaying game of five elements and one long night by Richard Moore. Fighter sheets, the Night sheet, Strikes resolved by the book, the enemies' turn, and the clocks to dawn; every automation can be switched off.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "compatibility": {
     "minimum": "13",
     "verified": "14"

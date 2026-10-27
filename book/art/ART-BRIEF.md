@@ -46,7 +46,7 @@ Counted from the layout (`book/tools/art-slots.mjs` writes this table; run it af
 | Pictures | Where they go | Shown at | Pixels needed (at least) | Shape |
 |---|---|---|---|---|
 | `back-heart` | Back cover: a framed panel under the blurb | 4.16 × 3.12 in | 1248 × 936 | 4 : 3 |
-| `ch-awakening`, `ch-city`, `ch-clocktower`, `ch-fighters`, `ch-fights`, `ch-map`, `ch-night`, `ch-storyteller`, `ch-unmade` | Chapter openers: a banner across the top of the chapter | 7.14 × 1.80 in | 2142 × 540 | 3.97 : 1 |
+| `ch-awakening`, `ch-city`, `ch-clocktower`, `ch-fighters`, `ch-fights`, `ch-lighthouse`, `ch-map`, `ch-night`, `ch-storyteller`, `ch-unmade` | Chapter openers: a banner across the top of the chapter | 7.14 × 1.80 in | 2142 × 540 | 3.97 : 1 |
 | `cover-night` | Front cover, full bleed, 0.125in trimmed off every edge | 8.75 × 11.32 in | 2625 × 3398 | 8.5 : 11 |
 | `el-earth`, `el-fire`, `el-metal`, `el-water`, `el-wood` | Element badges: each element's entry in Chapters 2 and 8; online, a fighter's portrait until they choose one | 1.05 in wide in print; on screen online | 512 × 512 | 1 : 1, cut to a circle |
 | `part-awaken`, `part-unmade` | Part title pages: on the dark page under the title | 6.70 × 2.23 in | 2010 × 670 | 3 : 1 |
@@ -78,6 +78,7 @@ The placeholder in `book/art/<name>.svg` shows the composition and what must be 
 - **`ch-storyteller`** (7, Running the Night): a game table seen from above: fighter sheets, dice, Chi tokens, the Night sheet.
 - **`ch-clocktower`** (8, The Night the Clocks Stopped): the clock tower in its square, the Heart in its face.
 - **`ch-map`** (9, Making Your Own Night): a city map from above: a river, streets, a park, five Anchors marked by the five element shapes, and the Heart at the centre. No labels.
+- **`ch-lighthouse`** (10, The Night the Tide Stood Still): a seaside town's bay at night with the sea stopped: a wave hanging mid-break, the old pier on its posts, and the lighthouse on the point with the Heart turning in its lamp room in place of the light.
 
 ### End-of-chapter pictures
 

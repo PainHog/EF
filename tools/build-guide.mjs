@@ -34,7 +34,7 @@ const ONLINE = `<p>The online version keeps the book's numbers for you: it rolls
 <h2>Running the night</h2>
 <p>Open <strong>The Night</strong> from the button at the top of the Actors tab. Its top line always says what comes next.</p>
 <ol>
-<li><strong>Begin the night.</strong> Pick the difficulty and three to five fighters. Everyone's Vigour and Chi are set from the size table. To use Anchors of your own (Chapter 9), press <em>Name the Anchors</em> first; each Anchor keeps one Shell element.</li>
+<li><strong>Begin the night.</strong> Pick the difficulty, three to five fighters and the Anchors. Everyone's Vigour and Chi are set from the size table. The Anchors start as Chapter 8's; with the <em>Ready-made Nights</em> module on, you can pick either ready-made night there. To use Anchors of your own (Chapter 9), press <em>Name the Anchors</em> first and keep "As named on the Night sheet"; each Anchor keeps one Shell element.</li>
 <li><strong>The Prologue,</strong> then <strong>The First Clash.</strong> Starting a fight makes its enemies (a Pack of Stills, and the Warden or the Heart) and puts them in the Actors tab. Drag them onto a scene if you want tokens; the fight doesn't need a map.</li>
 <li><strong>The Hunt.</strong> Each Hour, press <em>Go</em> beside an Anchor or <em>Take a Respite</em>. The Night sheet counts the Hours, long fights and any Hour owed.</li>
 <li><strong>The Heart.</strong> When the Hunt is over, press <em>The Heart</em>. Dawn comes at the end of the round shown.</li>

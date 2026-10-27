@@ -74,10 +74,23 @@ Hooks.once("init", function () {
   CONFIG.queries[QUERY] = runOp;
 
   game.elementalFighters = Object.assign(game.elementalFighters ?? {}, {
-    EF, id: SYSTEM_ID, rules, request, getNight, openNight,
+    EF, id: SYSTEM_ID, rules, request, getNight, openNight, registerNight,
     strike: actor => strikeFlow(actor)
   });
 });
+
+/**
+ * Add a ready-made night (or a journal for one already here) for the Storyteller
+ * to pick when the night begins. Call it in the "setup" hook or earlier.
+ * @param {string} id
+ * @param {{label: string, anchors: {name: string, warden: string, shell: string}[], journal?: string}} night
+ *   five Anchors, one per Shell element; journal: the uuid of a JournalEntry to read the night from
+ */
+function registerNight(id, { label, anchors, journal = null }) {
+  const problem = rules.anchorsProblem(anchors);
+  if (!id || !label || problem) throw new Error(`Nightwake | registerNight("${id}"): ${problem ?? "it needs an id and a label"}`);
+  EF.nights[id] = { label, journal, anchors: anchors.map(({ name, warden, shell }) => ({ name, warden, shell })) };
+}
 
 /* -------------------------------------------- */
 /*  Token defaults and portraits                */

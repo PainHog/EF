@@ -1,0 +1,56 @@
+{
+  "id": "nightwake-nights",
+  "title": "Nightwake: Ready-made Nights",
+  "description": "The two ready-made nights from the Nightwake rulebook, ready to run in Foundry VTT: The Night the Clocks Stopped and The Night the Tide Stood Still. Pick one when you begin the night and the Night sheet is set up with its Anchors and Wardens; every scene, Anchor and the Heart is in a journal to read from as you play. Needs the Nightwake game system.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Richard Moore",
+      "url": "https://domoorestudio.com"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "elemental-fighters",
+        "type": "system",
+        "compatibility": {
+          "minimum": "0.2.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/nights.mjs"
+  ],
+  "packs": [
+    {
+      "name": "nights",
+      "label": "Ready-made Nights",
+      "path": "packs/nights",
+      "type": "JournalEntry",
+      "system": "elemental-fighters",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Nightwake: Ready-made Nights",
+      "sorting": "m",
+      "color": "#1d2240",
+      "packs": [
+        "nights"
+      ]
+    }
+  ],
+  "url": "https://domoorestudio.com",
+  "license": "LICENSE",
+  "readme": "README.md"
+}

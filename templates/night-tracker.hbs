@@ -3,6 +3,8 @@
   <header class="nw-night-head">
     <span class="nw-phase">{{phase}}</span>
     <span class="nw-diff">{{difficulty}}</span>
+    {{#if readyNight}}<span class="nw-ready">{{readyNight}}</span>{{/if}}
+    {{#if canRead}}{{#if gm}}<button type="button" class="nw-read" data-action="readNight"><i class="fa-solid fa-book-open" inert></i> Read the night</button>{{/if}}{{/if}}
     {{#if ended}}<span class="nw-ending">{{endingText}}</span>{{/if}}
   </header>
   <p class="nw-next"><i class="fa-solid fa-circle-arrow-right" inert></i> {{next}}</p>

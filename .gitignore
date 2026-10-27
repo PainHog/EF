@@ -19,6 +19,9 @@ Thumbs.db
 packs/**/LOCK
 packs/**/LOG
 packs/**/LOG.old
+modules/*/packs/**/LOCK
+modules/*/packs/**/LOG
+modules/*/packs/**/LOG.old
 
 # Book build intermediates (the finished PDFs in book/dist/ are committed)
 book/dist/*

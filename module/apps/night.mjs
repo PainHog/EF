@@ -40,6 +40,10 @@ export class NightTracker extends HandlebarsApplicationMixin(ApplicationV2) {
       beginNight: NightTracker.#beginNight,
       join: NightTracker.#join,
       editAnchors: NightTracker.#editAnchors,
+      readNight: () => {
+        const uuid = EF.nights[getNight().preset]?.journal;
+        if (uuid) fromUuid(uuid).then(j => j?.sheet?.render(true));
+      },
       openSheet: (event, target) => actor(target.dataset.id)?.sheet?.render(true),
       clash: () => request(OPS.startFight, { kind: "clash" }),
       anchor: (event, target) => request(OPS.startFight, { kind: "anchor", anchor: Number(target.dataset.anchor) }),
@@ -62,6 +66,8 @@ export class NightTracker extends HandlebarsApplicationMixin(ApplicationV2) {
       started: night.started, ended: !!night.ending, endingText: ENDINGS[night.ending] ?? "",
       phase: fight?.kind === "clash" ? EF.fightKinds.clash : PHASES[night.phase] ?? night.phase,
       next: nextStep(night, huntOver),
+      readyNight: EF.nights[night.preset]?.label ?? "",
+      canRead: !!EF.nights[night.preset]?.journal,
       difficulty: EF.difficulties[night.difficulty]?.label,
       awakeningsOpen: night.firstDown,
       hours: Array.from({ length: EF.night.hours }, (_, i) => ({ left: i < night.hoursLeft })),
@@ -97,10 +103,11 @@ export class NightTracker extends HandlebarsApplicationMixin(ApplicationV2) {
     if (candidates.length < 3) { ui.notifications.warn("Make at least three fighters first, or import the ready-made fighters from their compendium."); return; }
     const diffs = Object.entries(EF.difficulties).map(([k, d]) => `<option value="${k}"${k === "standard" ? " selected" : ""}>${d.label}</option>`).join("");
     const boxes = candidates.map(a => `<label><input type="checkbox" name="f-${a.id}"> ${esc(a.name)}</label>`).join("");
+    const nights = Object.entries(EF.nights).map(([k, v]) => `<option value="${k}">${esc(v.label)}</option>`).join("");
     const choice = await Dialog().prompt({
       window: { title: "Begin the night" },
-      content: `<div class="elemental-fighters nw-dialog"><label>Difficulty <select name="difficulty">${diffs}</select></label><p class="hint">Easy for a first night or a young table; Standard for most nights; Hard for a group that wants to lose sometimes.</p><fieldset><legend>Fighters (3 to 5)</legend>${boxes}</fieldset></div>`,
-      ok: { label: "Begin", callback: (event, button) => ({ difficulty: button.form.elements.difficulty.value, fighterIds: candidates.filter(a => button.form.elements[`f-${a.id}`]?.checked).map(a => a.id) }) }
+      content: `<div class="elemental-fighters nw-dialog"><label>Difficulty <select name="difficulty">${diffs}</select></label><p class="hint">Easy for a first night or a young table; Standard for most nights; Hard for a group that wants to lose sometimes.</p><label>Anchors <select name="preset"><option value="">As named on the Night sheet</option>${nights}</select></label><fieldset><legend>Fighters (3 to 5)</legend>${boxes}</fieldset></div>`,
+      ok: { label: "Begin", callback: (event, button) => ({ difficulty: button.form.elements.difficulty.value, preset: button.form.elements.preset?.value ?? "", fighterIds: candidates.filter(a => button.form.elements[`f-${a.id}`]?.checked).map(a => a.id) }) }
     });
     if (choice) await request(OPS.beginNight, choice);
   }

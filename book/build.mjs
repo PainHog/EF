@@ -238,6 +238,7 @@ const SPOTS = {
   "ch-07": ["spot-dice", "spot-reservoir"],
   "ch-08": ["spot-bridge", "spot-reservoir", "spot-underpass", "spot-substation"],
   "ch-09": ["spot-underpass", "spot-reservoir"],
+  "ch-10": ["spot-stills", "spot-dice"],
 };
 const PT_PER_IN = 72;
 const BOTTOM_LIMIT_PT = (0.78 + BLEED_IN) * PT_PER_IN;   // @page bottom margin: content must end above this

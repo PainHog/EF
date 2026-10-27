@@ -1,0 +1,94 @@
+{
+  "key": "02-tide",
+  "name": "The Night the Tide Stood Still",
+  "pages": [
+    {
+      "key": "tonight",
+      "name": "Tonight",
+      "text": {
+        "format": 1,
+        "content": "<p><em><em>A second ready-made night, by the sea: five Anchors, a Heart and everything you need to run it tonight.</em></em></p>\n<p>Set it in any seaside town out of season: a pier, a promenade, a harbour with a crane or two, and a lighthouse on the point. It was built with the tables in Chapter 9. Three of its Anchors came straight off them and two are new, which is how you can build your own.</p>\n<p><strong>Online:</strong> when you begin the night on the Night sheet, choose “The Night the Tide Stood Still” under Anchors. The Night sheet is then set up with these Anchors and their Wardens, and its <em>Read the night</em> button opens this journal.</p>\n<p><em>From Chapter 10 of the rulebook.</em></p>"
+      }
+    },
+    {
+      "key": "s1",
+      "name": "Midnight",
+      "text": {
+        "format": 1,
+        "content": "<p>At the turn of the tide, the sea stops. All along the bay the waves hang in the air, mid-break, white along their tops. The lighthouse beam stops halfway round and goes out. On the promenade, the last dog walkers stand still where they were, leads slack, every face turned out to sea. Only five people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
+      }
+    },
+    {
+      "key": "s2",
+      "name": "The First Clash: the amusement arcade",
+      "text": {
+        "format": 1,
+        "content": "<p>The fighters are drawn to the arcade on the seafront, the only building with its lights still on. Every machine is playing its tune stuck on one note. Inside the claw machines and on every screen, grey shapes press against the glass, and then come through it.</p>\n<p><strong>Enemies:</strong> a pack of 2 Stills per fighter, no Warden · <strong>Won when</strong> the last Still falls · <strong>Costs</strong> no Hour</p>\n<p>When the last grey shape breaks, the stuck note stops. From the arcade roof the fighters can see five places along the coast where the town has gone grey. The Hunt begins.</p>"
+      }
+    },
+    {
+      "key": "s3",
+      "name": "The five Anchors",
+      "text": {
+        "format": 1,
+        "content": "<p>Read the players all five. The order is theirs.</p>\n<ul><li><strong>The Old Pier</strong>: the Piling · Wood Shell</li><li><strong>The Beach Bonfire</strong>: the Guy · Fire Shell</li><li><strong>The Sea Wall</strong>: the Breakwater · Earth Shell</li><li><strong>The Harbour Crane</strong>: the Jib · Metal Shell</li><li><strong>The Lido</strong>: the Lifeguard · Water Shell</li></ul>\n<p><strong>Every Anchor:</strong> its Warden and a pack of 1 Still per fighter · Warden numbers in Chapter 6</p>"
+      }
+    },
+    {
+      "key": "a1",
+      "name": "The Old Pier",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/wood.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Wood · <strong>Shattered by:</strong> Metal</p>\n<p>The wooden pier, half a mile of boards on barnacled posts, its far end out over the stopped sea. The Warden is <strong>the Piling</strong>: a giant of tarred posts and mooring rope, weed hanging off it in grey strands, the pier’s planks lifting off the walkway to follow it.</p>\n<p><em>On arrival:</em> the gulls hang over the boards with their wings out, not falling.</p>"
+      }
+    },
+    {
+      "key": "a2",
+      "name": "The Beach Bonfire",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/fire.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Fire · <strong>Shattered by:</strong> Water</p>\n<p>The bonfire someone lit on the beach this evening, still burning in a ring of frozen partygoers. The Warden is <strong>the Guy</strong>: a straw figure built for the top of the fire, climbed down out of it and burning without heat.</p>\n<p><em>On arrival:</em> the smoke is running back down into the fire.</p>"
+      }
+    },
+    {
+      "key": "a3",
+      "name": "The Sea Wall",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/earth.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Earth · <strong>Shattered by:</strong> Wood</p>\n<p>The old granite sea wall under the promenade, where a wave stopped as it struck. The Warden is <strong>the Breakwater</strong>: granite blocks and shingle heaped into a crouching giant, the stopped wave still standing over its shoulders.</p>\n<p><em>On arrival:</em> the spray hangs over the railings in a white sheet; walking through it, you come out dry.</p>"
+      }
+    },
+    {
+      "key": "a4",
+      "name": "The Harbour Crane",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/metal.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Metal · <strong>Shattered by:</strong> Fire</p>\n<p>The dockside crane over the harbour, a container halfway into the air. The Warden is <strong>the Jib</strong>: the crane folded down into something that stalks along the quay on its legs, its hook swinging grey and slow.</p>\n<p><em>On arrival:</em> the doors of every container on the quay have swung open at once, and every one is empty.</p>"
+      }
+    },
+    {
+      "key": "a5",
+      "name": "The Lido",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/water.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Water · <strong>Shattered by:</strong> Earth</p>\n<p>The old open-air pool on the front, closed for the winter. The Warden is <strong>the Lifeguard</strong>: the pool stood up on its end, tiles and lane ropes and grey water in the shape of a person, the diving board jutting from its shoulder.</p>\n<p><em>On arrival:</em> wet footprints cross the tiles towards the pool, one after another, with nobody making them.</p>"
+      }
+    },
+    {
+      "key": "s4",
+      "name": "The Heart: the lighthouse",
+      "text": {
+        "format": 1,
+        "content": "<p>When the Hunt ends, every wave in the bay leans the same way: towards the lighthouse on the point. The path up to it is lined with frozen people, all facing the lamp. The lamp has stopped, and in its place something turns very slowly behind the glass, like a great wheel with nothing on it, throwing no light. That is the Heart.</p>\n<p>For each Anchor still standing, show its piece in the Heart: tarred posts through the gallery rail, cold fire in the lamp, granite, a crane’s hook, a sheet of standing water.</p>\n<p><strong>Enemies:</strong> the Heart and a pack of 1 Still per fighter · Toughness from the size table, Crush and Sweep from the Difficulty table · <strong>Dawn</strong> at the end of round 7 (round 6 if an Hour is owed)</p>"
+      }
+    },
+    {
+      "key": "s5",
+      "name": "Morning",
+      "text": {
+        "format": 1,
+        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the lighthouse beam starts turning again, and all along the bay the waves break at once with one long roar. The dog walkers finish their steps as if nothing happened. Only five people know otherwise.</p>"
+      }
+    }
+  ]
+}

@@ -30,7 +30,7 @@ export function defaultNight() {
     started: false, difficulty: "standard", size: 0, fighterIds: [],
     hoursLeft: EF.night.hours, hoursOwed: 0, firstDown: false,
     anchors: EF.readyNight.map(a => ({ ...a, broken: false })),
-    phase: "setup", ending: null, fight: null
+    phase: "setup", ending: null, fight: null, preset: ""
   };
 }
 export const getNight = () => ({ ...defaultNight(), ...(foundry.utils.deepClone(game.settings.get(SYSTEM_ID, SETTINGS.night)) ?? {}) });
@@ -167,7 +167,7 @@ async function share(night, from, kind) {
 
 /* -------------------------------------------------------- operations -- */
 
-async function beginNight({ difficulty = "standard", fighterIds = [], anchors = null }) {
+async function beginNight({ difficulty = "standard", fighterIds = [], preset = "" }) {
   const ids = [...new Set(fighterIds)].filter(id => actor(id)?.type === "fighter");
   if (ids.length < 3 || ids.length > 5) throw new OpError("A night needs 3 to 5 fighters (Chapter 1).");
   if (!EF.difficulties[difficulty]) throw new OpError("Pick Easy, Standard or Hard.");
@@ -176,18 +176,22 @@ async function beginNight({ difficulty = "standard", fighterIds = [], anchors = 
     if (vals.some(v => !v)) throw new OpError(`Every fighter needs four picks: one has no ${key}.`);
     if (new Set(vals).size !== vals.length) throw new OpError(`Two fighters share a ${key}. No two fighters in a group share any pick (Chapter 2).`);
   }
+  const ready = preset ? EF.nights[preset] : null;
+  if (preset && !ready) throw new OpError("That ready-made night isn't installed.");
   const size = ids.length;
   for (const id of ids) {
     const a = actor(id);
     const max = L.startingVigor(size, a.system.perk);
     await a.update({ "system.vigor.value": max, "system.vigor.max": max, "system.chi": EF.rules.chiStart, "system.awakened": { active: false, roundsLeft: 0, used: false }, "system.luckyUsed": false, "system.stubbornUsed": false });
   }
-  const kept = getNight().anchors.map(a => ({ ...a, broken: false }));   // the Anchors as the Storyteller last named them
-  const night = { ...defaultNight(), started: true, difficulty, size, fighterIds: ids, phase: "prologue", anchors: anchors ?? kept };
+  // a ready-made night's Anchors, or the Anchors as the Storyteller last named them
+  const anchors = (ready ? ready.anchors : getNight().anchors).map(({ name, warden, shell }) => ({ name, warden, shell, broken: false }));
+  const night = { ...defaultNight(), started: true, difficulty, size, fighterIds: ids, phase: "prologue", anchors, preset: ready ? preset : "" };
   await saveNight(night);
   await postCard(CARD.night, "The night begins", [
     `${size} fighters on ${EF.difficulties[difficulty].label}.`,
     `Starting Vigour ${EF.vigorBySize[size]} (Tough +3) and 2 Chi each.`,
+    ready ? `Tonight: ${ready.label}.` : "",
     "The Prologue: each player describes the moment their element woke. Then the First Clash."
   ]);
   return { night };

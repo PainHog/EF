@@ -1,0 +1,94 @@
+{
+  "key": "01-clocks",
+  "name": "The Night the Clocks Stopped",
+  "pages": [
+    {
+      "key": "tonight",
+      "name": "Tonight",
+      "text": {
+        "format": 1,
+        "content": "<p><em><em>A ready-made night for any city: five Anchors, a Heart and everything you need to run it tonight.</em></em></p>\n<p>Set it in your own city, or in no city in particular. Everything here exists somewhere in every city big enough to have a night bus.</p>\n<p><strong>Online:</strong> when you begin the night on the Night sheet, choose “The Night the Clocks Stopped” under Anchors. The Night sheet is then set up with these Anchors and their Wardens, and its <em>Read the night</em> button opens this journal.</p>\n<p><em>From Chapter 8 of the rulebook.</em></p>"
+      }
+    },
+    {
+      "key": "s1",
+      "name": "Midnight",
+      "text": {
+        "format": 1,
+        "content": "<p>At two minutes to midnight, every clock in the city stops. Phones freeze on 23:58. The trains stop between stations. Most people don’t notice: they stop too, mid-step, mid-word, standing still where they were, as if waiting for something. Only five people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
+      }
+    },
+    {
+      "key": "s2",
+      "name": "The First Clash: the night bus station",
+      "text": {
+        "format": 1,
+        "content": "<p>The fighters are drawn, one by one, to the bus station: the last place in the city with its lights on. A night bus stands at the stop, its passengers frozen in their seats. Their reflections are getting off.</p>\n<p><strong>Enemies:</strong> a pack of 2 Stills per fighter, no Warden · <strong>Won when</strong> the last Still falls · <strong>Costs</strong> no Hour</p>\n<p>When the last reflection breaks, the station clock’s hands twitch. From the roof the fighters can see five places where the city has gone grey. The Hunt begins.</p>"
+      }
+    },
+    {
+      "key": "s3",
+      "name": "The five Anchors",
+      "text": {
+        "format": 1,
+        "content": "<p>Read the players all five. The order is theirs.</p>\n<ul><li><strong>The Old Greenhouse</strong>: the Gardener · Wood Shell</li><li><strong>The Substation</strong>: the Stoker · Fire Shell</li><li><strong>The Underpass</strong>: the Mason · Earth Shell</li><li><strong>The Iron Bridge</strong>: the Girder · Metal Shell</li><li><strong>The Reservoir</strong>: the Overflow · Water Shell</li></ul>\n<p><strong>Every Anchor:</strong> its Warden and a pack of 1 Still per fighter · Warden numbers in Chapter 6</p>"
+      }
+    },
+    {
+      "key": "a1",
+      "name": "The Old Greenhouse",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/wood.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Wood · <strong>Shattered by:</strong> Metal</p>\n<p>The Victorian glasshouse in the park. Every plant inside has turned the colour of ash and stopped growing mid-curl. The Warden is <strong>the Gardener</strong>: a hunched giant of grey roots and ironwork, the glasshouse’s frame grown into its back.</p>\n<p><em>On arrival:</em> the glass panes hang loose in the air above the roof, like a held breath.</p>"
+      }
+    },
+    {
+      "key": "a2",
+      "name": "The Substation",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/fire.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Fire · <strong>Shattered by:</strong> Water</p>\n<p>The substation by the canal, humming without making a sound. The Warden is <strong>the Stoker</strong>: a figure of cold grey flame, its flames frozen mid-flicker, shedding sparks that hang where they fall.</p>\n<p><em>On arrival:</em> every street light for a mile is lit but gives no light.</p>"
+      }
+    },
+    {
+      "key": "a3",
+      "name": "The Underpass",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/earth.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Earth · <strong>Shattered by:</strong> Wood</p>\n<p>The pedestrian tunnel under the ring road, tiled and echoing. The Warden is <strong>the Mason</strong>: brickwork and paving slabs stacked into the shape of a person, too wide for the tunnel, its footsteps leaving no echo.</p>\n<p><em>On arrival:</em> the graffiti has drained off the walls and lies in a grey puddle on the floor.</p>"
+      }
+    },
+    {
+      "key": "a4",
+      "name": "The Iron Bridge",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/metal.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Metal · <strong>Shattered by:</strong> Fire</p>\n<p>The old railway bridge over the river, with a freight train stopped halfway across. The Warden is <strong>the Girder</strong>: a towering frame of riveted iron and coupling chains, the train’s headlamp burning grey in its chest.</p>\n<p><em>On arrival:</em> the rails ring like a struck bell, once, and keep ringing in your teeth.</p>"
+      }
+    },
+    {
+      "key": "a5",
+      "name": "The Reservoir",
+      "text": {
+        "format": 1,
+        "content": "<img src=\"systems/elemental-fighters/assets/elements/water.webp\" alt=\"\" width=\"96\" height=\"96\" style=\"float:right;border:none;margin:0 0 6px 10px\">\n<p><strong>Shell:</strong> Water · <strong>Shattered by:</strong> Earth</p>\n<p>The great old reservoir behind the waterworks. Its surface stands up off the ground in a sheet. The Warden is <strong>the Overflow</strong>: a wave that never broke, grey and glassy, with the shapes of things it swallowed turning slowly inside it.</p>\n<p><em>On arrival:</em> the rain stopped falling an hour ago; the drops are still up there.</p>"
+      }
+    },
+    {
+      "key": "s4",
+      "name": "The Heart: the clock tower",
+      "text": {
+        "format": 1,
+        "content": "<p>When the Hunt ends, every stopped clock in the city points the same way: to the old clock tower in the square. The square is full of frozen people, all looking up. Above them the clock face has gone dark, and in the dark something turns very slowly, like a great wheel with nothing on it. That is the Heart.</p>\n<p>For each Anchor still standing, show its piece in the Heart: roots through the clock’s works, cold fire behind its face, brick, iron, a hanging sheet of water.</p>\n<p><strong>Enemies:</strong> the Heart and a pack of 1 Still per fighter · Toughness from the size table, Crush and Sweep from the Difficulty table · <strong>Dawn</strong> at the end of round 7 (round 6 if an Hour is owed)</p>"
+      }
+    },
+    {
+      "key": "s5",
+      "name": "Morning",
+      "text": {
+        "format": 1,
+        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the clock tower strikes midnight six hours late, and the city starts moving again, mid-step, mid-word, as if nothing happened. Only five people know otherwise.</p>"
+      }
+    }
+  ]
+}

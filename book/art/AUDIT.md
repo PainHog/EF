@@ -152,6 +152,20 @@ Defect found and fixed: the hour clocks first floated in the sky; moved into the
 ## `ch-map` (900×300)
 A map seen from above: river, road grid, park, a dashed ring road, five Anchor emblems and the Heart mark at the centre. No labels. Every mark lies inside the map frame.
 
+## `ch-lighthouse` (900×300)
+| Object | Contact / support | Under / holding |
+|---|---|---|
+| Sky, stars, moon | — | sky |
+| Sea | fills the bottom of the frame, flat (the sea has stopped, Ch 10) | frame |
+| Pier deck and railing | deck rests on the posts; railing posts stand on the deck; the landward end leaves the left edge of the frame | posts |
+| Pier posts | stand in the water and run down out of the frame | sea bed (out of frame) |
+| Stopped wave and its spray | the wave rises from the sea surface; the spray hangs in the air because the sea has stopped (Ch 10) | sea; (a frozen effect) |
+| Headland | rises out of the sea on the right and leaves the frame | sea |
+| Lighthouse: tower, red bands, gallery, lamp room, cap | tower base on the headland with a contact shadow; bands painted inside the tapering outline; gallery on the tower top (a cantilevered walkway, as real ones are); lamp room on the gallery; cap on the lamp room | headland; tower; gallery; lamp room |
+| The Heart in the lamp room | inside the lamp room's outline | lamp room |
+
+No people: at this distance a person next to the lighthouse would be a few pixels tall (checklist 12), so the frozen crowd is left to the text. Defect found and fixed: the first draft had a grey figure on the headland drawn far too large for the lighthouse, and red bands wider than the tapering tower.
+
 ## Spots (800×600): `spot-greenhouse`, `spot-substation`, `spot-underpass`, `spot-bridge`, `spot-reservoir`, `spot-stills`, `spot-dice`
 | Piece | Objects and their support |
 |---|---|

@@ -124,6 +124,15 @@ EF.readyNight = [
 ];
 
 /**
+ * Ready-made nights the Storyteller can pick when the night begins: their Anchors
+ * and, when a module supplies one, the journal to read it from. The adventure
+ * module adds its nights with game.elementalFighters.registerNight().
+ */
+EF.nights = {
+  clocks: { label: "The Night the Clocks Stopped", anchors: EF.readyNight, journal: null }
+};
+
+/**
  * The online version's art (assets/, drawn by tools/build-assets.mjs). Replace a
  * file to change the art, keeping its name, or change the path here.
  */

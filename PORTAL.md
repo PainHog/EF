@@ -1,9 +1,9 @@
 Now: The first version of the online game is out, and the rulebook is ready for its final pictures
 Next: Richard plays a test night in Foundry VTT, and an artist starts on the pictures
-Number: Design decisions made = 45
+Number: Design decisions made = 47
 Number: Open design questions = 0
 Number: Simulated nights in the latest balance check = 36,000
-Number: Rulebook chapters written = 9
+Number: Rulebook chapters written = 10
 Screenshot: docs/portal/cover.webp = The rulebook cover, with stand-in art until the final pictures arrive
 
 # Nightwake (working title) plan
@@ -31,6 +31,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Write the rulebook chapters
 - [x] Ready-made fighters for a quick start
 - [x] The first one-night adventure
+- [x] A second one-night adventure, by the sea
 - [x] Cover and book art
 - [x] Rulebook layout, for screen and for print
 - [x] Computer playtests by the book, and the fixes they turn up
@@ -47,3 +48,5 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [ ] The online version for Foundry VTT (built and tested; still to try in Foundry itself)
 - [x] Polish for the online version: portraits, tokens, an in-game guide and a Night sheet that says what comes next
 - [x] First release of the online version, ready to install
+- [x] Both ready-made nights as an add-on for the online version, to sell separately
+- [ ] Second release of the online version, which the add-on needs

@@ -327,3 +327,12 @@ export const payLongFight = ({ hoursLeft, hoursOwed }) => (hoursLeft > 0 ? { hou
 
 /** Ch 3 "How a fight ends": every fighter Down. */
 export const allDown = fighters => fighters.length > 0 && fighters.every(f => f.down);
+
+/** Ch 9 "Always five Shells": a night's Anchors, one for each Shell element. Returns what's wrong, or null. */
+export function anchorsProblem(anchors) {
+  if (!Array.isArray(anchors) || anchors.length !== EF.night.anchors) return `A night has exactly ${EF.night.anchors} Anchors.`;
+  if (anchors.some(a => !String(a?.name ?? "").trim() || !String(a?.warden ?? "").trim())) return "Every Anchor needs a name and a Warden.";
+  const shells = anchors.map(a => a.shell);
+  if (!EF.cycle.every(e => shells.includes(e))) return "A night has one Anchor for each Shell element (Chapter 9).";
+  return null;
+}

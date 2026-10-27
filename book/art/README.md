@@ -50,7 +50,7 @@ The same tokens as `book/src/book.css` and `C` in `book/tools/art-gen/lib.mjs`
 
 - **Cover and back:** `cover-night`, `back-heart`
 - **Part pages:** `part-awaken` (the feeding cycle), `part-unmade` (the Heart over a grey city)
-- **Chapter vignettes:** `ch-city`, `ch-fighters`, `ch-fights`, `ch-awakening`, `ch-night`, `ch-unmade`, `ch-storyteller`, `ch-clocktower`, `ch-map`
+- **Chapter vignettes:** `ch-city`, `ch-fighters`, `ch-fights`, `ch-awakening`, `ch-night`, `ch-unmade`, `ch-storyteller`, `ch-clocktower`, `ch-map`, `ch-lighthouse`
 - **Element emblems:** `el-wood`, `el-fire`, `el-earth`, `el-metal`, `el-water`
 - **Fighter emblems:** `pc-dani`, `pc-marcus`, `pc-jun`, `pc-priya`, `pc-sam`
 - **Spots** (placed by the build at chapter ends, never repeated): `spot-greenhouse`, `spot-substation`, `spot-underpass`, `spot-bridge`, `spot-reservoir`, `spot-stills`, `spot-dice`

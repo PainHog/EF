@@ -378,6 +378,38 @@ export function ch_clocktower() {
   return svg(`0 0 ${W} ${H}`, "The clock tower with the Heart turning in its face; frozen grey people in the square look up", s + c);
 }
 
+/** Ch 10: the lighthouse on the point with the Heart in its lamp, a wave stopped mid-break, the pier on its posts. */
+export function ch_lighthouse() {
+  const W = 900, H = 300, [o, c] = panel("chl", W, H);
+  const sea = 236;
+  let s = o + stars(19, 20, 15, 880, 130, 60) + `<circle cx="150" cy="60" r="22" fill="${C.accentB}" stroke="${C.ink}" stroke-width="2"/>`;
+  // the sea, flat and still, filling the bottom of the frame
+  s += `<rect x="0" y="${sea}" width="${W}" height="${H - sea}" fill="${C.water}" stroke="${C.ink}" stroke-width="2"/>`;
+  // the pier: a deck resting on posts that stand in the water and run down out of frame
+  // (it runs in from the left edge of the frame, so its landward end is cropped)
+  s += `<rect x="-10" y="196" width="330" height="12" fill="${C.unmadeDeep}" stroke="${C.ink}" stroke-width="2"/>`;
+  for (let x = 34; x <= 306; x += 34) s += `<rect x="${x - 4}" y="208" width="8" height="${H - 208}" fill="${C.unmadeDeep}" stroke="${C.ink}" stroke-width="1.6"/>`;
+  let rail = "M-10 182 L320 182"; for (let x = 20; x <= 320; x += 25) rail += `M${x} 182 L${x} 196`;
+  s += line(rail, 2, C.ink);
+  // a wave stopped mid-break: it rises from the sea surface, its crest curled over, spray hanging above
+  s += `<path d="M380 ${sea} L380 196 Q400 150 450 146 Q500 144 520 168 Q506 160 492 166 Q482 176 500 190 L520 ${sea} Z" fill="${C.water}" stroke="${C.ink}" stroke-width="2.4" stroke-linejoin="round"/>`;
+  s += `<path d="M392 186 Q430 160 470 158" fill="none" stroke="${C.light}" stroke-width="2.4" opacity=".6"/>`;
+  for (const [x, y, r] of [[440, 132, 4], [468, 124, 3], [496, 134, 4], [520, 150, 3]]) s += `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.light}" stroke="${C.ink}" stroke-width="1.4"/>`;
+  // the headland: rock rising out of the sea on the right
+  s += `<path d="M600 ${sea} L640 200 L700 186 L900 182 L900 ${sea} Z" fill="${C.dark}" stroke="${C.ink}" stroke-width="2.4" stroke-linejoin="round"/>`;
+  // the lighthouse stands on the headland: tapered tower, gallery on the tower, lantern on the gallery, cap on the lantern
+  const lx = 780, base = 184;
+  s += shadow(lx, base + 1, 30, 3);
+  s += `<path d="M${lx - 26} ${base} L${lx - 16} 82 L${lx + 16} 82 L${lx + 26} ${base} Z" fill="${C.light}" stroke="${C.ink}" stroke-width="2.4" stroke-linejoin="round"/>`;
+  // red bands painted on the tower, each inside its tapering outline
+  const half = y => 16 + (y - 82) / (base - 82) * 10;
+  for (const y of [104, 134, 162]) s += `<path d="M${n(lx - half(y))} ${y} L${n(lx + half(y))} ${y} L${n(lx + half(y + 10))} ${y + 10} L${n(lx - half(y + 10))} ${y + 10} Z" fill="${C.alarm}" opacity=".8"/>`;
+  s += `<rect x="${lx - 26}" y="74" width="52" height="8" fill="${C.dark}" stroke="${C.ink}" stroke-width="2"/>`;
+  s += `<rect x="${lx - 17}" y="42" width="34" height="32" fill="${C.deep}" stroke="${C.ink}" stroke-width="2"/>` + heartWheel(lx, 58, 14);
+  s += `<path d="M${lx - 20} 42 L${lx} 26 L${lx + 20} 42 Z" fill="${C.dark}" stroke="${C.ink}" stroke-width="2" stroke-linejoin="round"/>`;
+  return svg(`0 0 ${W} ${H}`, "The lighthouse on the point with the Heart turning in its lamp, a wave stopped mid-break and the pier on its posts", s + c);
+}
+
 /** A map of the night: river, roads, five Anchors and the Heart; symbols only. */
 export function ch_map() {
   const W = 900, H = 300; let s = "";

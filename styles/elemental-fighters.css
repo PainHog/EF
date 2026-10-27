@@ -84,6 +84,8 @@
 .elemental-fighters .nw-phase { color: var(--nw-dark-deep); font-size: 1.2em; }
 .elemental-fighters .nw-diff { padding: 1px 8px; border-radius: 10px; background: var(--nw-dark); color: var(--nw-accent-bright); }
 .elemental-fighters .nw-ending { color: var(--nw-alarm); }
+.elemental-fighters .nw-ready { font-weight: 600; font-style: italic; color: var(--nw-accent-deep); }
+.elemental-fighters .nw-read { margin-left: auto; flex: 0 0 auto; background: var(--nw-dark-deep); color: var(--nw-accent-bright); border: 1px solid var(--nw-accent); }
 .elemental-fighters .nw-hours { display: flex; gap: 4px; align-items: center; margin: 6px 0; }
 .elemental-fighters .hour { width: 18px; height: 18px; border: 2px solid var(--nw-dark); border-radius: 4px; }
 .elemental-fighters .hour.left { background: var(--nw-accent); }
