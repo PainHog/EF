@@ -7,7 +7,7 @@
       "name": "Tonight",
       "text": {
         "format": 1,
-        "content": "<p><em><em>A second ready-made night, by the sea: five Anchors, a Heart and everything you need to run it tonight.</em></em></p>\n<p>Set it in any seaside town out of season: a pier, a promenade, a harbour with a crane or two, and a lighthouse on the point. If your town hasn’t got one of them, take the nearest thing it has. It was built with the tables in Chapter 9. The pier, the bonfire and the lido came off them (the bonfire moved to the beach, the baths became a lido); the sea wall, the crane, the arcade, the lighthouse and the signs on arrival are new. That is how to build your own: roll or pick what fits your town, and make up the rest.</p>\n<p><strong>Online:</strong> when you begin the night on the Night sheet, choose “The Night the Tide Stood Still” under Anchors. The Night sheet is then set up with these Anchors and their Wardens, and its <em>Read the night</em> button opens this journal.</p>\n<p><em>From Chapter 10 of the rulebook.</em></p>"
+        "content": "<p><em><em>A second ready-made night, by the sea: five Anchors, a Heart and everything you need to run it tonight.</em></em></p>\n<p>Set it in any seaside town out of season: a pier, a promenade, a harbour with a crane or two, and a lighthouse on the point. If your town lacks any of these places, use the nearest thing it has and keep that Anchor’s Shell (every night has one Anchor of each Shell, Chapter 9). It was built with the tables in Chapter 9. The pier, the bonfire and the lido came off them (the bonfire moved to the beach, the baths became a lido); the sea wall, the crane, the arcade, the lighthouse and the signs on arrival are new. That is how to build your own: roll or pick what fits your town, and make up the rest.</p>\n<p><strong>Online:</strong> when you begin the night on the Night sheet, choose “The Night the Tide Stood Still” under Anchors. The Night sheet is then set up with these Anchors and their Wardens, and its <em>Read the night</em> button opens this journal.</p>\n<p><em>From Chapter 10 of the rulebook.</em></p>"
       }
     },
     {
@@ -15,7 +15,7 @@
       "name": "Midnight",
       "text": {
         "format": 1,
-        "content": "<p>At two minutes to midnight, at the turn of the tide, the sea stops, and every clock in town stops with it. All along the bay the waves hang in the air, mid-break, white along their tops. The lighthouse beam stops halfway round and goes out. On the promenade, the last dog walkers stand still where they were, leads slack, every face turned out to sea. Only five people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
+        "content": "<p>At two minutes to midnight, at the turn of the tide, the sea stops, and every clock in town stops with it. All along the bay the waves hang in the air, mid-break, white along their tops. The lighthouse beam stops halfway round and goes out. On the promenade, the last dog walkers stand still where they were, leads slack, every face turned out to sea. Only a handful of people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
       }
     },
     {
@@ -87,7 +87,7 @@
       "name": "Morning",
       "text": {
         "format": 1,
-        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the lighthouse beam starts turning again, and all along the bay the waves break at once with one long roar. The dog walkers finish their steps as if nothing happened. Only five people know otherwise.</p>"
+        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the lighthouse beam starts turning again, and all along the bay the waves break at once with one long roar. The dog walkers finish their steps as if nothing happened. Only they know otherwise.</p>"
       }
     }
   ]

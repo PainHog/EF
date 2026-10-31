@@ -218,3 +218,9 @@ From the three reports, in their words where possible:
 ## Copy-edit (2026-10-26)
 
 A full copy-edit of the book after the verification round. No rule or number changed: wording that contradicted a chapter (the Surge and Swarm in the enemies' step, the At the Table card's Guardian, long fight and feeding lines), terms used before they were explained, and small typos. Every fix is logged in `book/REVIEW.md` rows 48 to 54; "Vigour" replaces "Vigor" (DESIGN D44). The book still builds to 31 pages, with the contact sheet checked.
+
+## Chapter 10 and the online version (2026-10-31)
+
+- **Playtest C** (`playtest-c.md`, dice in `playtest-c-dice.log`): Chapter 10's night on Standard with four ready-made fighters, strictly by the book with real dice, plus three drills. No blockers, no confusing issues, no ruling needed on core flow; a win, the Heart broken in round 3. Four minor wording issues, all fixed (`book/REVIEW.md` row 57). This counts as the verification playtest for the new text.
+- **The online version end to end** (`online-test.md`): whole nights of both ready-made nights at every size and difficulty, through the add-on and the real windows and operations, with no errors; played with the simulator's habits, its results match the simulator's within chance over 1,000 nights per difficulty.
+- **For a real Foundry:** `docs/TESTING.md`, a two-window script for Richard.

@@ -15,7 +15,7 @@
       "name": "Midnight",
       "text": {
         "format": 1,
-        "content": "<p>At two minutes to midnight, every clock in the city stops. Phones freeze on 23:58. The trains stop between stations. Most people don’t notice: they stop too, mid-step, mid-word, standing still where they were, as if waiting for something. Only five people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
+        "content": "<p>At two minutes to midnight, every clock in the city stops. Phones freeze on 23:58. The trains stop between stations. Most people don’t notice: they stop too, mid-step, mid-word, standing still where they were, as if waiting for something. Only a handful of people keep moving.</p>\n<p>Run the Prologue (Chapter 7). Then begin the First Clash.</p>"
       }
     },
     {
@@ -87,7 +87,7 @@
       "name": "Morning",
       "text": {
         "format": 1,
-        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the clock tower strikes midnight six hours late, and the city starts moving again, mid-step, mid-word, as if nothing happened. Only five people know otherwise.</p>"
+        "content": "<p>Use the epilogues in Chapter 7. If the Heart falls, the clock tower strikes midnight six hours late, and the city starts moving again, mid-step, mid-word, as if nothing happened. Only they know otherwise.</p>"
       }
     }
   ]

@@ -513,8 +513,15 @@ export class ChatMessage extends BaseDocument {
 
 /* -------------------------------------------------------------- Dice -- */
 
+// mulberry32: exact 32-bit arithmetic (an LCG multiplied in floating point loses
+// precision past 2^53 and falls into a short cycle that repeats whole nights).
 let seed = 12345;
-const nextRandom = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+const nextRandom = () => {
+  seed = (seed + 0x6D2B79F5) | 0;
+  let t = Math.imul(seed ^ (seed >>> 15), seed | 1);
+  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
 /** Faces the next rolls will show, in order (then a seeded generator). */
 export const diceQueue = [];
 

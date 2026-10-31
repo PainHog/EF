@@ -1,0 +1,87 @@
+2026-10-30T18:21:38.022Z	Setup: ready-made fighter who sits out (1 Dani, 2 Marcus, 3 Jun, 4 Priya, 5 Sam; 6 reroll)	1d6	4	hits=0 sixes=0
+2026-10-30T18:22:45.197Z	FC pre-round Dani Quick free Strike vs pack (Quick die + Chi die)	7d6	4 2 3 2 6 1 1	hits=1 sixes=1
+2026-10-31T04:57:11.933Z	FC R1 Marcus strikes pack (Blaze, Chi die, fed)	6d6	2 6 6 1 3 6	hits=3 sixes=3
+2026-10-31T04:57:12.145Z	FC R1 Jun strikes pack (Bulwark on Jun, Chi die, fed)	6d6	3 5 6 5 1 3	hits=3 sixes=1
+2026-10-31T04:57:12.146Z	FC R1 Sam strikes pack (Tide, Chi die, fed)	6d6	2 6 5 6 4 5	hits=4 sixes=2
+2026-10-31T04:57:18.550Z	FC R1 Sam Tide reroll of the 2 non-hits (2,4)	2d6	1 5	hits=1 sixes=0
+2026-10-31T04:57:25.794Z	FC R1 Dani strikes pack, 2 Toughness left (Chi die, fed)	6d6	3 6 1 1 3 3	hits=1 sixes=1
+2026-10-31T04:57:49.653Z	H1 Bonfire pre-round Dani Quick free Strike vs pack (Quick die)	6d6	5 1 4 3 6 6	hits=3 sixes=2
+2026-10-31T04:57:49.655Z	H1 Bonfire R1 Marcus strikes pack (Blaze, fed)	5d6	4 6 4 4 3	hits=1 sixes=1
+2026-10-31T04:57:57.171Z	H1 Bonfire R1 Jun strikes pack, 4 Toughness (fed)	5d6	4 6 6 1 5	hits=3 sixes=2
+2026-10-31T04:58:01.997Z	H1 Bonfire R1 Sam strikes the Guy, Guard 2 for Water (Tide, Chi die, fed)	6d6	1 6 6 2 4 1	hits=2 sixes=2
+2026-10-31T04:58:06.451Z	H1 Bonfire R1 Sam Tide reroll of 3 non-hits (1,2,1)	3d6	2 4 6	hits=1 sixes=1
+2026-10-31T04:58:11.995Z	H1 Bonfire R1 Dani strikes the Guy, Guard 2 (Chi die, fed)	6d6	5 3 6 2 2 5	hits=3 sixes=1
+2026-10-31T04:58:17.374Z	H1 Bonfire R1 the Guy Surges	1d6	4	hits=0 sixes=0
+2026-10-31T04:58:28.238Z	H1 Bonfire R2 Marcus strikes the Guy, Guard 2 (fed, no Chi)	5d6	5 2 5 4 3	hits=2 sixes=0
+2026-10-31T04:58:34.995Z	H1 Bonfire R2 Jun strikes the Guy, Guard 2 (Bulwark on Jun, fed)	5d6	2 5 2 4 5	hits=2 sixes=0
+2026-10-31T04:58:39.412Z	H1 Bonfire R2 Sam strikes the Guy, Guard 2 (Tide, Chi die, fed)	6d6	4 1 4 4 6 5	hits=2 sixes=1
+2026-10-31T04:58:43.000Z	H1 Bonfire R2 Sam Tide reroll of 3 non-hits (4,1,4)	3d6	6 4 5	hits=2 sixes=1
+2026-10-31T04:58:47.856Z	H1 Bonfire R2 Dani strikes the Guy, Guard 2 (fed, no Chi)	5d6	4 3 2 2 1	hits=0 sixes=0
+2026-10-31T04:58:55.344Z	H1 Bonfire R2 the Guy Surges	1d6	5	hits=1 sixes=0
+2026-10-31T04:59:01.387Z	H1 Bonfire R3 Marcus strikes the Guy, 9 left (Blaze, Chi die, fed)	6d6	6 4 1 4 3 5	hits=2 sixes=1
+2026-10-31T04:59:05.791Z	H1 Bonfire R3 Jun strikes the Guy, 4 left (fed, no Chi)	5d6	1 1 2 6 6	hits=2 sixes=2
+2026-10-31T04:59:15.581Z	H2 Lido pre-round Dani Quick free Strike vs pack (Quick die, Renewal on Marcus)	6d6	4 3 2 2 6 4	hits=1 sixes=1
+2026-10-31T04:59:15.583Z	H2 Lido R1 Marcus strikes pack (fed, no Chi)	5d6	1 5 3 2 6	hits=2 sixes=1
+2026-10-31T04:59:22.116Z	H2 Lido R1 Jun strikes the Lifeguard, Guard 2 for Earth (Chi die, fed)	6d6	6 4 3 4 3 4	hits=1 sixes=1
+2026-10-31T04:59:26.380Z	H2 Lido R1 Jun Lucky reroll of 5 non-hits	5d6	2 6 4 6 6	hits=3 sixes=3
+2026-10-31T04:59:32.124Z	H2 Lido R1 Sam strikes pack, 8 left (fed, no Chi)	5d6	4 2 4 3 3	hits=0 sixes=0
+2026-10-31T04:59:37.369Z	H2 Lido R1 Dani strikes pack, 7 left (fed, no Chi)	5d6	3 6 6 1 5	hits=3 sixes=2
+2026-10-31T04:59:43.793Z	H2 Lido R1 the Lifeguard Surges	1d6	1	hits=0 sixes=0
+2026-10-31T04:59:56.937Z	H2 Lido R2 Marcus strikes the Lifeguard, Guard 2 (Blaze, Chi die, fed)	6d6	2 2 4 5 3 4	hits=1 sixes=0
+2026-10-31T05:00:04.914Z	H2 Lido R2 Jun strikes the Lifeguard, Guard 2 (Bulwark on Marcus, fed)	5d6	4 6 4 6 1	hits=2 sixes=2
+2026-10-31T05:00:10.275Z	H2 Lido R2 Sam strikes the Lifeguard, Guard 2 (Tide, Chi die, fed)	6d6	1 1 1 3 1 1	hits=0 sixes=0
+2026-10-31T05:00:13.882Z	H2 Lido R2 Sam Tide reroll of 3 non-hits (1,1,1)	3d6	3 3 4	hits=0 sixes=0
+2026-10-31T05:00:20.802Z	H2 Lido R2 Dani strikes the Lifeguard, Guard 2 (Renewal on Sam, fed)	5d6	4 4 1 3 5	hits=1 sixes=0
+2026-10-31T05:00:28.332Z	H2 Lido R2 the Lifeguard Surges	1d6	4	hits=0 sixes=0
+2026-10-31T05:00:47.432Z	H2 Lido R3 Marcus strikes the Lifeguard, 17 left (Chi die, fed)	6d6	6 2 5 3 1 2	hits=2 sixes=1
+2026-10-31T05:00:52.923Z	H2 Lido R3 Jun strikes the Lifeguard, 14 left (Bulwark on Marcus, fed)	5d6	2 5 2 5 6	hits=3 sixes=1
+2026-10-31T05:00:57.102Z	H2 Lido R3 Sam strikes the Lifeguard, 9 left (Tide, Chi die, fed)	6d6	5 5 3 3 1 1	hits=2 sixes=0
+2026-10-31T05:01:01.066Z	H2 Lido R3 Sam Tide reroll of 3 non-hits (3,1,1)	3d6	3 1 5	hits=1 sixes=0
+2026-10-31T05:01:14.100Z	H2 Lido R3 Dani strikes the last Still, 2 left (Renewal on Dani, fed)	5d6	6 5 2 5 6	hits=4 sixes=2
+2026-10-31T05:01:20.942Z	H2 Lido R3 the Lifeguard Surges	1d6	2	hits=0 sixes=0
+2026-10-31T05:01:36.063Z	H2 Lido R4 Jun strikes the Lifeguard, 4 left (not fed, no Chi)	5d6	1 1 4 1 2	hits=0 sixes=0
+2026-10-31T05:01:44.780Z	H2 Lido R4 Sam strikes the Lifeguard, 4 left (fed by Jun's action, no Chi)	5d6	5 3 2 6 2	hits=2 sixes=1
+2026-10-31T05:01:50.693Z	H2 Lido R4 Dani strikes the Lifeguard, 1 left (Chi die, fed)	6d6	3 4 6 6 1 4	hits=2 sixes=2
+2026-10-31T05:02:06.421Z	H4 Sea Wall pre-round Dani Quick free Strike vs the Breakwater, Guard 2 for Wood (Quick die, Chi die)	7d6	1 2 1 3 2 1 5	hits=1 sixes=0
+2026-10-31T05:02:12.180Z	H4 Sea Wall R1 Marcus strikes pack, 12 left (fed, no Chi)	5d6	3 2 3 2 3	hits=0 sixes=0
+2026-10-31T05:02:12.182Z	H4 Sea Wall R1 Jun strikes pack (fed, no Chi)	5d6	3 2 4 6 6	hits=2 sixes=2
+2026-10-31T05:02:18.500Z	H4 Sea Wall R1 Sam strikes pack, 7 left (fed, no Chi)	5d6	5 5 5 2 3	hits=3 sixes=0
+2026-10-31T05:02:22.868Z	H4 Sea Wall R1 Dani strikes the Breakwater, Guard 2 (fed, no Chi)	5d6	4 4 2 3 4	hits=0 sixes=0
+2026-10-31T05:02:31.149Z	H4 Sea Wall R1 the Breakwater Surges	1d6	2	hits=0 sixes=0
+2026-10-31T05:02:38.241Z	H4 Sea Wall R2 Marcus strikes the Breakwater, 36 left (Blaze, Chi die, fed)	6d6	2 1 1 6 1 2	hits=1 sixes=1
+2026-10-31T05:02:43.606Z	H4 Sea Wall R2 Jun strikes the Breakwater (Bulwark on Marcus, fed)	5d6	6 6 6 2 3	hits=3 sixes=3
+2026-10-31T05:02:47.920Z	H4 Sea Wall R2 Sam strikes the Breakwater (fed, no Chi)	5d6	3 5 5 6 2	hits=3 sixes=1
+2026-10-31T05:02:53.090Z	H4 Sea Wall R2 Dani strikes the Breakwater (Renewal on Marcus, fed)	5d6	6 5 6 2 5	hits=4 sixes=2
+2026-10-31T05:03:00.788Z	H4 Sea Wall R2 the Breakwater Surges	1d6	3	hits=0 sixes=0
+2026-10-31T05:03:06.699Z	H4 Sea Wall R3 Marcus strikes the Breakwater, 17 left (Blaze, Chi die, fed)	6d6	2 4 2 2 3 3	hits=0 sixes=0
+2026-10-31T05:03:13.528Z	H4 Sea Wall R3 Jun strikes the Breakwater, 17 left (Bulwark on Marcus, fed)	5d6	4 1 4 5 6	hits=2 sixes=1
+2026-10-31T05:03:17.848Z	H4 Sea Wall R3 Sam strikes the Breakwater, 13 left (fed, no Chi)	5d6	5 5 4 4 3	hits=2 sixes=0
+2026-10-31T05:03:22.615Z	H4 Sea Wall R3 Dani strikes the Breakwater, 10 left (Renewal on Marcus, fed)	5d6	2 6 2 6 6	hits=3 sixes=3
+2026-10-31T05:03:28.591Z	H4 Sea Wall R3 the Breakwater Surges	1d6	1	hits=0 sixes=0
+2026-10-31T05:03:41.356Z	H4 Sea Wall R4 Marcus strikes the Breakwater, 6 left (Blaze, fed by Dani's last action)	5d6	6 4 6 2 6	hits=3 sixes=3
+2026-10-31T05:04:15.986Z	Heart pre-round Dani Quick free Strike vs pack (Quick die, Chi die, Renewal on Dani)	7d6	5 5 4 4 1 4 1	hits=2 sixes=0
+2026-10-31T05:04:23.678Z	Heart R1 Marcus Awakens Harmony, strikes pack 10 left (Blaze, fed)	5d6	5 1 4 6 3	hits=2 sixes=1
+2026-10-31T05:04:29.967Z	Heart R1 Jun Awakens Tempest, action 1 strikes pack 5 left (fed, can't be hit back)	5d6	1 2 4 4 4	hits=0 sixes=0
+2026-10-31T05:04:37.824Z	Heart R1 Jun Tempest action 2 strikes pack 5 left (not fed, can't be hit back)	5d6	2 6 2 5 1	hits=2 sixes=1
+2026-10-31T05:04:43.197Z	Heart R1 Sam Awakens Unbreakable, strikes the Heart 51 left (fed, no Chi left)	5d6	6 6 5 4 4	hits=3 sixes=2
+2026-10-31T05:04:50.134Z	Heart R1 Dani strikes the Heart 44 left (Renewal on Dani, fed)	5d6	6 2 6 5 4	hits=3 sixes=2
+2026-10-31T05:04:56.005Z	Heart R1 the Heart Surges	1d6	6	hits=1 sixes=1
+2026-10-31T05:05:06.352Z	Heart R2 Marcus strikes the Heart 40 left (fed, no Chi)	5d6	5 2 6 2 2	hits=2 sixes=1
+2026-10-31T05:05:14.123Z	Heart R2 Jun Tempest action 1 strikes pack 7 left (Bulwark on Dani, fed)	5d6	5 3 1 4 1	hits=1 sixes=0
+2026-10-31T05:05:18.759Z	Heart R2 Jun Tempest action 2 strikes pack 4 left (not fed)	5d6	5 4 1 1 2	hits=1 sixes=0
+2026-10-31T05:05:24.110Z	Heart R2 Sam strikes the Heart 37 left (Tide, Chi die, fed)	6d6	1 3 1 6 4 1	hits=1 sixes=1
+2026-10-31T05:05:27.624Z	Heart R2 Sam Tide reroll of 3 non-hits (1,3,1)	3d6	4 4 6	hits=1 sixes=1
+2026-10-31T05:05:33.875Z	Heart R2 Dani Awakens Ascendant, strikes the Heart 31 left (fed, Bulwark on her)	5d6	1 4 3 2 6	hits=1 sixes=1
+2026-10-31T05:05:42.311Z	Heart R2 the Heart Surges	1d6	5	hits=1 sixes=0
+2026-10-31T05:05:49.877Z	Heart R3 Marcus strikes the Heart 29 left (Blaze, fed)	5d6	3 1 3 5 6	hits=2 sixes=1
+2026-10-31T05:05:56.195Z	Heart R3 Jun Tempest action 1 strikes the Heart 24 left (Bulwark on Dani, fed)	5d6	1 6 3 2 6	hits=2 sixes=2
+2026-10-31T05:06:01.076Z	Heart R3 Jun Tempest action 2 strikes the Heart 19 left (Chi die, not fed)	6d6	2 1 1 6 2 3	hits=1 sixes=1
+2026-10-31T05:06:07.474Z	Heart R3 Jun Lucky reroll of 5 non-hits	5d6	4 6 3 4 5	hits=2 sixes=1
+2026-10-31T05:06:13.804Z	Heart R3 Sam strikes the Heart 14 left (Tide, Chi die, fed)	6d6	5 6 2 6 3 3	hits=3 sixes=2
+2026-10-31T05:06:17.708Z	Heart R3 Sam Tide reroll of 3 non-hits (2,3,3)	3d6	3 2 5	hits=1 sixes=0
+2026-10-31T05:06:25.104Z	Heart R3 Dani Ascendant strikes the Heart 6 left (Chi die, fed, Bulwark on her)	6d6	2 5 6 2 6 4	hits=3 sixes=2
+2026-10-31T05:08:08.808Z	Drill 1a: which Chapter 10 place the town lacks (1 arcade, 2 pier, 3 beach, 4 promenade and sea wall, 5 harbour crane, 6 lido)	1d6	6	hits=1 sixes=1
+2026-10-31T05:08:08.810Z	Drill 2: element table for a Chapter 9 Anchor (1 Wood, 2 Fire, 3 Earth, 4 Metal, 5 Water, 6 reroll)	1d6	1	hits=0 sixes=0
+2026-10-31T05:08:25.299Z	Drill 2: Wood Shells place (Chapter 9 table)	1d6	4	hits=0 sixes=0
+2026-10-31T05:08:25.301Z	Drill 2: sign of the Unmade for that Anchor	1d6	5	hits=1 sixes=0
+2026-10-31T05:08:25.301Z	Drill 2: sign for a second rolled Anchor (tests the next-sign-down rule)	1d6	6	hits=1 sixes=1

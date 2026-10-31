@@ -1,4 +1,4 @@
-Now: Richard tries the online version; a second adventure and an add-on with both adventures are done
+Now: Computer playtests done for the second adventure and the online version; Richard tries the online version with a step-by-step test script
 Next: A game at a real table this weekend, then the rulebook text is final for Richard's own rewrite
 Number: Design decisions made = 47
 Number: Open design questions = 0
@@ -32,6 +32,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Ready-made fighters for a quick start
 - [x] The first one-night adventure
 - [x] A second one-night adventure, by the sea
+- [x] A computer playtest of the second adventure, with real dice, and its fixes
 - [x] Cover and book art
 - [x] Rulebook layout, for screen and for print
 - [x] Computer playtests by the book, and the fixes they turn up
@@ -49,4 +50,7 @@ Plain words only: no repo names, usernames, file paths, links or commit IDs. Rul
 - [x] Polish for the online version: portraits, tokens, an in-game guide and a Night sheet that says what comes next
 - [x] First release of the online version, ready to install
 - [x] Both ready-made nights as an add-on for the online version, to sell separately
+- [x] Whole nights played through the online version automatically, with results that match the balance checks
+- [x] A step-by-step script for testing the online version in Foundry VTT
+- [ ] Richard tests the online version in his own Foundry VTT
 - [ ] Second release of the online version, which the add-on needs
